@@ -7,11 +7,13 @@ body {
   margin: 0 auto; 
 }
  
+#headerDiv nav li #home {
+  height: 40px;
+}
 
 #headerDiv nav {
- 
   width: 100%;
-  height: 100px;
+  height: 50px;
 
   margin: 25px 0; 
 }
@@ -19,8 +21,8 @@ body {
 #headerDiv #logo {
     float: left;
 	width: 55px;
-	height: 55px;
-	margin: 20px;
+	height: 50px;
+	//margin: 10px;
 }
 
 #headerDiv nav ul {
@@ -36,29 +38,33 @@ body {
 }
  
 #headerDiv nav ul li a {
+
   text-decoration: none;
+
+  height: 48px;
 
   font-family: "Avenir Next" !important;
 
-  font-size: 21px;
+  font-size: 20px;
   
   color: rgb(184,184,184);
 
   text-align: center;
  
-  padding: 20px 0;
+  /*fix padding for pading top too? */
+  padding-top: 10px;
+  padding-bottom: 18px 0;
  
   display: block;
  
   width: 100%;
 
-  //background-color: red;
 }
 
 #headerDiv nav ul li a:hover {
 
-	font-size:30px;
-	transition: font-size 1s;
+	font-size:28px;
+	transition: font-size .8s;
 }
 
 #divOne img{
