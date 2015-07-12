@@ -1,0 +1,62 @@
+body {
+ 
+  width: 100%;
+  
+  margin: 0 auto; 
+}
+ 
+ 
+nav {
+ 
+  width: 100%;
+
+  margin: 25px 0; 
+}
+ 
+
+#logo {
+    float: left;
+	width: 55px;
+	height: 55px;
+	//margin: 20px;
+}
+
+nav ul {
+ 
+  width: 100%; 
+  list-style-type: none;
+}
+
+nav ul li {
+ 
+  width: 20%; 
+  float: left; 
+}
+ 
+nav ul li a {
+  text-decoration: none;
+
+  font-family: "Avenir Next" !important;
+
+  font-size: 21px;
+  
+  color: rgb(184,184,184) ;
+
+  text-align: center;
+ 
+  padding: 20px 0;
+ 
+  display: block;
+ 
+  width: 100%;
+
+  //background-color: red;
+}
+
+nav ul li a:hover {
+
+	font-size:30px;
+	transition: font-size 1.5s;
+}
+
+
