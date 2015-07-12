@@ -1,7 +1,9 @@
 body {
  
   width: 100%;
-  
+
+  font-family: "Avenir Next" !important;
+
   margin: 0 auto; 
 }
  
@@ -57,7 +59,7 @@ nav ul li a {
 nav ul li a:hover {
 
 	font-size:30px;
-	transition: font-size 1.5s;
+	transition: font-size 1s;
 }
 
 
