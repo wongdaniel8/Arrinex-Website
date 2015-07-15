@@ -88,10 +88,47 @@ body {
   margin right: 50px;
 }
 
+/*============================================*/
+#divOne .hiddenTitle {
+  margin: auto;
+  max-width: 20px;
+
+  color: red;
+}
+
+#divOne #hiddenDescript {
+  position:absolute;
+  opacity: .8;
+  top: 80px;
+  display: none;
+  /*position: relative;
+  margin: auto;
+  padding: 30px;
+  color: red;*/
+  /*max-width: 500px;*/
+  background-color: #E8E8E8;
+  margin: auto;
+  width: 70%;
+  /*margin-top: 100px;*/
+  padding-top: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 400px;
+
+}
+/*#divOne #hiddenDescript { 
+}*/
+
+
+/*============================================*/
+
+
+
 #divOne img{
   margin-top: 30px; /**/
   width: 100%;
   height: auto;
+
 }
 
 #divOne #homePar{

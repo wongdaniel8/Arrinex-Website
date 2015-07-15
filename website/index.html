@@ -16,7 +16,7 @@
         </li>
         <!-- <div id = "textNav"> -->
         <li>
-            <a id = "company" onmouseout = "navBarHoverAway('company')" href="/company">Company</a>
+            <a id = "company" onmouseover = "displayHidden('hiddenDescript')" onmouseout = "navBarHoverAway('company', 'hiddenDescript')" href="/company">Company</a>
 
         </li>
         <li>
@@ -34,8 +34,26 @@
     
 </div>
 
+
+
+
 <div id="divOne" class="sectionDiv">
     <!-- First Div after header -->
+    
+    
+   
+
+
+    <div id = "hiddenDescript">
+    <div id = "companyDescript">
+        <h1 class = "hiddenTitle"> Company  </h1>
+        <p>Find out who we are, what we do, and meet our scientific advisory board.</p>
+    </div>        
+    </div>
+
+
+
+
     <img src="unnamed.png"></img>
      <div id = "homePar">
         <h1> WHO WE ARE </h1>
