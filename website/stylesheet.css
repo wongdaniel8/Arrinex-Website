@@ -30,12 +30,15 @@ body {
   /*position: relative;
   right: 50px;*/
   margin-right: 130px;
+  
   /*margin-bottom: 50px;*/
   float: center;
 	width: 45px;
 	height: 35px;
 	/*margin: 10px;*/
 }
+
+
 
 #headerDiv nav ul {
  
@@ -44,7 +47,7 @@ body {
 }
 
 #headerDiv nav ul li {
- 
+  
   width: 20%; 
   float: left;
   background-color: white; 
@@ -54,7 +57,7 @@ body {
 
   text-decoration: none;
 
-  height: 38px;
+  height: 42px;
 
   font-family: "Avenir Next" !important;
 
@@ -75,9 +78,15 @@ body {
 }
 
 #headerDiv nav ul li a:hover {
-
+  color: black;
+  /*font-color: "#606060";*/
 	font-size:23px;
 	transition: font-size .8s;
+}
+
+#headerDiv nav ul #textNav {
+  background-color: red;
+  margin right: 50px;
 }
 
 #divOne img{
@@ -85,3 +94,21 @@ body {
   width: 100%;
   height: auto;
 }
+
+#divOne #homePar{
+  
+  position: relative;
+ /*position: absolute;*/ /* check this out */
+  max-width: 45%;
+  left: 25px;
+  right-border: 50px;
+  top: 20px;
+  padding: 30px;
+  background-color: rgb(184,184,184);
+}
+
+
+
+
+
+
