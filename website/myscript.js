@@ -16,3 +16,8 @@ function displayHidden(ident) {
 	var id = document.getElementById(ident);
 	id.style.display = "block";
 }
+
+function homeParReveal(ident) {
+	var id = document.getElementById(ident);
+	id.style.opacity = 1;
+}

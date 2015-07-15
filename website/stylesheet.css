@@ -92,28 +92,28 @@ body {
 #divOne .hiddenTitle {
   margin: auto;
   max-width: 20px;
-
-  color: red;
+  color: grey;
 }
 
-#divOne #hiddenDescript {
+#divOne #hiddenDescript {   /*OR LAYER THE CAROUSEL AND HIDDEN DESCRIPTIONS AND ALTER WITH OPACITY TRANSITIONS*/ 
   position:absolute;
-  opacity: .8;
+  opacity: .9;
   top: 80px;
   display: none;
-  /*position: relative;
-  margin: auto;
+  /*
   padding: 30px;
   color: red;*/
   /*max-width: 500px;*/
   background-color: #E8E8E8;
   margin: auto;
+  
   width: 70%;
   /*margin-top: 100px;*/
   padding-top: 50px;
   padding-left: 200px;
   padding-right: 200px;
-  padding-bottom: 400px;
+  padding-bottom: 350px;
+  transition: opacity ease 5s;
 
 }
 /*#divOne #hiddenDescript { 
@@ -131,7 +131,8 @@ body {
 
 }
 
-#divOne #homePar{
+#divOne #homePar {
+  opacity: 0;
   position: relative;
  /*position: absolute;*/ /* check this out */
   max-width: 45%;
@@ -140,7 +141,7 @@ body {
   top: 15px;
   padding: 30px;
   background-color: rgb(184,184,184);
-  transition: color 3s;
+  transition: color 3s, opacity ease 3s;
 }
 
 #divOne #homePar:hover {
