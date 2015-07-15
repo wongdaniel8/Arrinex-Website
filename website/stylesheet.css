@@ -79,7 +79,6 @@ body {
 
 #headerDiv nav ul li a:hover {
   color: black;
-  /*font-color: "#606060";*/
 	font-size:23px;
 	transition: font-size .8s;
 }
@@ -96,15 +95,21 @@ body {
 }
 
 #divOne #homePar{
-  
   position: relative;
  /*position: absolute;*/ /* check this out */
   max-width: 45%;
-  left: 25px;
+  left: 20px;
   right-border: 50px;
-  top: 20px;
+  top: 15px;
   padding: 30px;
   background-color: rgb(184,184,184);
+  transition: color 3s;
+}
+
+#divOne #homePar:hover {
+  /*insert transition style here*/
+  background-color: #E8E8E8;
+  
 }
 
 
