@@ -14,9 +14,9 @@
         <li>
              <li id = "home"><a href = "#home"><img id = "logo" src = "logo.jpg"> </img></a></li>
         </li>
-        <!-- <div id = "textNav"> -->
+        <!-- <div id = "textNav"> --> 
         <li>
-            <a id = "company" onmouseover = "displayHidden('hiddenDescript')" onmouseout = "navBarHoverAway('company', 'hiddenDescript')" href="/company">Company</a>
+            <a id = "company" onmouseover = "displayHidden('hiddenDescript', 'company')" onmouseout = "navBarHoverAway('company', 'hiddenDescript')" href="/company">Company</a>
 
         </li>
         <li>
@@ -44,7 +44,7 @@
    
 
 
-    <div id = "hiddenDescript">
+    <div id = "hiddenDescript" onwheel = "homeParReveal('homePar')">
     <div id = "companyDescript">
         <h1 class = "hiddenTitle"> Company  </h1>
         <p>Find out who we are, what we do, and meet our scientific advisory board.</p>

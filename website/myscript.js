@@ -8,13 +8,19 @@ function navBarHoverAway(ident, ident2) {
 	var id = document.getElementById(ident);
 	id.style.color = "#B8B8B8";
     var id2 = document.getElementById(ident2);
-    id2.style.display = "none";
+    // id2.style.display = "none";
+    id2.style.opacity = 0;
 
 }
 
-function displayHidden(ident) {
+/* on mouseover of main navigation, displays the hidden mini-summary and changes font color of link hovered over*/ 
+function displayHidden(ident, self) {
 	var id = document.getElementById(ident);
 	id.style.display = "block";
+	id.style.opacity = .9;
+	var self = document.getElementById(self);
+	self.style.color = "black";
+
 }
 
 function homeParReveal(ident) {

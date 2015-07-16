@@ -91,15 +91,16 @@ body {
 /*============================================*/
 #divOne .hiddenTitle {
   margin: auto;
-  max-width: 20px;
+  max-width: 25px;
   color: grey;
 }
 
 #divOne #hiddenDescript {   /*OR LAYER THE CAROUSEL AND HIDDEN DESCRIPTIONS AND ALTER WITH OPACITY TRANSITIONS*/ 
-  position:absolute;
-  opacity: .9;
+  position:fixed;
+  font-size: 20px;
+  opacity: 0;
   top: 80px;
-  display: none;
+  /*display: none;*/
   /*
   padding: 30px;
   color: red;*/
@@ -109,15 +110,14 @@ body {
   
   width: 70%;
   /*margin-top: 100px;*/
+
   padding-top: 50px;
   padding-left: 200px;
   padding-right: 200px;
   padding-bottom: 350px;
-  transition: opacity ease 5s;
+  transition: opacity ease 1s;
 
 }
-/*#divOne #hiddenDescript { 
-}*/
 
 
 /*============================================*/
@@ -141,7 +141,7 @@ body {
   top: 15px;
   padding: 30px;
   background-color: rgb(184,184,184);
-  transition: color 3s, opacity ease 3s;
+  transition: color 3s, opacity ease 2s;
 }
 
 #divOne #homePar:hover {
