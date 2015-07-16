@@ -3,6 +3,7 @@ body, html {
   width: 100%;
   font-family: "Avenir Next" !important;
   margin: 0 auto;
+  overflow-x:hidden;
 }
 #navBarTable {
   height: 41px;
