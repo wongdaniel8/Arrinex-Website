@@ -3,6 +3,7 @@ body, html {
   width: 100%;
   font-family: "Avenir Next" !important;
   margin: 0 auto;
+  overflow-x:hidden;
 }
 #navBarTable {
   height: 41px;
@@ -42,7 +43,6 @@ padding-top:10px;
 vertical-align: middle;
 }
 
-<<<<<<< HEAD
 .navBarLink{
 text-decoration: none;
 font-size: 17px;
@@ -53,48 +53,6 @@ vertical-align: middle;
 .navBarLink:hover{
   color:white;
 }
-=======
-/*============================================*/
-#divOne .hiddenTitle {
-  margin: auto;
-  max-width: 25px;
-  color: grey;
-}
-
-#divOne #hiddenDescript {   /*OR LAYER THE CAROUSEL AND HIDDEN DESCRIPTIONS AND ALTER WITH OPACITY TRANSITIONS*/ 
-  position:fixed;
-  font-size: 20px;
-  opacity: 0;
-  top: 80px;
-  /*display: none;*/
-  /*
-  padding: 30px;
-  color: red;*/
-  /*max-width: 500px;*/
-  background-color: #E8E8E8;
-  margin: auto;
-  
-  width: 70%;
-  /*margin-top: 100px;*/
-
-  padding-top: 50px;
-  padding-left: 200px;
-  padding-right: 200px;
-  padding-bottom: 350px;
-  transition: opacity ease 1s;
-
-}
-
-
-/*============================================*/
-
-
-
-#divOne img{
-  margin-top: 30px; /**/
-  width: 100%;
-  height: auto;
->>>>>>> afa2a6235af0799f42d3f97ed37e60a3d7a12ab3
 
 #homeImageDiv{
   width:100%;
@@ -108,21 +66,10 @@ vertical-align: middle;
 
 #homeImageDiv #firstHomeText{
   position: relative;
-<<<<<<< HEAD
   top:275px;
   left:25px;
   z-index: 3;
   color:rgb(55,55,55);
-=======
- /*position: absolute;*/ /* check this out */
-  max-width: 45%;
-  left: 20px;
-  right-border: 50px;
-  top: 15px;
-  padding: 30px;
-  background-color: rgb(184,184,184);
-  transition: color 3s, opacity ease 2s;
->>>>>>> afa2a6235af0799f42d3f97ed37e60a3d7a12ab3
 }
 
 #homeImageDiv #learnMoreButt{
