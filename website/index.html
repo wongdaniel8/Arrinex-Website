@@ -1,74 +1,102 @@
 <!DOCTYPE html>
-
+<html>
 <head>
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
-<script type="text/javascript" src="myscript.js"></script>
+	<title>Arrinex</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script type="text/javascript" src="myscript.js"></script>
 </head>
 
 <body>
+	
+	<!-- Main Header Nav Bar -->
+ <div id="navBarDiv">
+	<table id="navBarTable" cellspacing="0">
+        <tbody id="navBarTableBody">
+            <tr id="navBar">
+                <td width="50%" id="logoBlock">
+                    <a href="#home">
+                        <img id = "logo" src = "transparant_logo.png" align="center"> </img>
+                        <span>Arrinex</span>
+                    </a>
+                </td>
+                <td>
+                    <a id = "company" class="navBarLink" onmouseout = "navBarHoverAway('company')" href="/company">Company</a>
+                </td>
+                <td>
+                    <a id = "forInvestors" class="navBarLink" onmouseout = "navBarHoverAway('forInvestors')"href="/investors">For Investors</a>
+                </td>
+                <td>
+                    <a id = "forPatients" class="navBarLink" onmouseout = "navBarHoverAway('forPatients')" href="/patients">For Patients</a>
+                </td>
+                <td>
+                    <a id = "contactUs"  class="navBarLink"onmouseout = "navBarHoverAway('contactUs')" href="/contact">Contact Us </a>
+                </td>
+        </tbody>
+    </table>
+ </div>
 
-<div id="headerDiv" class="sectionDiv"> 
-
-    <nav>
-      <ul>
-        <li>
-             <li id = "home"><a href = "#home"><img id = "logo" src = "logo.jpg"> </img></a></li>
-        </li>
-        <!-- <div id = "textNav"> -->
-        <li>
-            <a id = "company" onmouseover = "displayHidden('hiddenDescript')" onmouseout = "navBarHoverAway('company', 'hiddenDescript')" href="/company">Company</a>
-
-        </li>
-        <li>
-            <a id = "forInvestors" onmouseout = "navBarHoverAway('forInvestors')"href="/investors">For Investors</a>
-        </li>
-        <li>
-            <a id = "forPatients" onmouseout = "navBarHoverAway('forPatients')" href="/patients">For Patients</a>
-        </li>
-        <li>
-            <a id = "contactUs" onmouseout = "navBarHoverAway('contactUs')" href="/contact">Contact Us </a>
-        </li>
-    <!-- </div> -->
-      </ul>
-    </nav>
-    
-</div>
-
-
-
-
-<div id="divOne" class="sectionDiv">
+ <div id="homeImageDiv">
+ 	<div id="firstHomeText">
+ 		<font size="20">
+ 			Enjoy <b><i>peace</i></b> of mind.
+ 		</font>
+ 		<br>
+ 		<font size="5">Get relief from chronic rhinitis with
+ 		<br>
+ 		breakthrough cryogenic therapy.</font>
+ 		<br>
+ 		<div id="coolButton1">
+ 			What is Chronic Rhinitis?
+ 		</div>
+ 		<div id="coolButton2">
+ 			The Arrinex Solution
+ 		</div>
+ 	</div>
+ </div>
+    <div style="background:aqua; top:0px">
+    	<p>Hello Hello Hello Hello Hello Hello Hello Hello HelloHello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello</p>
+    	<br>
+    	<p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br><p>Hello</p>
+    	<br>
+    </div>
+	<!-- Setting the background home image -->
+	<div id="divOne" class="sectionDiv">
     <!-- First Div after header -->
-    
-
-   
-
-
-    <div id = "hiddenDescript">
-    <div id = "companyDescript">
-        <h1 class = "hiddenTitle"> Company  </h1>
-        <p>Find out who we are, what we do, and meet our scientific advisory board.</p>
-    </div>        
-    </div>
+     
+	</div>
 
 
 
 
-    <img src="unnamed.png" onwheel = "homeParReveal('homePar')"></img>
-     <div id = "homePar">
-        <h1> WHO WE ARE </h1>
-        <p> We are a medical technology company focused on the design and development of products for the minimally invasive treatment of patients suffering from chronic rhinitis. Our ClariFix family of products is used by ENT physicians in patients with chronic rhinitis due to allergic or non-allergic causes.
-        </p>
-    </div>
-</div>
 
-<div id="divTwo" class="sectionDiv">
-    <!-- Second div after...you get the idea -->
-</div>
 
-<div id="footerDiv" class="sectionDiv">
-    <!-- This is the LAST div in the home page -->
-</div>
+
+
+
+
+
+
+
 
 </body>
 </html>
