@@ -68,11 +68,7 @@ function homeParHide(ident) {
 	id.style.opacity = 0;
 }
 
-
-
-
-
-
+$(document).ready(function(){
 	var scroll_point1 = 0;
 	var trigger_fade_height = 150;
         $(document).scroll(function() {
@@ -119,7 +115,6 @@ function homeParHide(ident) {
 
 
     });
-
 
 
 

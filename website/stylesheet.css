@@ -153,12 +153,18 @@ body, html {
           color: white;
         }
 
-#homePar {
-  /*color:rgb(55,55,55);*/
+/* ==============================================*/
+/* BEGINNING OF SECTIONDIVS */
 
+.sectionDivs {
+  padding: 30px;
+  height: 670px;
+  width: 100%;
+  text-align: center;
+}
+
+#homePar {
   opacity: 0;
- 
- 
   width: 100%;
   margin: auto;
   padding: 30px;
@@ -171,16 +177,9 @@ body, html {
   transition: color 2s, opacity ease 2s;
 }
 
-#homeParHeader {
-  /*position: absolute;*/
-  /*float: center;*/
-
-  margin: auto;
-  left: 150px;
-  right: 150px;
-  /*padding: 20px;*/
-  /*top: 20px;
-  bottom: 20px;*/
+#rhinitisInfo {
+  background-color: #BCBCBC;
+  color: white;
 }
 
 
