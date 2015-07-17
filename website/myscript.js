@@ -75,6 +75,7 @@ $(document).ready(function(){
             
             //FUNCTION that deals with fade in and out
 	            var scroll_point2 = $("body").scrollTop();
+
 	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 250) // scrolling down
 			    {
 			    	$("#homePar").css("opacity","1");
@@ -83,8 +84,8 @@ $(document).ready(function(){
 			    {
 			    	$("#homePar").css("opacity","0");
 			    }
+			    
 			    scroll_point1 = scroll_point2;// update the data points to ensure accuracy
-
 
 			    if (scroll_point2 > 30)
 			    {
