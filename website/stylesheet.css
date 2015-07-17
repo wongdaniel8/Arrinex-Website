@@ -130,9 +130,10 @@ body, html {
     }
     
     #firstHomeText{
+      opacity: 1;
       position: absolute;
       /*z-index: 1;*/
-      color:rgba(77, 31, 31, 0.51);
+      color:rgb(77, 31, 31);
       line-height: 20px;
     }
         
@@ -140,7 +141,7 @@ body, html {
           display: inline-block;
           color:rgba(77, 31, 31, 0.51);
           transition: background-color 0.5s ease,border .6s ease;
-          border: 2px solid rgba(255, 255, 255, 0.51);
+          border: 2px solid rgba(255, 255, 255, 1);
           background-color: transparent;
           /*padding: 11px 17px;*/
         }
@@ -159,32 +160,34 @@ body, html {
 
 /* ==============================================*/
 /* BEGINNING OF SECTIONDIVS */
-
-.sectionDivs {
-  padding: 30px;
-  height: 670px;
-  width: 100%;
-  text-align: center;
+#parallaxHelpDiv{
+  position: relative;
+  background-color: white;
 }
+    .sectionDivs {
+      padding: 30px;
+      height: 670px;
+      width: 100%;
+      text-align: center;
+    }
 
-#homePar {
-  opacity: 0;
-  width: 100%;
-  margin: auto;
-  padding: 30px;
-  padding-bottom: 300px;
-  line-height: 150%;
-  color: black;
-  bottom: 20px;
-  max-width: 650px;
-  font-size: 17px;
-  transition: color 2s, opacity ease 2s;
-}
+    #homePar {
+      opacity: 0;
+      margin: auto;
+      padding: 30px;
+      padding-bottom: 300px;
+      line-height: 150%;
+      color: black;
+      bottom: 20px;
+      max-width: 650px;
+      font-size: 17px;
+      transition: opacity ease 0.8s;
+    }
 
-#rhinitisInfo {
-  background-color: #BCBCBC;
-  color: white;
-}
+    #rhinitisInfo {
+      background-color: #BCBCBC;
+      color: white;
+    }
 
 
 
