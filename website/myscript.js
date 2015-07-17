@@ -33,3 +33,23 @@ function homeParHide(ident) {
 	var id = document.getElementById(ident);
 	id.style.opacity = 0;
 }
+
+$(document).ready(function(){
+        $("body").scroll(function() {
+            var scrolled = $(window).scrollTop();
+            var win_height= $(window).height();
+            var title = $("#homeParHeader");
+            var revealTitleTop = title.offset().top;
+            if (scrolled + win_height <= (revealTitleTop /1.02 )){
+            	    alert("fff");
+                    title.fadeOut(1000);
+            }
+        });
+    });
+
+
+
+
+
+
+
