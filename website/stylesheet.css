@@ -10,7 +10,7 @@ body, html {
       width:100%;min-width: 1024px;
       position:fixed;
       text-align: center;
-      background-color:rgba(0,0,0, 1);
+      background-color:rgba(0,0,0,1);
       transition: height 0.25s ;
     }
         #navBarList{
