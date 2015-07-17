@@ -76,11 +76,15 @@ $(document).ready(function(){
             //FUNCTION that deals with fade in and out
 	            var scroll_point2 = $("body").scrollTop();
 
+
 	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 250) // scrolling down
+
+	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 150) // scrolling down
+
 			    {
 			    	$("#homePar").css("opacity","1");
 			    }
-			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 250)// scrolling up
+			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 150)// scrolling up
 			    {
 			    	$("#homePar").css("opacity","0");
 			    }
@@ -92,15 +96,25 @@ $(document).ready(function(){
 			    	$("#navBarDiv").css("height","50px");
 			    	$(".navBarLinks").css("padding","13px 17px");
 			    	$("#logoBlock").css("padding","10px 17px");
-			    	$(".dropDownList").css("border-top","17px solid black");
+			    	$(".dropDownList").css("top","17px");
 			    }
 			    else
 			    {
 			    	$("#navBarDiv").css("height","70px");
 			    	$(".navBarLinks").css("padding","25px 17px");
 			    	$("#logoBlock").css("padding","20px 17px");
-			    	$(".dropDownList").css("border-top","25px solid black");
+			    	$(".dropDownList").css("top","25px");
 			    }
+
+
+			//FUNCTION for parallax
+				if (scroll_point2 < 300)
+				{
+					var parallax_displacement = scroll_point2*0.8;
+					var parallax_opacity = 1-scroll_point2*0.004;
+					$("#parallaxHelpDiv").css("bottom",""+parallax_displacement+"px");
+					$("#firstHomeText").css("opacity",""+parallax_opacity);
+				}
 
         });
 
