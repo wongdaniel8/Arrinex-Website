@@ -1,115 +1,164 @@
 body, html {
-  height:100%;
-  width: 100%;
-  font-family: "Avenir Next" !important;
+  font-family: sans-serif; !important;
   margin: 0 auto;
   overflow-x:hidden;
 }
-#navBarTable {
-  height: 41px;
-  width:100%;
-  position:fixed;
-  z-index: 2;
-  top:0px;
-  text-align: center;
-}
+    #navBarDiv {
+      z-index: 1;
+      height: 70px;
+      margin: 0px;
+      width:100%;min-width: 1024px;
+      position:fixed;
+      text-align: center;
+      background-color:rgba(0,0,0, 1);
+      transition: height 0.25s ;
+    }
+        #navBarList{
+          padding-left: 0px;
+          margin:0px;
+          
+        }
 
-#navBarTableBody {
-  height: 41px;
-}
+        #logoBlock{
+          float: left;
+          padding: 20px 17px;
+          transition: padding .25s;
+        }
 
-#navBar {
-  width:100%;
-  height: 41px;
-  background:rgba(0,0,0, 1);
-}
+            #logoBlock a{
+              text-decoration: none;
+              font-size: 24px;
+              color: rgb(245,245,245);
+            }
+                #logo{
+                      height:35px;
+                      padding-left:20px;
+                      }
 
-#navBar #logo{
-  height:35px;
-  padding-left:20px;
-}
-#navBar #logoBlock a{
-  text-decoration: none;
-  font-size: 24px;
-  color: rgb(245,245,245);
-}
+        .navBarLinks{
+          padding: 25px 17px;
+          float: right;
+          display: inline-block;
+          font-size: 17px;
+          color: rgb(120,120,120);
+          transition: padding .25s;
+        }    
+        
+            .navBarLinks a{
+              text-decoration: none;
+              color: rgb(120,120,120);
+            }
+            .navBarLinks a:hover{
+            color:white;
+            }
+            .dropDownList{
+              width: 130px;
+              border-top: 25px solid black;
+              background-color: rgba(106, 105, 107, 1);
+              display: block;
+              list-style-type: none;
+              padding:15px  15px 0px 15px;
+              opacity: 0;
+              transform-origin: center top 0px;
+              -webkit-transform: matrix3d(1, 0, 0, 0, 0, 0, -1, 0.00125, 0, 1, 0, 0, 0, 0, 0, 1);
+              transition: -webkit-transform 0.4s linear, opacity 0.4s ease;
+            }
+            .dropDownON{
+              opacity: 1;
+              -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.00125, 0, 0, 0, 1);
+              
+            }
+                .dropDownLI{
+                  padding-bottom: 15px;
+                  
+                }
+                .dropDownLI:hover{
 
-#navBar #logoBlock{
-  text-align: left;
-}
-
-#navBar td{
-padding-top:10px;
-vertical-align: middle;
-}
-
-.navBarLink{
-text-decoration: none;
-font-size: 17px;
-color: rgb(120,120,120);
-vertical-align: middle;
-}
-
-.navBarLink:hover{
-  color:white;
-}
+                }
 
 #homeImageDiv{
-  width:100%;
-  height:100%;
-  min-height:400px;
-  top:-10px;
+  margin-top: 70px;
+  height:670px;
+  min-width: 1024px;
   background-image:url("womanDeepBreath.jpg");
-  background-size:100% 100%;
+  background-size:100% auto;
+  background-repeat: no-repeat;
   opacity: .8;
+  overflow-y:hidden;
+  overflow-x:hidden;
+  
 }
+    @media screen and (min-width: 0px){
+        
+        #textSpanEnjoy{
+          font-size: 45px;
+        }
+        #textSpanRelief{
+          font-size: 20px;
+          line-height: 15px;
+        }
+        #chronicRhinitisButt,#solutionButt{
+          
+          padding: 10px 20px;
+        }
+        #chronicRhinitisButt:hover,#solutionButt:hover{
+          padding: 10px 20px;
+        }
 
-#homeImageDiv #firstHomeText{
-  position: relative;
-  top:275px;
-  left:25px;
-  z-index: 3;
-  color:rgb(55,55,55);
-}
-
-#homeImageDiv #learnMoreButt{
-  display:inline-block;
-  width:200px;
-  text-align: center;
-}
-
-#homeImageDiv #miscButt{
-  display: inline-block;
-  text-align: center;
-}
-
-#coolButton1,#coolButton2{
-  display: inline-block;
-  color:rgb(65,65,65);
-  transition: background-color 0.5s ease;
-  border: 2px solid rgb(85,85,85);
-  background-color: transparent;
-  padding: 11px 17px;
-}
-#coolButton2:hover{
-  background-color: rgb(95, 192, 103);
-  border: 0px;
-  color: white;
-  padding: 13px 19px;
-}
-#coolButton1:hover{
-  background-color: rgb(110, 162, 242);
-  border: 0px ;
-  color: white;
-  padding: 13px 19px;
-}
+    }
+    @media screen and (min-width: 1290px){
+        
+        #textSpanEnjoy{
+          font-size: 50px;
+          line-height: 50px;
+        }
+        #textSpanRelief{
+          font-size: 25px;
+          line-height: 20px;
+        }
+        #chronicRhinitisButt,#solutionButt{
+          
+          padding: 13px 30px;
+        }
+        #chronicRhinitisButt:hover,#solutionButt:hover{
+          padding: 13px 30px;
+        }
+    }
+    
+    #firstHomeText{
+      position: absolute;
+      /*z-index: 1;*/
+      color:rgba(77, 31, 31, 0.51);
+      line-height: 20px;
+    }
+        
+        #chronicRhinitisButt,#solutionButt{
+          display: inline-block;
+          color:rgba(77, 31, 31, 0.51);
+          transition: background-color 0.5s ease,border .6s ease;
+          border: 2px solid rgba(255, 255, 255, 0.51);
+          background-color: transparent;
+          /*padding: 11px 17px;*/
+        }
+        
+        #solutionButt:hover{
+          background-color: rgba(253, 53, 49, 1);/*rgb(95, 192, 103)*/
+          border:  2px solid rgba(253, 53, 49, 1);
+          color: white;
+          
+        }
+        #chronicRhinitisButt:hover{
+          background-color: rgba(106, 105, 107, 1);/*rgb(110, 162, 242);*/
+          border:2px solid rgba(106,105,107,1);
+          color: white;
+        }
 
 #homePar {
   /*color:rgb(55,55,55);*/
 
   opacity: 0;
  
- /*position: absolute;*/ /* check this out */
+ 
   width: 100%;
   margin: auto;
   padding: 30px;
@@ -119,7 +168,7 @@ vertical-align: middle;
   bottom: 20px;
   max-width: 650px;
   font-size: 17px;
-  transition: color 3s, opacity ease 2.9s;
+  transition: color 2s, opacity ease 2s;
 }
 
 #homeParHeader {
