@@ -8,52 +8,97 @@
     
 </head>
 
-<body>
+<body onresize="adjustPicture()" onload="adjustPicture()">
 	
 	<!-- Main Header Nav Bar -->
  <div id="navBarDiv">
-	<table id="navBarTable" cellspacing="0">
-        <tbody id="navBarTableBody">
-            <tr id="navBar">
-                <td width="50%" id="logoBlock">
-                    <a href="#home">
-                        <img id = "logo" src = "transparant_logo.png" align="center"> </img>
-                        <span>Arrinex</span>
-                    </a>
-                </td>
-                <td>
-                    <a id = "company" class="navBarLink" href="/company">Company</a>
-                </td>
-                <td>
-                    <a id = "forInvestors" class="navBarLink" href="/investors">For Investors</a>
-                </td>
-                <td>
-                    <a id = "forPatients" class="navBarLink"  href="/patients">For Patients</a>
-                </td>
-                <td>
-                    <a id = "contactUs"  class="navBarLink" href="/contact">Contact Us </a>
-                </td>
-        </tbody>
-    </table>
+    <ul id="navBarList">
+        <li id="logoBlock">
+            <a href="#home">
+                <img id = "logo" src = "transparant_logo.png" align="center"> </img>
+                <span>Arrinex, Inc.</span>
+            </a>
+        </li>
+        <li class="navBarLinks">
+            <a id = "contactUs"   href="/contact">Contact Us </a>
+        </li>
+        <li class="navBarLinks">
+            <a id = "forPatients"   href="/patients">For Patients</a>
+            <ul class="dropDownList">
+                <li class="dropDownLI">
+                    <a href="#theTeam">What is rhinitis</a>
+                </li>
+                <li class="dropDownLI">
+                    <a href="#theTeam">Current Solutions</a>
+                </li>
+                <li class="dropDownLI">
+                    <a href="#theTeam">Arrinex's Capability</a>
+                </li>
+            </ul>
+        </li>
+        <li class="navBarLinks">
+            <a id = "forInvestors"  href="/investors">For Investors</a>
+            <ul class="dropDownList">
+                <li class="dropDownLI">
+                    <a href="#theTeam">Executive Summary</a>
+                </li>
+                <li class="dropDownLI">
+                    <a href="#theTeam">Presentations</a>
+                </li>
+                <li class="dropDownLI">
+                    <a href="#theTeam">Business Plan</a>
+                </li>
+                <li class="dropDownLI">
+                    <a href="#theTeam">Clinical Data</a>
+                </li>
+                <li class="dropDownLI">
+                    <a href="#theTeam">Literature and Reference Papers</a>
+                </li>
+                <li class="dropDownLI">
+                    <a href="#theTeam">Videos</a>
+                </li>
+            </ul>
+        </li>
+        <li class="navBarLinks" >
+            <a id = "company"   href="#/company">Company</a>
+            <ul class="dropDownList">
+                <li class="dropDownLI">
+                    <a href="#theTeam">Products</a>
+                </li>
+                <li class="dropDownLI">
+                    <a href="#theTeam">The Team</a>
+                </li>
+                <li class="dropDownLI">
+                    <a href="#theTeam">Scientific Advisory Board</a>
+                </li>
+            </ul>
+
+        </li>
+        
+        
+        
+    </ul>
  </div>
 
- <div id="homeImageDiv" onwheel = "homeParReveal('homePar')">
- 	<div id="firstHomeText">
- 		<font size="20">
- 			Enjoy <b><i>peace</i></b> of mind.
- 		</font>
- 		<br>
- 		<font size="5">Get relief from chronic rhinitis with
- 		<br>
- 		breakthrough cryogenic therapy.</font>
- 		<br>
- 		<div id="coolButton1" onwheel = "homeParReveal('homePar')">
- 			What is Chronic Rhinitis?
- 		</div>
- 		<div id="coolButton2" onwheel = "homeParReveal('homePar')">
- 			The Arrinex Solution
- 		</div>
- 	</div>
+ <div id="homeImageDiv">
+        <div id="firstHomeText">
+            <span id="textSpanEnjoy" size="20">
+                Enjoy <b>peace</b> of mind
+            </span>
+            <br>
+            <br>
+            <span id="textSpanRelief" size="5">Get relief from chronic rhinitis with
+            <br>
+            breakthrough cryogenic therapy.</span>
+            <br>
+            <br>
+            <div id="chronicRhinitisButt">
+                What is Chronic Rhinitis?
+            </div>
+            <div id="solutionButt">
+                The Arrinex Solution
+            </div>
+        </div>
  </div>
 
 
