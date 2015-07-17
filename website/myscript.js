@@ -91,14 +91,14 @@ $(document).ready(function(){
 			    	$("#navBarDiv").css("height","50px");
 			    	$(".navBarLinks").css("padding","13px 17px");
 			    	$("#logoBlock").css("padding","10px 17px");
-			    	$(".dropDownList").css("border-top","17px solid black");
+			    	$(".dropDownList").css("top","17px");
 			    }
 			    else
 			    {
 			    	$("#navBarDiv").css("height","70px");
 			    	$(".navBarLinks").css("padding","25px 17px");
 			    	$("#logoBlock").css("padding","20px 17px");
-			    	$(".dropDownList").css("border-top","25px solid black");
+			    	$(".dropDownList").css("top","25px");
 			    }
 
         });
