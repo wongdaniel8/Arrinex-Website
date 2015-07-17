@@ -34,17 +34,32 @@ function homeParHide(ident) {
 	id.style.opacity = 0;
 }
 
-// $(document).ready(function(){
-//         $("body").scroll(function() {
-//             var scrolled = $(window).scrollTop();
-//             var win_height= $(window).height();
-//             var title = $("#homeParHeader");
-//             var revealTitleTop = title.offset().top;
-//             if (scrolled + win_height <= (revealTitleTop /1.02 )){
-//                     title.fadeOut(1000);
-//             }
-//         });
-//     });
+$(document).ready(function(){
+        $("body").scroll(function() {
+            var scrolled = $(window).scrollTop();
+            var win_height= $(window).height();
+            var title = $("#homeParHeader");
+            var revealTitleTop = title.offset().top;
+            if (scrolled + win_height <= (revealTitleTop /1.001 )){
+                    title.fadeOut(1000);
+            }
+        });
+    });
+
+
+
+// $(document).ready(function() {
+//     $("body").scroll(function () {
+//     	var scrolled = $(window).scrollTop(); 
+//     	var imgApex = $("#homeImageDiv").scrollTop();
+//     	if (scrolled >= imgApex) {
+//     		alert("success");
+//     		$("#homeParHeader").fadeOut(5000);
+//     	}
+//     }
+// }
+
+
 
 
 
