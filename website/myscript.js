@@ -23,7 +23,13 @@
 
 // }
 
-// function homeParReveal(ident) {
-// 	var id = document.getElementById(ident);
-// 	id.style.opacity = 1;
-// }
+function homeParReveal(ident) {
+	var id = document.getElementById(ident);
+	id.style.opacity = 1;
+	id.style.color = "rgb(105,105,105)";
+}
+
+function homeParHide(ident) {
+	var id = document.getElementById(ident);
+	id.style.opacity = 0;
+}
