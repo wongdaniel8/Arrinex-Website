@@ -4,7 +4,7 @@ body, html {
   overflow-x:hidden;
 }
     #navBarDiv {
-      z-index: 1;
+      z-index: 5;
       height: 70px;
       margin: 0px;
       width:100%;min-width: 1024px;
@@ -42,6 +42,7 @@ body, html {
           font-size: 17px;
           color: rgb(120,120,120);
           transition: padding .25s;
+
         }    
         
             .navBarLinks a{
@@ -52,6 +53,7 @@ body, html {
             color:white;
             }
             .dropDownList{
+          
               position: relative;
               top: 25px;
               width: 130px;
