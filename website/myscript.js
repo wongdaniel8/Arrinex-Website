@@ -128,14 +128,20 @@ $(document).ready(function(){
     //////////////login modal
     	$("#forInvestors").mouseover(
     		function(){
+    			$("#navBarDiv").css("z-index","5");
     			$("#passwordField").css("opacity",".8");
+    			$("#passwordField").css("z-index","3");
     			$("#passwordInput").css("opacity",".8");
+    			$("#passwordInput").css("z-index","3");
     		});
 
     	$("#passwordField").click(
     		function(){
+    			$("#navBarDiv").css("z-index","1");
     			$("#passwordField").css("opacity","0");
+    			$("#passwordField").css("z-index","0");
     			$("#passwordInput").css("opacity","0");
+    			$("#passwordInput").css("z-index","0");
     		});
     });
 		
