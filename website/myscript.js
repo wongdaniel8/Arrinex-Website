@@ -129,8 +129,14 @@ $(document).ready(function(){
     	$("#forInvestors").mouseover(
     		function(){
     			$("#passwordField").css("opacity",".8");
+    			$("#passwordInput").css("opacity",".8");
     		});
 
+    	$("#passwordField").click(
+    		function(){
+    			$("#passwordField").css("opacity","0");
+    			$("#passwordInput").css("opacity","0");
+    		});
     });
 		
 
