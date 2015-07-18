@@ -23,10 +23,8 @@
 
 // }
 
-// function homeParReveal(ident) {
-// 	var id = document.getElementById(ident);
-// 	id.style.opacity = 1;
-// }
+
+
 function adjustPicture()
 {
 	// 
@@ -59,7 +57,7 @@ function adjustPicture()
 
 function homeParReveal(ident) {
 	var id = document.getElementById(ident);
-	id.style.opacity = 1;
+	id.style.opacity = .8;
 	id.style.color = "rgb(105,105,105)";
 }
 
@@ -117,7 +115,7 @@ $(document).ready(function(){
 				}
 
         });
-
+	////////////	drop down menus
         $( "#navBarList li a" ).mouseover(
 		  function() {
 		    $( this ).parent().find(".dropDownList").addClass("dropDownON");
@@ -127,11 +125,14 @@ $(document).ready(function(){
 		    $( this ).find("ul").removeClass("dropDownON");
 		    
 		  });
-
+    //////////////login modal
+    	$("#forInvestors").mouseover(
+    		function(){
+    			$("#passwordField").css("opacity",".8");
+    		});
 
     });
-
-
+		
 
 
 

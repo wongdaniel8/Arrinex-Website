@@ -80,6 +80,33 @@ body, html {
 
                 }
 
+
+
+#passwordField {
+  opacity: 0;
+  top: 70px;
+  right: 60px;
+  left: 40px;
+ position: fixed;
+  z-index: 3;
+  background-color: black;
+  height: 300px; /*320 for reduced navbar */
+  width: 1000px;
+  margin: auto;
+  padding: 100px;
+  color: white;
+  text-align: center;
+  transition: opacity 3s ease;
+}
+
+#passwordInput {
+
+  display: block;
+  margin: auto;
+
+
+}
+
 #homeImageDiv{
   margin-top: 70px;
   height:670px;
@@ -181,7 +208,7 @@ body, html {
       bottom: 20px;
       max-width: 650px;
       font-size: 17px;
-      transition: opacity ease 0.8s;
+      transition: opacity ease 1s;
     }
 
     #rhinitisInfo {
