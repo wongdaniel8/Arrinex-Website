@@ -91,6 +91,8 @@ body, html {
   right: 60px;
   left: 40px;
  position: fixed;
+ font-size: 17px;
+ line-height: 40px;
   /*z-index: 3;*/
   background-color: black;
   height: 320px; /*320 for reduced navbar */
@@ -105,18 +107,27 @@ body, html {
 
 #passwordInput {
   /*border-radius: 25px;*/
+  /*content: "*";*/
+
   width: 520px;
   height: 30px;
   opacity: 0;
-  top: 350px;
+  top: 360px;
   right: 60px;
   left: 80px;
 position: fixed;
   display: block;
   margin: auto;
+  /*outline: none;*/
   /*z-index: 10;*/
-  transition: opacity 3s ease;
+  transition: opacity 2.8s linear;
 }
+
+#errorPar {
+  opacity: 0;
+  color: red;
+}
+
 
 #homeImageDiv{
   margin-top: 70px;

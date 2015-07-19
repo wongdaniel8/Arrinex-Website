@@ -38,26 +38,7 @@
         </li>
         <li class="navBarLinks">
             <a id = "forInvestors"  href="/investors">For Investors</a>
-            <ul class="dropDownList">
-                <li class="dropDownLI">
-                    <a href="#theTeam">Executive Summary</a>
-                </li>
-                <li class="dropDownLI">
-                    <a href="#theTeam">Presentations</a>
-                </li>
-                <li class="dropDownLI">
-                    <a href="#theTeam">Business Plan</a>
-                </li>
-                <li class="dropDownLI">
-                    <a href="#theTeam">Clinical Data</a>
-                </li>
-                <li class="dropDownLI">
-                    <a href="#theTeam">Literature and Reference Papers</a>
-                </li>
-                <li class="dropDownLI">
-                    <a href="#theTeam">Videos</a>
-                </li>
-            </ul>
+            
         </li>
         <li class="navBarLinks" >
             <a id = "company"   href="#/company">Company</a>
@@ -82,11 +63,49 @@
 
   <div id = "passwordField"> 
     <h1> FOR INVESTORS </h1>
-    <p> The following page is restricted to potential investors only. Please input your confidential key, or contact us to recieve one. </p>
+    <p> The following page is restricted to potential investors only. 
+        Please input your confidential key, or contact us to recieve one. Click anywhere in the black box to exit. </p>
+    <p id = "errorPar"><br> </br> The entered password was incorrect </p>
    <!--  <input id = "passwordInput" type = "text"> </input> -->
   </div>
-  <input id = "passwordInput" type = "text"> </input>
+  <!-- <form action="company.html"> -->
+  <form>
+  <input id = "passwordInput" type = "password" placeholder = "PASSWORD" onkeypress = "verifyKey(event)"> </input>
+</form>
+<script>
+function verification() {
+    var x;
+    var invalidDisplay = document.getElementById('errorPar');
 
+    x = document.getElementById("passwordInput").value;
+    try { 
+
+        if(x == "a") {
+            invalidDisplay.style.opacity = "0";
+            window.open("company.html");
+        }
+        else return invalid();
+    }
+    catch(err) {
+        message.innerHTML = "Input is " + err;
+    }
+}
+function verifyKey(e) {
+    var keycode;
+    if (window.event)
+        keycode = window.event.keyCode;
+    if (keycode == 13) {
+        alert("verifedKey");
+        return verification();
+        // window.open("company.html");
+    }
+}
+function invalid() {
+    var invalidDisplay = document.getElementById('errorPar');
+    invalidDisplay.style.opacity = 1;
+    alert("invalid key");
+}
+</script>
 
 
 

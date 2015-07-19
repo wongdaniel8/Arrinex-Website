@@ -136,6 +136,7 @@ $(document).ready(function(){
     		});
 
     	$("#passwordField").click(
+    	//$("#company").mouseover(
     		function(){
     			$("#navBarDiv").css("z-index","1");
     			$("#passwordField").css("opacity","0");
