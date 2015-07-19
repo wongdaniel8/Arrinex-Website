@@ -102,6 +102,8 @@ function verifyKey(e) {
 }
 function invalid() {
     var invalidDisplay = document.getElementById('errorPar');
+    document.getElementById("passwordInput").value = "";
+
     invalidDisplay.style.opacity = 1;
     alert("invalid key");
 }
