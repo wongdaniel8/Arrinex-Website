@@ -114,6 +114,10 @@ $(document).ready(function(){
 					$("#firstHomeText").css("opacity",""+parallax_opacity);
 				}
 
+
+			//FUNCTION to assist carousel
+				carouselTimer();
+
         });
 	////////////	drop down menus
         $( "#navBarList li a" ).mouseover(
@@ -125,6 +129,8 @@ $(document).ready(function(){
 		    $( this ).find("ul").removeClass("dropDownON");
 		    
 		  });
+
+
     //////////////login modal
     	$("#forInvestors").mouseover(
     		function(){
@@ -144,10 +150,124 @@ $(document).ready(function(){
     			$("#passwordInput").css("opacity","0");
     			$("#passwordInput").css("z-index","0");
     		});
-    });
+
+
+});
 		
 
+/////////////////PASSWORD SCRIPT START///////////////////////
+function verification() {
+    var x;
+    var invalidDisplay = document.getElementById('errorPar');
+
+    x = document.getElementById("passwordInput").value;
+    try { 
+
+        if(x == "a") {
+            invalidDisplay.style.opacity = "0";
+            window.open("company.html");
+        }
+        else return invalid();
+    }
+    catch(err) {
+        message.innerHTML = "Input is " + err;
+    }
+}
+function verifyKey(e) {
+    var keycode;
+    if (window.event)
+        keycode = window.event.keyCode;
+    if (keycode == 13) {
+        alert("verifedKey");
+        return verification();
+        // window.open("company.html");
+    }
+}
+function invalid() {
+    var invalidDisplay = document.getElementById('errorPar');
+    document.getElementById("passwordInput").value = "";
+
+    invalidDisplay.style.opacity = 1;
+    alert("invalid key");
+}
+
+/////////////////PASSWORD SCRIPT END///////////////////////
 
 
+var carousel_is_on = false;
+function carouselTimer()
+{
+	var pos_from_top = $("body").scrollTop();
+	var vert_pos_exist_soln_div = $("#existingSolutions").offset().top;
+	var height_exist_soln_div = parseFloat($("#existingSolutions").css("height"));
+	var carousel_var;
+		if (pos_from_top > vert_pos_exist_soln_div - height_exist_soln_div && pos_from_top < vert_pos_exist_soln_div + height_exist_soln_div)
+		{
+			var count = 0;
+			// each cycle takes 6 seconds
+			function executeCarousel()
+			{
+				if (carousel_is_on == false)
+				{
+
+				}
+				// the first 5 seconds wait to put the red cirlce
+				setTimeout(function(){
+					$("#wrong_pic_holder").css("display","block");
+					$("#wrong_pic_holder").css("opacity","1");
+					$("#wrong_pic_holder").css("top","0px");
+					$("#wrong_pic_holder").css("left","50px");
+					$("#wrong_pic_holder").css("width","600px");
+					$("#wrong_pic_holder").css("height","600px");
 
 
+				},7500);
+				// after the last second switch pictures
+				setTimeout(function(){
+					//hide the big red circle and return its original demensions and position
+					$("#wrong_pic_holder").css("display","none");
+					$("#wrong_pic_holder").css("top","-225px");
+					$("#wrong_pic_holder").css("left","-140px");
+					$("#wrong_pic_holder").css("width","1000px");
+					$("#wrong_pic_holder").css("height","1000px");
+
+
+					if (parseFloat($("#carouselList").css("margin-left")) < -695)
+					{
+						$("#carouselList").css("margin-left","0px");
+						count++;
+
+					}
+					else
+					{
+						var left_position = parseFloat($("#carouselList").css("margin-left")) - 695;
+						$("#carouselList").css("margin-left",""+left_position + "px");
+						count++;
+					}
+					// hide all the list items
+					$(".pictureDescription").css("display","none");
+
+					// only show the one we care about
+					 var the_chossen_one = $(".pictureDescription[data-position='"+((count%3)+1)+"']");
+					the_chossen_one.css("display","block");
+					the_chossen_one.css("opacity","1");
+
+				},10000);
+
+			}
+
+			// if the carousel is not already on turn it on
+			if (carousel_is_on == false)
+			{
+				// the first one starts off display: none so this fixes that
+				$(".pictureDescription[data-position='1']").css("display","block");
+				$(".pictureDescription[data-position='1']").css("opacity","1");
+
+				executeCarousel();
+				carousel_var = setInterval(function(){ executeCarousel() },11000);
+				carousel_is_on = true;
+			}
+			//if its on already do nothing
+		}
+
+}

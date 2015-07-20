@@ -11,107 +11,65 @@
 <body onresize="adjustPicture()" onload="adjustPicture()">
 	
 	<!-- Main Header Nav Bar -->
- <div id="navBarDiv">
-    <ul id="navBarList">
-        <li id="logoBlock">
-            <a href="#home">
-                <img id = "logo" src = "transparant_logo.png" align="center"> </img>
-                <span>Arrinex, Inc.</span>
-            </a>
-        </li>
-        <li class="navBarLinks">
-            <a id = "contactUs"   href="/contact">Contact Us </a>
-        </li>
-        <li class="navBarLinks">
-            <a id = "forPatients"   href="/patients">For Patients</a>
-            <ul class="dropDownList">
-                <li class="dropDownLI">
-                    <a href="#theTeam">What is rhinitis</a>
-                </li>
-                <li class="dropDownLI">
-                    <a href="#theTeam">Current Solutions</a>
-                </li>
-                <li class="dropDownLI">
-                    <a href="#theTeam">Arrinex's Capability</a>
-                </li>
-            </ul>
-        </li>
-        <li class="navBarLinks">
-            <a id = "forInvestors"  href="/investors">For Investors</a>
-            
-        </li>
-        <li class="navBarLinks" >
-            <a id = "company"   href="#/company">Company</a>
-            <ul class="dropDownList">
-                <li class="dropDownLI">
-                    <a href="#theTeam">Products</a>
-                </li>
-                <li class="dropDownLI">
-                    <a href="#theTeam">The Team</a>
-                </li>
-                <li class="dropDownLI">
-                    <a href="#theTeam">Scientific Advisory Board</a>
-                </li>
-            </ul>
-
-        </li>
-        
-        
-        
-    </ul>
- </div>
+    <div id="navBarDiv">
+        <ul id="navBarList">
+            <li id="logoBlock">
+                <a href="#home">
+                    <img id = "logo" src = "transparant_logo.png" align="center"> </img>
+                    <span>Arrinex, Inc.</span>
+                </a>
+            </li>
+            <li class="navBarLinks">
+                <a id = "contactUs"   href="/contact">Contact Us </a>
+            </li>
+            <li class="navBarLinks">
+                <a id = "forPatients"   href="/patients">For Patients</a>
+                <ul class="dropDownList">
+                    <li class="dropDownLI">
+                        <a href="#theTeam">What is rhinitis</a>
+                    </li>
+                    <li class="dropDownLI">
+                        <a href="#theTeam">Current Solutions</a>
+                    </li>
+                    <li class="dropDownLI">
+                        <a href="#theTeam">Arrinex's Capability</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navBarLinks">
+                <a id = "forInvestors"  href="/investors">For Investors</a>
+                
+            </li>
+            <li class="navBarLinks" >
+                <a id = "company"   href="#/company">Company</a>
+                <ul class="dropDownList">
+                    <li class="dropDownLI">
+                        <a href="#theTeam">Products</a>
+                    </li>
+                    <li class="dropDownLI">
+                        <a href="#theTeam">The Team</a>
+                    </li>
+                    <li class="dropDownLI">
+                        <a href="#theTeam">Scientific Advisory Board</a>
+                    </li>
+                </ul>
+            </li>
+       </ul>
+    </div>
 
 
-  <div id = "passwordField"> 
+<div id = "passwordField"> 
+
     <h1> FOR INVESTORS </h1>
     <p> The following page is restricted to potential investors only. 
         Please input your confidential key, or contact us to recieve one. Click anywhere in the black box to exit. </p>
     <p id = "errorPar"><br> </br> The entered password was incorrect </p>
    <!--  <input id = "passwordInput" type = "text"> </input> -->
-  </div>
-  <!-- <form action="company.html"> -->
-  <form>
-  <input id = "passwordInput" type = "password" placeholder = "PASSWORD" onkeypress = "verifyKey(event)"> </input>
+</div>
+<!-- <form action="company.html"> -->
+<form>
+    <input id = "passwordInput" type = "password" placeholder = "PASSWORD" onkeypress = "verifyKey(event)"> </input>
 </form>
-<script>
-
-function verifyKey(e) {
-    var keycode;
-    if (window.event)
-        keycode = window.event.keyCode;
-    if (keycode == 13) {
-        alert("verifedKey");
-        return verification();
-        // window.open("company.html");
-    }
-}
-function verification() {
-    var x;
-    var invalidDisplay = document.getElementById('errorPar');
-
-    x = document.getElementById("passwordInput").value;
-    try { 
-
-        if(x == "a") {
-            invalidDisplay.style.opacity = "0";
-            window.open("company.html");
-        }
-        else return invalid();
-    }
-    catch(err) {
-        message.innerHTML = "Input is " + err;
-    }
-}
-function invalid() {
-    var invalidDisplay = document.getElementById('errorPar');
-    document.getElementById("passwordInput").value = "";
-
-    invalidDisplay.style.opacity = 1;
-    alert("invalid key");
-}
-</script>
-
-
 
  <div id="homeImageDiv">
         <div id="firstHomeText">
@@ -137,27 +95,94 @@ function invalid() {
 
 <!-- Beginning of section divs -->
 
-<div id="parallaxHelpDiv">
-    <div class = "sectionDivs" id = "homePar">
-        <h1 align = "center" class = "headers" id = "homeParHeader"> WHO WE ARE </h1>
-        <p> We are a medical technology company focused on the design and development of products for the minimally invasive treatment of patients suffering from chronic rhinitis. Our ClariFix family of products is used by ENT physicians in patients with chronic rhinitis due to allergic or non-allergic causes.
-        </p>
+    <div id="parallaxHelpDiv">
+        <div class = "sectionDivs" id = "rhinitisInfo">
+        <h1 class = "headers"> WHAT IS RHINITIS? </h1>
+        <div id="homeParWrapperOne">
+            <div id="homeParPicOne" >
+                <img id = "people" src = "groupOfPeopleCircle.png" align="center"> </img>
+            </div>
+            <div id="homeParInfoOne" align="center">
+                <div id="divCell" align="center">
+                    <h3 style="height: 35px"> How <i>common</i> is this?</h3>
+                    <p id="randoPara">
+                        About <i>58 million</i> Americans have allergic rhinitis,
+                        and an additional <i>19 million</i> have non-allergic rhinitis.
+                    </p> 
+                </div>
+            </div>
+        </div>
+         <div id="homeParWrapperOne">
+            <div id="homeParPicOne" align="center">
+                <img id = "people" src = "triggersCircle.png" align="center"> </img>
+            </div>
+            <div id="homeParInfoOne" align="center">
+                <div id="divCell">
+                    <h3 style="height: 35px">What <i>triggers</i> rhinitis?</h3>
+                    <p id="randoPara">
+                        About <i>58 million</i> Americans have allergic rhinitis, 
+                        and an additional <i>19 million</i> have non-allergic rhinitis.
+                    </p> 
+                </div>
+            </div>
+        </div>
+        <div id="homeParWrapperOne">
+            <div id="homeParPicOne" align="center">
+                <img id = "people" src = "blowNoseCircle.png" align="center"> </img>
+            </div>
+            <div id="homeParInfoOne" align="center">
+                <div id="divCell">
+                    <h3 style="height: 35px"><i>Symptoms</i>?</h3>
+                    <p id="randoPara">
+                        About <i>58 million</i> Americans have allergic rhinitis,
+                        and an additional <i>19 million</i> have non-allergic rhinitis.
+                    </p> 
+                </div>
+            </div>
+        </div>
     </div>
 
-
-
-    <div class = "sectionDivs" id = "rhinitisInfo">
+    <!-- <div class = "sectionDivs" id = "rhinitisInfo">
     <h1 class = "headers"> WHAT IS CHRONIC RHINITIS? </h1>
     <p>About 58 million Americans have allergic rhinitis, which leads to symptoms such as sinusitis, or inflammation of the tissues that line the sinuses, eustachian tube dysfunction, ear infection, obstructive sleep apnea, and asthma. On the other hand, about 19 million have non-allergic rhinitis, which induces unpleasentries in the nose like postnasal drips, incessant runny noses and clogged stuffy noses, and violent sneezing. 
     
     Unfortunately, the implications of rhinitis do not stop at the symptoms. Both forms of rhinitis have been known to lead to loss of productivity at work, drowsiness, and increased, expensive, and frequent doctor visits. 
-    </p> 
-    </div>  
+    </p>
+    </div>   -->
 
-
-    
     <div class = "sectionDivs" id = "existingSolutions">
-    </div>      
+        <div id="carouselContainer">
+            <div id="wrong_pic_holder">
+            </div>
+            <div id="carouselImageContainer">
+                <ul id="carouselList">
+                    <li class="carouselLI" id="sinus_rinse">
+                    </li>
+                    <li class="carouselLI" id="nose_spary">
+                    </li>
+                    <li class="carouselLI" id="dealing_with">
+                    </li>
+                </ul>
+            </div>
+            <div id="textContainer">
+                <ul id="descriptionList">
+                    <li class="pictureDescription" data-position="1" data-degree="6" data-duration="3" convinience="7">
+                        <h3>Nasal rinsing</h3><p > is a procuess that involves squirtting a saline solution up the nostrils to purge the nasal cavities. Nasal rinses can be slightly repolsive and unfomfortable. At best, nasal rinses only bring about temporary relief from certain symptoms of allergies.
+                        </p>
+                    </li>
+                    <li class="pictureDescription" data-position="2" data-degree="7" data-duration="7" convinience="4">
+                        <h3>Steriod nasal sprays</h3><p> work by inhaling a liquid-aresol medicine up your nose for the purpose of reducing inflamation of the nasal lining. Depending on the type, some nasal sprays require several days to a week of continued use before any improvement in symptoms can be noticed.
+                        </p>
+                    </li>
+                    <li class="pictureDescription" data-position="3" data-degree="1" data-duration="1" convinience="10">
+                        <h3>Dealing with it.</h3><p> When the prospect of continually seeking medication or constantly trying different therapies seems to have no avail, many people are left with unfortunate choice of continuing the laborious process of seeking relief or just living with chronic rhinitis.
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>    
 	
 
 
@@ -167,6 +192,9 @@ function invalid() {
     
 
     <div class = "sectionDivs" id = "team"> 
+        <h1 align = "center" class = "headers" id = "homeParHeader"> WHO WE ARE </h1>
+        <p> We are a medical technology company focused on the design and development of products for the minimally invasive treatment of patients suffering from chronic rhinitis. Our ClariFix family of products is used by ENT physicians in patients with chronic rhinitis due to allergic or non-allergic causes.
+        </p>
     </div>
 
 
