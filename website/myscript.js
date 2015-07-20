@@ -157,22 +157,46 @@ $(document).ready(function(){
 
 /////////////////PASSWORD SCRIPT START///////////////////////
 function verification() {
+	var passwordArray = ["a", "b", "password"];
     var x;
     var invalidDisplay = document.getElementById('errorPar');
-
+    var i;
     x = document.getElementById("passwordInput").value;
     try { 
-
-        if(x == "a") {
-            invalidDisplay.style.opacity = "0";
-            window.open("company.html");
-        }
-        else return invalid();
+        for (i = 0; i < passwordArray.length; i++) {
+			if(x == passwordArray[i]) {
+	    	    invalidDisplay.style.opacity = "0";
+	    	    window.open("company.html");
+	    	    // window.open("company.html", "_self");
+	    	    // window.close();
+	    	    return;
+			}
+		}
+        return invalid();
     }
     catch(err) {
         message.innerHTML = "Input is " + err;
     }
 }
+
+// function verification() {
+//     var x;
+//     var invalidDisplay = document.getElementById('errorPar');
+
+//     x = document.getElementById("passwordInput").value;
+//     try { 
+
+//         if(x == "a") {
+//             invalidDisplay.style.opacity = "0";
+//             window.open("company.html");
+//         }
+//         else return invalid();
+//     }
+//     catch(err) {
+//         message.innerHTML = "Input is " + err;
+//     }
+// }
+
 function verifyKey(e) {
     var keycode;
     if (window.event)
