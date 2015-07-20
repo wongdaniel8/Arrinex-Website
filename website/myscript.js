@@ -80,11 +80,11 @@ $(document).ready(function(){
 	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 150) // scrolling down
 
 			    {
-			    	$("#homePar").css("opacity","1");
+			    	$("#rhinitisInfo").css("opacity","1");
 			    }
 			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 150)// scrolling up
 			    {
-			    	$("#homePar").css("opacity","0");
+			    	$("#rhinitisInfo").css("opacity","0");
 			    }
 			    
 			    scroll_point1 = scroll_point2;// update the data points to ensure accuracy

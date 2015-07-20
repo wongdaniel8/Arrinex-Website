@@ -223,6 +223,7 @@ position: fixed;
 
 
 #rhinitisInfo {
+  opacity: 0;
   background-color: white;
   color: black;
   height: 570px;
@@ -231,6 +232,7 @@ position: fixed;
   vertical-align: middle;
   padding:0px;
   padding-bottom: 15px;
+  transition: opacity 3s ease;
 }
   #homeParWrapperOne{
     height:100%;
@@ -315,7 +317,7 @@ position: fixed;
                     width: 1000px;
                     height: 1000px;
                 }
->>>>>>> d307a39e2c0b8c7293db479822b3ee0b4c11f009
+
 
                 1% {
                     display: block ; 
