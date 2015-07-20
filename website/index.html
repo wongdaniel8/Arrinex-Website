@@ -61,6 +61,7 @@
     </ul>
  </div>
 
+
   <div id = "passwordField"> 
     <h1> FOR INVESTORS </h1>
     <p> The following page is restricted to potential investors only. 
@@ -73,6 +74,17 @@
   <input id = "passwordInput" type = "password" placeholder = "PASSWORD" onkeypress = "verifyKey(event)"> </input>
 </form>
 <script>
+
+function verifyKey(e) {
+    var keycode;
+    if (window.event)
+        keycode = window.event.keyCode;
+    if (keycode == 13) {
+        alert("verifedKey");
+        return verification();
+        // window.open("company.html");
+    }
+}
 function verification() {
     var x;
     var invalidDisplay = document.getElementById('errorPar');
@@ -88,16 +100,6 @@ function verification() {
     }
     catch(err) {
         message.innerHTML = "Input is " + err;
-    }
-}
-function verifyKey(e) {
-    var keycode;
-    if (window.event)
-        keycode = window.event.keyCode;
-    if (keycode == 13) {
-        alert("verifedKey");
-        return verification();
-        // window.open("company.html");
     }
 }
 function invalid() {
