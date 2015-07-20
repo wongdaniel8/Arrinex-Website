@@ -4,7 +4,7 @@ body, html {
   overflow-x:hidden;
 }
     #navBarDiv {
-      z-index: 1;
+      z-index: 5;
       height: 70px;
       margin: 0px;
       width:100%;min-width: 1024px;
@@ -42,6 +42,7 @@ body, html {
           font-size: 17px;
           color: rgb(120,120,120);
           transition: padding .25s;
+
         }    
         
             .navBarLinks a{
@@ -52,6 +53,7 @@ body, html {
             color:white;
             }
             .dropDownList{
+          
               position: relative;
               top: 25px;
               width: 130px;
@@ -79,6 +81,53 @@ body, html {
                 .dropDownLI:hover{
 
                 }
+
+
+
+#passwordField {
+
+  opacity: 0;
+  top: 70px;
+  right: 60px;
+  left: 40px;
+ position: fixed;
+ font-size: 17px;
+ line-height: 40px;
+  /*z-index: 3;*/
+  background-color: black;
+  height: 320px; /*320 for reduced navbar */
+  /*width: 100%;*/
+  width: 1000px;
+  margin: auto;
+  padding: 100px;
+  color: white;
+  text-align: center;
+  transition: opacity 3s ease;
+}
+
+#passwordInput {
+  /*border-radius: 25px;*/
+  /*content: "*";*/
+
+  width: 520px;
+  height: 30px;
+  opacity: 0;
+  top: 360px;
+  right: 60px;
+  left: 80px;
+position: fixed;
+  display: block;
+  margin: auto;
+  /*outline: none;*/
+  /*z-index: 10;*/
+  transition: opacity 2.8s linear;
+}
+
+#errorPar {
+  opacity: 0;
+  color: red;
+}
+
 
 #homeImageDiv{
   margin-top: 70px;
@@ -130,9 +179,10 @@ body, html {
     }
     
     #firstHomeText{
+      opacity: 1;
       position: absolute;
       /*z-index: 1;*/
-      color:rgba(77, 31, 31, 0.51);
+      color:rgb(77, 31, 31);
       line-height: 20px;
     }
         
@@ -140,7 +190,7 @@ body, html {
           display: inline-block;
           color:rgba(77, 31, 31, 0.51);
           transition: background-color 0.5s ease,border .6s ease;
-          border: 2px solid rgba(255, 255, 255, 0.51);
+          border: 2px solid rgba(255, 255, 255, 1);
           background-color: transparent;
           /*padding: 11px 17px;*/
         }
@@ -159,63 +209,24 @@ body, html {
 
 /* ==============================================*/
 /* BEGINNING OF SECTIONDIVS */
-
-.sectionDivs {
-  padding: 30px;
-  height: 670px;
-  width: 100%;
-  text-align: center;
+#parallaxHelpDiv{
+  position: relative;
+  background-color: white;
 }
+    .sectionDivs {
+      padding: 30px;
+      height: 670px;
+      width: 100%;
+      text-align: center;
+    }
 
-#homePar {
-  opacity: 0;
-  width: 100%;
-  /*margin: auto;*/
-  padding-bottom: 300px;
-  color: black;
-  bottom: 20px;
-  /*max-width: 650px;*/
-  font-size: 17px;
-  transition: color 2s, opacity ease 2s;
-}
-  #homeParHeader{
-    font-family: "Century Gothic", sans-serif;
-    font-size: 50px;
-    font-weight: 100;
-    padding: 10px;
-    display: inherit;
-  }
-  #homeParTable{
-    width:864px;
-    height:90%;
-    margin: auto;
-  }
-        #pic{
-          column-count:1;
-        }
-        #para{
-          column-count:4;
-        }
 
-          /*#homeParPicOne{
-            width:100%;
-            height:100%;
-            background-image:url("groupOfPeople.gif");
-            background-size: contain;
-            background-repeat: no-repeat;
-          }
-          #homeParInfoOne{
-            width:100%;
-            height:100%;
-            text-align: center;
-            overflow:auto;
-          }*/
-    
 
 #rhinitisInfo {
   background-color: white;
   color: black;
-  height: 670px;
+  height: 570px;
+  min-width: 780px;
   display:inline-block;
   vertical-align: middle;
   padding:0px;
@@ -245,17 +256,174 @@ body, html {
       }
       #randoPara{
         text-align: center;
+        padding:0px 10px;
       }
         #divCell{
           display:table;
           width:100%;
           height:100%;
         }
+       /*#rhinitisInfo {
+      background-color: #BCBCBC;
+      color: white;
+    }
+
+     #rhinitisInfo {
+      opacity: 0;
+      margin: auto;
+      padding: 30px;
+      line-height: 150%;
+      color: black;
+      bottom: 20px;
+      max-width: 650px;
+      font-size: 17px;
+      transition: opacity ease 1s;
+    }*/
+
+    #existingSolutions {
+      color: white;
+    }
+        #carouselContainer{
+          width: 1024px;
+          height: 600px;
+          margin: auto;
+          background-color: transparent;
+          margin-top: 35px;
+          position: relative;
+        }
+            #wrong_pic_holder{
+              display: none;
+              opacity: 0;
+              position: absolute;
+              top: -225px;
+              left: -140px;
+              width: 1000px;
+              height: 1000px;
+              background-image: url("wrong_pic.png");
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+              -webkit-animation-duration: 1s;
+              -webkit-animation-name: fadeInFromNone;
+
+            }
+            @-webkit-keyframes fadeInFromNone {
+                0% {
+                    display:none; 
+                    opacity: 0;
+                    top:-225px;
+                    left: -140px;
+                    width: 1000px;
+                    height: 1000px;
+                }
+>>>>>>> d307a39e2c0b8c7293db479822b3ee0b4c11f009
+
+                1% {
+                    display: block ; 
+                    opacity: 0;
+                }
+
+                100% {
+                    display: block ; 
+                    opacity: 1;
+                    top: 0px;
+                    left:50px;
+                    width: 600px;
+                    height: 600px;
+                }
+            }
+            #carouselImageContainer{
+                width: 695px;
+                height: 100%;
+                display: inline-block;
+                overflow-x: hidden;
+                border-right: 25px solid white;
+            }
+                #carouselList{
+                  width: 2085px;
+                  height: 100%;
+                  padding-left: 0px;
+                  margin: 0px;
+                  list-style-type: none;
+                  margin-left: 0px;
+                  -webkit-transition: margin-left 1.5s ease;
+                }
+                    .carouselLI{
+                      display: inline-block;
+                      float: left;
+                      width:695px;
+                      height: 100%;
+                    }
+                    #sinus_rinse{
+                      background-image: url("sinus_rinse_carousel.png");
+                      background-repeat: no-repeat;
+                      background-size:auto 100%;
+                    }
+                    #dealing_with{
+                      background-image: url("dealing_with_allergies.jpg");
+                      background-repeat: no-repeat;
+                      background-size: auto 100%;
+                    }
+                    #nose_spary{
+                      background-image: url("nose_spray.png");
+                      background-repeat: no-repeat;
+                      background-size:100% 100%;
+                    }
+            #textContainer{
+              float: right;
+              width: 284px;
+              height: 100%;
+              background-color: white;
+              display: inline-block;
+              color: rgb(0,0,0);
+              font-size: 20px;
+              padding: 0px 10px;
+              overflow-y:hidden;
+            }
+
+                #descriptionList{
+                   margin-top: 0px;
+                  list-style-type: none;
+                  padding-left: 0px;
+                   
+                }
+                  .pictureDescription{
+                    margin-left: -20px;
+                    display: none;
+                  -webkit-animation-duration: 2s;
+                  -webkit-animation-name: fadeIn;
+                  }
+                  @-webkit-keyframes fadeIn {
+                      0% {
+                          display:none; 
+                          opacity: 0;
+                      }
+
+                      1% {
+                          display: block ; 
+                          opacity: 0;
+                      }
+
+                      100% {
+                          display: block ; 
+                          opacity: 1;   
+                      }
+                  }
+                        .pictureDescription h3{
+                          margin: 175px 70px -12px 30px;
+                        }
+                        .pictureDescription p{
+                          width: 80%;
+                          padding: 0px 10px 160px 10px;
+                          text-align: center;
+                          line-height: 25px;
+                          font-size: 17px;
+                        }
+
+                            .pictureDescription p span{
+                              font-weight: bold;
+                              font-size: 25px;
+                            }
 
 
 
 
-
-
-
-}
