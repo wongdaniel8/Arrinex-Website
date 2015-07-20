@@ -220,11 +220,15 @@ position: fixed;
       text-align: center;
     }
 
-    #homePar {
+       #rhinitisInfo {
+      background-color: #BCBCBC;
+      color: white;
+    }
+
+     #rhinitisInfo {
       opacity: 0;
       margin: auto;
       padding: 30px;
-      padding-bottom: 300px;
       line-height: 150%;
       color: black;
       bottom: 20px;
@@ -233,10 +237,149 @@ position: fixed;
       transition: opacity ease 1s;
     }
 
-    #rhinitisInfo {
+    #existingSolutions {
       background-color: #BCBCBC;
       color: white;
     }
+        #carouselContainer{
+          width: 1024px;
+          height: 600px;
+          margin: auto;
+          background-color: transparent;
+          margin-top: 35px;
+          position: relative;
+        }
+            #wrong_pic_holder{
+              display: none;
+              opacity: 0;
+              position: absolute;
+              top: -225px;
+              left: -140px;
+              width: 1000px;
+              height: 1000px;
+              background-image: url("wrong_pic.png");
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+              -webkit-animation-duration: 1s;
+              -webkit-animation-name: fadeInFromNone;
+
+            }
+            @-webkit-keyframes fadeInFromNone {
+                0% {
+                    display:none; 
+                    opacity: 0;
+                    top:-225px;
+                    left: -140px;
+                    width: 1000px;
+                    height: 1000px;
+                }
+
+                1% {
+                    display: block ; 
+                    opacity: 0;
+                }
+
+                100% {
+                    display: block ; 
+                    opacity: 1;
+                    top: 0px;
+                    left:50px;
+                    width: 600px;
+                    height: 600px;
+                }
+            }
+            #carouselImageContainer{
+                width: 695px;
+                height: 100%;
+                display: inline-block;
+                overflow-x: hidden;
+                border-right: 25px solid white;
+            }
+                #carouselList{
+                  width: 2085px;
+                  height: 100%;
+                  padding-left: 0px;
+                  margin: 0px;
+                  list-style-type: none;
+                  margin-left: 0px;
+                  -webkit-transition: margin-left 1.5s ease;
+                }
+                    .carouselLI{
+                      display: inline-block;
+                      float: left;
+                      width:695px;
+                      height: 100%;
+                    }
+                    #sinus_rinse{
+                      background-image: url("sinus_rinse_carousel.png");
+                      background-repeat: no-repeat;
+                      background-size:auto 100%;
+                    }
+                    #dealing_with{
+                      background-image: url("dealing_with_allergies.jpg");
+                      background-repeat: no-repeat;
+                      background-size: auto 100%;
+                    }
+                    #nose_spary{
+                      background-image: url("nose_spray.png");
+                      background-repeat: no-repeat;
+                      background-size:100% 100%;
+                    }
+            #textContainer{
+              float: right;
+              width: 284px;
+              height: 100%;
+              background-color: white;
+              display: inline-block;
+              color: rgb(0,0,0);
+              font-size: 20px;
+              padding: 0px 10px;
+              overflow-y:hidden;
+            }
+
+                #descriptionList{
+                   margin-top: 0px;
+                  list-style-type: none;
+                  padding-left: 0px;
+                   
+                }
+                  .pictureDescription{
+                    margin-left: -20px;
+                    display: none;
+                  -webkit-animation-duration: 2s;
+                  -webkit-animation-name: fadeIn;
+                  }
+                  @-webkit-keyframes fadeIn {
+                      0% {
+                          display:none; 
+                          opacity: 0;
+                      }
+
+                      1% {
+                          display: block ; 
+                          opacity: 0;
+                      }
+
+                      100% {
+                          display: block ; 
+                          opacity: 1;   
+                      }
+                  }
+                        .pictureDescription h3{
+                          margin: 175px 70px -12px 30px;
+                        }
+                        .pictureDescription p{
+                          width: 80%;
+                          padding: 0px 10px 160px 10px;
+                          text-align: center;
+                          line-height: 25px;
+                          font-size: 17px;
+                        }
+
+                            .pictureDescription p span{
+                              font-weight: bold;
+                              font-size: 25px;
+                            }
 
 
 
