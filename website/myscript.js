@@ -166,7 +166,7 @@ function verification() {
         for (i = 0; i < passwordArray.length; i++) {
 			if(x == passwordArray[i]) {
 	    	    invalidDisplay.style.opacity = "0";
-	    	    window.open("company.html");
+	    	    window.open("investors.html");
 	    	    // window.open("company.html", "_self");
 	    	    // window.close();
 	    	    return;
