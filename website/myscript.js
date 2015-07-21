@@ -80,11 +80,11 @@ $(document).ready(function(){
 	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 150) // scrolling down
 
 			    {
-			    	$("#homePar").css("opacity","1");
+			    	$("#rhinitisInfo").css("opacity","1");
 			    }
 			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 150)// scrolling up
 			    {
-			    	$("#homePar").css("opacity","0");
+			    	$("#rhinitisInfo").css("opacity","0");
 			    }
 			    
 			    scroll_point1 = scroll_point2;// update the data points to ensure accuracy
@@ -157,22 +157,46 @@ $(document).ready(function(){
 
 /////////////////PASSWORD SCRIPT START///////////////////////
 function verification() {
+	var passwordArray = ["a", "b", "password"];
     var x;
     var invalidDisplay = document.getElementById('errorPar');
-
+    var i;
     x = document.getElementById("passwordInput").value;
     try { 
-
-        if(x == "a") {
-            invalidDisplay.style.opacity = "0";
-            window.open("company.html");
-        }
-        else return invalid();
+        for (i = 0; i < passwordArray.length; i++) {
+			if(x == passwordArray[i]) {
+	    	    invalidDisplay.style.opacity = "0";
+	    	    window.open("investors.html");
+	    	    // window.open("company.html", "_self");
+	    	    // window.close();
+	    	    return;
+			}
+		}
+        return invalid();
     }
     catch(err) {
         message.innerHTML = "Input is " + err;
     }
 }
+
+// function verification() {
+//     var x;
+//     var invalidDisplay = document.getElementById('errorPar');
+
+//     x = document.getElementById("passwordInput").value;
+//     try { 
+
+//         if(x == "a") {
+//             invalidDisplay.style.opacity = "0";
+//             window.open("company.html");
+//         }
+//         else return invalid();
+//     }
+//     catch(err) {
+//         message.innerHTML = "Input is " + err;
+//     }
+// }
+
 function verifyKey(e) {
     var keycode;
     if (window.event)
