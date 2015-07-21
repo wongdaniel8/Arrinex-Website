@@ -1,6 +1,6 @@
 body, html {
-  font-family: sans-serif; !important;
   font-weight: 100;
+  font-family: "Avenir Next" !important;
   margin: 0 auto;
   overflow-x:hidden;
 }
@@ -103,7 +103,7 @@ body, html {
   padding: 100px;
   color: white;
   text-align: center;
-  transition: opacity 3s ease;
+  transition: opacity 2s ease;
 }
 
 #passwordInput {
@@ -498,24 +498,35 @@ position: fixed;
 
 }
 
+.sabPars {
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: normal;
+  /*line-height: 20px;*/
+
+}
+
 /*============================================================================
 BEGINNING OF INVESTORS STYLESHEET
 ============================================================================*/
 
 /*#pdfDisplay {
-  height: 800px;
+  position: absolute;
+  height: 3000px;
   width: 50%;
   margin-top: 100px;
   padding: 30px;
-  float: right;
+  float: left;
 }*/
 
 #article-Impact {
+  position: absolute;
   height: 550px;
   width: 50%;
   margin-top: 75px;
   padding: 30px;
-  float: right;
+  right: 10px;
+  /*float: right;*/
 
 }
 /*
