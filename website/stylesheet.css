@@ -568,6 +568,7 @@ BEGINNING OF INVESTORS STYLESHEET
 #article-canning {
   z-index: 0;
   opacity: 0; 
+
 }
 
 #article-kikawada {
@@ -624,6 +625,7 @@ BEGINNING OF INVESTORS STYLESHEET
 .articleButton:hover {
   background-color: rgba(106, 105, 107, 1);
   color: white;
+  opacity: .7;
   transition: background-color 1.5s ease;
 }
 
