@@ -549,7 +549,7 @@ BEGINNING OF INVESTORS STYLESHEET
   margin-top: 70px;
   /*position: absolute;*/
   height: 1000px;
-  width: 69%;
+  width: 70%;
   float: right;
   /*background-color: rgb(204, 204, 204);*/ /*pdf grey*/
   /*padding: 30px;*/
@@ -559,7 +559,7 @@ BEGINNING OF INVESTORS STYLESHEET
   z-index: 4; /*navbar z-index is 5*/
   position: absolute;
   float: right;
-  height: 550px;
+  height: 600px;
   width: 70%;
   margin-right: 0px;
   padding: 0px;
@@ -571,32 +571,55 @@ BEGINNING OF INVESTORS STYLESHEET
 #article-canning {
   /*z-index: 0;*/
   /*opacity: 0;*/
+ 
   position: absolute;
-  height: 550px;
+  float: right;
+  height: 600px;
   width: 70%;
+  margin-right: 0px;
   padding: 0px;
-  right: 10px;
+  right: 0px;
 }
 
-#articleButton {
-  width: 100%;
-  height: 35px;
-  padding: 10px 20px;
-  background-color: beige;
+.articleButton {
+  width: 90%;
+  height: 40px;
+  background-color: transparent;
   text-align: center;
   left-margin: 10px;
-  /*float: left;*/
   display: block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 12.5px;
+  margin-right: 15px;
+  padding-top: 20px;
+  /*border-radius: 15px;*/
+  border: 2px solid white;
+  color: rgb(196, 168, 143);
+}
+
+.articleButton:hover {
+  background-color: rgba(106, 105, 107, 1);;
+  color: white;
+
+
+
+  transition: background-color 1.5s ease;
 }
 
 #articleButtons {
   /*margin-top: 10px;*/
+  background-image: url("investorButtonbackground.jpg"); ;
   position: absolute;
-  float: left;
   width: 30%;
   left: 0;
+  height: 600px;
 }
-
+/*
+#articleButtonFirst {
+  margin-top: 0px;
+}
+*/
 
 
 
