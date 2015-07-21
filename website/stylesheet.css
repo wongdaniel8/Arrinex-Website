@@ -557,6 +557,7 @@ BEGINNING OF INVESTORS STYLESHEET
 
 #article-Impact {
   z-index: 4; /*navbar z-index is 5*/
+  
   position: absolute;
   float: right;
   height: 600px;
