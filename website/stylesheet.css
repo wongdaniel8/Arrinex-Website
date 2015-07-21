@@ -545,41 +545,63 @@ BEGINNING OF INVESTORS STYLESHEET
 ============================================================================*/
 
 #pdfDisplay {
-  /*z-index: 2;*/
   margin-top: 70px;
-  /*position: absolute;*/
   height: 1000px;
   width: 70%;
   float: right;
-  /*background-color: rgb(204, 204, 204);*/ /*pdf grey*/
-  /*padding: 30px;*/
   }
+
+.article {
+  position: absolute;
+  float: right;
+  height: 600px;
+  width: 70%;
+  margin-right: 0px;
+  padding: 0px;
+  right: 0px;
+}
 
 #article-Impact {
   z-index: 4; /*navbar z-index is 5*/
-  
-  position: absolute;
-  float: right;
-  height: 600px;
-  width: 70%;
-  margin-right: 0px;
-  padding: 0px;
-  right: 0px;
-  
-
 }
 
 #article-canning {
-  /*z-index: 0;*/
-  /*opacity: 0;*/
- 
+  z-index: 0;
+  opacity: 0; 
+}
+
+#article-kikawada {
+  z-index: 0;
+  opacity: 0;
+}
+
+#article-epidemiology{
+ z-index: 0;
+ opacity: 0;
+}
+
+#article-ikeda{
+ z-index: 0;
+ opacity: 0;
+}
+
+#article-WhitePaper{
+ z-index: 0;
+ opacity: 0;
+}
+
+#article-prevalence{
+ z-index: 0;
+ opacity: 0;
+}
+
+#articleButtons {
+  /*margin-top: 10px;*/
+  background-image: url("merged copy.png"); ;
   position: absolute;
-  float: right;
+  width: 30%;
+  left: 0;
   height: 600px;
-  width: 70%;
-  margin-right: 0px;
-  padding: 0px;
-  right: 0px;
 }
 
 .articleButton {
@@ -600,27 +622,10 @@ BEGINNING OF INVESTORS STYLESHEET
 }
 
 .articleButton:hover {
-  background-color: rgba(106, 105, 107, 1);;
+  background-color: rgba(106, 105, 107, 1);
   color: white;
-
-
-
   transition: background-color 1.5s ease;
 }
-
-#articleButtons {
-  /*margin-top: 10px;*/
-  background-image: url("merged copy.png"); ;
-  position: absolute;
-  width: 30%;
-  left: 0;
-  height: 600px;
-}
-/*
-#articleButtonFirst {
-  margin-top: 0px;
-}
-*/
 
 
 
