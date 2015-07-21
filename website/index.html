@@ -145,11 +145,19 @@
         <div id="carouselContainer">
             <div id="wrong_pic_holder">
             </div>
+            <image id="left_picture" src="left_picture.png" onclick="stopCarousel()">
+            </image>
+            <image id="right_picture" src="right_picture.png" onclick="stopCarousel()">
+            </image>
             <div id="carouselImageContainer">
-                <ul id="carouselList">
+                <ul class="carouselList">
                     <li class="carouselLI" id="sinus_rinse">
                     </li>
+                    <li class="carouselLI" id="sinus_medication">
+                    </li>
                     <li class="carouselLI" id="nose_spary">
+                    </li>
+                    <li class="carouselLI" id="sinus_surgery">
                     </li>
                     <li class="carouselLI" id="dealing_with">
                     </li>
@@ -157,15 +165,27 @@
             </div>
             <div id="textContainer">
                 <ul id="descriptionList">
-                    <li class="pictureDescription" data-position="1" data-degree="6" data-duration="3" convinience="7">
+                    <li class="pictureDescription" data-position="1" >
                         <h3>Nasal rinsing</h3><p > is a process that involves squirting a saline solution up the nostrils to purge the nasal cavities. Nasal rinses can be slightly repulsive and unfomfortable. At best, nasal rinses only bring about temporary relief from certain symptoms of allergies.
                         </p>
                     </li>
-                    <li class="pictureDescription" data-position="2" data-degree="7" data-duration="7" convinience="4">
+                    <li class="pictureDescription" data-position="2" >
+                        <h3>Medication</h3>
+                        <p> 
+                            is often used to mask the symptoms of rhinitis by temporarily surpressing the release of histamines within the body. Even if medication is susccessful in reducing the irritating affects of rhinitis, they must be constantly replenished which can take a toll financially.
+                       </p>
+                    </li>
+                    <li class="pictureDescription" data-position="3" >
                         <h3>Steriod nasal sprays</h3><p> work by inhaling a liquid-aresol medicine up your nose for the purpose of reducing inflammation of the nasal lining. Depending on the type, some nasal sprays require several days to a week of continued use before any improvement in symptoms can be noticed.
                         </p>
                     </li>
-                    <li class="pictureDescription" data-position="3" data-degree="1" data-duration="1" convinience="10">
+                    <li class="pictureDescription" data-position="4" >
+                        <h3>Sinus surgery</h3>
+                        <p> 
+                            is used in for certain cases of chronic rhinits but is often seen as a last resort. Surgery can help drain fluid built up in the sinuses or remove nasal polyps, either of which could be the result of either form of rhinis.
+                        </p>
+                    </li>
+                    <li class="pictureDescription" data-position="5" >
                         <h3>Dealing with it.</h3><p> When the prospect of continually seeking medication or constantly trying different therapies seems to have no avail, many people are left with the unfortunate choice of continuing the laborious process of seeking relief, or just living with chronic rhinitis.
 
                         </p>
@@ -174,7 +194,6 @@
             </div>
         </div>
     </div>    
-	</div>
 
 
     <div class = "sectionDivs" id = "arrinexSolution">
