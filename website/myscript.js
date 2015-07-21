@@ -310,12 +310,16 @@ function carouselTimer()
 	//============================================================
 	// JAVASCRIPT FOR INVESTORS PAGE
 	//============================================================
-
+    
+    zIndex = 4;
 	function articleReveal(ident) {
 		var id = document.getElementById(ident);
 		id.style.opacity = 1;
-		id.style.zIndex = "4";
+		// id.style.zIndex = "4";
 
+		var num = zIndex.toString()
+		zIndex++;
+		id.style.zIndex = num;
 	}
 
 
