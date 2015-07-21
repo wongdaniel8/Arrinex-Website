@@ -1,7 +1,5 @@
-// function navBarHover(ident) {
-// 	var id = document.getElementById(ident);
-// 	id.style.color = "#606060";
-// }
+
+	
 
 
 // function navBarHoverAway(ident, ident2) {
@@ -294,4 +292,26 @@ function carouselTimer()
 			//if its on already do nothing
 		}
 
+
+
+
 }
+
+	//============================================================
+	// JAVASCRIPT FOR INVESTORS PAGE
+	//============================================================
+
+	function articleReveal(ident) {
+		var id = document.getElementById(ident);
+		id.style.opacity = 1;
+		id.style.zIndex = "4";
+
+	}
+
+
+
+
+
+
+
+
