@@ -546,10 +546,12 @@ BEGINNING OF INVESTORS STYLESHEET
 
 #pdfDisplay {
   /*z-index: 2;*/
-  margin-top: 50px;
-  position: absolute;
+  margin-top: 70px;
+  /*position: absolute;*/
   height: 1000px;
-  width: 100%;
+  width: 69%;
+  float: right;
+  /*background-color: rgb(204, 204, 204);*/ /*pdf grey*/
   /*padding: 30px;*/
   }
 
@@ -559,9 +561,9 @@ BEGINNING OF INVESTORS STYLESHEET
   float: right;
   height: 550px;
   width: 70%;
-  margin-right: 10px;
+  margin-right: 0px;
   padding: 0px;
-  right: 10px;
+  right: 0px;
   
 
 }
@@ -577,16 +579,22 @@ BEGINNING OF INVESTORS STYLESHEET
 }
 
 #articleButton {
-  width: 20%;
+  width: 100%;
   height: 35px;
   padding: 10px 20px;
   background-color: beige;
   text-align: center;
   left-margin: 10px;
-  float: left;
+  /*float: left;*/
   display: block;
+}
 
-
+#articleButtons {
+  /*margin-top: 10px;*/
+  position: absolute;
+  float: left;
+  width: 30%;
+  left: 0;
 }
 
 

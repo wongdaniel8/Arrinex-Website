@@ -302,12 +302,10 @@ function carouselTimer()
 
 			//if its on already do nothing
 		}
-
-
-
-
-
 }
+
+
+
 
 	//============================================================
 	// JAVASCRIPT FOR INVESTORS PAGE
@@ -328,7 +326,7 @@ function carouselTimer()
 
 
 
-}
+
 
 function stopCarousel()
 {
