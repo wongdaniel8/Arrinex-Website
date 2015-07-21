@@ -217,64 +217,74 @@ function invalid() {
 
 
 var carousel_is_on = false;
+var carousel_var;
+var manual_override = false;
 function carouselTimer()
 {
 	var pos_from_top = $("body").scrollTop();
 	var vert_pos_exist_soln_div = $("#existingSolutions").offset().top;
 	var height_exist_soln_div = parseFloat($("#existingSolutions").css("height"));
-	var carousel_var;
+	
 		if (pos_from_top > vert_pos_exist_soln_div - height_exist_soln_div && pos_from_top < vert_pos_exist_soln_div + height_exist_soln_div)
 		{
 			var count = 0;
 			// each cycle takes 6 seconds
 			function executeCarousel()
 			{
-				if (carousel_is_on == false)
-				{
-
-				}
+				
 				// the first 5 seconds wait to put the red cirlce
 				setTimeout(function(){
-					$("#wrong_pic_holder").css("display","block");
-					$("#wrong_pic_holder").css("opacity","1");
-					$("#wrong_pic_holder").css("top","0px");
-					$("#wrong_pic_holder").css("left","50px");
-					$("#wrong_pic_holder").css("width","600px");
-					$("#wrong_pic_holder").css("height","600px");
+					if (manual_override == false)
+					{
+						$("#wrong_pic_holder").css("display","block");
+						$("#wrong_pic_holder").css("opacity","1");
+						$("#wrong_pic_holder").css("top","0px");
+						$("#wrong_pic_holder").css("left","120px");
+						$("#wrong_pic_holder").css("width","600px");
+						$("#wrong_pic_holder").css("height","600px");
+					}
 
 
-				},7500);
+				},500);
 				// after the last second switch pictures
 				setTimeout(function(){
 					//hide the big red circle and return its original demensions and position
-					$("#wrong_pic_holder").css("display","none");
-					$("#wrong_pic_holder").css("top","-225px");
-					$("#wrong_pic_holder").css("left","-140px");
-					$("#wrong_pic_holder").css("width","1000px");
-					$("#wrong_pic_holder").css("height","1000px");
-
-
-					if (parseFloat($("#carouselList").css("margin-left")) < -695)
+					if (manual_override == false)
 					{
-						$("#carouselList").css("margin-left","0px");
-						count++;
+						$("#wrong_pic_holder").css("display","none");
+						$("#wrong_pic_holder").css("top","-225px");
+						$("#wrong_pic_holder").css("left","-140px");
+						$("#wrong_pic_holder").css("width","1000px");
+						$("#wrong_pic_holder").css("height","1000px");
 
+
+						if ((count+1) % 5 == 0 && count > 0)
+						{
+							$(".carouselList").addClass("temp_disable_carousel_animation");
+							$(".temp_disable_carousel_animation").removeClass("carouselList");
+							$(".temp_disable_carousel_animation").css("margin-left","0px");
+							//disables the annoying transition back to margin elft 0
+							$(".temp_disable_carousel_animation").css("margin-left");
+							$(".temp_disable_carousel_animation").addClass("carouselList");
+							$(".carouselList").removeClass("temp_disable_carousel_animation");
+							count++;
+						}
+						else
+						{
+							var left_position = parseFloat($(".carouselList").css("margin-left")) - 695;
+							$(".carouselList").css("margin-left",""+left_position + "px");
+							count++;
+						}
+						// hide all the list items
+						$(".pictureDescription").css("display","none");
+
+						// only show the one we care about
+						 var the_chossen_one = $(".pictureDescription[data-position='"+((count%5)+1)+"']");
+						the_chossen_one.css("display","block");
+						the_chossen_one.css("opacity","1");
 					}
-					else
-					{
-						var left_position = parseFloat($("#carouselList").css("margin-left")) - 695;
-						$("#carouselList").css("margin-left",""+left_position + "px");
-						count++;
-					}
-					// hide all the list items
-					$(".pictureDescription").css("display","none");
 
-					// only show the one we care about
-					 var the_chossen_one = $(".pictureDescription[data-position='"+((count%3)+1)+"']");
-					the_chossen_one.css("display","block");
-					the_chossen_one.css("opacity","1");
-
-				},10000);
+				},3000);
 
 			}
 
@@ -286,11 +296,13 @@ function carouselTimer()
 				$(".pictureDescription[data-position='1']").css("opacity","1");
 
 				executeCarousel();
-				carousel_var = setInterval(function(){ executeCarousel() },11000);
+				carousel_var = setInterval(function(){ executeCarousel() },3000);
 				carousel_is_on = true;
 			}
+
 			//if its on already do nothing
 		}
+
 
 
 
@@ -315,3 +327,11 @@ function carouselTimer()
 
 
 
+
+}
+
+function stopCarousel()
+{
+	clearTimeout(carousel_var);
+	manual_override = true;
+}
