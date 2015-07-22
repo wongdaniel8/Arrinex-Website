@@ -129,6 +129,7 @@ $(document).ready(function(){
 		  });
 
 
+
     //////////////login modal
     	$("#forInvestors").mouseover(
     		function(){
@@ -151,6 +152,22 @@ $(document).ready(function(){
 
 
 });
+
+
+//////////Display Bio
+    function fullBio(event){
+    	if ($(event + 'Para').css("display") == 'none'){
+    		$("#sab").css("height", "670px");
+    		$(event).parent().css("height", "235px");
+    		$(event + 'Para').css("display", "inline");
+    		$(event + 'Button').html("Full Bio &uarr;");
+    	} else{
+    		$(event).parent().css("height", "100px");
+    		$("#sab").css("height", "270px");
+    		$(event + 'Para').css("display", "none");
+    		$(event + 'Button').html("Full Bio &darr;");
+    	}
+    }
 		
 
 /////////////////PASSWORD SCRIPT START///////////////////////

@@ -484,15 +484,6 @@ position: fixed;
 
 }
 
-.teamHeader {
-  display: absolute;
-  float: center;
-  margin:auto;
-  left: 10px;
-  padding: 0px;
-
-}
-
 #vahidSaadat {
   margin-top:300px;
   display: inline-block;
@@ -515,30 +506,51 @@ position: fixed;
   padding: 0px;
   margin: 0px;
   vertical-align: middle;
-
 }
-
-
-
-#sabPerson {
-
-
+/*3x2*/
+#sab{
+  text-align: center;
 }
-.sabPars {
-  font-size: 15px;
-  text-decoration: none;
-  font-weight: normal;
-  /*line-height: 20px;*/
-
+#firstRow{
+  height:100px;
 }
-
-.sabPars {
-  font-size: 15px;
-  text-decoration: none;
-  font-weight: normal;
-  /*line-height: 20px;*/
-
+#secondRow{
+  height:100px;
 }
+#thirddRow{
+  height:100px;
+}
+.sabPerson {
+  margin: 15px 10px;
+  width:370px;
+  height: 100%;
+  display: inline-block;
+  padding: 15px 0px;
+  top: 0px;
+  vertical-align:top;
+}
+    .teamHeader {
+      /*display: absolute;
+      float: center;*/
+      width:380px;
+      left: 10px;
+      padding: 5px 0px;
+
+    }
+    .fullBioButton{
+      font-size:14px;
+      font-weight:400;
+      margin-left: 30px;
+      width:50px;
+    }
+        .sabPars {
+          font-size: 15px;
+          text-decoration: none;
+          font-weight: normal;
+          /*line-height: 20px;*/
+          display:none;
+
+        }
 
 /*============================================================================
 BEGINNING OF INVESTORS STYLESHEET

@@ -133,14 +133,6 @@
         </div>
     </div>
 
-    <!-- <div class = "sectionDivs" id = "rhinitisInfo">
-    <h1 class = "headers"> WHAT IS CHRONIC RHINITIS? </h1>
-    <p>About 58 million Americans have allergic rhinitis, which leads to symptoms such as sinusitis, or inflammation of the tissues that line the sinuses, eustachian tube dysfunction, ear infection, obstructive sleep apnea, and asthma. On the other hand, about 19 million have non-allergic rhinitis, which induces unpleasentries in the nose like postnasal drips, incessant runny noses and clogged stuffy noses, and violent sneezing. 
-    
-    Unfortunately, the implications of rhinitis do not stop at the symptoms. Both forms of rhinitis have been known to lead to loss of productivity at work, drowsiness, and increased, expensive, and frequent doctor visits. 
-    </p>
-    </div>   -->
-
     <div class = "sectionDivs" id = "existingSolutions">
         <div id="carouselContainer">
             <div id="wrong_pic_holder">
@@ -218,37 +210,55 @@
 
 
 
-        <div id = "sab">
-            <h1 class = "headers"> SCIENTIFIC ADVISORY BOARD <h1>
-            <div class = "sabPerson" id = "peterHwang">
-            <h5 class = "teamHeader"> Peter Hwang, M.D.</h5>
-                <p class = "sabPars">Peter Hwang is a professor of Otololaryngology at the Stanford University Medical Center, focusing on head and neck surgery. He is the chief of Stanford Medical's division of Rhinology and Endoscopic Skull Base Surgery.</p>
+    <div id="sab">
+        <h1 class="headers"> SCIENTIFIC ADVISORY BOARD </h1>
+        <div id="firstRow">
+            <div class="sabPerson" id="hwang">
+                <span class="teamHeader"> Peter Hwang, M.D.</span>
+                <span class="fullBioButton" id="hwangButton" onclick="fullBio('#hwang')">Full Bio &darr;</span>
+                <hr id="teamHeaderUnderline">
+                <p class="sabPars" id="hwangPara">Peter Hwang is a professor of Otololaryngology at the Stanford University Medical Center, focusing on head and neck surgery. He is the chief of Stanford Medical's division of Rhinology and Endoscopic Skull Base Surgery.</p>
             </div>
-            <div id = "rayWeiss">
-            <h5 class = "teamHeader">Ray Weiss, M.D.</h5>
-            <p class = "sabPars"> Ray Weiss is a graduate of the University of Texas Medical School at San Antonio. He is Board certified by the American Board of Otolaryngology, and is a Fellow of the American Academy of Otolaryngology - Head and Neck Surgery, and a member of the American Rhinology Society.
+            <div class="sabPerson" id="weiss">
+                <span class="teamHeader">Ray Weiss, M.D.</span>
+                <span class="fullBioButton" id="weissButton" onclick="fullBio('#weiss')">Full Bio &darr;</span>
+                <hr id="teamHeaderUnderline">
+                <p class="sabPars" id="weissPara"> Ray Weiss is a graduate of the University of Texas Medical School at San Antonio. He is Board certified by the American Board of Otolaryngology, and is a Fellow of the American Academy of Otolaryngology - Head and Neck Surgery, and a member of the American Rhinology Society.</p>
             </div>
-            <div id = "williamBolger">
-            <h5 class = "teamHeader">William Bolger, M.D.</h5>
-            <p class = "sabPars"> Dr. William Bolger is an ENT-otolaryngologist in Jacksonville, Florida and is affiliated with Mayo Clinic. William Bolger recieved his medical degree from the F. Edward Hebert School of Medicine, Uniformed Services University of the Health Sciences. </p> 
+        </div>
+        <div id="secondRow">
+            <div class="sabPerson" id="bolger">
+                <span class="teamHeader">William Bolger, M.D.</span>
+                <span class="fullBioButton" id="bolgerButton" onclick="fullBio('#bolger')">Full Bio &darr;</span>
+                <hr id="teamHeaderUnderline">
+                <p class="sabPars" id="bolgerPara"> Dr. William Bolger is an ENT-otolaryngologist in Jacksonville, Florida and is affiliated with Mayo Clinic. William Bolger recieved his medical degree from the F. Edward Hebert School of Medicine, Uniformed Services University of the Health Sciences. </p> 
+            
+            </div>
+            <div class="sabPerson" id="goode">
+                <span class="teamHeader">Richard Goode, M.D.</span>
+                <span class="fullBioButton" id="goodeButton" onclick="fullBio('#goode')">Full Bio &darr;</span>
+                <hr id="teamHeaderUnderline">
+                <p class="sabPars" id="goodePara"> Dr. Goode is a professor emiritus of Otolarnygology at Stanford. He recieved his medical degree at the USC Keck School of Medicine. Dr. Goode held the title of president of the American Academy of Otolaryngology-Head and Neck Surgery. 
+                </p>
+            </div>
+        </div>
+        <div id="thirdRow">
+            <div class="sabPerson" id="nelson">
+                <span class="teamHeader">Lionel Nelson, M.D.</span>
+                <span class="fullBioButton" id="nelsonButton" onclick="fullBio('#nelson')">Full Bio &darr;</span>
+                <hr id="teamHeaderUnderline">
+                <p class="sabPars" id="nelsonPara">Lionel Nelson is a graduate from the Yale School of Medicine. He did his residency at Stanford and currently works in San Jose, in affiliation with Good Samaritan Hospital. </p>
+                </div>
+            <div class="sabPerson" id="strome">
+                <span class="teamHeader">Marshall Strome, M.D.</span>
+                <span class="fullBioButton" id="stromeButton" onclick="fullBio('#strome')">Full Bio &darr;</span>
+                <hr id="teamHeaderUnderline">
+                <p class="sabPars" id="stromePara"> Dr. Strome recieved his degree in medicine from the University of Michigan Medical School and has been in practice for 51 years. He is affiliated with Mount Sinai St. Luke's-Roosevelt, and is the Director for the Center for Head and Neck Oncology at the  New York Head and Neck Institute. 
+                </p>
+            </div>
+        </div>
         
-           </div>
-           <div id = "richardGoode">
-            <h5 class = "teamHeader">Richard Goode, M.D.</h5>
-            <p class = "sabPars"> Dr. Goode is a professor emiritus of Otolarnygology at Stanford. He recieved his medical degree at the USC Keck School of Medicine. Dr. Goode held the title of president of the American Academy of Otolaryngology-Head and Neck Surgery. 
-            </p>
-
-            </div>
-           <div id = "lionelNelson">
-            <h5 class = "teamHeader">Lionel Nelson, M.D.</h5>
-            <p class = "sabPars">Lionel Nelson is a graduate from the Yale School of Medicine. He did his residency at Stanford and currently works in San Jose, in affiliation with Good Samaritan Hospital. </p>
-            </div>
-           <div id = "marshallStrome">
-            <h5 class = "teamHeader">Marshall Strome, M.D.</h5>
-            <p class = "sabPars"> Dr. Strome recieved his degree in medicine from the University of Michigan Medical School and has been in practice for 51 years. He is affiliated with Mount Sinai St. Luke's-Roosevelt, and is the Director for the Center for Head and Neck Oncology at the  New York Head and Neck Institute. 
-            </p>
-         </div>
-            <p class = "sabPars">We are a medical technology company focused on the design and development of products for the minimally invasive treatment of patients suffering from chronic rhinitis. Our ClariFix family of products is used by ENT physicians in patients with chronic rhinitis due to allergic or non-allergic causes.
+        <p class = "sabPars">We are a medical technology company focused on the design and development of products for the minimally invasive treatment of patients suffering from chronic rhinitis. Our ClariFix family of products is used by ENT physicians in patients with chronic rhinitis due to allergic or non-allergic causes.
             </p>
         </div>
   <!--   </div> -->
