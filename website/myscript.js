@@ -1,28 +1,4 @@
-
 	
-
-
-// function navBarHoverAway(ident, ident2) {
-// 	var id = document.getElementById(ident);
-// 	id.style.color = "#B8B8B8";
-//     var id2 = document.getElementById(ident2);
-//     // id2.style.display = "none";
-//     id2.style.opacity = 0;
-
-// }
-
-//  on mouseover of main navigation, displays the hidden mini-summary and changes font color of link hovered over 
-// function displayHidden(ident, self) {
-// 	var id = document.getElementById(ident);
-// 	id.style.display = "block";
-// 	id.style.opacity = .9;
-// 	var self = document.getElementById(self);
-// 	self.style.color = "black";
-
-// }
-
-
-
 function adjustPicture()
 {
 	// 
@@ -133,7 +109,7 @@ $(document).ready(function(){
     //////////////login modal
     	$("#forInvestors").mouseover(
     		function(){
-    			$("#navBarDiv").css("z-index","5");
+    			$("#navBarDiv").css("z-index","1000"); //1000 to fix issue of pdf z index exceeding z index of navbar in investors page FIXME
     			$("#passwordField").css("opacity",".8");
     			$("#passwordField").css("z-index","3");
     			$("#passwordInput").css("opacity",".8");
@@ -194,24 +170,6 @@ function verification() {
     }
 }
 
-// function verification() {
-//     var x;
-//     var invalidDisplay = document.getElementById('errorPar');
-
-//     x = document.getElementById("passwordInput").value;
-//     try { 
-
-//         if(x == "a") {
-//             invalidDisplay.style.opacity = "0";
-//             window.open("company.html");
-//         }
-//         else return invalid();
-//     }
-//     catch(err) {
-//         message.innerHTML = "Input is " + err;
-//     }
-// }
-
 function verifyKey(e) {
     var keycode;
     if (window.event)
@@ -219,7 +177,7 @@ function verifyKey(e) {
     if (keycode == 13) {
         alert("verifedKey");
         return verification();
-        // window.open("company.html");
+        window.open("company.html");
     }
 }
 function invalid() {
@@ -327,12 +285,20 @@ function carouselTimer()
 	//============================================================
 	// JAVASCRIPT FOR INVESTORS PAGE
 	//============================================================
+    
+    zIndex = 4;
 
 	function articleReveal(ident) {
 		var id = document.getElementById(ident);
-		id.style.opacity = 1;
-		id.style.zIndex = "4";
+		var navBar = document.getElementById("navBarDiv");
+		
+		// id.style.zIndex = "4";
 
+		var num = zIndex.toString()
+		zIndex++;
+		id.style.zIndex = num;
+		navBar.style.zIndex = num + 2;
+		id.style.opacity = 1;
 	}
 
 
