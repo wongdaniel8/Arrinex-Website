@@ -29,7 +29,7 @@
                         <a href="#theTeam">What is rhinitis</a>
                     </li>
                     <li class="dropDownLI">
-                        <a href="#theTeam">Current Solutions</a>
+                        <a href="#existingSolutions">Current Solutions</a>
                     </li>
                     <li class="dropDownLI">
                         <a href="#theTeam">Arrinex's Capability</a>
@@ -37,7 +37,7 @@
                 </ul>
             </li>
             <li class="navBarLinks">
-                <a id = "forInvestors"  href="/investors">For Investors</a>
+                <a id = "forInvestors">For Investors</a>
                 
             </li>
             <li class="navBarLinks" >
@@ -47,10 +47,10 @@
                         <a href="#theTeam">Products</a>
                     </li>
                     <li class="dropDownLI">
-                        <a href="#theTeam">The Team</a>
+                        <a href="#team">The Team</a>
                     </li>
                     <li class="dropDownLI">
-                        <a href="#theTeam">Scientific Advisory Board</a>
+                        <a href="#sab">Scientific Advisory Board</a>
                     </li>
                 </ul>
             </li>
@@ -97,37 +97,37 @@
 
     <div id="parallaxHelpDiv">
         <div class = "sectionDivs" id = "rhinitisInfo">
-        <!-- <h1 id="rhinitisHeader"class = "headers"> Rhinitis: Did You Know? </h1> -->
-         <div id="rhitinisInfoWrapper">
-            <div id="homeParPicOne" >
-                <img id = "circlePics" src = "groupOfPeopleCircle2.png" align="center"> </img>
+       <!--  <h1 id="rhinitisHeader"class = "headers"> Rhinitis: Did You Know? </h1> -->
+          <div class="rhitinisInfoWrapper">
+            <div class="homeParPicOne" >
+                <img class = "circlePics" src = "groupOfPeopleCircle2.png" align="center"> </img>
             </div>
-            <div id="homeParInfoOne" align="center">
-                <div id="paraCell" align="center">
+            <div class="homeParInfoOne" align="center">
+                <div class="paraCell" align="center">
                     <h3 style="height: 35px"> It's <i>Common</i>...</h3>
-                    <p align="justify" style="padding: 0px 50px">About 60-80 million Americans have either allergic or non-allergic rhinitis. The difference? One is triggered by allergies, the other is triggered by unknown causes</p>
+                    <p align="justify" style="padding: 0px 23px">About 60-80 million Americans have either allergic or non-allergic rhinitis. The difference? One is triggered by allergies, the other is triggered by unknown causes</p>
                 </div>
             </div>
         </div>
-        <div id="rhitinisInfoWrapper">
-            <div id="homeParPicOne" align="center">
-                <img id = "circlePics" src = "blowNoseCircle.png" align="center"> </img>
+        <div class="rhitinisInfoWrapper">
+            <div class="homeParPicOne" align="center">
+                <img class = "circlePics" src = "blowNoseCircle.png" align="center"> </img>
             </div>
-            <div id="homeParInfoOne" align="center">
-                <div id="paraCell">
+            <div class="homeParInfoOne" align="center">
+                <div class="paraCell">
                     <h3 style="height: 35px">It's <i>Annoying</i>...</h3>
-                    <p align="justify" style="padding: 0px 50px">Both allergic and non-allergic rhinitis result in allergy symptoms such as a runny nose, itchy eyes and skin, sneezing, stuffy nose, and fatigue.</p>
+                    <p align="justify" style="padding: 0px 34px">Both allergic and non-allergic rhinitis result in allergy symptoms such as a runny nose, itchy eyes and skin, sneezing, stuffy nose, and fatigue.</p>
                 </div>
             </div>
         </div>
-         <div id="rhitinisInfoWrapper">
-            <div id="homeParPicOne" align="center">
-                <img id = "circlePics" src = "triggersCircle.png" align="center"> </img>
+         <div class="rhitinisInfoWrapper">
+            <div class="homeParPicOne" align="center">
+                <img class = "circlePics" src = "triggersCircle.png" align="center"> </img>
             </div>
-            <div id="homeParInfoOne" align="center">
-                <div id="paraCell">
+            <div class="homeParInfoOne" align="center">
+                <div class="paraCell">
                     <h3 style="height: 35px">...It's <i>Easily</i> Triggered</h3>
-                    <p align="justify" style="padding: 0px 50px">Common triggers are allergens in the air such ass pollen, grass, pet hair, and dust mites. Non-allergenic triggers include cleaning solutions, cigarette smoke, hair spray, car exhaust</p>
+                    <p align="justify" style="padding: 0px 35px">Common triggers are pollen, grass, pet hair, and dust mites. Non-allergenic triggers include cleaning solutions, cigarette smoke, hair spray, car exhaust</p>
                 </div>
             </div>
         </div>
@@ -135,12 +135,18 @@
 
     <div class = "sectionDivs" id = "existingSolutions">
         <div id="carouselContainer">
+            <div id="carouselControls">
+                <div id="carouselPlayborder" >
+                    <div class="right_next"></div>
+                    <div class="right_next" style="left:-8px;" onclick=""></div>
+                    <div id="carouselPlay" onclick="playCarousel()"></div>
+                    <div id="carouselPause" onclick="pauseCarousel()"></div>
+                    <div class="left_next"></div>
+                    <div class="left_next" style="right:20px;"></div>
+                </div>
+            </div>
             <div id="wrong_pic_holder">
             </div>
-            <image id="left_picture" src="left_picture.png" onclick="stopCarousel()">
-            </image>
-            <image id="right_picture" src="right_picture.png" onclick="stopCarousel()">
-            </image>
             <div id="carouselImageContainer">
                 <ul class="carouselList">
                     <li class="carouselLI" id="sinus_rinse">
@@ -194,17 +200,33 @@
     
 
     <div class = "sectionDivs" id = "team"> 
-        <h1 align = "center" class = "headers" id = "teamHeader1"> THE TEAM </h1>
+        <h1 align = "center" class = "headers" id = "teamHeader1"> The Team</h1>
         <div id = "vahidSaadat">
-        <h2 class = "teamHeader"> Vahid Saadat, CEO</h2> 
-            <p class = "teamPars">Vahid Saadat is a serial medical device entrepreneur with 25 years of experience.
-            Prior to Arrinex, Vahid served as the CEO of Voyage Medical, funded by Kleiner perkins, Three Arch , RWI and Abbott Ventures. Mr. Saadat holds a Bachelor's and Master’s degrees in engineering from the University of Texas at Austin. He is named an inventor on 200 patents in a variety of medical specialties. </p>
+
+            <!-- UNCOMMENT FOR FLIP EFFECT -->
+            <!-- <div id="f1_container">
+                <div id="f1_card" class="shadow">
+                  <div class="front face">
+                    <img id = "vahidImg" src="vahidPicture.png"/>
+                  </div>
+                  <div class="back face center">
+                    <p>Any content can go here.</p>
+                  </div>
+                </div>
+            </div> -->
+
+            <img id = "vahidImg" src = "vahidPicture.png">
+
+            <h2 class = "teamHeader"> Vahid Saadat, CEO</h2> 
+                <p class = "teamPars">Vahid Saadat is a serial medical device entrepreneur with 25 years of experience.
+                Prior to Arrinex, Vahid served as the CEO of Voyage Medical, funded by Kleiner perkins, Three Arch , RWI and Abbott Ventures. Mr. Saadat holds a Bachelor's and Master’s degrees in engineering from the University of Texas at Austin. He is named an inventor on 200 patents in a variety of medical specialties. </p>
+
         </div>
 
         <div id = "mojganSaadat">
+        <img id = "mojganImg" src = "mojganSaadat.png">
         <h2 class = "teamHeader"> Mojgan Saadat, Co-Founder</h2>
-        <p class = "teamPars" >Mojgan Saadat is an entrepreneur with more than 10 years of hands on experience. Mojgan has had an ongoing key role in scientific and clinical due diligence, establishing Intellectual Property, strategic planning, financing, and operations for the company. Mojgan holds a BS in biology and a BS in computer science. </p>
-    
+        <p class = "teamPars" >Mojgan Saadat is an entrepreneur with more than 10 years of hands on experience. Mojgan has had an ongoing key role in scientific and clinical due diligence, establishing Intellectual Property, strategic planning, financing, and operations for the company. Mojgan holds a BS in biology and a BS in computer science. Lorus ipsum dolor. Lorus ipsum dolor. Lorus ipsum dolor. Lorus ipsum dolor. Lorus ipsum dolor. </p>
         </div>
     </div>
 
