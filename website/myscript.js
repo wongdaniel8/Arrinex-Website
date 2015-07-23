@@ -1,4 +1,4 @@
-	
+
 function adjustPicture()
 {
 	// 
@@ -181,6 +181,16 @@ $(document).ready(function(){
 		
 
 /////////////////PASSWORD SCRIPT START///////////////////////
+function verifyKey(e) {
+    var keycode;
+    if (window.event)
+        keycode = window.event.keyCode;
+    if (keycode == 13) {
+        // alert("verifedKey");
+        return verification();
+        // window.open("company.html");
+    }
+}
 function verification() {
 	var passwordArray = ["a", "b", "password"];
     var x;
@@ -204,22 +214,14 @@ function verification() {
     }
 }
 
-function verifyKey(e) {
-    var keycode;
-    if (window.event)
-        keycode = window.event.keyCode;
-    if (keycode == 13) {
-        alert("verifedKey");
-        return verification();
-        window.open("company.html");
-    }
-}
+
 function invalid() {
     var invalidDisplay = document.getElementById('errorPar');
     document.getElementById("passwordInput").value = "";
 
     invalidDisplay.style.opacity = 1;
     alert("invalid key");
+    return;
 }
 
 /////////////////PASSWORD SCRIPT END///////////////////////

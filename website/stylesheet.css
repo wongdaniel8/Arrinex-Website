@@ -92,7 +92,7 @@ body, html {
   left: 40px;
  position: fixed;
  font-size: 17px;
- line-height: 40px;
+ line-height: 30px;
   /*z-index: 3;*/
   background-color: black;
   height: 320px; /*320 for reduced navbar */
@@ -124,6 +124,7 @@ position: fixed;
 }
 
 #errorPar {
+  line-height: 24px;
   opacity: 0;
   color: red;
 }
@@ -663,6 +664,12 @@ position: fixed;
           text-align:justify;
 
         }
+#hwangButton {
+  position: relative;
+  /*float: right;*/
+
+ 
+}
 
 /*============================================================================
 BEGINNING OF INVESTORS STYLESHEET
