@@ -106,7 +106,7 @@ $(document).ready(function(){
 
 
     //////////////login modal
-    	$("#forInvestors").mouseover(
+    	$("#forInvestors").click(
     		function(){
     			$("#navBarDiv").css("z-index","1000"); //1000 to fix issue of pdf z index exceeding z index of navbar in investors page FIXME
     			$("#passwordField").css("opacity",".8");
@@ -263,6 +263,15 @@ function carouselTimer()
 }
 
 
+function stopCarousel()
+{
+	clearTimeout(carousel_var);
+	manual_override = true;
+}
+
+
+
+
 
 
 	//============================================================
@@ -289,13 +298,21 @@ function carouselTimer()
 
 
 
+	$(document).ready(function(){
+    $("#foxButton").click(function(){
+        $("#fox").animate({left: "700px"}, 6000, "linear");
+
+    });
+    
+});
 
 
 
 
 
-function stopCarousel()
-{
-	clearTimeout(carousel_var);
-	manual_override = true;
-}
+
+
+
+
+
+
