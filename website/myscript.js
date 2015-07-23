@@ -133,13 +133,38 @@ $(document).ready(function(){
 //////////Display Bio
     function fullBio(event){
     	if ($(event + 'Para').css("display") == 'none'){
-    		$("#sab").css("height", "670px");
-    		$(event).parent().css("height", "235px");
+    		//$("#sab").css("height", "670px");
+    		//$(event).parent().css("height", "235px");
+    		$("#hwangPara").css("display", "none");
+    		$("#hwangButton").html("Full Bio &darr;");
+    		$("#hwangHeader").css("background", "rgba(255,255,255,.7");
+    		$("#weissPara").css("display", "none");
+    		$("#weissButton").html("Full Bio &darr;");
+    		$("#weissHeader").css("background", "rgba(255,255,255,.7");
+    		$("#bolgerPara").css("display", "none");
+    		$("#bolgerButton").html("Full Bio &darr;");
+    		$("#bolgerHeader").css("background", "rgba(255,255,255,.7");
+    		$("#goodePara").css("display", "none");
+    		$("#goodeButton").html("Full Bio &darr;");
+    		$("#goodeHeader").css("background", "rgba(255,255,255,.7");
+    		$("#nelsonPara").css("display", "none");
+    		$("#nelsonButton").html("Full Bio &darr;");
+    		$("#nelsonHeader").css("background", "rgba(255,255,255,.7");
+    		$("#stromePara").css("display", "none");
+    		$("#stromeButton").html("Full Bio &darr;");
+    		$("#stromeHeader").css("background", "rgba(255,255,255,.7");
+    		$(event + 'Para').css("transition", "display .7s ease");
     		$(event + 'Para').css("display", "inline");
     		$(event + 'Button').html("Full Bio &uarr;");
+    		$(event + 'Header').css("transition", "background .7s ease");
+    		$(event + 'Header').css("background", "rgba(125,125,125,.7");
+
     	} else{
-    		$(event).parent().css("height", "100px");
-    		$("#sab").css("height", "270px");
+    		//$(event).parent().css("height", "100px");
+    		//$("#sab").css("height", "270px");
+    		$(event + 'Header').css("transition", "background .7s ease");
+    		$(event + 'Header').css("background", "rgba(255,255,255,.7");
+    		$(event + 'Para').css("transition", "display .7s ease");
     		$(event + 'Para').css("display", "none");
     		$(event + 'Button').html("Full Bio &darr;");
     	}
