@@ -311,36 +311,37 @@ function playCarousel()
 					$("#wrong_pic_holder").css("width","1000px");
 					$("#wrong_pic_holder").css("height","1000px");
 				}
+
+				var carousel_in_motion = false;
 				function tickCarouselOne()
 				{
-					
-
-					if ((count+1) % 5 == 0 && count > 0)
+					if (carousel_in_motion == false)
 					{
-						//$(".carouselList").addClass("temp_disable_carousel_animation");
-						//$(".temp_disable_carousel_animation").removeClass("carouselList");
-						//$(".temp_disable_carousel_animation").css("margin-left","0px");
-						//disables the annoying transition back to margin elft 0
-						//$(".temp_disable_carousel_animation").css("margin-left");
-						//$(".temp_disable_carousel_animation").addClass("carouselList");
-						//$(".carouselList").removeClass("temp_disable_carousel_animation");
-						$(".carouselList").css("margin-left","0px");
-						count++;
-					}
-					else
-					{
-						var left_position = parseFloat($(".carouselList").css("margin-left")) - 695;
-						$(".carouselList").css("margin-left",""+left_position + "px");
-						count++;
-					}
-					// hide all the list items
-					$(".pictureDescription").css("display","none");
-					// the first one starts off display: none so this fixes that
+						carousel_in_motion = true;
+						if (count == -1 || ((count+1) % 5 == 0 && count > 0))
+						{
+							$(".carouselList").css("margin-left","0px");
+							count++;
+						}
+						else
+						{
+							var left_position = parseFloat($(".carouselList").css("margin-left")) - 695;
+							$(".carouselList").css("margin-left",""+left_position + "px");
+							count++;
+						}
+						// hide all the list items
+						$(".pictureDescription").css("display","none");
+						// the first one starts off display: none so this fixes that
 
-					// only show the one we care about
-					 var the_chossen_one = $(".pictureDescription[data-position='"+((count%5)+1)+"']");
-					the_chossen_one.css("display","block");
-					the_chossen_one.css("opacity","1");
+						// only show the one we care about
+						 var the_chossen_one = $(".pictureDescription[data-position='"+((count%5)+1)+"']");
+						the_chossen_one.css("display","block");
+						the_chossen_one.css("opacity","1");
+						setTimeout(function(){
+							carousel_in_motion = false;
+						},1500);
+						// alert();
+					}
 				}
 
 
@@ -353,12 +354,47 @@ function playCarousel()
 			clearTimeout(carousel_var);
 		}
 
+		function tickRight()
+		{
+			pauseCarousel();
+			hideRedCircle();
+			tickCarouselOne();
+		}
 
-function stopCarousel()
-{
-	clearTimeout(carousel_var);
-	manual_override = true;
-}
+		function tickLeft()
+		{
+			pauseCarousel();
+			hideRedCircle();
+			// execture tickCarouselOne() in reverse
+			if (carousel_in_motion == false)
+			{
+				carousel_in_motion = true;
+				if ((count) % 5 == 0 )
+				{
+					$(".carouselList").css("margin-left","-2778.6767578125px");
+					count--;
+				}
+				else
+				{//alert(count);
+					var left_position = parseFloat($(".carouselList").css("margin-left")) + 695;
+					$(".carouselList").css("margin-left",""+left_position + "px");
+					count--;
+				}
+				// hide all the list items
+				$(".pictureDescription").css("display","none");
+				// the first one starts off display: none so this fixes that
+
+				// only show the one we care about
+				 var the_chossen_one = $(".pictureDescription[data-position='"+((count%5)+1)+"']");
+				the_chossen_one.css("display","block");
+				the_chossen_one.css("opacity","1");
+
+				setTimeout(function(){
+							carousel_in_motion = false;
+						},1500);
+			}
+		}
+
 
 
 

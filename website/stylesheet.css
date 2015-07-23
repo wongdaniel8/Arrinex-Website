@@ -350,7 +350,7 @@ position: fixed;
                     border-right: 7px solid rgb(0,0,0);;
                     margin-right:18px;
                   }
-                  .left_next{
+                  .right_next{
                    position:relative;
                     right:10px;
                     bottom:10px;
@@ -362,7 +362,7 @@ position: fixed;
                     border-top:6px solid transparent;
                     border-bottom:6px solid transparent;
                   }
-                  .right_next{
+                  .left_next{
                    position:relative;
                     left:2px;
                     bottom:10px;
