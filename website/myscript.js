@@ -102,6 +102,8 @@ $(document).ready(function(){
         });
 	//FUNCTION to assist carousel
 		$(".pictureDescription[data-position='1']").css("display","block");
+
+
 	////////////	drop down menus
         $( "#navBarList li a" ).mouseover(
 		  function() {
@@ -112,6 +114,17 @@ $(document).ready(function(){
 		    $( this ).find("ul").removeClass("dropDownON");
 		    
 		  });
+    ///////////////////FUNCTION for the cool highlight method for the DropDownMenus
+       	$(".dropDownLI").mouseover(function(){
+       		$(this).find(".highlightLeft").css("opacity","1").css("left","0px");
+
+       		$(this).find(".highlightRight").css("opacity","1").css("left","0px");
+       	});
+       	$(".dropDownLI").mouseleave(function(){
+       		$(this).find(".highlightLeft").css("opacity","0").css("left","-196px");
+
+       		$(this).find(".highlightRight").css("opacity","0").css("left","196px");
+       	});
 
 
 
