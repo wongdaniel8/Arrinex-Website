@@ -14,43 +14,50 @@
     <div id="navBarDiv">
         <ul id="navBarList">
             <li id="logoBlock">
-                <a href="#home">
+                <a href="#">
                     <img id = "logo" src = "transparant_logo.png" align="center"> </img>
                     <span>Arrinex, Inc.</span>
                 </a>
             </li>
             <li class="navBarLinks">
-                <a id = "contactUs"   href="/contact">Contact Us </a>
+                <a id = "contactUs"   href="#">Contact Us </a>
             </li>
             <li class="navBarLinks">
-                <a id = "forPatients"   href="/patients">For Patients</a>
+                <a id = "forInvestors"  href="#">For Investors</a>
+                
+            </li>
+            <li class="navBarLinks">
+                <a id = "forPatients"   href="#">Company</a>
                 <ul class="dropDownList">
                     <li class="dropDownLI">
-                        <a href="#theTeam">What is rhinitis</a>
+                        <div class="ddText">The Arinex Solution</div>
+                        <div class="highlightLeft"></div>
+                        <div class="highlightRight"></div>
                     </li>
                     <li class="dropDownLI">
-                        <a href="#existingSolutions">Current Solutions</a>
+                        <div class="ddText">The Team</div>
+                        <div class="highlightLeft"></div>
+                        <div class="highlightRight"></div>
                     </li>
                     <li class="dropDownLI">
-                        <a href="#theTeam">Arrinex's Capability</a>
+                        <div class="ddText">Scientific Advisory Board</div>
+                        <div class="highlightLeft"></div>
+                        <div class="highlightRight"></div>
                     </li>
                 </ul>
             </li>
-            <li class="navBarLinks">
-                <a id = "forInvestors">For Investors</a>
-                
-            </li>
             <li class="navBarLinks" >
-                <a id = "company"   href="#/company">Company</a>
+                <a id = "company"   href="#/company">Rhitis</a>
                 <ul class="dropDownList">
                     <li class="dropDownLI">
-                        <a href="#theTeam">Products</a>
+                        <div class="ddText">What is Rhinitis?</div>
+                        <div class="highlightLeft"></div>
+                        <div class="highlightRight"></div>
                     </li>
                     <li class="dropDownLI">
-                        <a href="#team">The Team</a>
-                    </li>
-                    <li class="dropDownLI">
-                        <a href="#sab">Scientific Advisory Board</a>
+                        <div class="ddText">Current Solution</div>
+                        <div class="highlightLeft"></div>
+                        <div class="highlightRight"></div>
                     </li>
                 </ul>
             </li>
@@ -137,12 +144,12 @@
         <div id="carouselContainer">
             <div id="carouselControls">
                 <div id="carouselPlayborder" >
-                    <div class="right_next"></div>
-                    <div class="right_next" style="left:-8px;" onclick=""></div>
+                    <div class="left_next" onclick="tickLeft()" ></div>
+                    <div class="left_next" style="left:-8px;" onclick="tickLeft()"></div>
                     <div id="carouselPlay" onclick="playCarousel()"></div>
                     <div id="carouselPause" onclick="pauseCarousel()"></div>
-                    <div class="left_next"></div>
-                    <div class="left_next" style="right:20px;"></div>
+                    <div class="right_next" onclick="tickRight()"></div>
+                    <div class="right_next" style="right:20px;" onclick="tickRight()"></div>
                 </div>
             </div>
             <div id="wrong_pic_holder">
