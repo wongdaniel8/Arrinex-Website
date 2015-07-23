@@ -87,12 +87,21 @@ $(document).ready(function(){
 					$("#parallaxHelpDiv").css("bottom",""+parallax_displacement+"px");
 					$("#firstHomeText").css("opacity",""+parallax_opacity);
 				}
+			//FUNCTION trigger the carousel initially
+				var pos_from_top = $("body").scrollTop();
+				var vert_pos_exist_soln_div = $("#existingSolutions").offset().top;
+				var height_exist_soln_div = parseFloat($("#existingSolutions").css("height"));
+				
+				if (pos_from_top > vert_pos_exist_soln_div - height_exist_soln_div && pos_from_top < vert_pos_exist_soln_div + height_exist_soln_div && first_toggle == false)
+				{
+					first_toggle = true;
+					playCarousel();
+				}
 
-
-			//FUNCTION to assist carousel
-				carouselTimer();
 
         });
+	//FUNCTION to assist carousel
+		$(".pictureDescription[data-position='1']").css("display","block");
 	////////////	drop down menus
         $( "#navBarList li a" ).mouseover(
 		  function() {
@@ -176,91 +185,118 @@ function invalid() {
 
 var carousel_is_on = false;
 var carousel_var;
-var manual_override = false;
-function carouselTimer()
+var count = 0;
+var first_toggle = false;
+function playCarousel()
 {
+	
 	var pos_from_top = $("body").scrollTop();
 	var vert_pos_exist_soln_div = $("#existingSolutions").offset().top;
 	var height_exist_soln_div = parseFloat($("#existingSolutions").css("height"));
 	
-		if (pos_from_top > vert_pos_exist_soln_div - height_exist_soln_div && pos_from_top < vert_pos_exist_soln_div + height_exist_soln_div)
-		{
-			var count = 0;
-			// each cycle takes 6 seconds
-			function executeCarousel()
+	//if (pos_from_top > vert_pos_exist_soln_div - height_exist_soln_div && pos_from_top < vert_pos_exist_soln_div + height_exist_soln_div)
+	//if (pos_from_top > vert_pos_exist_soln_div && pos_from_top < vert_pos_exist_soln_div + height_exist_soln_div)
+	//{
+		// each cycle takes 6 seconds
+		// if the carousel is not already on turn it on
+			carousel_is_on = true;
+			if (count == 0 )
 			{
-				
-				// the first 5 seconds wait to put the red cirlce
-				setTimeout(function(){
-					if (manual_override == false)
-					{
-						$("#wrong_pic_holder").css("display","block");
-						$("#wrong_pic_holder").css("opacity","1");
-						$("#wrong_pic_holder").css("top","0px");
-						$("#wrong_pic_holder").css("left","120px");
-						$("#wrong_pic_holder").css("width","600px");
-						$("#wrong_pic_holder").css("height","600px");
-					}
-
-
-				},500);
-				// after the last second switch pictures
-				setTimeout(function(){
-					//hide the big red circle and return its original demensions and position
-					if (manual_override == false)
-					{
-						$("#wrong_pic_holder").css("display","none");
-						$("#wrong_pic_holder").css("top","-225px");
-						$("#wrong_pic_holder").css("left","-140px");
-						$("#wrong_pic_holder").css("width","1000px");
-						$("#wrong_pic_holder").css("height","1000px");
-
-
-						if ((count+1) % 5 == 0 && count > 0)
-						{
-							$(".carouselList").addClass("temp_disable_carousel_animation");
-							$(".temp_disable_carousel_animation").removeClass("carouselList");
-							$(".temp_disable_carousel_animation").css("margin-left","0px");
-							//disables the annoying transition back to margin elft 0
-							$(".temp_disable_carousel_animation").css("margin-left");
-							$(".temp_disable_carousel_animation").addClass("carouselList");
-							$(".carouselList").removeClass("temp_disable_carousel_animation");
-							count++;
-						}
-						else
-						{
-							var left_position = parseFloat($(".carouselList").css("margin-left")) - 695;
-							$(".carouselList").css("margin-left",""+left_position + "px");
-							count++;
-						}
-						// hide all the list items
-						$(".pictureDescription").css("display","none");
-
-						// only show the one we care about
-						 var the_chossen_one = $(".pictureDescription[data-position='"+((count%5)+1)+"']");
-						the_chossen_one.css("display","block");
-						the_chossen_one.css("opacity","1");
-					}
-
-				},3000);
-
-			}
-
-			// if the carousel is not already on turn it on
-			if (carousel_is_on == false)
-			{
-				// the first one starts off display: none so this fixes that
 				$(".pictureDescription[data-position='1']").css("display","block");
 				$(".pictureDescription[data-position='1']").css("opacity","1");
-
-				executeCarousel();
-				carousel_var = setInterval(function(){ executeCarousel() },3000);
-				carousel_is_on = true;
 			}
+			//alert("played!");
+			
+			executeCarousel();
+			carousel_var = setInterval(function(){ executeCarousel() },3000);
 
-			//if its on already do nothing
-		}
+			//hide the pause button
+			$("#carouselPause").css("display","inline-block");
+			$("#carouselPlay").css("display","none");
+	//}
 }
+
+	//helperfunction for playCarousel()
+		function executeCarousel()
+		{
+			// the first 5 seconds wait to put the red cirlce
+			setTimeout(function(){
+				if (carousel_is_on == true)
+					displayRedCircle();
+
+			},500);
+
+			// after the last second switch pictures
+			setTimeout(function(){
+				//hide the big red circle and return its original demensions and position
+				if (carousel_is_on == true)
+				{
+					hideRedCircle();
+					tickCarouselOne();
+				}
+
+			},3000);
+
+		}
+		//helper functions for execute carousel
+				function displayRedCircle()
+				{
+					$("#wrong_pic_holder").css("display","block");
+					$("#wrong_pic_holder").css("opacity","1");
+					$("#wrong_pic_holder").css("top","0px");
+					$("#wrong_pic_holder").css("left","120px");
+					$("#wrong_pic_holder").css("width","600px");
+					$("#wrong_pic_holder").css("height","600px");
+				}
+				function hideRedCircle()
+				{
+					$("#wrong_pic_holder").css("display","none");
+					$("#wrong_pic_holder").css("top","-225px");
+					$("#wrong_pic_holder").css("left","-140px");
+					$("#wrong_pic_holder").css("width","1000px");
+					$("#wrong_pic_holder").css("height","1000px");
+				}
+				function tickCarouselOne()
+				{
+					
+
+					if ((count+1) % 5 == 0 && count > 0)
+					{
+						//$(".carouselList").addClass("temp_disable_carousel_animation");
+						//$(".temp_disable_carousel_animation").removeClass("carouselList");
+						//$(".temp_disable_carousel_animation").css("margin-left","0px");
+						//disables the annoying transition back to margin elft 0
+						//$(".temp_disable_carousel_animation").css("margin-left");
+						//$(".temp_disable_carousel_animation").addClass("carouselList");
+						//$(".carouselList").removeClass("temp_disable_carousel_animation");
+						$(".carouselList").css("margin-left","0px");
+						count++;
+					}
+					else
+					{
+						var left_position = parseFloat($(".carouselList").css("margin-left")) - 695;
+						$(".carouselList").css("margin-left",""+left_position + "px");
+						count++;
+					}
+					// hide all the list items
+					$(".pictureDescription").css("display","none");
+					// the first one starts off display: none so this fixes that
+
+					// only show the one we care about
+					 var the_chossen_one = $(".pictureDescription[data-position='"+((count%5)+1)+"']");
+					the_chossen_one.css("display","block");
+					the_chossen_one.css("opacity","1");
+				}
+
+
+
+		function pauseCarousel()
+		{
+			carousel_is_on = false;
+			$("#carouselPlay").css("display","inline-block");
+			$("#carouselPause").css("display","none");
+			clearTimeout(carousel_var);
+		}
 
 
 
