@@ -533,7 +533,7 @@ position: fixed;
                               font-size: 25px;
                             }
 #arrinexSolution {
-  background-color: grey;
+  background-color: beige;
 }
 
 #team {
@@ -601,7 +601,7 @@ position: fixed;
   position: relative;
   margin: 10px auto;
   width: 450px;
-  height: 281px;
+  height: 800px;
   z-index: 1;
 }
 #f1_container {
@@ -624,14 +624,67 @@ position: fixed;
   backface-visibility: hidden;
 }
 .face.back {
+  height: 800px;
   display: block;
   transform: rotateY(180deg);
   box-sizing: border-box;
   padding: 10px;
-  color: white;
+  color: black;
   text-align: center;
-  background-color: rgb(255,255,255);
 }
+
+
+
+
+
+
+#f1_container1 {
+  position: relative;
+  margin: 10px auto;
+  width: 450px;
+  height: 581px;
+  z-index: 1;
+}
+#f1_container1 {
+  perspective: 1000;
+}
+#f1_card1 {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+#f1_container1:hover #f1_card1 {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face1 {
+  border: 2px solid grey;
+  font-size: 70px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /*height: 500px;*/
+  backface-visibility: hidden;
+  background-color: white;
+}
+.face1.back1 {
+  /*height: 500px;*/
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: black;
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+
+
+
+
+
+
 /*===================================
 */
 
