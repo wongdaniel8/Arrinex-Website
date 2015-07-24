@@ -666,7 +666,7 @@ position: fixed;
   transform-style: preserve-3d;
   transition: all 1.0s linear;
 }
-/*#f1_container1:hover #f1_card1,*/ #f1_container2:hover #f1_card2, #f1_container3:hover #f1_card3  {
+#f1_container1:hover #f1_card1, #f1_container2:hover #f1_card2, #f1_container3:hover #f1_card3  {
   transform: rotateY(180deg);
   box-shadow: -5px 5px 5px #aaa;
 }
@@ -709,7 +709,7 @@ position: fixed;
   border-bottom: 1px solid grey;
   /*border-left: 1px solid black;
   border-right: 1px solid black;*/
-  box-shadow: 0px 0px 8px white; 
+  box-shadow: 0px 0px 20px white; 
 }
 
 
