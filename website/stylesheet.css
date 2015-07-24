@@ -596,7 +596,7 @@ position: fixed;
 /*FOR IMAGE FLIP 
   NEEDS WORK
   ===================================
-*//
+*/
 /*Reference
 #f1_container {
   position: relative;
@@ -636,35 +636,51 @@ position: fixed;
 */
 
 
-#f1_container1 {
-  position: relative;
+#f1_container1, #f1_container2, #f1_container3 {
+  display: inline-block;
+  position: absolute;
   margin: 10px auto;
-  width: 450px;
-  height: 581px;
+  width: 330px;
+  height: 530px;
   z-index: 1;
+  left: 100px;
+
+  
 }
-#f1_container1 {
+
+#f1_container2 {
+  left: 463px;
+}
+
+
+#f1_container3 {
+  left: 830px;
+}
+
+#f1_container1, #f1_container2, #f1_container3  {
   perspective: 1000;
 }
-#f1_card1 {
+#f1_card1, #f1_card2, #f1_card3 {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
   transition: all 1.0s linear;
 }
-#f1_container1:hover #f1_card1 {
+#f1_container1:hover #f1_card1, #f1_container2:hover #f1_card2, #f1_container3:hover #f1_card3  {
   transform: rotateY(180deg);
   box-shadow: -5px 5px 5px #aaa;
 }
 .face1 {
-  border: 2px solid grey;
-  font-size: 70px;
+  color: white;
+  border: 2px solid white;
+  font-size: 65px;
   position: absolute;
   width: 100%;
   height: 100%;
   /*height: 500px;*/
   backface-visibility: hidden;
-  background-color: white;
+  background-color: rgb(218, 31, 59);
+  /*background-image: url("Arrinex_banner_print2.png");*/
 }
 .face1.back1 {
   /*height: 500px;*/
