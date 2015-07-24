@@ -239,6 +239,20 @@ function invalid() {
 
 /////////////////PASSWORD SCRIPT END///////////////////////
 
+//NEEDS FIXING
+function rotate(ident) {
+	var element = document.getElementById(ident);
+	element.style.boxShadow = "-5px 5px 5px #aaa";
+	element.style.transform = "rotateY(180deg)" ;
+	element.style.display = "block";
+    element.style.boxSizing = "border-box";
+    element.style.padding = "10px";
+    element.style.color = "black";
+    element.style.textAlign = "center";
+    element.style.backgroundColor = "whiteSmoke";
+
+}
+
 
 var carousel_is_on = false;
 var carousel_var;
