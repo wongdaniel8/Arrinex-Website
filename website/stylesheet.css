@@ -593,10 +593,11 @@ position: fixed;
 
 
 
-/*FOR VAHID'S AND MOJGAN'S IMAGE FLIP 
+/*FOR IMAGE FLIP 
   NEEDS WORK
   ===================================
-*/
+*//
+/*Reference
 #f1_container {
   position: relative;
   margin: 10px auto;
@@ -632,10 +633,7 @@ position: fixed;
   color: black;
   text-align: center;
 }
-
-
-
-
+*/
 
 
 #f1_container1 {
