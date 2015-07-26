@@ -23,7 +23,7 @@
                 <a id = "contactUs"   href="#">Contact Us </a>
             </li>
             <li class="navBarLinks">
-                <a id = "forInvestors"  href="#">For Investors</a>
+                <a id = "forInvestors">For Investors</a>
                 
             </li>
             <li class="navBarLinks">
@@ -206,7 +206,7 @@
     <div class = "sectionDivs" id = "arrinexSolution">
 
 
-            <div id = "f1_container1" onclick = "rotate('f1_container1')"> 
+            <div id = "f1_container1" > <!-- onclick = "rotate('f1_container1')"> --> 
                 <div id="f1_card1" class="shadow">
                      <div class="front face1">
                         <br></br>
@@ -222,7 +222,7 @@
                         <div class="homeParInfoOne" align="center">
                             <div class="paraCell" align="center">
                                 <h3 style="height: 35px"> It's <i>Common</i>...</h3>
-                                <p align="justify" style="padding: 0px 23px">About 60-80 million Americans have either allergic or non-allergic rhinitis. The difference? One is triggered by allergies, the other is triggered by unknown causes</p>
+                                <p align="justify" style="padding: 0px 23px">About 60-80 million Americans have either allergic or non-allergic rhinitis. The difference? One is triggered by allergies, the other is triggered by unknown causes.</p>
                             </div> 
                         </div>
                     </div>
@@ -234,7 +234,9 @@
                      <div class="front face1">
                         <br></br>
                         How annoying?
+                        <div id = "logoWrapper">
                         <img src = "transparant_logo.png" class = "cardLogo">
+                        </div>
                     </div>
                     <div class="back1 face1 center">
                         <div class="homeParPicOne" align="center">
@@ -257,7 +259,9 @@
                      <div class="front face1">
                         <br></br>
                         How is it triggered?
+                        <div id = "logoWrapper">
                         <img src = "transparant_logo.png" class = "cardLogo">
+                        </div>
                     </div>
                     <div class="back1 face1 center">
                        <div class="homeParPicOne" align="center">
@@ -265,8 +269,8 @@
                     </div>
                         <div class="homeParInfoOne" align="center">
                             <div class="paraCell">
-                                <h3 style="height: 35px">...It's <i>Easily</i> Triggered</h3>
-                                <p align="justify" style="padding: 0px 35px">Common triggers are pollen, grass, pet hair, and dust mites. Non-allergenic triggers include cleaning solutions, cigarette smoke, hair spray, car exhaust</p>
+                                <h3 style="height: 35px">It's <i>Easily </i>Triggered...</h3>
+                                <p align="justify" style="padding: 0px 35px">Common triggers are pollen, grass, pet hair, and dust mites. Non-allergenic triggers include cleaning solutions, cigarette smoke, hair spray, and car exhaust.</p>
                             </div>
                         </div>
                     </div>
@@ -368,8 +372,77 @@
 
 
 
+
+
+
+
+
     <div class = "sectionDivs" id = "contact"> 
-    </div>
+        <?php
+            // define variables and set to empty values
+            $nameErr = $emailErr = "";
+            $name = $email = "";
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+               if (empty($_POST["name"])) {
+                 $nameErr = "Name is required";
+               } else {
+                 $name = test_input($_POST["name"]);
+                 // check if name only contains letters and whitespace
+                 if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+                   $nameErr = "Only letters and white space allowed"; 
+                 }
+               }
+               
+               if (empty($_POST["email"])) {
+                 $emailErr = "Email is required";
+               } else {
+                 $email = test_input($_POST["email"]);
+                 // check if e-mail address is well-formed
+                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                   $emailErr = "Invalid email format"; 
+                 }
+               }
+                 
+               
+
+               if (empty($_POST["comment"])) {
+                 $comment = "";
+               } else {
+                 $comment = test_input($_POST["comment"]);
+               }  
+            }
+
+            function test_input($data) {
+               $data = trim($data);
+               $data = stripslashes($data);
+               $data = htmlspecialchars($data);
+               return $data;
+            }
+        ?>
+            <input type = "text"> 
+            <h2>PHP Form Validation</h2>
+            <p><span class="error">* required field.</span></p>
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+               Name: <input type="text" name="name" value = "<?php echo $name;?>" >
+               <span class="error">* <?php echo $nameErr;?></span>
+               <br><br>
+               E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+               <span class="error">* <?php echo $emailErr;?></span>
+               <br><br>
+               
+               <br><br>
+               Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+               <br><br>
+               <input type="submit" name="submit" value="Submit"> 
+            </form>
+            
+
+
+
+
+
+    </div> <!-- CONTACT END DIV -->
 
 
 </div>  

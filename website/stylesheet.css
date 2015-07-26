@@ -674,6 +674,7 @@ position: fixed;
   color: white;
   /*border-left: 1px solid black;*/
   font-size: 65px;
+  /*text-shadow: 0px 0px 40px white;*/
   position: absolute;
   width: 100%;
   height: 100%;
@@ -786,6 +787,10 @@ position: fixed;
  
 }
 
+#contact { 
+z-index: 10;
+}
+
 /*============================================================================
 BEGINNING OF INVESTORS STYLESHEET
 ============================================================================*/
@@ -866,7 +871,9 @@ BEGINNING OF INVESTORS STYLESHEET
   padding-top: 20px;
   /*border-radius: 15px;*/
   border: 2px solid white;
-  color: rgb(196, 168, 143);
+  /*color: rgb(196, 168, 143);*/
+  color: #9E8365;
+
 }
 
 .articleButton:hover {
