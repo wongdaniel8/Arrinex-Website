@@ -268,6 +268,8 @@ function rotate(card, container, ident) {
 }
 
 
+
+
 var carousel_is_on = false;
 var carousel_var;
 var count = 0;
