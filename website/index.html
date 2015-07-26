@@ -8,7 +8,7 @@
     
 </head>
 
-<body onresize="adjustPicture()" onload="adjustPicture()">
+<body onresize="adjustPicture()" onload="adjustPicture(),pauseBoyGearMotion(),pauseGirlGearMotion()">
 	
 	<!-- Main Header Nav Bar -->
     <div id="navBarDiv">
@@ -259,35 +259,96 @@
 
     
 
-    <div class = "sectionDivs" id = "team"> 
-        <h1 align = "center" class = "headers" id = "teamHeader1"> The Team</h1>
-        <div id = "vahidSaadat">
-
-            <!-- UNCOMMENT FOR FLIP EFFECT -->
-            <!-- <div id="f1_container">
-                <div id="f1_card" class="shadow">
-                  <div class="front face">
-                    <img id = "vahidImg" src="vahidPicture.png"/>
-                  </div>
-                  <div class="back face center">
-                    <p>Any content can go here.</p>
-                  </div>
+     <div class = "sectionDivs" id = "team"> 
+        <div id="gears_container">
+            <div id="faces_conainer">
+                <div id="gearColoredBackground"></div>
+                <div id="giantGear"></div>
+                <div id="extraGear1"></div>
+                <div id="extraGear2"></div>
+                <div id="extraGear3"></div>
+                <div id="extraGear4"></div>
+                <div id="extraGear5"></div>
+                <!-- <div id="extraGear6"></div> -->
+                <div id="boy_face">
+                    <div id="boy_modal" class="gear_modal">
+                        <span class="close_gear_modal">Close</span>
+                        <h1 id="gear_modal_header">Meet Vahid Saadat</h1>
+                        <p id="mastermind_description">Vahid Saadat is a serial medical device entrepreneur with 25 years of experience.
+                    Prior to Arrinex, Vahid served as the CEO of Voyage Medical, funded by Kleiner perkins, Three Arch , RWI and Abbott Ventures. Mr. Saadat holds a Bachelor's and Master’s degrees in engineering from the University of Texas at Austin. He is named an inventor on 200 patents in a variety of medical specialties.</p>
+                    </div>                
+                    <div id="boy_gear">
+                        <div class="boy_pin_wheel">
+                          <div class="spoke1 spoke">
+                            <div class="spoke_tip1">
+                                <span class="spoke_tip_description">
+                                    Vahid Saadat was an undergraduate at the University of Autstin Texas between 1980 and 1984 and recieved a Bachelor of Science in Electrical Engineering. After undergraduate studies, Saadat stayed on two more years (1984-1986) to get a his masters in Biomedical Engineering 
+                                </span>
+                            </div>
+                            <div class="spoke_tip2">
+                                <span class="spoke_tip_description">Voyage Medical</span>
+                            </div>
+                          </div>
+                          <div class="spoke2 spoke">
+                            <div class="spoke_tip1">
+                                <span class="spoke_tip_description">USGImedical</span>
+                            </div>
+                            <div class="spoke_tip2">
+                                <span class="spoke_tip_description">Trimedyne</span>
+                            </div>
+                          </div>
+                          <div class="spoke3 spoke">
+                            <div class="spoke_tip1">
+                                <span class="spoke_tip_description">Arrinex</span>
+                            </div>
+                            <div class="spoke_tip2">
+                                <span class="spoke_tip_description">Baxano Surgical</span>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <image id="boy_picture" src="vahidPicture.png"></image>
+                    <!-- <h1 id="boy_name">Vahid Saadat</h1> -->
                 </div>
-            </div> -->
-
-            <img id = "vahidImg" src = "vahidPicture.png">
-
-            <h2 class = "teamHeader"> Vahid Saadat, CEO</h2> 
-                <p class = "teamPars">Vahid Saadat is a serial medical device entrepreneur with 25 years of experience.
-                Prior to Arrinex, Vahid served as the CEO of Voyage Medical, funded by Kleiner perkins, Three Arch , RWI and Abbott Ventures. Mr. Saadat holds a Bachelor's and Master’s degrees in engineering from the University of Texas at Austin. He is named an inventor on 200 patents in a variety of medical specialties. </p>
-
-        </div>
-
-        <div id = "mojganSaadat">
-        <img id = "mojganImg" src = "mojganSaadat.png">
-        <h2 class = "teamHeader"> Mojgan Saadat, Co-Founder</h2>
-        <p class = "teamPars" >Mojgan Saadat is an entrepreneur with more than 10 years of hands on experience. Mojgan has had an ongoing key role in scientific and clinical due diligence, establishing Intellectual Property, strategic planning, financing, and operations for the company. Mojgan holds a BS in biology and a BS in computer science. Lorus ipsum dolor. Lorus ipsum dolor. Lorus ipsum dolor. </p>
-        </div>
+                <div id="girl_face">
+                    <div id="girl_modal" class="gear_modal">
+                        <span class="close_gear_modal">Close</span>
+                        <h1 id="gear_modal_header">Meet Mojgan Saadat</h1>
+                        <p id="mastermind_description">Mojgan Saadat is an entrepreneur with more than 10 years of hands on experience. Mojgan has had an ongoing key role in scientific and clinical due diligence, establishing Intellectual Property, strategic planning, financing, and operations for the company. Mojgan holds a BS in biology and a BS in computer science.</p>
+                    </div>
+                    <div id="girl_gear">
+                        <div class="girl_pin_wheel">
+                          <div class="spoke1 spoke">
+                            <div class="spoke_tip1">
+                                <span class="spoke_tip_description">Isfahan University of Technology</span>
+                            </div>
+                            <div class="spoke_tip2">
+                                <span class="spoke_tip_description">San Jose State University</span>
+                            </div>
+                          </div>
+                          <div class="spoke2 spoke">
+                            <div class="spoke_tip1">
+                                <span class="spoke_tip_description">Arrinex</span>
+                            </div>
+                            <div class="spoke_tip2">Cognitx
+                                <span class="spoke_tip_description">Cognitx</span>
+                            </div>
+                          </div>
+                          <div class="spoke3 spoke">
+                            <div class="spoke_tip1">Nidus Medical, LLC.
+                                <span class="spoke_tip_description">Nidus Medical LLC></span>
+                            </div>
+                            <div class="spoke_tip2">
+                                <span class="spoke_tip_description">Voyage Medical</span>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <image id="girl_picture" src="mojganSaadat.png"></image>
+                    <!-- <h1 id="girl_name">Mojgan Saadat</h1> -->
+                </div>
+            </div>
+       </div>
     </div>
 
 

@@ -66,14 +66,14 @@ $(document).ready(function(){
 			    if (scroll_point2 > 30)
 			    {
 			    	$("#navBarDiv").css("height","50px");
-			    	$(".navBarLinks").css("padding","13px 17px");
+			    	$(".navBarLinks").css("padding","13px 25px");
 			    	$("#logoBlock").css("padding","10px 17px");
 			    	$(".dropDownList").css("top","17px");
 			    }
 			    else
 			    {
 			    	$("#navBarDiv").css("height","70px");
-			    	$(".navBarLinks").css("padding","25px 17px");
+			    	$(".navBarLinks").css("padding","25px 25px");
 			    	$("#logoBlock").css("padding","20px 17px");
 			    	$(".dropDownList").css("top","25px");
 			    }
@@ -114,6 +114,43 @@ $(document).ready(function(){
 		    $( this ).find("ul").removeClass("dropDownON");
 		    
 		  });
+
+	//this PART was added to ensure the cogs didn't interfere with the DD menu
+	        $( "#navBarList li" ).mouseleave(
+			  function() {
+
+			    	var over_DD = false;
+				    $( ".dropDownList " ).mouseover( function() {
+				    over_DD = true;
+				    
+				  });
+				    if (!over_DD)
+				    {
+				    	$( this ).find(".dropDownList").removeClass("dropDownON")
+				    }
+			    
+			  });
+
+	//close the description of vahid and mojgan
+	    	$("#boy_face .close_gear_modal").click(function(){
+	    		$(this).parent("div").css("display","none");
+	    		playBoyGearMotion();
+	    	});
+	    	$("#girl_face .close_gear_modal").click(function(){
+	    		$(this).parent("div").css("display","none");
+	    		playGirlGearMotion();
+	    	});
+	    	$("#boy_picture").click(function(){
+	    		$(this).prev().prev().css("display","block");
+	    		pauseBoyGearMotion();
+	    	});
+	    	$("#girl_picture").click(function(){
+	    		$(this).prev().prev().css("display","block");
+	    		pauseGirlGearMotion();
+	    	});
+
+
+
     ///////////////////FUNCTION for the cool highlight method for the DropDownMenus
        	$(".dropDownLI").mouseover(function(){
        		$(this).find(".highlightLeft").css("opacity","1").css("left","0px");
@@ -427,8 +464,31 @@ function playCarousel()
 			}
 		}
 
+// code for TEAM and COGS/ GEARS///////////////////////////////////////////////////////////////
 
+function pauseGirlGearMotion()
+{
+	$("#girl_gear, #girl_face .spoke_tip1").css("-webkit-animation-play-state","paused").css("-moz-animation-play-state","paused").css("-o-animation-play-state","paused").css("animation-play-state","paused");
+	$("#girl_gear, #girl_face .spoke_tip2").css("-webkit-animation-play-state","paused").css("-moz-animation-play-state","paused").css("-o-animation-play-state","paused").css("animation-play-state","paused");
+} 
 
+function playGirlGearMotion()
+{
+	$("#girl_gear, #girl_face .spoke_tip1").css("-webkit-animation-play-state","running").css("-moz-animation-play-state","running").css("-o-animation-play-state","running").css("animation-play-state","running");
+	$("#girl_gear, #girl_face .spoke_tip2").css("-webkit-animation-play-state","running").css("-moz-animation-play-state","running").css("-o-animation-play-state","running").css("animation-play-state","running");
+}
+
+function pauseBoyGearMotion()
+{
+	$("#boy_gear, #boy_face .spoke_tip1").css("-webkit-animation-play-state","paused").css("-moz-animation-play-state","paused").css("-o-animation-play-state","paused").css("animation-play-state","paused");
+	$("#boy_gear, #boy_face .spoke_tip2").css("-webkit-animation-play-state","paused").css("-moz-animation-play-state","paused").css("-o-animation-play-state","paused").css("animation-play-state","paused");
+} 
+
+function playBoyGearMotion()
+{
+	$("#boy_gear, #boy_face .spoke_tip1").css("-webkit-animation-play-state","running").css("-moz-animation-play-state","running").css("-o-animation-play-state","running").css("animation-play-state","running");
+	$("#boy_gear, #boy_face .spoke_tip2").css("-webkit-animation-play-state","running").css("-moz-animation-play-state","running").css("-o-animation-play-state","running").css("animation-play-state","running");
+}
 
 
 
