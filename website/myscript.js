@@ -239,31 +239,10 @@ function invalid() {
 
 /////////////////PASSWORD SCRIPT END///////////////////////
 
-//NEEDS FIXING
 function rotate(card, container, ident) {
-	// var car = document.getElementById(card);
-	var front = document.getElementsByClassName(ident);
-	var cont = document.getElementById(container);
-	var backface = document.getElementsByClassName('back1 face1 center');
-
-	for (i = 0; i <front.length; i++) {
-
-		backface[i].style.zIndex = "100";
-
-
-		front[i].style.opacity = 0;
-		front[i].style.transition = ".3s linear";
-
-
-		// front[i].style.backfaceVisibility = "hidden";
-		backface[i].style.transition = "backfaceVisibility 6s linear";
-		backface[i].style.backfaceVisibility = "visible";
-
-	}
-	cont.style.transition = "1s linear";
-	cont.style.transform = "rotateY(180deg)" ;
-
-
+	var car = document.getElementById(card);
+	car.style.transition = "1s linear";
+	car.style.transform = "rotateY(180deg)" ;
 }
 
 
