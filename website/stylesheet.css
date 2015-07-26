@@ -112,8 +112,7 @@ body, html {
 
 
 
-#passwordField {
-
+#passwordField, #contact {
   opacity: 0;
   top: 70px;
   right: 60px;

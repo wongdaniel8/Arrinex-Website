@@ -131,6 +131,8 @@ $(document).ready(function(){
     //////////////login modal
     	$("#forInvestors").click(
     		function(){
+    			$("#contact").css("opacity","0");
+    			$("#contact").css("z-index","0");
     			$("#navBarDiv").css("z-index","1000"); //1000 to fix issue of pdf z index exceeding z index of navbar in investors page FIXME
     			$("#passwordField").css("opacity",".8");
     			$("#passwordField").css("z-index","3");
@@ -146,6 +148,26 @@ $(document).ready(function(){
     			$("#passwordField").css("z-index","0");
     			$("#passwordInput").css("opacity","0");
     			$("#passwordInput").css("z-index","0");
+    		});
+
+    	$("#contactUs").click(
+    		function(){
+    			$("#passwordField").css("opacity","0");
+    			$("#passwordField").css("z-index","0");
+    			$("#passwordInput").css("opacity","0");
+    			$("#passwordInput").css("z-index","0");
+    			$("#navBarDiv").css("z-index","1000"); //1000 to fix issue of pdf z index exceeding z index of navbar in investors page FIXME
+    			$("#contact").css("opacity",".8");
+    			$("#contact").css("z-index","3");
+    		});
+
+    	$("#contact").click(
+    		function() {
+    			$("#navBarDiv").css("z-index","1");
+    			$("#contact").css("opacity", "0");
+    			$("#contact").css("z-index","0");
+
+
     		});
 
 
