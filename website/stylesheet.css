@@ -1208,11 +1208,16 @@ position: fixed;
  /* background-image: url("Arrinex_banner_print2.png");
   background-repeat: no-repeat;
   background-position: 170px 300px ;*/
+  height: 625px;
+}
+
+/*#solutionHeader {
+  padding-top: 35px;
   border: 10;
   padding: 0;
   height: 325px;
-  /*box-shadow: 10px 0px 10px  black;*/
-}
+  //box-shadow: 10px 0px 10px  black;
+}*/
 
 #solutionHeader {
   padding-top: 59px;
@@ -1309,7 +1314,6 @@ position: fixed;
   padding:0px;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top:300px;
   overflow: hidden;
   margin-left: 0px;
 
@@ -1389,28 +1393,28 @@ position: fixed;
   cursor: pointer;
 }
 #hwangHeader{
-  right: 392px;
-  margin-top: 278px;
+  right: 398px;
+  margin-top: 285px;
 }
 #weissHeader{
-  right: 240px;
-  margin-top: 278px;
+  right: 246px;
+  margin-top: 285px;
 }
 #stromeHeader{
-  right: 80px;
-  margin-top: 278px;
+  right: 86px;
+  margin-top: 285px;
 }
 #bolgerHeader{
-  right: 392px;
-  margin-top: 437px;
+  right: 398px;
+  margin-top: 465px;
 }
 #goodeHeader{
-  right: 240px;
-  margin-top: 437px;
+  right: 246px;
+  margin-top: 465px;
 }
 #nelsonHeader{
-  right: 80px;
-  margin-top: 437px;
+  right: 86px;
+  margin-top: 465px;
 }
 
 /*============================================================================
