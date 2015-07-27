@@ -494,7 +494,7 @@ function playBoyGearMotion()
 
 $(document).on('scroll', function(e) {
 	
-        var S = $(this).scrollTop() - 3630,                // scrolled distance
+        var S = $(this).scrollTop() - 3175,                // scrolled distance
             T = 315 + (S/45),                        // value for Top
             L = 3 + (S/24)							//value for Left
             H = 100*(S/75)							//value for height
@@ -502,6 +502,7 @@ $(document).on('scroll', function(e) {
             D = 360 *(S/100)						//value for degrees
             //L = 10 + Math.abs(Math.sin(S/40)*50);  // value for Left
             //set CSS
+           
         if(H > 10 && H <= 401){
         	$("#dandelion").css({"margin-top": T + 'px'});
         	$("#dandelion").css({"margin-left": L + '%'});
