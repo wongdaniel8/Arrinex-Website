@@ -493,6 +493,14 @@ position: fixed;
                   padding-left: 0px;
                    
                 }
+                  .carouselHeader {
+                    font-weight: 400;
+                  }
+
+                  .carouselPar {
+                    font-weight: 300;
+                  }
+
                   .pictureDescription{
                     position: relative;
                     top: 50px;
@@ -531,9 +539,7 @@ position: fixed;
                               font-weight: bold;
                               font-size: 25px;
                             }
-#arrinexSolution {
-  /*background-color: beige;*/
-}
+
 /*======================================================================*/
 /*TEAM SECTION starts here */
 /*======================================================================*/
@@ -1095,6 +1101,15 @@ position: fixed;
                       animation-direction: normal;
                     }
 
+#gear_modal_header { 
+  font-weight: 300;
+}
+
+#mastermind_description {
+  font-weight: 300;
+  line-height: 23px;
+}
+
 /*======================================================================*/
 /*team section ENDS here */
 /*======================================================================*/
@@ -1192,7 +1207,10 @@ position: fixed;
  /* background-image: url("Arrinex_banner_print2.png");
   background-repeat: no-repeat;
   background-position: 170px 300px ;*/
+  border: 10;
+  padding: 0;
   height: 325px;
+  /*box-shadow: 10px 0px 10px  black;*/
 }
 
 #solutionHeader {
