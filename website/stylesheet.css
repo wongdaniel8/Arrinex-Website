@@ -499,6 +499,7 @@ position: fixed;
 
                   .carouselPar {
                     font-weight: 300;
+                    /*text-align: justify;*/
                   }
 
                   .pictureDescription{
@@ -1224,6 +1225,7 @@ position: fixed;
   padding: 0;
   padding-bottom: 50px;
   margin: 0;
+  color: #999;
 }
 
 .solutionIntroPar {
