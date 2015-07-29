@@ -381,14 +381,60 @@ function invalid() {
 }
 
 /////////////////PASSWORD SCRIPT END///////////////////////
+var card_1_flipped_back = 1;
+var card_2_flipped_back = 1;
+var card_3_flipped_back = 1;
 
 function rotate(card, container, ident) {
-	var car = document.getElementById(card);
-	car.style.transition = "1s linear";
-	car.style.transform = "rotateY(180deg)" ;
+
+	if (card == "f1_card1" )
+	{
+
+		
+			var car = document.getElementById(card);
+			car.style.transition = "1s linear";
+			var rotateDeg = card_1_flipped_back * 180;
+			car.style.transform = "rotateY("+rotateDeg+"deg)" ;
+		
+	}
+	if (card == "f1_card2" )
+	{
+
+		
+			var car = document.getElementById(card);
+			car.style.transition = "1s linear";
+			var rotateDeg = card_2_flipped_back * 180;
+			car.style.transform = "rotateY("+rotateDeg+"deg)" ;
+		
+	}
+	if (card == "f1_card3" )
+	{
+
+		
+			var car = document.getElementById(card);
+			car.style.transition = "1s linear";
+			var rotateDeg = card_3_flipped_back * 180;
+			car.style.transform = "rotateY("+rotateDeg+"deg)" ;
+		
+	}
+	
 }
 
-
+function leftCard(card)
+{
+	if (card == "f1_card1")
+	{
+		card_1_flipped_back++;
+	}
+	else if (card == "f1_card2")
+	{
+		card_2_flipped_back++;
+	}
+	else if (card == "f1_card3")
+	{
+		card_3_flipped_back++;
+	}
+}
 
 
 var carousel_is_on = false;
