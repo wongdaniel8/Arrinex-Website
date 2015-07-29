@@ -279,7 +279,7 @@ $(document).ready(function(){
     			$("#contact").css("z-index","3");
     		});
 
-    	$("#contact").click(
+    	$("#contactUs").mouseout(
     		function() {
     			$("#navBarDiv").css("z-index","1");
     			$("#contact").css("opacity", "0");
