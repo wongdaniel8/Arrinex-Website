@@ -1,7 +1,21 @@
+// $('a[href^="#"]').on('click', function(event) {
+// 	alert("blah");
+//     var target = $( $(this).attr('href') );
+//     if( target.length ) {
+//         event.preventDefault();
+//         $('html, body').animate({
+//             scrollTop: target.offset().top
+//         }, 5000);
+//     }
+// });
+
+
+
+
 
 function adjustPicture()
 {
-	// 
+	
 	if (parseFloat(window.innerWidth) > 1024)
 	{
 		var initial_top_offset_at_1590_width = 325;
@@ -41,6 +55,41 @@ function homeParHide(ident) {
 }
 
 $(document).ready(function(){
+	
+	$("#teamLink").click(function() {
+		$("html, body").animate({ scrollTop: 2140 + 'px'}, 1000);
+	    	return true;
+	});
+
+	// WHAT IS RHINITIS LINK NEEDS WORK BECAUSE OF PARALLAX
+	$("#whatIsLink").click(function() {
+		if ($("body").scrollTop() >= 0 && $("body").scrollTop() <= 120) {
+			alert("top");
+	    	$("html, body").animate({ scrollTop: $("#rhinitisInfo").offset().top - 280 + 'px'}, 1000);
+	    }
+	       else $("html, body").animate({ scrollTop: 670 + 'px'}, 1000);
+	       return true;
+	});
+
+	$("#currentSolutionsLink").click(function() {
+	    	$("html, body").animate({ scrollTop: 1435 + 'px'}, 1000);
+	    	return true;
+	});
+
+	$("#arrinexSolutionLink").click(function() {
+	    	$("html, body").animate({ scrollTop: 2901 + 'px'}, 1000); //if selected below home page image
+	    	return true;
+	});
+
+	$("#solutionButt").click(function() {
+	    	$("html, body").animate({ scrollTop: 2715 + 'px'}, 1000);
+	    	return true;
+	});
+
+
+
+
+
 	var scroll_point1 = 0;
 	var trigger_fade_height = 150;
         $(document).scroll(function() {
@@ -332,7 +381,7 @@ function playCarousel()
 			//alert("played!");
 			
 			executeCarousel();
-			carousel_var = setInterval(function(){ executeCarousel() },3000);
+			carousel_var = setInterval(function(){ executeCarousel() },5000);
 
 			//hide the pause button
 			$("#carouselPause").css("display","inline-block");
@@ -348,7 +397,7 @@ function playCarousel()
 				if (carousel_is_on == true)
 					displayRedCircle();
 
-			},500);
+			},2500);
 
 			// after the last second switch pictures
 			setTimeout(function(){
@@ -359,7 +408,7 @@ function playCarousel()
 					tickCarouselOne();
 				}
 
-			},3000);
+			},5000);
 
 		}
 		//helper functions for execute carousel
@@ -512,29 +561,29 @@ $(document).on('scroll', function(e) {
             $("#sabHeader").css({"transition": "display 1s"});
             $("#sabHeader").css({"display": "none"});
             if(H<=390){
-            $("#hwangHeader").css({"transition": "display 1s"});
+            // $("#hwangHeader").css({"transition": "display 1s"});
             $("#hwangHeader").css({"display": "none"});
-            $("#weissHeader").css({"transition": "display 1s"});
+            // $("#weissHeader").css({"transition": "display 1s"});
             $("#weissHeader").css({"display": "none"});
-            $("#stromeHeader").css({"transition": "display 1s"});
+            // $("#stromeHeader").css({"transition": "display 1s"});
             $("#stromeHeader").css({"display": "none"});
-            $("#bolgerHeader").css({"transition": "display 1s"});
+            // $("#bolgerHeader").css({"transition": "display 1s"});
             $("#bolgerHeader").css({"display": "none"});
-            $("#goodeHeader").css({"transition": "display 1s"});
+            // $("#goodeHeader").css({"transition": "display 1s"});
             $("#goodeHeader").css({"display": "none"});
-            $("#nelsonHeader").css({"transition": "display 1s"});
+            // $("#nelsonHeader").css({"transition": "display 1s"});
             $("#nelsonHeader").css({"display": "none"});
-            $("#bud").css({"transition": "display .1s"});
+            // $("#bud").css({"transition": "display .1s"});
             $("#bud").fadeOut();
-            $("#bud1").css({"transition": "display 1s"});
+            // $("#bud1").css({"transition": "display 1s"});
             $("#bud1").fadeOut();
-            $("#bud2").css({"transition": "display 1s"});
+            // $("#bud2").css({"transition": "display 1s"});
             $("#bud2").fadeOut();
-            $("#bud3").css({"transition": "display 1s"});
+            // $("#bud3").css({"transition": "display 1s"});
             $("#bud3").fadeOut();
-            $("#bud4").css({"transition": "display 1s"});
+            // $("#bud4").css({"transition": "display 1s"});
             $("#bud4").fadeOut();
-            $("#bud5").css({"transition": "display 1s"});
+            // $("#bud5").css({"transition": "display 1s"});
             $("#bud5").fadeOut();
             $("#hwangPara").css("display", "none");
             $("#weissPara").css("display", "none");
@@ -545,33 +594,33 @@ $(document).on('scroll', function(e) {
         }
         }
         if(H >= 390){
-        	$("#sabHeader").css({"transition": "display .5s"});
+        	// $("#sabHeader").css({"transition": "display .5s"});
         	$("#sabHeader").css({"display": "block"});
-        	$("#hwangHeader").css({"transition": "display .5s"});
+        	// $("#hwangHeader").css({"transition": "display .5s"});
         	$("#hwangHeader").fadeIn();
             $("#hwangHeader").css({"display": "inline-block"});
-        	$("#weissHeader").css({"transition": "display 1s"});
+        	// $("#weissHeader").css({"transition": "display 1s"});
         	$("#weissHeader").fadeIn();
             $("#weissHeader").css({"display": "inline-block"});
-        	$("#stromeHeader").css({"transition": "display 1.5s"});
+        	// $("#stromeHeader").css({"transition": "display 1.5s"});
         	$("#stromeHeader").fadeIn();
-        	$("#bolgerHeader").css({"transition": "display 2s"});
+        	// $("#bolgerHeader").css({"transition": "display 2s"});
         	$("#bolgerHeader").fadeIn();
-        	$("#goodeHeader").css({"transition": "display 2.5s"});
+        	// $("#goodeHeader").css({"transition": "display 2.5s"});
         	$("#goodeHeader").fadeIn();
-        	$("#nelsonHeader").css({"transition": "display 3s"});
+        	// $("#nelsonHeader").css({"transition": "display 3s"});
         	$("#nelsonHeader").fadeIn();
-            $("#bud").css({"transition": "display .5s"});
+            // $("#bud").css({"transition": "display .5s"});
         	$("#bud").fadeIn();
-        	$("#bud1").css({"transition": "display 1s"});
+        	// $("#bud1").css({"transition": "display 1s"});
             $("#bud1").fadeIn();
-        	$("#bud2").css({"transition": "display 1.5s"});
+        	// $("#bud2").css({"transition": "display 1.5s"});
             $("#bud2").fadeIn();
-        	$("#bud3").css({"transition": "display 2s"});
+        	// $("#bud3").css({"transition": "display 2s"});
             $("#bud3").fadeIn();
-        	$("#bud4").css({"transition": "display 10s ease 3s"});
+        	// $("#bud4").css({"transition": "display 10s ease 3s"});
             $("#bud4").fadeIn();
-        	$("#bud5").css({"transition": "display 15s linear 5s"});
+        	// $("#bud5").css({"transition": "display 15s linear 5s"});
             $("#bud5").fadeIn();
         }
     });
@@ -601,6 +650,9 @@ setInterval(function(){
       $("#bud5").css({"transform": 'rotate(' + angle + 'deg)'});
      //$("#bud").rotate(angle);
 }, 50);
+
+
+
 	//============================================================
 	// JAVASCRIPT FOR INVESTORS PAGE
 	//============================================================

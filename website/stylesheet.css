@@ -239,6 +239,7 @@ position: fixed;
 #parallaxHelpDiv{
   position: relative;
   background-color: white;
+  overflow-y: hidden;
 }
     .sectionDivs {
       padding: 30px;
@@ -566,6 +567,7 @@ position: fixed;
       height: 800px;
       background: linear-gradient(rgb(171, 249, 181), rgb(5, 53, 60));
       /*background: linear-gradient(#3F4041, whitesmoke);*/
+
       z-index: 3;
       opacity: .85;
     }
