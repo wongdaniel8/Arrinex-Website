@@ -56,35 +56,7 @@ function homeParHide(ident) {
 
 $(document).ready(function(){
 	
-	$("#teamLink").click(function() {
-		$("html, body").animate({ scrollTop: 2140 + 'px'}, 1000);
-	    	return true;
-	});
-
-	// WHAT IS RHINITIS LINK NEEDS WORK BECAUSE OF PARALLAX
-	$("#whatIsLink").click(function() {
-		if ($("body").scrollTop() >= 0 && $("body").scrollTop() <= 120) {
-			alert("top");
-	    	$("html, body").animate({ scrollTop: $("#rhinitisInfo").offset().top - 280 + 'px'}, 1000);
-	    }
-	       else $("html, body").animate({ scrollTop: 670 + 'px'}, 1000);
-	       return true;
-	});
-
-	$("#currentSolutionsLink").click(function() {
-	    	$("html, body").animate({ scrollTop: 1435 + 'px'}, 1000);
-	    	return true;
-	});
-
-	$("#arrinexSolutionLink").click(function() {
-	    	$("html, body").animate({ scrollTop: 2901 + 'px'}, 1000); //if selected below home page image
-	    	return true;
-	});
-
-	$("#solutionButt").click(function() {
-	    	$("html, body").animate({ scrollTop: 2715 + 'px'}, 1000);
-	    	return true;
-	});
+	
 
 
 
@@ -92,6 +64,7 @@ $(document).ready(function(){
 
 	var scroll_point1 = 0;
 	var trigger_fade_height = 150;
+	var parallax_shifted = false;
         $(document).scroll(function() {
             
             //FUNCTION that deals with fade in and out
@@ -130,12 +103,14 @@ $(document).ready(function(){
 
 			//FUNCTION for parallax
 				if (scroll_point2 < 300)
-				{
+				{   parallax_shifted = true;
 					var parallax_displacement = scroll_point2*0.8;
 					var parallax_opacity = 1-scroll_point2*0.004;
 					$("#parallaxHelpDiv").css("bottom",""+parallax_displacement+"px");
 					$("#firstHomeText").css("opacity",""+parallax_opacity);
 				}
+
+
 			//FUNCTION trigger the carousel initially
 				var pos_from_top = $("body").scrollTop();
 				var vert_pos_exist_soln_div = $("#existingSolutions").offset().top;
@@ -149,6 +124,66 @@ $(document).ready(function(){
 
 
         });
+
+	// FUNCTIONS FOR NAVIGATION BAR SCROLLING
+				$("#teamLink").click(function() {
+					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+						if (parallax_shifted == true) {
+							alert('true');
+						} else alert('false');
+						$("html, body").animate({ scrollTop: 1960 + 'px'}, 1000);
+					}
+					else {
+						alert('false');
+						$("html, body").animate({ scrollTop: 2140 + 'px'}, 1000);
+	    			}
+	    			return true;
+				});
+
+				// WHAT IS RHINITIS LINK NEEDS WORK BECAUSE OF PARALLAX
+				$("#whatIsLink").click(function() {
+					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+				    		$("html, body").animate({ scrollTop: 458 + 'px'}, 1000);
+				    	}
+				    	else {
+				    		$("html, body").animate({ scrollTop: 678 + 'px'}, 1000);
+				    	}
+				    	return true;
+					
+				});
+
+				$("#currentSolutionsLink").click(function() {
+						if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+				    		$("html, body").animate({ scrollTop: 1215 + 'px'}, 1000);
+				    	}
+				    	else {
+				    		$("html, body").animate({ scrollTop: 1435 + 'px'}, 1000);
+				    	}
+				    	return true;
+				});
+
+				$("#arrinexSolutionLink").click(function() {
+					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+				    		$("html, body").animate({ scrollTop: 2681 + 'px'}, 1000);
+				    	}
+				    	else {
+				    		$("html, body").animate({ scrollTop: 2901 + 'px'}, 1000);
+				    	}
+				    	return true;
+				});
+
+				$("#chronicRhinitisButt").click(function() {
+				    	if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+				    		$("html, body").animate({ scrollTop: 458 + 'px'}, 1000);
+				    	}
+				    	else {
+				    		$("html, body").animate({ scrollTop: 678 + 'px'}, 1000);
+				    	}
+				    	return true;
+				});
+
+
+
 	//FUNCTION to assist carousel
 		$(".pictureDescription[data-position='1']").css("display","block");
 
