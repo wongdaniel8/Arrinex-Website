@@ -397,6 +397,13 @@ position: fixed;
 /*Rhinitis Info Section div END*/
 /*================================================*/
 
+   #currentSolutionsHeader {
+    
+    color: black;
+    font-weight: 300;
+    /*margin-bottom: 90px;*/
+   }
+
    #existingSolutions {
       color: white;
       padding: 0px;
@@ -1526,6 +1533,37 @@ BEGINNING OF INVESTORS STYLESHEET
   width: 30%;
 }
 
+#copyright { 
+  z-index: 100;
+  padding-top: 1px;
+  border:0;
+  background: black;
+  display: block;
+  height: 45px;
+  max-width: 100%;
+  min-width: 100%;
+  /*color: grey;*/
+  color: #787878;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+#copyrightPar1 {
+  display: block;
+  margin:0;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  font-size: 12px;
+
+
+
+
+}
+#copyrightPar2 {
+  margin:0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
 
 
 

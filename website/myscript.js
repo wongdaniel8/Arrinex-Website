@@ -1,16 +1,3 @@
-// $('a[href^="#"]').on('click', function(event) {
-// 	alert("blah");
-//     var target = $( $(this).attr('href') );
-//     if( target.length ) {
-//         event.preventDefault();
-//         $('html, body').animate({
-//             scrollTop: target.offset().top
-//         }, 5000);
-//     }
-// });
-
-
-
 
 
 function adjustPicture()
@@ -56,12 +43,6 @@ function homeParHide(ident) {
 
 $(document).ready(function(){
 	
-	
-
-
-
-
-
 	var scroll_point1 = 0;
 	var trigger_fade_height = 150;
 	var parallax_shifted = false;
@@ -397,13 +378,14 @@ function invalid() {
 }
 
 /////////////////PASSWORD SCRIPT END///////////////////////
+
 var card_1_flipped_back = 1;
 var card_2_flipped_back = 1;
 var card_3_flipped_back = 1;
 
 function rotate(card, container, ident) {
 
-	if (card == "f1_card1" )
+	if (card == "f1_card1"  )
 	{
 
 		

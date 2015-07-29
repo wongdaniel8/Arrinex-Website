@@ -71,9 +71,7 @@
     <p> The following page is restricted to potential investors only. 
         Please input your confidential key, or contact us to recieve one.</p> <p>Click anywhere in the black box to exit. </p>
     <p id = "errorPar"><br> </br> <br></br>The entered password was incorrect </p>
-   <!--  <input id = "passwordInput" type = "text"> </input> -->
 </div>
-<!-- <form action="company.html"> -->
 <form>
     <input id = "passwordInput" type = "password" placeholder = "PASSWORD" onkeypress = "verifyKey(event)"> </input>
 </form>
@@ -108,12 +106,11 @@
 
 
 <!-- Beginning of section divs -->
-
     <div id="parallaxHelpDiv">
     
     <div class = "sectionDivs" id = "rhinitisInfo">
         <div id="cards_container">
-            <h1 id="rhinitisHeader">Understanding Rhinitis...</h1>
+            <h1 id="rhinitisHeader" style = "font-weight: 300;">Understanding Rhinitis...</h1>
             <div id = "f1_container1" data-count="0" onmouseover = "rotate('f1_card1')" onmouseleave = "leftCard('f1_card1')"> 
                     <div id="f1_card1" class="shadow">
                          <div class="front face1">
@@ -191,7 +188,9 @@
 
 
     <div class = "sectionDivs" id = "existingSolutions">
+
         <div id="carouselContainer">
+            <!-- <h1 id = "currentSolutionsHeader">Current Solutions</h1> -->
             <div id="carouselControls">
                 <div id="carouselPlayborder" >
                     <div class="left_next" onclick="tickLeft()" ></div>
@@ -245,7 +244,6 @@
                     <li class="pictureDescription" data-position="5" >
                         <h3 class = "carouselHeader">Dealing With It</h3>
                         <p class = "carouselPar"> When the prospect of continually seeking medication or constantly trying different therapies seems to have no avail, many people are left with the unfortunate choice of seeking temporary relief, or just living with chronic rhinitis.
-
                         </p>
                     </li>
                 </ul>
@@ -412,11 +410,6 @@
 
 
 
-
-
-
-
-
             <p class="sabPars" id="hwangPara">Peter Hwang is a professor of Otololaryngology at the Stanford University Medical Center, focusing on head and neck surgery. He is the chief of Stanford Medical's division of Rhinology and Endoscopic Skull Base Surgery.</p>
             <p class="sabPars" id="weissPara"> Ray Weiss is a graduate of the University of Texas Medical School at San Antonio. He is Board certified by the American Board of Otolaryngology, and is a Fellow of the American Academy of Otolaryngology - Head and Neck Surgery, and a member of the American Rhinology Society.</p>
             <p class="sabPars" id="bolgerPara"> Dr. William Bolger is an ENT-otolaryngologist in Jacksonville, Florida and is affiliated with Mayo Clinic. William Bolger recieved his medical degree from the F. Edward Hebert School of Medicine, Uniformed Services University of the Health Sciences. </p> 
@@ -439,10 +432,19 @@
             <p class="sabName" id="goodeHeader" onClick="sabClick('#goode')">Goode, M.D.</p>
             <img src="headerDandelion.png" id="bud5" class="bud">
             <p class="sabName" id="nelsonHeader" onClick="sabClick('#nelson')">Nelson, M.D.</p>
-        
     </div>
-<div> Lorus ipsum dolor <br> </br>
-    Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>
+<div id = "copyright"> 
+    <p id = "copyrightPar1">&#169;Copyright 2015</p>
+    <p id = "copyrightPar2"> Website designed and created by Daniel Wong, in collaboration with Herberth Bonilla, and Devin Morgan. All rights reserved.</p>
+
+
+
+
+
+
+
+<!-- Lorus ipsum dolor <br> </br>
+    Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br> -->
 </div>
       
 
