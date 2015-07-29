@@ -128,13 +128,10 @@ $(document).ready(function(){
 	// FUNCTIONS FOR NAVIGATION BAR SCROLLING
 				$("#teamLink").click(function() {
 					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
-						if (parallax_shifted == true) {
-							alert('true');
-						} else alert('false');
+						
 						$("html, body").animate({ scrollTop: 1960 + 'px'}, 1000);
 					}
 					else {
-						alert('false');
 						$("html, body").animate({ scrollTop: 2140 + 'px'}, 1000);
 	    			}
 	    			return true;
