@@ -169,6 +169,16 @@ $(document).ready(function(){
 				    	return true;
 				});
 
+				$("#solutionButt").click(function() {
+					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+				    		$("html, body").animate({ scrollTop: 2681 + 'px'}, 1000);
+				    	}
+				    	else {
+				    		$("html, body").animate({ scrollTop: 2901 + 'px'}, 1000);
+				    	}
+				    	return true;
+				});
+
 				$("#chronicRhinitisButt").click(function() {
 				    	if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
 				    		$("html, body").animate({ scrollTop: 458 + 'px'}, 1000);
@@ -179,6 +189,15 @@ $(document).ready(function(){
 				    	return true;
 				});
 
+				$("#sabLink").click(function() {
+					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+				    		$("html, body").animate({ scrollTop: 3600 + 'px'}, 1000);
+				    	}
+				    	else {
+				    		$("html, body").animate({ scrollTop: 3590 + 'px'}, 1000);
+				    	}
+				    	return true;
+				});
 
 
 	//FUNCTION to assist carousel
