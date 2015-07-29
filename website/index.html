@@ -112,78 +112,79 @@
     <div id="parallaxHelpDiv">
     
     <div class = "sectionDivs" id = "rhinitisInfo">
-
-        <div id = "f1_container1" onclick = "rotate('f1_card1')"> 
-                <div id="f1_card1" class="shadow">
-                     <div class="front face1">
-                        <br></br>
-                        How common?
-                        <div id = "logoWrapper">
-                        <img src = "transparant_logo.png" class = "cardLogo">
+        <div id="cards_container">
+            <h1 id="rhinitisHeader">Understanding Rhinitis...</h1>
+            <div id = "f1_container1" data-count="0" onmouseover = "rotate('f1_card1')" onmouseleave = "leftCard('f1_card1')"> 
+                    <div id="f1_card1" class="shadow">
+                         <div class="front face1">
+                            <br></br>
+                            How common is it?
+                            <div id = "logoWrapper">
+                            <img src = "transparant_logo.png" class = "cardLogo">
+                            </div>
                         </div>
-                    </div>
-                    <div class="back1 face1 center" onclick = "rotate()">
-                        <div class="homeParPicOne" >
-                            <img class = "circlePics" src = "groupOfPeopleCircle2.png" align="center"> </img>
-                        </div>
-                        <div class="homeParInfoOne" align="center">
-                            <div class="paraCell" align="center">
-                                <h3 style="height: 35px"> It's <i>Common</i>...</h3>
-                                <p align="justify" style="padding: 0px 23px">About 60-80 million Americans have either allergic or non-allergic rhinitis. The difference? One is triggered by allergies, the other is triggered by unknown causes.</p>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-        </div>
-
-        <div id = "f1_container2" onclick = "rotate('f1_card2')">
-                <div id="f1_card2" class="shadow">
-                     <div class="front face1">
-                        <br></br>
-                        How annoying?
-                        <div id = "logoWrapper">
-                        <img src = "transparant_logo.png" class = "cardLogo">
-                        </div>
-                    </div>
-                    <div class="back1 face1 center">
-                        <div class="homeParPicOne" align="center">
-                            <img class = "circlePics" src = "blowNoseCircle.png" align="center"> </img>
-                        </div>
-                        <div class="homeParInfoOne" align="center">
-                            <div class="paraCell">
-                                <h3 style="height: 35px">It's <i>Annoying</i>...</h3>
-                                <p align="justify" style="padding: 0px 34px">Both allergic and non-allergic rhinitis result in allergy symptoms such as a runny nose, itchy eyes and skin, sneezing, stuffy nose, and fatigue.</p>
+                        <div class="back1 face1 center" >
+                            <div class="homeParPicOne" >
+                                <img class = "circlePics" src = "groupOfPeopleCircle2.png" align="center"> </img>
+                            </div>
+                            <div class="homeParInfoOne" align="center">
+                                <div class="paraCell" align="center">
+                                    <h3 style="height: 35px"> It's common!</h3>
+                                    <p align="justify" style="padding: 0px 23px">About 60-80 million Americans have either allergic or non-allergic rhinitis. The difference? One is triggered by allergies, the other is triggered by unknown causes.</p>
+                                </div> 
                             </div>
                         </div>
                     </div>
-                </div>
-        </div>
+            </div>
 
-
-
-        <div id = "f1_container3" onclick = "rotate('f1_card3')">
-                <div id="f1_card3" class="shadow">
-                     <div class="front face1">
-                        <br></br>
-                        How is it triggered?
-                        <div id = "logoWrapper">
-                        <img src = "transparant_logo.png" class = "cardLogo">
+            <div id = "f1_container2" data-count="0" onmouseover = "rotate('f1_card2')" onmouseleave = "leftCard('f1_card2')">
+                    <div id="f1_card2" class="shadow">
+                         <div class="front face1">
+                            <br></br>
+                            How annoying is it?
+                            <div id = "logoWrapper">
+                            <img src = "transparant_logo.png" class = "cardLogo">
+                            </div>
                         </div>
-                    </div>
-                    <div class="back1 face1 center">
-                       <div class="homeParPicOne" align="center">
-                        <img class = "circlePics" src = "triggersCircle.png" align="center"> </img>
-                    </div>
-                        <div class="homeParInfoOne" align="center">
-                            <div class="paraCell">
-                                <h3 style="height: 35px">It's <i>Easily </i>Triggered...</h3>
-                                <p align="justify" style="padding: 0px 35px">Common triggers are pollen, grass, pet hair, and dust mites. Non-allergenic triggers include cleaning solutions, cigarette smoke, hair spray, and car exhaust.</p>
+                        <div class="back1 face1 center">
+                            <div class="homeParPicOne" align="center">
+                                <img class = "circlePics" src = "blowNoseCircle.png" align="center"> </img>
+                            </div>
+                            <div class="homeParInfoOne" align="center">
+                                <div class="paraCell">
+                                    <h3 style="height: 35px">It's annoying!</h3>
+                                    <p align="justify" style="padding: 0px 34px">Both allergic and non-allergic rhinitis result in allergy symptoms such as a runny nose, itchy eyes and skin, sneezing, stuffy nose, and fatigue.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-        </div>   
-    
+            </div>
+
+
+
+            <div id = "f1_container3" data-count="0" onmouseover = "rotate('f1_card3')" onmouseleave = "leftCard('f1_card3')">
+                    <div id="f1_card3" class="shadow">
+                         <div class="front face1">
+                            <br></br>
+                            How easily is it triggered?
+                            <div id = "logoWrapper">
+                            <img src = "transparant_logo.png" class = "cardLogo">
+                            </div>
+                        </div>
+                        <div class="back1 face1 center">
+                           <div class="homeParPicOne" align="center">
+                            <img class = "circlePics" src = "triggersCircle.png" align="center"> </img>
+                        </div>
+                            <div class="homeParInfoOne" align="center">
+                                <div class="paraCell">
+                                    <h3 style="height: 35px">Easily!</h3>
+                                    <p align="justify" style="padding: 0px 35px">Common triggers include pollen, grass, pet hair, and dust mites which is pretty close. Non-allergenic triggers include cleaning solutions, cigarette smoke, hair spray, and car exhaust.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>   
+        </div>
     </div>
 
 
