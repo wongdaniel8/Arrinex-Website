@@ -1535,6 +1535,7 @@ BEGINNING OF INVESTORS STYLESHEET
 
 #copyright { 
   z-index: 100;
+  /*padding, margin: 0px;*/
   padding-top: 1px;
   border:0;
   background: black;

@@ -142,7 +142,7 @@ $(document).ready(function(){
 
 				$("#arrinexSolutionLink").click(function() {
 					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
-				    		$("html, body").animate({ scrollTop: 2681 + 'px'}, 1000);
+				    		$("html, body").animate({ scrollTop: 2681 + 'px'}, 1010);
 				    	}
 				    	else {
 				    		$("html, body").animate({ scrollTop: 2901 + 'px'}, 1000);
@@ -152,7 +152,7 @@ $(document).ready(function(){
 
 				$("#solutionButt").click(function() {
 					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
-				    		$("html, body").animate({ scrollTop: 2681 + 'px'}, 1000);
+				    		$("html, body").animate({ scrollTop: 2681 + 'px'}, 1080);
 				    	}
 				    	else {
 				    		$("html, body").animate({ scrollTop: 2901 + 'px'}, 1000);
@@ -374,7 +374,7 @@ function invalid() {
 
     invalidDisplay.style.opacity = 1;
     alert("invalid key");
-    return;
+    // return;
 }
 
 /////////////////PASSWORD SCRIPT END///////////////////////
