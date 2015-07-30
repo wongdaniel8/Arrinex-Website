@@ -42,7 +42,7 @@ function homeParHide(ident) {
 }
 
 $(document).ready(function(){
-	
+
 	var scroll_point1 = 0;
 	var trigger_fade_height = 150;
 	var parallax_shifted = false;
@@ -105,6 +105,9 @@ $(document).ready(function(){
 
 
         });
+
+
+
 
 	// FUNCTIONS FOR NAVIGATION BAR SCROLLING
 				$("#teamLink").click(function() {
@@ -339,12 +342,7 @@ function verifyKey(e) {
     if (window.event)
         keycode = window.event.keyCode;
     if (keycode == 13) {
-        // alert("verifedKey");
-        // var hash = CryptoJS.MD5("Message");
-        // alert(hash);
         return verification();
-
-        // window.open("company.html");
     }
 }
 function verification() {
@@ -356,33 +354,48 @@ function verification() {
     var i;
     x = document.getElementById("passwordInput").value;
     var hashedPasswordInput = CryptoJS.MD5(x);
-    alert(hashedPasswordInput);
+    // alert(hashedPasswordInput);
     try { 
         for (i = 0; i < passwordArray.length; i++) {
 			if(hashedPasswordInput == passwordArray[i]) {
 	    	    invalidDisplay.style.opacity = "0";
 	    	    window.open("investors.html");
-	    	    // window.open("company.html", "_self");
-	    	    // window.close();
 	    	    return;
 			}
 		}
         return invalid();
     }
     catch(err) {
-        message.innerHTML = "Input is " + err;
+        message.innerHTML = "Error in input: " + err;
     }
 }
 
 
+var shakeCount = 1;
 function invalid() {
     var invalidDisplay = document.getElementById('errorPar');
     document.getElementById("passwordInput").value = "";
-
     invalidDisplay.style.opacity = 1;
+    
+    invalidDisplay.style.animation = "shake";
+    // invalidDisplay.style.animationPlayState = "running";
+    invalidDisplay.style.animationDuration = "1s";
+    // invalidDisplay.style.animationFillMode="forwards";
+    shakeCount+=2;
+    invalidDisplay.style.animationIterationCount= shakeCount.toString();
+    // return pause();
     alert("invalid key");
     // return;
 }
+// $("#passwordInput").click(function() {
+//     				$( "#errorPar" ).effect( "shake" , {times:4}, 1000  );
+// 	    			return true;
+// 	});
+function pause() {
+	var invalidDisplay = document.getElementById('errorPar');
+    invalidDisplay.style.animationPlayState = "paused";
+}
+
 
 /////////////////PASSWORD SCRIPT END///////////////////////
 
