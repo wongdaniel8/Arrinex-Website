@@ -1400,17 +1400,27 @@ position: fixed;
   margin-top:300px;
   left:960px;
 }
+
+#bud,#bud1,#bud2,#bud3,#bud4,#bud5{
+  animation-name: fullRotate;
+  animation-duration: 500s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
 #sabHeader{
-  left: 380px;
-  margin-top: 420px;
-  width: 100px;
-  min-width:100px;
+  left: 327px;
+  margin-top: 400px;
+  width: 215px;
+  min-width: 100px;
   position: absolute;
   text-align: center;
-  font-size: 25px;
+  font-size: 45px;
   font-weight: bold;
   color: rgb(245,245,245);
-  background-color: rgba(0,0,0,.2);
+  /* background-color: rgba(0,0,0,.2); */
   transition: display .5s;
 }
 .sabNameRow1, .sabNameRow2{
@@ -1421,7 +1431,7 @@ position: fixed;
   font-size: 25px;
   color: rgb(245,245,245);
   z-index: 1;
-  background-color: rgba(0,0,0,.2);
+  /*background-color: rgba(0,0,0,.2);*/
   transition: display 1s;
   display:none;
 }
@@ -1452,6 +1462,13 @@ position: fixed;
   left: 1045px;
   margin-top: 465px;
 }
+
+
+
+
+
+
+
 
 /*============================================================================
 BEGINNING OF INVESTORS STYLESHEET

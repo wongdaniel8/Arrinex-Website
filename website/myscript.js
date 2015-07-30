@@ -732,29 +732,29 @@ function sabClick(event){
 }
 
 var angle = 0;
-setInterval(function(){
-      angle += .33;
-      $(".budRow2").css({"transform": 'rotate(' + angle + 'deg)'});
-      if (!($("#bud").css("display") == 'none')){
-      	$("#bud").css({"transform": 'rotate(' + angle + 'deg)'});
-      }
-      if (!($("#bud1").css("display") == 'none')){
-      	$("#bud1").css({"transform": 'rotate(' + angle + 'deg)'});
-      }
-      if (!($("#bud2").css("display") == 'none')){
-      	$("#bud2").css({"transform": 'rotate(' + angle + 'deg)'});
-      }
-      if (!($("#bud3").css("display") == 'none')){
-      	$("#bud3").css({"transform": 'rotate(' + angle + 'deg)'});
-      }
-      if (!($("#bud4").css("display") == 'none')){
-      	$("#bud4").css({"transform": 'rotate(' + angle + 'deg)'});
-      }
-      if (!($("#bud5").css("display") == 'none')){
-      	$("#bud5").css({"transform": 'rotate(' + angle + 'deg)'});
-      }
-     //$("#bud").rotate(angle);
-}, 50);
+// setInterval(function(){
+//       angle += .1;
+//       $(".budRow2").css({"transform": 'rotate(' + angle + 'deg)'});
+//       if (!($("#bud").css("display") == 'none')){
+//       	$("#bud").css({"transform": 'rotate(' + angle + 'deg)'});
+//       }
+//       if (!($("#bud1").css("display") == 'none')){
+//       	$("#bud1").css({"transform": 'rotate(' + angle + 'deg)'});
+//       }
+//       if (!($("#bud2").css("display") == 'none')){
+//       	$("#bud2").css({"transform": 'rotate(' + angle + 'deg)'});
+//       }
+//       if (!($("#bud3").css("display") == 'none')){
+//       	$("#bud3").css({"transform": 'rotate(' + angle + 'deg)'});
+//       }
+//       if (!($("#bud4").css("display") == 'none')){
+//       	$("#bud4").css({"transform": 'rotate(' + angle + 'deg)'});
+//       }
+//       if (!($("#bud5").css("display") == 'none')){
+//       	$("#bud5").css({"transform": 'rotate(' + angle + 'deg)'});
+//       }
+//      //$("#bud").rotate(angle);
+// }, 1000);
 
 
 
