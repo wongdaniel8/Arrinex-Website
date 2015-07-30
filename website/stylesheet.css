@@ -261,67 +261,71 @@ position: fixed;
       width: 100%;
       text-align: center;
     }
-
-
-    #rhinitisHeader{
-      margin-top: 0px;
-      margin-bottom: 20px;
-      padding-top: 20px;
-      /*background: rgb(245, 245, 245);*/
-      color: rgb(65, 65, 65);
-    }
-    #rhinitisInfo {
-      opacity: 0;
-      background-color: white;
-      color: black;
-      /*height: 670px;*/
-      margin-bottom: 10px;
-      min-width: 780px;
-      display:inline-block;
-      vertical-align: middle;
-      padding:0px;
-      transition: opacity 3s ease;
-    }
-        .rhitinisInfoWrapper{
-           width:300px;
-           height: 460px;
-          display: inline-block;
-          vertical-align: middle;
-          padding: 15px 15px 30px 15px;
-          margin: 85px 15px 0px 15px;
-          background:rgb(245, 245, 245);
+        #cards_center_wrapper{
+          width: 1100px;
+          height: 400px;
+          margin: 25px auto;
         }
-            .homeParPicOne{
-                height:189px;
-                background-color:rgb(245, 245, 245); 
-              }
-                  .circlePics{
-                    height:200px;
-                    width:200px;
-                  }
-              .homeParInfoOne{
-                font-size: 17px;
-                line-height: 35px;
-              }
-                  .paraCell{
-                      display:table;
-                    }
-                        #infoPara{
-                          text-align: center;
-                          padding:0px 10px;
-                        }
-                        #symptomsList{
-                          font-size: 15px;
-                          line-height: 20px;
-                          padding-left: 50px;
-                          height: 100px;
-                        }
-                            #symptomsItem{
+
+            #rhinitisHeader{
+              margin-top: 0px;
+              margin-bottom: 20px;
+              padding-top: 20px;
+              /*background: rgb(245, 245, 245);*/
+              color: rgb(65, 65, 65);
+            }
+            #rhinitisInfo {
+              opacity: 0;
+              background-color: white;
+              color: black;
+              /*height: 670px;*/
+              margin-bottom: 50px;
+              min-width: 780px;
+              display:inline-block;
+              vertical-align: middle;
+              padding:0px;
+              transition: opacity 3s ease;
+            }
+                .rhitinisInfoWrapper{
+                   width:300px;
+                   height: 460px;
+                  display: inline-block;
+                  vertical-align: middle;
+                  padding: 15px 15px 30px 15px;
+                  margin: 85px 15px 0px 15px;
+                  background:rgb(245, 245, 245);
+                }
+                    .homeParPicOne{
+                        height:189px;
+                        background-color:rgb(245, 245, 245); 
+                      }
+                          .circlePics{
+                            height:200px;
+                            width:200px;
+                          }
+                      .homeParInfoOne{
+                        font-size: 17px;
+                        line-height: 35px;
+                      }
+                          .paraCell{
+                              display:table;
                             }
+                                #infoPara{
+                                  text-align: center;
+                                  padding:0px 10px;
+                                }
+                                #symptomsList{
+                                  font-size: 15px;
+                                  line-height: 20px;
+                                  padding-left: 50px;
+                                  height: 100px;
+                                }
+                                    #symptomsItem{
+                                    }
    #existingSolutions {
       color: white;
       padding: 0px;
-      margin-top: 100px;
+      margin:10px 0px 50px 0px;;
     }
         #carouselContainer{
           width: 1024px;
@@ -1135,8 +1139,8 @@ position: fixed;
 */
 #f1_container1, #f1_container2, #f1_container3 {
   display: inline-block;
-  position: absolute;
-  margin: 10px auto;
+  /*position: absolute;*/
+  margin: 10px 15px;
   width: 330px;
   height: 530px;
   z-index: 0;
