@@ -340,19 +340,26 @@ function verifyKey(e) {
         keycode = window.event.keyCode;
     if (keycode == 13) {
         // alert("verifedKey");
+        // var hash = CryptoJS.MD5("Message");
+        // alert(hash);
         return verification();
+
         // window.open("company.html");
     }
 }
 function verification() {
-	var passwordArray = ["a", "b", "password"];
+	// var passwordArray = ["a", "b", "password"];
+	var passwordArray = ["0cc175b9c0f1b6a831c399e269772661", "92eb5ffee6ae2fec3ad71c777531578f", "5f4dcc3b5aa765d61d8327deb882cf99"];
+
     var x;
     var invalidDisplay = document.getElementById('errorPar');
     var i;
     x = document.getElementById("passwordInput").value;
+    var hashedPasswordInput = CryptoJS.MD5(x);
+    alert(hashedPasswordInput);
     try { 
         for (i = 0; i < passwordArray.length; i++) {
-			if(x == passwordArray[i]) {
+			if(hashedPasswordInput == passwordArray[i]) {
 	    	    invalidDisplay.style.opacity = "0";
 	    	    window.open("investors.html");
 	    	    // window.open("company.html", "_self");
