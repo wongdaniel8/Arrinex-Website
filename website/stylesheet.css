@@ -1191,7 +1191,7 @@ position: fixed;
 
 #logoWrapper {
   position: relative;
-  top: 160px;
+  top: 85px;
   height: 68px;
   background-color: white;
   border-top: 2px solid white;
@@ -1337,6 +1337,14 @@ position: fixed;
   width:50px;
   position:absolute;
 }
+#dandelion2{
+  margin-top:325px;
+  margin-left:209px;
+  height:400px;
+  width:428px;
+  position:absolute;
+  display:none;
+}
 .budRow1{
   height:350px;
   width:300px;
@@ -1398,7 +1406,7 @@ position: fixed;
   transition: display 1s;
   display:none;
 }
-.sabNameRow1:hover, .sabRow2:hover{
+.sabNameRow1:hover, .sabNameRow2:hover{
   cursor: pointer;
 }
 #hwangHeader{
@@ -1523,7 +1531,37 @@ BEGINNING OF INVESTORS STYLESHEET
   top: 1000px;
   width: 30%;
 }
+#copyright { 
+  z-index: 1;
+  padding-top: 1px;
+  border:0;
+  background: black;
+  display: block;
+  height: 45px;
+  max-width: 100%;
+  min-width: 100%;
+  /*color: grey;*/
+  color: #787878;
+  font-weight: 300;
+  font-size: 14px;
+}
 
+#copyrightPar1 {
+  display: block;
+  margin:0;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  font-size: 12px;
+
+
+
+
+}
+#copyrightPar2 {
+  margin:0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
 
 
 

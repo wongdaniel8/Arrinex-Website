@@ -30,32 +30,32 @@
                 <a id = "forPatients"   href="#">Company</a>
                 <ul class="dropDownList">
                     <li class="dropDownLI">
-                        <div class="ddText">The Team</div>
+                        <div class="ddText" id = "teamLink">The Team</div>
                         <div class="highlightLeft"></div>
                         <div class="highlightRight"></div>
                     </li>
                     <li class="dropDownLI">
-                        <div class="ddText" style="line-height:20px;">Scientific Advisory Board</div>
+                        <div class="ddText" id = "sabLink" style="line-height:20px;">Scientific Advisory Board</div>
                         <div class="highlightLeft"></div>
                         <div class="highlightRight"></div>
                     </li>
                 </ul>
             </li>
             <li class="navBarLinks" >
-                <a id = "company"   href="#/company">For Patients</a>
+                <a id = "forPatients">For Patients</a>
                 <ul class="dropDownList">
                     <li class="dropDownLI">
-                        <div class="ddText">What is Rhinitis?</div>
+                        <div class="ddText" id = "whatIsLink">What is Rhinitis?</div>
                         <div class="highlightLeft"></div>
                         <div class="highlightRight"></div>
                     </li>
                     <li class="dropDownLI">
-                        <div class="ddText">Current Solution</div>
+                        <div class="ddText" id = "currentSolutionsLink">Current Solutions</div>
                         <div class="highlightLeft"></div>
                         <div class="highlightRight"></div>
                     </li>
                     <li class="dropDownLI">
-                        <div class="ddText">The Arinex Solution</div>
+                        <div class="ddText" id = "arrinexSolutionLink">The Arrinex Solution</div>
                         <div class="highlightLeft"></div>
                         <div class="highlightRight"></div>
                     </li>
@@ -71,9 +71,7 @@
     <p> The following page is restricted to potential investors only. 
         Please input your confidential key, or contact us to recieve one.</p> <p>Click anywhere in the black box to exit. </p>
     <p id = "errorPar"><br> </br> <br></br>The entered password was incorrect </p>
-   <!--  <input id = "passwordInput" type = "text"> </input> -->
 </div>
-<!-- <form action="company.html"> -->
 <form>
     <input id = "passwordInput" type = "password" placeholder = "PASSWORD" onkeypress = "verifyKey(event)"> </input>
 </form>
@@ -108,89 +106,91 @@
 
 
 <!-- Beginning of section divs -->
-
     <div id="parallaxHelpDiv">
     
     <div class = "sectionDivs" id = "rhinitisInfo">
-
-        <div id = "f1_container1" onclick = "rotate('f1_card1')"> 
-                <div id="f1_card1" class="shadow">
-                     <div class="front face1">
-                        <br></br>
-                        How common?
-                        <div id = "logoWrapper">
-                        <img src = "transparant_logo.png" class = "cardLogo">
+        <div id="cards_container">
+            <h1 id="rhinitisHeader" style = "font-weight: 300;">Understanding Rhinitis...</h1>
+            <div id = "f1_container1" data-count="0" onmouseover = "rotate('f1_card1')" onmouseleave = "leftCard('f1_card1')"> 
+                    <div id="f1_card1" class="shadow">
+                         <div class="front face1">
+                            <br></br>
+                            How common is it?
+                            <div id = "logoWrapper">
+                            <img src = "transparant_logo.png" class = "cardLogo">
+                            </div>
                         </div>
-                    </div>
-                    <div class="back1 face1 center" onclick = "rotate()">
-                        <div class="homeParPicOne" >
-                            <img class = "circlePics" src = "groupOfPeopleCircle2.png" align="center"> </img>
-                        </div>
-                        <div class="homeParInfoOne" align="center">
-                            <div class="paraCell" align="center">
-                                <h3 style="height: 35px"> It's <i>Common</i>...</h3>
-                                <p align="justify" style="padding: 0px 23px">About 60-80 million Americans have either allergic or non-allergic rhinitis. The difference? One is triggered by allergies, the other is triggered by unknown causes.</p>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-        </div>
-
-        <div id = "f1_container2" onclick = "rotate('f1_card2')">
-                <div id="f1_card2" class="shadow">
-                     <div class="front face1">
-                        <br></br>
-                        How annoying?
-                        <div id = "logoWrapper">
-                        <img src = "transparant_logo.png" class = "cardLogo">
-                        </div>
-                    </div>
-                    <div class="back1 face1 center">
-                        <div class="homeParPicOne" align="center">
-                            <img class = "circlePics" src = "blowNoseCircle.png" align="center"> </img>
-                        </div>
-                        <div class="homeParInfoOne" align="center">
-                            <div class="paraCell">
-                                <h3 style="height: 35px">It's <i>Annoying</i>...</h3>
-                                <p align="justify" style="padding: 0px 34px">Both allergic and non-allergic rhinitis result in allergy symptoms such as a runny nose, itchy eyes and skin, sneezing, stuffy nose, and fatigue.</p>
+                        <div class="back1 face1 center" >
+                            <div class="homeParPicOne" >
+                                <img class = "circlePics" src = "groupOfPeopleCircle2.png" align="center"> </img>
+                            </div>
+                            <div class="homeParInfoOne" align="center">
+                                <div class="paraCell" align="center">
+                                    <h3 style="height: 35px"> It's common!</h3>
+                                    <p align="justify" style="padding: 0px 23px">About 60-80 million Americans have either allergic or non-allergic rhinitis. The difference? One is triggered by allergies, the other is triggered by unknown causes.</p>
+                                </div> 
                             </div>
                         </div>
                     </div>
-                </div>
-        </div>
+            </div>
 
-
-
-        <div id = "f1_container3" onclick = "rotate('f1_card3')">
-                <div id="f1_card3" class="shadow">
-                     <div class="front face1">
-                        <br></br>
-                        How is it triggered?
-                        <div id = "logoWrapper">
-                        <img src = "transparant_logo.png" class = "cardLogo">
+            <div id = "f1_container2" data-count="0" onmouseover = "rotate('f1_card2')" onmouseleave = "leftCard('f1_card2')">
+                    <div id="f1_card2" class="shadow">
+                         <div class="front face1">
+                            <br></br>
+                            How annoying is it?
+                            <div id = "logoWrapper">
+                            <img src = "transparant_logo.png" class = "cardLogo">
+                            </div>
                         </div>
-                    </div>
-                    <div class="back1 face1 center">
-                       <div class="homeParPicOne" align="center">
-                        <img class = "circlePics" src = "triggersCircle.png" align="center"> </img>
-                    </div>
-                        <div class="homeParInfoOne" align="center">
-                            <div class="paraCell">
-                                <h3 style="height: 35px">It's <i>Easily </i>Triggered...</h3>
-                                <p align="justify" style="padding: 0px 35px">Common triggers are pollen, grass, pet hair, and dust mites. Non-allergenic triggers include cleaning solutions, cigarette smoke, hair spray, and car exhaust.</p>
+                        <div class="back1 face1 center">
+                            <div class="homeParPicOne" align="center">
+                                <img class = "circlePics" src = "blowNoseCircle.png" align="center"> </img>
+                            </div>
+                            <div class="homeParInfoOne" align="center">
+                                <div class="paraCell">
+                                    <h3 style="height: 35px">It's annoying!</h3>
+                                    <p align="justify" style="padding: 0px 34px">Both allergic and non-allergic rhinitis result in allergy symptoms such as a runny nose, itchy eyes and skin, sneezing, stuffy nose, and fatigue.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-        </div>   
-    
+            </div>
+
+
+
+            <div id = "f1_container3" data-count="0" onmouseover = "rotate('f1_card3')" onmouseleave = "leftCard('f1_card3')">
+                    <div id="f1_card3" class="shadow">
+                         <div class="front face1">
+                            <br></br>
+                            How easily is it triggered?
+                            <div id = "logoWrapper">
+                            <img src = "transparant_logo.png" class = "cardLogo">
+                            </div>
+                        </div>
+                        <div class="back1 face1 center">
+                           <div class="homeParPicOne" align="center">
+                            <img class = "circlePics" src = "triggersCircle.png" align="center"> </img>
+                        </div>
+                            <div class="homeParInfoOne" align="center">
+                                <div class="paraCell">
+                                    <h3 style="height: 35px">Easily!</h3>
+                                    <p align="justify" style="padding: 0px 35px">Common triggers include pollen, grass, pet hair, and dust mites which is pretty close. Non-allergenic triggers include cleaning solutions, cigarette smoke, hair spray, and car exhaust.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>   
+        </div>
     </div>
 
 
 
 
     <div class = "sectionDivs" id = "existingSolutions">
+
         <div id="carouselContainer">
+            <!-- <h1 id = "currentSolutionsHeader">Current Solutions</h1> -->
             <div id="carouselControls">
                 <div id="carouselPlayborder" >
                     <div class="left_next" onclick="tickLeft()" ></div>
@@ -244,7 +244,6 @@
                     <li class="pictureDescription" data-position="5" >
                         <h3 class = "carouselHeader">Dealing With It</h3>
                         <p class = "carouselPar"> When the prospect of continually seeking medication or constantly trying different therapies seems to have no avail, many people are left with the unfortunate choice of seeking temporary relief, or just living with chronic rhinitis.
-
                         </p>
                     </li>
                 </ul>
@@ -267,7 +266,6 @@
                 <div id="extraGear3"></div>
                 <div id="extraGear4"></div>
                 <div id="extraGear5"></div>
-                <!-- <div id="extraGear6"></div> -->
                 <div id="boy_face">
                     <div id="boy_modal" class="gear_modal">
                         <span class="close_gear_modal">Close</span>
@@ -306,7 +304,6 @@
                         </div>
                     </div>
                     <image id="boy_picture" src="vahidPicture.png"></image>
-                    <!-- <h1 id="boy_name">Vahid Saadat</h1> -->
                 </div>
                 <div id="girl_face">
                     <div id="girl_modal" class="gear_modal">
@@ -343,7 +340,6 @@
                         </div>
                     </div>
                     <image id="girl_picture" src="mojganSaadat.png"></image>
-                    <!-- <h1 id="girl_name">Mojgan Saadat</h1> -->
                 </div>
             </div>
        </div>
@@ -354,14 +350,11 @@
         <p id = "solutionStarter"> Simple. Elegant. Effective.</p>
         <p class = "solutionIntroPar"> Here at Arrinex, we have developed a non-surgical means of eliminating rhinitis symptoms using cryotherapy that is as safe as it is effective. With the Arrinex solution, symptoms will be alleviated with a brief and painless procedure, and peace of mind will be restored for years to come. </p>
         <br></br>
-        <p class = "solutionIntroPar" > The science and methodology behind our solution, which has undergone the most rigorous academic scrutiny and scientific testing, are based upon an anatomical survey of the nervous system. By selectively targeting overactive nerves, we are able to provide a long-term alleviation of rhinitis. </p>
-
         <p class = "solutionIntroPar" > The science and methodology behind our solution, which has undergone the most rigorous academic scrutiny and scientific testing, are based upon an anatomical survey of the nervous system. By selectively targeting overactive nerves, we are able to provide long-term alleviation of rhinitis. </p>
-
-
     </div> <!--arrinexSolution end div-->
 
-
+    </div> <!-- parallax div? -->
+    
 
     <div id="sab">
         <!-- <h1 class="headers"> SCIENTIFIC ADVISORY BOARD </h1>
@@ -414,6 +407,9 @@
         
         <p class = "sabPars">We are a medical technology company focused on the design and development of products for the minimally invasive treatment of patients suffering from chronic rhinitis. Our ClariFix family of products is used by ENT physicians in patients with chronic rhinitis due to allergic or non-allergic causes.
             </p> -->
+
+
+
             <p class="sabPars" id="hwangPara">Peter Hwang is a professor of Otololaryngology at the Stanford University Medical Center, focusing on head and neck surgery. He is the chief of Stanford Medical's division of Rhinology and Endoscopic Skull Base Surgery.</p>
             <p class="sabPars" id="weissPara"> Ray Weiss is a graduate of the University of Texas Medical School at San Antonio. He is Board certified by the American Board of Otolaryngology, and is a Fellow of the American Academy of Otolaryngology - Head and Neck Surgery, and a member of the American Rhinology Society.</p>
             <p class="sabPars" id="bolgerPara"> Dr. William Bolger is an ENT-otolaryngologist in Jacksonville, Florida and is affiliated with Mayo Clinic. William Bolger recieved his medical degree from the F. Edward Hebert School of Medicine, Uniformed Services University of the Health Sciences. </p> 
@@ -423,6 +419,7 @@
             <p class="sabPars" id="stromePara"> Dr. Strome recieved his degree in medicine from the University of Michigan Medical School and has been in practice for 51 years. He is affiliated with Mount Sinai St. Luke's-Roosevelt, and is the Director for the Center for Head and Neck Oncology at the  New York Head and Neck Institute. 
             </p>
             <img src="enlargedDandelion.png" id="dandelion">
+            <img src="enlargedDandelion.png" id="dandelion2">
             <p id="sabHeader">Meet the Scientific Advisory Board</p>
             <img src="headerDandelion.png" id="bud" class="budRow1">
             <p class="sabNameRow1" id="hwangHeader" onClick="sabClick('#hwang')">Hwang, M.D.</p>
@@ -439,6 +436,21 @@
         </div>
   <!--   </div> -->
     </div> <!-- parallax div? -->
+<div id = "copyright"> 
+    <p id = "copyrightPar1">&#169;Copyright 2015</p>
+    <p id = "copyrightPar2"> Website designed and created by Daniel Wong, in collaboration with Herberth Bonilla, and Devin Morgan. All rights reserved.</p>
+
+
+
+
+
+
+
+<!-- Lorus ipsum dolor <br> </br>
+    Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br>Lorus ipsum dolor <br> </br> -->
+</div>
+      
+
 
 
 

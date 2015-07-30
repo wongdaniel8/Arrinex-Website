@@ -1,7 +1,8 @@
 
+
 function adjustPicture()
 {
-	// 
+	
 	if (parseFloat(window.innerWidth) > 1024)
 	{
 		var initial_top_offset_at_1590_width = 325;
@@ -41,8 +42,10 @@ function homeParHide(ident) {
 }
 
 $(document).ready(function(){
+	
 	var scroll_point1 = 0;
 	var trigger_fade_height = 150;
+	var parallax_shifted = false;
         $(document).scroll(function() {
             
             //FUNCTION that deals with fade in and out
@@ -81,12 +84,14 @@ $(document).ready(function(){
 
 			//FUNCTION for parallax
 				if (scroll_point2 < 300)
-				{
+				{   parallax_shifted = true;
 					var parallax_displacement = scroll_point2*0.8;
 					var parallax_opacity = 1-scroll_point2*0.004;
 					$("#parallaxHelpDiv").css("bottom",""+parallax_displacement+"px");
 					$("#firstHomeText").css("opacity",""+parallax_opacity);
 				}
+
+
 			//FUNCTION trigger the carousel initially
 				var pos_from_top = $("body").scrollTop();
 				var vert_pos_exist_soln_div = $("#existingSolutions").offset().top;
@@ -100,6 +105,82 @@ $(document).ready(function(){
 
 
         });
+
+	// FUNCTIONS FOR NAVIGATION BAR SCROLLING
+				$("#teamLink").click(function() {
+					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+						
+						$("html, body").animate({ scrollTop: 1960 + 'px'}, 1000);
+					}
+					else {
+						$("html, body").animate({ scrollTop: 2140 + 'px'}, 1000);
+	    			}
+	    			return true;
+				});
+
+				// WHAT IS RHINITIS LINK NEEDS WORK BECAUSE OF PARALLAX
+				$("#whatIsLink").click(function() {
+					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+				    		$("html, body").animate({ scrollTop: 458 + 'px'}, 1000);
+				    	}
+				    	else {
+				    		$("html, body").animate({ scrollTop: 678 + 'px'}, 1000);
+				    	}
+				    	return true;
+					
+				});
+
+				$("#currentSolutionsLink").click(function() {
+						if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+				    		$("html, body").animate({ scrollTop: 1215 + 'px'}, 1000);
+				    	}
+				    	else {
+				    		$("html, body").animate({ scrollTop: 1435 + 'px'}, 1000);
+				    	}
+				    	return true;
+				});
+
+				$("#arrinexSolutionLink").click(function() {
+					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+				    		$("html, body").animate({ scrollTop: 2681 + 'px'}, 1000);
+				    	}
+				    	else {
+				    		$("html, body").animate({ scrollTop: 2901 + 'px'}, 1000);
+				    	}
+				    	return true;
+				});
+
+				$("#solutionButt").click(function() {
+					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+				    		$("html, body").animate({ scrollTop: 2681 + 'px'}, 1000);
+				    	}
+				    	else {
+				    		$("html, body").animate({ scrollTop: 2901 + 'px'}, 1000);
+				    	}
+				    	return true;
+				});
+
+				$("#chronicRhinitisButt").click(function() {
+				    	if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+				    		$("html, body").animate({ scrollTop: 458 + 'px'}, 1000);
+				    	}
+				    	else {
+				    		$("html, body").animate({ scrollTop: 678 + 'px'}, 1000);
+				    	}
+				    	return true;
+				});
+
+				$("#sabLink").click(function() {
+					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+				    		$("html, body").animate({ scrollTop: 3600 + 'px'}, 1000);
+				    	}
+				    	else {
+				    		$("html, body").animate({ scrollTop: 3590 + 'px'}, 1000);
+				    	}
+				    	return true;
+				});
+
+
 	//FUNCTION to assist carousel
 		$(".pictureDescription[data-position='1']").css("display","block");
 
@@ -198,7 +279,7 @@ $(document).ready(function(){
     			$("#contact").css("z-index","3");
     		});
 
-    	$("#contact").click(
+    	$("#contactUs").mouseout(
     		function() {
     			$("#navBarDiv").css("z-index","1");
     			$("#contact").css("opacity", "0");
@@ -298,13 +379,60 @@ function invalid() {
 
 /////////////////PASSWORD SCRIPT END///////////////////////
 
+var card_1_flipped_back = 1;
+var card_2_flipped_back = 1;
+var card_3_flipped_back = 1;
+
 function rotate(card, container, ident) {
-	var car = document.getElementById(card);
-	car.style.transition = "1s linear";
-	car.style.transform = "rotateY(180deg)" ;
+
+	if (card == "f1_card1"  )
+	{
+
+		
+			var car = document.getElementById(card);
+			car.style.transition = "1s linear";
+			var rotateDeg = card_1_flipped_back * 180;
+			car.style.transform = "rotateY("+rotateDeg+"deg)" ;
+		
+	}
+	if (card == "f1_card2" )
+	{
+
+		
+			var car = document.getElementById(card);
+			car.style.transition = "1s linear";
+			var rotateDeg = card_2_flipped_back * 180;
+			car.style.transform = "rotateY("+rotateDeg+"deg)" ;
+		
+	}
+	if (card == "f1_card3" )
+	{
+
+		
+			var car = document.getElementById(card);
+			car.style.transition = "1s linear";
+			var rotateDeg = card_3_flipped_back * 180;
+			car.style.transform = "rotateY("+rotateDeg+"deg)" ;
+		
+	}
+	
 }
 
-
+function leftCard(card)
+{
+	if (card == "f1_card1")
+	{
+		card_1_flipped_back++;
+	}
+	else if (card == "f1_card2")
+	{
+		card_2_flipped_back++;
+	}
+	else if (card == "f1_card3")
+	{
+		card_3_flipped_back++;
+	}
+}
 
 
 var carousel_is_on = false;
@@ -332,7 +460,7 @@ function playCarousel()
 			//alert("played!");
 			
 			executeCarousel();
-			carousel_var = setInterval(function(){ executeCarousel() },3000);
+			carousel_var = setInterval(function(){ executeCarousel() },5000);
 
 			//hide the pause button
 			$("#carouselPause").css("display","inline-block");
@@ -348,7 +476,7 @@ function playCarousel()
 				if (carousel_is_on == true)
 					displayRedCircle();
 
-			},500);
+			},2500);
 
 			// after the last second switch pictures
 			setTimeout(function(){
@@ -359,7 +487,7 @@ function playCarousel()
 					tickCarouselOne();
 				}
 
-			},3000);
+			},5000);
 
 		}
 		//helper functions for execute carousel
@@ -509,7 +637,8 @@ $(document).on('scroll', function(e) {
         	$("#dandelion").css({"height": H + 'px'});
         	$("#dandelion").css({"width": W + 'px'});
         	$("#dandelion").css({"transform": 'rotate(' + D + 'deg)'});
-        	if(H>90){
+        }
+        if(H>90){
         		$("#hwangHeader").fadeIn();
 		        $("#bud").fadeIn();
 		    } else{
@@ -544,9 +673,17 @@ $(document).on('scroll', function(e) {
 		        $("#bud3").fadeOut();
 		    }
 		     if(H>360){
+		     	$("#dandelion").fadeOut();
+		     	$("#dandelion2").fadeIn();
         		$("#goodeHeader").fadeIn();
 		        $("#bud4").fadeIn();
+		        $("#dandelion").css({"margin-top": T + 'px'});
+        		$("#dandelion").css({"margin-left": L + 'px'});
+        		$("#dandelion").css({"height": '400px'});
+        		$("#dandelion").css({"width": '428'});
 		    } else{
+		    	$("#dandelion").fadeIn();
+		     	$("#dandelion2").fadeOut();
 		    	$("#goodePara").fadeOut();
 		    	$("#goodeHeader").fadeOut();
 		        $("#bud4").fadeOut();
@@ -559,13 +696,6 @@ $(document).on('scroll', function(e) {
 		    	$("#nelsonHeader").fadeOut();
 		        $("#bud5").fadeOut();
 		    }
-		    //     $(".sabNameRow1").fadeIn();
-		    //     $(".budRow1").fadeIn();
-		    // } else{
-	     //       	$(".sabNameRow1").fadeOut();
-	     //       	$(".budRow1").fadeOut();
-	        
-        }
     });
 
 function sabClick(event){
@@ -605,6 +735,9 @@ setInterval(function(){
       }
      //$("#bud").rotate(angle);
 }, 50);
+
+
+
 	//============================================================
 	// JAVASCRIPT FOR INVESTORS PAGE
 	//============================================================
