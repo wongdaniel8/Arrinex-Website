@@ -1308,6 +1308,7 @@ position: fixed;
   overflow: hidden;
   background-image: url("meadowWithDandelions.jpg");
   width:100%;
+  min-width:1200px;
   height:720px;
   padding:0px;
   background-repeat: no-repeat;
@@ -1336,7 +1337,13 @@ position: fixed;
   width:50px;
   position:absolute;
 }
-.bud{
+.budRow1{
+  height:350px;
+  width:300px;
+  position:absolute;
+  display:none;
+}
+.budRow2{
   height:350px;
   width:300px;
   position:absolute;
@@ -1344,74 +1351,78 @@ position: fixed;
 }
 #bud{
   margin-top:120px;
-  margin-left:660px;
+  left:650px;
 }
 #bud1{
   margin-top:120px;
-  margin-left:810px;
+  left:805px;
 }
 #bud2{
   margin-top:120px;
-  margin-left:960px;
+  left:960px;
 }
 #bud3{
   margin-top:300px;
-  margin-left:660px;
+  left:650px;
 }
 #bud4{
   margin-top:300px;
-  margin-left:810px;
+  left:805px;
 }
 #bud5{
   margin-top:300px;
-  margin-left:960px;
+  left:960px;
 }
 #sabHeader{
   left: 380px;
   margin-top: 425px;
   width: 100px;
+  min-width:100px;
   position: absolute;
   text-align: center;
   font-size: 25px;
   font-weight: bold;
   color: rgb(245,245,245);
   background-color: rgba(0,0,0,.2);
+  transition: display .5s;
 }
-.sabName{
+.sabNameRow1, .sabNameRow2{
   position: absolute;
   vertical-align: top;
+  min-width: 150px;
   text-align: center;
   font-size: 25px;
   color: rgb(245,245,245);
   z-index: 1;
   background-color: rgba(0,0,0,.2);
+  transition: display 1s;
   display:none;
 }
-.sabName:hover{
+.sabNameRow1:hover, .sabRow2:hover{
   cursor: pointer;
 }
 #hwangHeader{
-  right: 398px;
+  left: 735px;
   margin-top: 285px;
 }
 #weissHeader{
-  right: 246px;
+  left: 890px;
   margin-top: 285px;
 }
 #stromeHeader{
-  right: 86px;
+  left: 1045px;
   margin-top: 285px;
 }
 #bolgerHeader{
-  right: 398px;
+  left: 735px;
   margin-top: 465px;
 }
 #goodeHeader{
-  right: 246px;
+  left: 890px;
   margin-top: 465px;
 }
 #nelsonHeader{
-  right: 86px;
+  left: 1045px;
   margin-top: 465px;
 }
 
