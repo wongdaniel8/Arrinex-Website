@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script type="text/javascript" src="myscript.js"></script>
+    <script type='text/javascript' > var isInvestors = true; </script>
     
 </head>
 
@@ -14,49 +15,55 @@
     <div id="navBarDiv">
         <ul id="navBarList">
             <li id="logoBlock">
-                <a href="#home">
+                <a href="index.html">
                     <img id = "logo" src = "transparant_logo.png" align="center"> </img>
                     <span>Arrinex, Inc.</span>
                 </a>
             </li>
             <li class="navBarLinks">
-                <a id = "contactUs"   href="/contact">Contact Us </a>
+                <a id = "contactUs">Contact Us </a>
             </li>
             <li class="navBarLinks">
-                <a id = "forPatients"   href="/patients">For Patients</a>
+                <a id = "forInvestors" style = "cursor: pointer;" >For Investors</a>
+                
+            </li>
+            <li class="navBarLinks">
+                <a id = "forPatients"   href="#">Company</a>
                 <ul class="dropDownList">
                     <li class="dropDownLI">
-                        <a href="#theTeam">What is rhinitis</a>
+                        <div class="ddText" id = "teamLink" href= "index.html">The Team</div>
+                        <div class="highlightLeft"></div>
+                        <div class="highlightRight"></div>
                     </li>
                     <li class="dropDownLI">
-                        <a href="#theTeam">Current Solutions</a>
-                    </li>
-                    <li class="dropDownLI">
-                        <a href="#theTeam">Arrinex's Capability</a>
+                        <div class="ddText" id = "sabLink" style="line-height:20px;">Scientific Advisory Board</div>
+                        <div class="highlightLeft"></div>
+                        <div class="highlightRight"></div>
                     </li>
                 </ul>
             </li>
-            <li class="navBarLinks">
-                <a id = "forInvestors">For Investors</a>
-                
-            </li>
             <li class="navBarLinks" >
-                <a id = "company"   href="#/company">Company</a>
+                <a id = "forPatients">For Patients</a>
                 <ul class="dropDownList">
                     <li class="dropDownLI">
-                        <a href="#theTeam">Products</a>
+                        <div class="ddText" id = "whatIsLink">What is Rhinitis?</div>
+                        <div class="highlightLeft"></div>
+                        <div class="highlightRight"></div>
                     </li>
                     <li class="dropDownLI">
-                        <a href="#theTeam">The Team</a>
+                        <div class="ddText" id = "currentSolutionsLink">Current Solutions</div>
+                        <div class="highlightLeft"></div>
+                        <div class="highlightRight"></div>
                     </li>
                     <li class="dropDownLI">
-                        <a href="#theTeam">Scientific Advisory Board</a>
+                        <div class="ddText" id = "arrinexSolutionLink">The Arrinex Solution</div>
+                        <div class="highlightLeft"></div>
+                        <div class="highlightRight"></div>
                     </li>
                 </ul>
             </li>
        </ul>
-    </div> <!-- navbar -->
-
+    </div>
 
     <div id = "pdfDisplay">
         

@@ -109,15 +109,33 @@ $(document).ready(function(){
 
 	// FUNCTIONS FOR NAVIGATION BAR SCROLLING
 				$("#teamLink").click(function() {
-					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+					if (isInvestors == false) {
 						
-						$("html, body").animate({ scrollTop: 1960 + 'px'}, 1000);
+						if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+							
+							$("html, body").animate({ scrollTop: 1960 + 'px'}, 1000);
+						}
+						else {
+							$("html, body").animate({ scrollTop: 2140 + 'px'}, 1000);
+		    			}
+		    			return true;
+		    		}
+		    		else {
+		    		window.location = "index.html";
+		    		 // window.open("index.html", "Arrinex");
+		    		 // window.scrollTo(0,1000);
+		    		 alert("1");
+		    		 $.fn.myScroll();
+		    		 // document.getElementById("#team").scrollIntoView();
+		    		 // alert("blah");
 					}
-					else {
-						$("html, body").animate({ scrollTop: 2140 + 'px'}, 1000);
-	    			}
-	    			return true;
 				});
+
+				$.fn.myScroll = function() {
+				    alert('2');
+		    		 window.scrollTo(0,1000);
+				  }
+				
 
 				// WHAT IS RHINITIS LINK NEEDS WORK BECAUSE OF PARALLAX
 				$("#whatIsLink").click(function() {
@@ -341,6 +359,8 @@ function verifyKey(e) {
         return verification();
     }
 }
+
+var isInvestors = false;
 function verification() {
 	// var passwordArray = ["a", "b", "password"];
 	var passwordArray = ["0cc175b9c0f1b6a831c399e269772661", "92eb5ffee6ae2fec3ad71c777531578f", "5f4dcc3b5aa765d61d8327deb882cf99"];
@@ -354,7 +374,8 @@ function verification() {
         for (i = 0; i < passwordArray.length; i++) {
 			if(hashedPasswordInput == passwordArray[i]) {
 	    	    invalidDisplay.style.opacity = "0";
-	    	    window.open("investors.html");
+	    	    // window.open("investors.html", "Investors");
+	    	    window.location = "investors.html";
 	    	    return;
 			}
 		}
@@ -380,11 +401,6 @@ function invalid() {
 	    invalidDisplay1.style.animationDuration = "1s";
 	}
 
-}
-
-function pause() {
-	var invalidDisplay = document.getElementById('errorPar');
-    invalidDisplay.style.animationPlayState = "paused";
 }
 
 
@@ -461,7 +477,6 @@ function playCarousel()
 				$(".pictureDescription[data-position='1']").css("display","block");
 				$(".pictureDescription[data-position='1']").css("opacity","1");
 			}
-			//alert("played!");
 			
 			executeCarousel();
 			carousel_var = setInterval(function(){ executeCarousel() },5000);
@@ -541,7 +556,6 @@ function playCarousel()
 						setTimeout(function(){
 							carousel_in_motion = false;
 						},1500);
-						// alert();
 					}
 				}
 
