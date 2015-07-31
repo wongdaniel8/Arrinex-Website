@@ -1,5 +1,3 @@
-
-
 function adjustPicture()
 {
 	
@@ -287,8 +285,6 @@ $(document).ready(function(){
     			$("#navBarDiv").css("z-index","1");
     			$("#contact").css("opacity", "0");
     			$("#contact").css("z-index","0");
-
-
     		});
 
 
@@ -675,14 +671,13 @@ $(document).on('scroll', function(e) {
 		        $("#bud1").fadeOut();
 		    }
 		    if(H>200){
-		    	$("#sabHeader").fadeIn();
         		$("#stromeHeader").fadeIn();
 		        $("#bud2").fadeIn();
 		    } else{
 		    	$("#stromePara").fadeOut();
 		    	$("#stromeHeader").fadeOut();
 		        $("#bud2").fadeOut();
-		        $("#sabHeader").fadeOut();
+		        
 		    }
 		    if(H>300){
         		$("#bolgerHeader").fadeIn();
@@ -711,10 +706,12 @@ $(document).on('scroll', function(e) {
 		    if(H>390){
         		$("#nelsonHeader").fadeIn();
 		        $("#bud5").fadeIn();
+		        $("#sabHeader").fadeIn();
 		    } else{
 		    	$("#nelsonPara").fadeOut();
 		    	$("#nelsonHeader").fadeOut();
 		        $("#bud5").fadeOut();
+		        $("#sabHeader").fadeOut();
 		    }
     });
 
@@ -788,15 +785,4 @@ var angle = 0;
 
     });
     
-});
-
-
-
-
-
-
-
-
-
-
-
+}); 

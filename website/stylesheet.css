@@ -155,7 +155,7 @@ position: fixed;
   opacity: 0;
   color: red;
   /*animation: shake 2s infinite;*/
-  animation-duration: 2s; 
+  animation-duration: 1s; 
   animation-play-state: paused;
 }
 
@@ -1266,7 +1266,6 @@ position: fixed;
 /*#sab{
   text-align: center;
 }
-
 .sabPars {
   font-size: 15px;
   text-decoration: none;
@@ -1295,7 +1294,6 @@ position: fixed;
       text-align: center;
       left: 10px;
       padding: 5px 0px;
-
     }
     .fullBioButton{
       font-size:14px;
@@ -1316,7 +1314,6 @@ position: fixed;
           line-height: 25px;
           display:none;
           text-align:justify;
-
         }
 #hwangButton {
   position: relative;
@@ -1403,7 +1400,7 @@ position: fixed;
 
 #bud,#bud1,#bud2,#bud3,#bud4,#bud5{
   animation-name: fullRotate;
-  animation-duration: 500s;
+  animation-duration: 60s;
   animation-timing-function: linear;
   animation-delay: 0s;
   animation-iteration-count: infinite;
@@ -1439,27 +1436,27 @@ position: fixed;
   cursor: pointer;
 }
 #hwangHeader{
-  left: 735px;
+  left: 730px;
   margin-top: 285px;
 }
 #weissHeader{
-  left: 890px;
+  left: 885px;
   margin-top: 285px;
 }
 #stromeHeader{
-  left: 1045px;
+  left: 1040px;
   margin-top: 285px;
 }
 #bolgerHeader{
-  left: 735px;
+  left: 730px;
   margin-top: 465px;
 }
 #goodeHeader{
-  left: 890px;
+  left: 885px;
   margin-top: 465px;
 }
 #nelsonHeader{
-  left: 1045px;
+  left: 1040px;
   margin-top: 465px;
 }
 
@@ -1599,8 +1596,3 @@ BEGINNING OF INVESTORS STYLESHEET
   font-size: 12px;
   padding-bottom: 0px;
 }
-
-
-
-
-
