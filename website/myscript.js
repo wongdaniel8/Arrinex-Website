@@ -119,37 +119,33 @@ $(document).ready(function(){
 							$("html, body").animate({ scrollTop: 2140 + 'px'}, 1000);
 		    			}
 		    			return true;
+
 		    		}
-		    		else {
-		    		window.location = "index.html";
-		    		 // window.open("index.html", "Arrinex");
-		    		 // window.scrollTo(0,1000);
-		    		 alert("1");
-		    		 $.fn.myScroll();
-		    		 // document.getElementById("#team").scrollIntoView();
-		    		 // alert("blah");
-					}
+		    		else window.location = "index.html#team";
+		    	
+					
 				});
 
-				$.fn.myScroll = function() {
-				    alert('2');
-		    		 window.scrollTo(0,1000);
-				  }
 				
 
 				// WHAT IS RHINITIS LINK NEEDS WORK BECAUSE OF PARALLAX
 				$("#whatIsLink").click(function() {
-					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
-				    		$("html, body").animate({ scrollTop: 458 + 'px'}, 1000);
-				    	}
-				    	else {
-				    		$("html, body").animate({ scrollTop: 678 + 'px'}, 1000);
-				    	}
-				    	return true;
-					
+					if (isInvestors == false) {
+
+						if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+					    		$("html, body").animate({ scrollTop: 458 + 'px'}, 1000);
+					    	}
+					    	else {
+					    		$("html, body").animate({ scrollTop: 678 + 'px'}, 1000);
+					    	}
+					    	return true;
+
+					    }
+					else window.location = "index.html#rhinitisInfo";
 				});
 
 				$("#currentSolutionsLink").click(function() {
+					if (isInvestors == false) {
 						if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
 				    		$("html, body").animate({ scrollTop: 1215 + 'px'}, 1000);
 				    	}
@@ -157,16 +153,21 @@ $(document).ready(function(){
 				    		$("html, body").animate({ scrollTop: 1435 + 'px'}, 1000);
 				    	}
 				    	return true;
+				    } 
+					else window.location = "index.html#existingSolutions";
+
 				});
 
 				$("#arrinexSolutionLink").click(function() {
-					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
-				    		$("html, body").animate({ scrollTop: 2681 + 'px'}, 1010);
-				    	}
-				    	else {
-				    		$("html, body").animate({ scrollTop: 2901 + 'px'}, 1000);
-				    	}
-				    	return true;
+					if (isInvestors == false) {
+						if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+					    		$("html, body").animate({ scrollTop: 2681 + 'px'}, 1010);
+					    	}
+					    	else {
+					    		$("html, body").animate({ scrollTop: 2901 + 'px'}, 1000);
+					    	}
+					    	return true;
+					} else window.location = "index.html#arrinexSolution";
 				});
 
 				$("#solutionButt").click(function() {
@@ -190,13 +191,15 @@ $(document).ready(function(){
 				});
 
 				$("#sabLink").click(function() {
-					if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
-				    		$("html, body").animate({ scrollTop: 3600 + 'px'}, 1000);
-				    	}
-				    	else {
-				    		$("html, body").animate({ scrollTop: 3590 + 'px'}, 1000);
-				    	}
-				    	return true;
+					if (isInvestors == false) {
+						if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+					    		$("html, body").animate({ scrollTop: 3600 + 'px'}, 1000);
+					    	}
+					    	else {
+					    		$("html, body").animate({ scrollTop: 3590 + 'px'}, 1000);
+					    	}
+					    	return true;
+				    } else window.location = "index.html#sab";
 				});
 
 
