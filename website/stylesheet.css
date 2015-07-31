@@ -325,7 +325,8 @@ position: fixed;
    #existingSolutions {
       color: white;
       padding: 0px;
-      margin:10px 0px 50px 0px;;
+      margin:10px 0px 50px 0px;
+      overflow-y:hidden; 
     }
         #carouselContainer{
           width: 1024px;
@@ -1408,17 +1409,16 @@ position: fixed;
 }
 
 #sabHeader{
-  left: 327px;
-  margin-top: 400px;
-  width: 215px;
-  min-width: 100px;
-  position: absolute;
-  text-align: center;
-  font-size: 45px;
-  font-weight: bold;
-  color: rgb(245,245,245);
-  /* background-color: rgba(0,0,0,.2); */
-  transition: display .5s;
+    left: 365px;
+    margin-top: 430px;
+    width: 133px;
+    min-width: 100px;
+    position: absolute;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(245,245,245);
+    /* background-color: rgba(0,0,0,.2); */
+    transition: display .5s;
 }
 .sabNameRow1, .sabNameRow2{
   position: absolute;

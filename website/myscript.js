@@ -379,7 +379,7 @@ function invalid() {
 	    elem.parentNode.replaceChild(invalidDisplay1, elem);
 	    invalidDisplay1.style.animation = "shake";
 	    invalidDisplay1.style.animationDuration = "1s";
-	    alert("invalid key" + shakeCount);
+
 	}
 
 }
