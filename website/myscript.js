@@ -354,7 +354,6 @@ function verification() {
     var i;
     x = document.getElementById("passwordInput").value;
     var hashedPasswordInput = CryptoJS.MD5(x);
-    // alert(hashedPasswordInput);
     try { 
         for (i = 0; i < passwordArray.length; i++) {
 			if(hashedPasswordInput == passwordArray[i]) {
@@ -383,7 +382,6 @@ function invalid() {
 	    elem.parentNode.replaceChild(invalidDisplay1, elem);
 	    invalidDisplay1.style.animation = "shake";
 	    invalidDisplay1.style.animationDuration = "1s";
-	    alert("invalid key" + shakeCount);
 	}
 
 }
@@ -404,8 +402,6 @@ function rotate(card, container, ident) {
 
 	if (card == "f1_card1"  )
 	{
-
-		
 			var car = document.getElementById(card);
 			car.style.transition = "1s linear";
 			var rotateDeg = card_1_flipped_back * 180;
@@ -413,9 +409,7 @@ function rotate(card, container, ident) {
 		
 	}
 	if (card == "f1_card2" )
-	{
-
-		
+	{	
 			var car = document.getElementById(card);
 			car.style.transition = "1s linear";
 			var rotateDeg = card_2_flipped_back * 180;
@@ -424,13 +418,10 @@ function rotate(card, container, ident) {
 	}
 	if (card == "f1_card3" )
 	{
-
-		
 			var car = document.getElementById(card);
 			car.style.transition = "1s linear";
 			var rotateDeg = card_3_flipped_back * 180;
-			car.style.transform = "rotateY("+rotateDeg+"deg)" ;
-		
+			car.style.transform = "rotateY("+rotateDeg+"deg)" ;	
 	}
 	
 }
