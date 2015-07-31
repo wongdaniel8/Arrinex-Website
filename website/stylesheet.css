@@ -155,8 +155,8 @@ position: fixed;
   opacity: 0;
   color: red;
   /*animation: shake 2s infinite;*/
-  animation-duration: 2s; 
-  animation-play-state: paused;
+  /*animation-duration: 2s; 
+  animation-play-state: paused;*/
 }
 
  @-webkit-keyframes shake {
