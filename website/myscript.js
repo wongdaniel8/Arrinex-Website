@@ -366,27 +366,24 @@ function verification() {
     }
 }
 
-
-var shakeCount = 1;
+var shakeCount = 0;
 function invalid() {
     var invalidDisplay = document.getElementById('errorPar');
     document.getElementById("passwordInput").value = "";
     invalidDisplay.style.opacity = 1;
     
-    invalidDisplay.style.animation = "shake";
-    // invalidDisplay.style.animationPlayState = "running";
-    invalidDisplay.style.animationDuration = "1s";
-    // invalidDisplay.style.animationFillMode="forwards";
-    shakeCount+=2;
-    invalidDisplay.style.animationIterationCount= shakeCount.toString();
-    // return pause();
-    alert("invalid key");
-    // return;
+    shakeCount++;
+    if (shakeCount != 1) { 
+	    var elem = invalidDisplay;
+	    var invalidDisplay1 = elem.cloneNode(true);
+	    elem.parentNode.replaceChild(invalidDisplay1, elem);
+	    invalidDisplay1.style.animation = "shake";
+	    invalidDisplay1.style.animationDuration = "1s";
+	    alert("invalid key" + shakeCount);
+	}
+
 }
-// $("#passwordInput").click(function() {
-//     				$( "#errorPar" ).effect( "shake" , {times:4}, 1000  );
-// 	    			return true;
-// 	});
+
 function pause() {
 	var invalidDisplay = document.getElementById('errorPar');
     invalidDisplay.style.animationPlayState = "paused";
