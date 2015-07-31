@@ -155,8 +155,8 @@ position: fixed;
   opacity: 0;
   color: red;
   /*animation: shake 2s infinite;*/
-  /*animation-duration: 2s; 
-  animation-play-state: paused;*/
+  animation-duration: 1s; 
+  animation-play-state: paused;
 }
 
  @-webkit-keyframes shake {
@@ -261,67 +261,71 @@ position: fixed;
       width: 100%;
       text-align: center;
     }
-
-
-    #rhinitisHeader{
-      margin-top: 0px;
-      margin-bottom: 20px;
-      padding-top: 20px;
-      /*background: rgb(245, 245, 245);*/
-      color: rgb(65, 65, 65);
-    }
-    #rhinitisInfo {
-      opacity: 0;
-      background-color: white;
-      color: black;
-      /*height: 670px;*/
-      margin-bottom: 10px;
-      min-width: 780px;
-      display:inline-block;
-      vertical-align: middle;
-      padding:0px;
-      transition: opacity 3s ease;
-    }
-        .rhitinisInfoWrapper{
-           width:300px;
-           height: 460px;
-          display: inline-block;
-          vertical-align: middle;
-          padding: 15px 15px 30px 15px;
-          margin: 85px 15px 0px 15px;
-          background:rgb(245, 245, 245);
+        #cards_center_wrapper{
+          width: 1100px;
+          height: 400px;
+          margin: 25px auto;
         }
-            .homeParPicOne{
-                height:189px;
-                background-color:rgb(245, 245, 245); 
-              }
-                  .circlePics{
-                    height:200px;
-                    width:200px;
-                  }
-              .homeParInfoOne{
-                font-size: 17px;
-                line-height: 35px;
-              }
-                  .paraCell{
-                      display:table;
-                    }
-                        #infoPara{
-                          text-align: center;
-                          padding:0px 10px;
-                        }
-                        #symptomsList{
-                          font-size: 15px;
-                          line-height: 20px;
-                          padding-left: 50px;
-                          height: 100px;
-                        }
-                            #symptomsItem{
+
+            #rhinitisHeader{
+              margin-top: 0px;
+              margin-bottom: 20px;
+              padding-top: 20px;
+              /*background: rgb(245, 245, 245);*/
+              color: rgb(65, 65, 65);
+            }
+            #rhinitisInfo {
+              opacity: 0;
+              background-color: white;
+              color: black;
+              /*height: 670px;*/
+              margin-bottom: 50px;
+              min-width: 780px;
+              display:inline-block;
+              vertical-align: middle;
+              padding:0px;
+              transition: opacity 3s ease;
+            }
+                .rhitinisInfoWrapper{
+                   width:300px;
+                   height: 460px;
+                  display: inline-block;
+                  vertical-align: middle;
+                  padding: 15px 15px 30px 15px;
+                  margin: 85px 15px 0px 15px;
+                  background:rgb(245, 245, 245);
+                }
+                    .homeParPicOne{
+                        height:189px;
+                        background-color:rgb(245, 245, 245); 
+                      }
+                          .circlePics{
+                            height:200px;
+                            width:200px;
+                          }
+                      .homeParInfoOne{
+                        font-size: 17px;
+                        line-height: 35px;
+                      }
+                          .paraCell{
+                              display:table;
                             }
+                                #infoPara{
+                                  text-align: center;
+                                  padding:0px 10px;
+                                }
+                                #symptomsList{
+                                  font-size: 15px;
+                                  line-height: 20px;
+                                  padding-left: 50px;
+                                  height: 100px;
+                                }
+                                    #symptomsItem{
+                                    }
    #existingSolutions {
       color: white;
       padding: 0px;
-      margin-top: 100px;
+      margin:10px 0px 50px 0px;;
     }
         #carouselContainer{
           width: 1024px;
@@ -1135,8 +1139,8 @@ position: fixed;
 */
 #f1_container1, #f1_container2, #f1_container3 {
   display: inline-block;
-  position: absolute;
-  margin: 10px auto;
+  /*position: absolute;*/
+  margin: 10px 15px;
   width: 330px;
   height: 530px;
   z-index: 0;
@@ -1262,7 +1266,6 @@ position: fixed;
 /*#sab{
   text-align: center;
 }
-
 .sabPars {
   font-size: 15px;
   text-decoration: none;
@@ -1291,7 +1294,6 @@ position: fixed;
       text-align: center;
       left: 10px;
       padding: 5px 0px;
-
     }
     .fullBioButton{
       font-size:14px;
@@ -1312,7 +1314,6 @@ position: fixed;
           line-height: 25px;
           display:none;
           text-align:justify;
-
         }
 #hwangButton {
   position: relative;
@@ -1396,17 +1397,27 @@ position: fixed;
   margin-top:300px;
   left:960px;
 }
+
+#bud,#bud1,#bud2,#bud3,#bud4,#bud5{
+  animation-name: fullRotate;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
 #sabHeader{
-  left: 380px;
-  margin-top: 420px;
-  width: 100px;
-  min-width:100px;
+  left: 327px;
+  margin-top: 400px;
+  width: 215px;
+  min-width: 100px;
   position: absolute;
   text-align: center;
-  font-size: 25px;
+  font-size: 45px;
   font-weight: bold;
   color: rgb(245,245,245);
-  background-color: rgba(0,0,0,.2);
+  /* background-color: rgba(0,0,0,.2); */
   transition: display .5s;
 }
 .sabNameRow1, .sabNameRow2{
@@ -1417,7 +1428,7 @@ position: fixed;
   font-size: 25px;
   color: rgb(245,245,245);
   z-index: 1;
-  background-color: rgba(0,0,0,.2);
+  /*background-color: rgba(0,0,0,.2);*/
   transition: display 1s;
   display:none;
 }
@@ -1425,29 +1436,36 @@ position: fixed;
   cursor: pointer;
 }
 #hwangHeader{
-  left: 735px;
+  left: 730px;
   margin-top: 285px;
 }
 #weissHeader{
-  left: 890px;
+  left: 885px;
   margin-top: 285px;
 }
 #stromeHeader{
-  left: 1045px;
+  left: 1040px;
   margin-top: 285px;
 }
 #bolgerHeader{
-  left: 735px;
+  left: 730px;
   margin-top: 465px;
 }
 #goodeHeader{
-  left: 890px;
+  left: 885px;
   margin-top: 465px;
 }
 #nelsonHeader{
-  left: 1045px;
+  left: 1040px;
   margin-top: 465px;
 }
+
+
+
+
+
+
+
 
 /*============================================================================
 BEGINNING OF INVESTORS STYLESHEET
@@ -1578,8 +1596,3 @@ BEGINNING OF INVESTORS STYLESHEET
   font-size: 12px;
   padding-bottom: 0px;
 }
-
-
-
-
-

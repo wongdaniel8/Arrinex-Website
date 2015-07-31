@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Arrinex</title>
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <title>Arrinex</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script type="text/javascript" src="myscript.js"></script>
+    <script type="text/javascript" src="myscript.js"></script>
     <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
     
 
@@ -12,8 +12,8 @@
 </head>
 
 <body onresize="adjustPicture()" onload="adjustPicture(),pauseBoyGearMotion(),pauseGirlGearMotion()">
-	
-	<!-- Main Header Nav Bar -->
+    
+    <!-- Main Header Nav Bar -->
     <div id="navBarDiv">
         <ul id="navBarList">
             <li id="logoBlock">
@@ -111,31 +111,35 @@
     
     <div class = "sectionDivs" id = "rhinitisInfo">
         <div id="cards_container">
-            <h1 id="rhinitisHeader" style = "font-weight: 300;">Understanding Rhinitis...</h1>
-            <div id = "f1_container1" data-count="0" onmouseover = "rotate('f1_card1')" onmouseleave = "leftCard('f1_card1')"> 
-                    <div id="f1_card1" class="shadow">
-                         <div class="front face1">
-                            <br></br>
-                            How common is it?
-                            <div id = "logoWrapper">
-                            <img src = "transparant_logo.png" class = "cardLogo">
-                            </div>
-                        </div>
-                        <div class="back1 face1 center" >
-                            <div class="homeParPicOne" >
-                                <img class = "circlePics" src = "groupOfPeopleCircle2.png" align="center"> </img>
-                            </div>
-                            <div class="homeParInfoOne" align="center">
-                                <div class="paraCell" align="center">
-                                    <h3 style="height: 35px"> It's common!</h3>
-                                    <p align="justify" style="padding: 0px 23px">About 60-80 million Americans have either allergic or non-allergic rhinitis. The difference? One is triggered by allergies, the other is triggered by unknown causes.</p>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-            </div>
+            <div id="cards_center_wrapper">
+                <h1 id="rhinitisHeader" style = "font-weight: 300;">Understanding Rhinitis...</h1>
 
-            <div id = "f1_container2" data-count="0" onmouseover = "rotate('f1_card2')" onmouseleave = "leftCard('f1_card2')">
+
+                <div id = "f1_container1" data-count="0" onmouseover = "rotate('f1_card1')" onmouseleave = "leftCard('f1_card1')"> 
+                        <div id="f1_card1" class="shadow">
+                             <div class="front face1">
+                                <br></br>
+                                How common is it?
+                                <div id = "logoWrapper">
+                                <img src = "transparant_logo.png" class = "cardLogo">
+                                </div>
+                            </div>
+                            <div class="back1 face1 center" >
+                                <div class="homeParPicOne" >
+                                    <img class = "circlePics" src = "groupOfPeopleCircle2.png" align="center"> </img>
+                                </div>
+                                <div class="homeParInfoOne" align="center">
+                                    <div class="paraCell" align="center">
+                                        <h3 style="height: 35px"> It's common!</h3>
+                                        <p align="justify" style="padding: 0px 23px">About 60-80 million Americans have either allergic or non-allergic rhinitis. The difference? One is triggered by allergies, the other is triggered by unknown causes.</p>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+
+                <div id = "f1_container2" data-count="0" onmouseover = "rotate('f1_card2')" onmouseleave = "leftCard('f1_card2')">
                     <div id="f1_card2" class="shadow">
                          <div class="front face1">
                             <br></br>
@@ -156,11 +160,10 @@
                             </div>
                         </div>
                     </div>
-            </div>
+                </div>
 
 
-
-            <div id = "f1_container3" data-count="0" onmouseover = "rotate('f1_card3')" onmouseleave = "leftCard('f1_card3')">
+                <div id = "f1_container3" data-count="0" onmouseover = "rotate('f1_card3')" onmouseleave = "leftCard('f1_card3')">
                     <div id="f1_card3" class="shadow">
                          <div class="front face1">
                             <br></br>
@@ -181,7 +184,10 @@
                             </div>
                         </div>
                     </div>
-            </div>   
+                </div>
+
+
+            </div>
         </div>
     </div>
 
@@ -189,7 +195,7 @@
 
 
     <div class = "sectionDivs" id = "existingSolutions" style="font-weight:300;">
-        <h1 id="carouselHeader" style="font-weight:300;">What Are the Existing Treatments?</h1>
+        <h1 id="carouselHeader" style="font-weight:300;color:black;">What Are the Existing Treatments?</h1>
 
         <div id="carouselContainer">
             <!-- <h1 id = "currentSolutionsHeader">Current Solutions</h1> -->
@@ -270,9 +276,8 @@
                 <div id="extraGear5"></div>
                 <div id="boy_face">
                     <div id="boy_modal" class="gear_modal">
-                        <span class="close_gear_modal">Close</span>
-                        <h2 id="gear_modal_header">The Arrinex Masterminds:</h2>
-                        <h4>Vahid Saadat</h4>
+                        <span class="close_gear_modal" style="font-weight:300;">Close</span>
+                        <h1 id="gear_modal_header">Meet Vahid Saadat:</h1>
                         <p id="mastermind_description">Vahid Saadat is a serial medical device entrepreneur with 25 years of experience.
                     Prior to Arrinex, Vahid served as the CEO of Voyage Medical, funded by Kleiner perkins, Three Arch , RWI and Abbott Ventures. Mr. Saadat holds a Bachelor's and Master's degrees in engineering from the University of Texas at Austin. He is named an inventor on 200 patents in a variety of medical specialties.</p>
                     </div>                
@@ -311,8 +316,7 @@
                 <div id="girl_face">
                     <div id="girl_modal" class="gear_modal">
                         <span class="close_gear_modal">Close</span>
-                        <h2 id="gear_modal_header">The Arrinex Masterminds:</h2>
-                        <h4>Mojgan Saadat</h4>
+                        <h1 id="gear_modal_header" style="font-weight:300;">Meet Mojgan Saadat</h1>
                         <p id="mastermind_description">Mojgan Saadat is an entrepreneur with more than 10 years of hands on experience. Mojgan has had an ongoing key role in scientific and clinical due diligence, establishing Intellectual Property, strategic planning, financing, and operations for the company. Mojgan holds a BS in biology and a BS in computer science.</p>
                     </div>
                     <div id="girl_gear">

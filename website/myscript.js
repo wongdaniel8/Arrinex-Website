@@ -1,5 +1,3 @@
-
-
 function adjustPicture()
 {
 	
@@ -287,8 +285,6 @@ $(document).ready(function(){
     			$("#navBarDiv").css("z-index","1");
     			$("#contact").css("opacity", "0");
     			$("#contact").css("z-index","0");
-
-
     		});
 
 
@@ -663,14 +659,13 @@ $(document).on('scroll', function(e) {
 		        $("#bud1").fadeOut();
 		    }
 		    if(H>200){
-		    	$("#sabHeader").fadeIn();
         		$("#stromeHeader").fadeIn();
 		        $("#bud2").fadeIn();
 		    } else{
 		    	$("#stromePara").fadeOut();
 		    	$("#stromeHeader").fadeOut();
 		        $("#bud2").fadeOut();
-		        $("#sabHeader").fadeOut();
+		        
 		    }
 		    if(H>300){
         		$("#bolgerHeader").fadeIn();
@@ -699,10 +694,12 @@ $(document).on('scroll', function(e) {
 		    if(H>390){
         		$("#nelsonHeader").fadeIn();
 		        $("#bud5").fadeIn();
+		        $("#sabHeader").fadeIn();
 		    } else{
 		    	$("#nelsonPara").fadeOut();
 		    	$("#nelsonHeader").fadeOut();
 		        $("#bud5").fadeOut();
+		        $("#sabHeader").fadeOut();
 		    }
     });
 
@@ -720,29 +717,29 @@ function sabClick(event){
 }
 
 var angle = 0;
-setInterval(function(){
-      angle += .33;
-      $(".budRow2").css({"transform": 'rotate(' + angle + 'deg)'});
-      if (!($("#bud").css("display") == 'none')){
-      	$("#bud").css({"transform": 'rotate(' + angle + 'deg)'});
-      }
-      if (!($("#bud1").css("display") == 'none')){
-      	$("#bud1").css({"transform": 'rotate(' + angle + 'deg)'});
-      }
-      if (!($("#bud2").css("display") == 'none')){
-      	$("#bud2").css({"transform": 'rotate(' + angle + 'deg)'});
-      }
-      if (!($("#bud3").css("display") == 'none')){
-      	$("#bud3").css({"transform": 'rotate(' + angle + 'deg)'});
-      }
-      if (!($("#bud4").css("display") == 'none')){
-      	$("#bud4").css({"transform": 'rotate(' + angle + 'deg)'});
-      }
-      if (!($("#bud5").css("display") == 'none')){
-      	$("#bud5").css({"transform": 'rotate(' + angle + 'deg)'});
-      }
-     //$("#bud").rotate(angle);
-}, 50);
+// setInterval(function(){
+//       angle += .1;
+//       $(".budRow2").css({"transform": 'rotate(' + angle + 'deg)'});
+//       if (!($("#bud").css("display") == 'none')){
+//       	$("#bud").css({"transform": 'rotate(' + angle + 'deg)'});
+//       }
+//       if (!($("#bud1").css("display") == 'none')){
+//       	$("#bud1").css({"transform": 'rotate(' + angle + 'deg)'});
+//       }
+//       if (!($("#bud2").css("display") == 'none')){
+//       	$("#bud2").css({"transform": 'rotate(' + angle + 'deg)'});
+//       }
+//       if (!($("#bud3").css("display") == 'none')){
+//       	$("#bud3").css({"transform": 'rotate(' + angle + 'deg)'});
+//       }
+//       if (!($("#bud4").css("display") == 'none')){
+//       	$("#bud4").css({"transform": 'rotate(' + angle + 'deg)'});
+//       }
+//       if (!($("#bud5").css("display") == 'none')){
+//       	$("#bud5").css({"transform": 'rotate(' + angle + 'deg)'});
+//       }
+//      //$("#bud").rotate(angle);
+// }, 1000);
 
 
 
@@ -776,15 +773,4 @@ setInterval(function(){
 
     });
     
-});
-
-
-
-
-
-
-
-
-
-
-
+}); 
