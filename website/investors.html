@@ -21,17 +21,17 @@
                 </a>
             </li>
             <li class="navBarLinks">
-                <a id = "contactUs">Contact Us </a>
+                <a id = "contactUs" style = "cursor:pointer">Contact Us </a>
             </li>
             <li class="navBarLinks">
-                <a id = "forInvestors" style = "cursor: pointer;" >For Investors</a>
+                <div id = "forInvestors" style = "color: white;">For Investors</div>
                 
             </li>
             <li class="navBarLinks">
-                <a id = "forPatients"   href="#">Company</a>
+                <a id = "company">Company</a>
                 <ul class="dropDownList">
                     <li class="dropDownLI">
-                        <div class="ddText" id = "teamLink">The Team</div>
+                        <div class="ddText" id = "teamLink" >The Team</div>
                         <div class="highlightLeft"></div>
                         <div class="highlightRight"></div>
                     </li>
@@ -63,26 +63,40 @@
                 </ul>
             </li>
        </ul>
+    </div> <!-- NAV BAR DIV -->
+
+    <div id = "contact"> 
+    <h1>CONTACT US</h1>
+    <p> Address: 1755 East Bayshore Road, Suite 26A</p>
+    <p> Redwood City, CA 94063</p>
+    <p> Email: info@arrinex.com </p>
     </div>
 
     <div id = "pdfDisplay">
         
         <div id = "articleButtons">
-        <div class = "articleButton" id = "articleButtonFirst" onclick = "articleReveal('article-Impact')">Impact on Work Productivity</div>
+            <div class = "articleButton" id = "articleButtonFirst" onclick = "articleReveal('article-executive')">Executive Summary</div>
 
-        <div class = "articleButton" onclick = "articleReveal('article-canning')"> Canning </div>
+            <div class = "articleButton"  onclick = "articleReveal('article-Impact')">Impact on Work Productivity</div>
 
-        <div class = "articleButton" onclick = "articleReveal('article-kikawada')"> Kikawada </div>
+            <div class = "articleButton" onclick = "articleReveal('article-canning')"> Canning </div>
 
-        <div class = "articleButton" onclick = "articleReveal('article-epidemiology')"> Epidemeology </div>
+            <div class = "articleButton" onclick = "articleReveal('article-kikawada')"> Kikawada </div>
 
-        <div class = "articleButton" onclick = "articleReveal('article-ikeda')"> Ikeda </div>
+            <div class = "articleButton" onclick = "articleReveal('article-epidemiology')"> Epidemeology </div>
 
-        <div class = "articleButton" onclick = "articleReveal('article-WhitePaper')"> White Paper </div>
+            <div class = "articleButton" onclick = "articleReveal('article-ikeda')"> Ikeda </div>
 
-        <div class = "articleButton" onclick = "articleReveal('article-prevalence')"> Prevalence </div>
+            <div class = "articleButton" onclick = "articleReveal('article-WhitePaper')"> White Paper </div>
+
+            <div class = "articleButton" onclick = "articleReveal('article-prevalence')"> Prevalence </div>
        </div>
 
+
+
+       <div class = "article" id = "article-executive">
+            <object data="executive.pdf" type="application/pdf" width="100%" height="100%"> </object>
+        </div>
 
         <div class = "article" id = "article-Impact">
             <object data="AR & its impact on work productivity.pdf" type="application/pdf" width="100%" height="100%"> </object>
@@ -91,10 +105,6 @@
         <div class = "article" id = "article-canning">
             <object data="Canning_ neurology of Allergic inflammation and rhinitis.pdf" type="application/pdf" width="100%" height="100%"> </object>
         </div>
-
-
-
-
         
         <div class = "article" id = "article-kikawada">
             <object data="kikawada.pdf" type="application/pdf" width="100%" height="100%"> </object>
@@ -118,6 +128,9 @@
 
     </div> <!-- pdfDisplay div -->
 
+    <div id = "pptDisplay">
+     <object data="businitch.pdf" type="application/pdf" width="100%" height="100%"> </object>
+    </div>
 
     <div id = "fox">
         <p id = "foxP"> the quick brown fox jumps over the lazy dog <br></br>

@@ -1200,7 +1200,6 @@ position: fixed;
 }
 
 .cardLogo { 
-  /*top: 155px;*/
   top: 5px;
   position: relative;
   float: right;
@@ -1216,27 +1215,14 @@ position: fixed;
   background-color: white;
   border-top: 2px solid white;
   border-bottom: 1px solid grey;
-  /*border-left: 1px solid black;
-  border-right: 1px solid black;*/
   box-shadow: 0px 0px 20px white; 
 }
 
 /*===================================
 */
 #arrinexSolution {
- /* background-image: url("Arrinex_banner_print2.png");
-  background-repeat: no-repeat;
-  background-position: 170px 300px ;*/
   height: 625px;
 }
-
-/*#solutionHeader {
-  padding-top: 35px;
-  border: 10;
-  padding: 0;
-  height: 325px;
-  //box-shadow: 10px 0px 10px  black;
-}*/
 
 #solutionHeader {
   padding-top: 59px;
@@ -1258,68 +1244,6 @@ position: fixed;
   font-size: 18px;
   font-weight: 300;
 }
-
-
-
-
-
-
-/*#sab{
-  text-align: center;
-}
-.sabPars {
-  font-size: 15px;
-  text-decoration: none;
-  font-weight: normal;
-  //line-height: 20px;
-}
-#firstRow{
-  height:100px;
-}
-#secondRow{
-  height:100px;
-}
-#thirddRow{
-  height:100px;
-}
-.sabPerson {
-  margin: 15px 10px;
-  width:370px;
-  height: 100%;
-  display: inline-block;
-  padding: 15px 0px;
-  top: 0px;
-  vertical-align:top;
-}
-    .teamHeader {
-      text-align: center;
-      left: 10px;
-      padding: 5px 0px;
-    }
-    .fullBioButton{
-      font-size:14px;
-      font-weight:400;
-      margin-left: 30px;
-      width:75px;
-      float:right;
-    }
-#paraBios{
-  height:200px;
-  width:33%;
-  margin:auto;
-}
-        .sabPars {
-          font-size: 17px;
-          text-decoration: none;
-          font-weight: normal;
-          line-height: 25px;
-          display:none;
-          text-align:justify;
-        }
-#hwangButton {
-  position: relative;
-  //float: right;
-}*/
 
 #sab{
   overflow: hidden;
@@ -1417,7 +1341,6 @@ position: fixed;
     text-align: center;
     font-size: 30px;
     color: rgb(245,245,245);
-    /* background-color: rgba(0,0,0,.2); */
     transition: display .5s;
 }
 .sabNameRow1, .sabNameRow2{
@@ -1428,7 +1351,6 @@ position: fixed;
   font-size: 25px;
   color: rgb(245,245,245);
   z-index: 1;
-  /*background-color: rgba(0,0,0,.2);*/
   transition: display 1s;
   display:none;
 }
@@ -1463,17 +1385,14 @@ position: fixed;
 
 
 
-
-
-
-
 /*============================================================================
 BEGINNING OF INVESTORS STYLESHEET
 ============================================================================*/
 
 #pdfDisplay {
+  /*position: absolute;*/
   margin-top: 70px;
-  height: 1000px;
+  height: 700px;
   width: 70%;
   float: right;
 
@@ -1489,8 +1408,13 @@ BEGINNING OF INVESTORS STYLESHEET
   right: 0px;
 }
 
-#article-Impact {
+#article-executive {
   z-index: 4; /*navbar z-index is 5*/
+
+}
+#article-Impact {
+  z-index: 0;
+  opacity: 0; 
 }
 
 #article-canning {
@@ -1525,19 +1449,22 @@ BEGINNING OF INVESTORS STYLESHEET
 }
 
 #articleButtons {
-  /*margin-top: 10px;*/
   background-image: url("merged copy.png"); 
+  /*background-size: 100% 100%;*/
   position: absolute;
   width: 30%;
   left: 0;
+  /*height: 658px;*/
   height: 600px;
 }
 
 .articleButton {
   width: 90%;
-  height: 40px;
+  /*height: 40px;*/
+  height: 30px;
   background-color: transparent;
   text-align: center;
+  /*vertical-align: center;*/
   left-margin: 10px;
   display: block;
   margin-bottom: 20px;
@@ -1545,9 +1472,7 @@ BEGINNING OF INVESTORS STYLESHEET
   margin-left: 12.5px;
   margin-right: 15px;
   padding-top: 20px;
-  /*border-radius: 15px;*/
   border: 2px solid white;
-  /*color: rgb(196, 168, 143);*/
   color: #9E8365;
 
 }
@@ -1559,9 +1484,18 @@ BEGINNING OF INVESTORS STYLESHEET
   transition: background-color 1.5s ease;
 }
 
+#pptDisplay {
+  position: absolute;
+  width: 80%;
+  margin: auto;
+  left: 60px;
+  top: 900px;
+  height: 600px;
+  border: 3px solid black;
+}
 #fox {
   position: absolute;
-  top: 1000px;
+  top: 1500px;
   width: 30%;
 }
 #copyright { 
@@ -1574,7 +1508,6 @@ BEGINNING OF INVESTORS STYLESHEET
   height: 45px;
   max-width: 100%;
   min-width: 100%;
-  /*color: grey;*/
   color: #787878;
   font-weight: 300;
   font-size: 14px;
@@ -1586,8 +1519,6 @@ BEGINNING OF INVESTORS STYLESHEET
   margin-top: 10px;
   margin-bottom: 2px;
   font-size: 12px;
-
-
 
 
 }

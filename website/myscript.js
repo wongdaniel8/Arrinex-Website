@@ -91,6 +91,7 @@ $(document).ready(function(){
 
 
 			//FUNCTION trigger the carousel initially
+			if (!isInvestors) {
 				var pos_from_top = $("body").scrollTop();
 				var vert_pos_exist_soln_div = $("#existingSolutions").offset().top;
 				var height_exist_soln_div = parseFloat($("#existingSolutions").css("height"));
@@ -100,8 +101,7 @@ $(document).ready(function(){
 					first_toggle = true;
 					playCarousel();
 				}
-
-
+			}
         });
 
 
@@ -121,9 +121,7 @@ $(document).ready(function(){
 		    			return true;
 
 		    		}
-		    		else window.location = "index.html#team";
-		    	
-					
+		    		else window.location = "index.html#team";					
 				});
 
 				
@@ -281,7 +279,6 @@ $(document).ready(function(){
     		});
 
     	$("#passwordField").click(
-    	//$("#company").mouseover(
     		function(){
     			$("#navBarDiv").css("z-index","1");
     			$("#passwordField").css("opacity","0");
@@ -297,60 +294,17 @@ $(document).ready(function(){
     			$("#passwordInput").css("opacity","0");
     			$("#passwordInput").css("z-index","0");
     			$("#navBarDiv").css("z-index","1000"); //1000 to fix issue of pdf z index exceeding z index of navbar in investors page FIXME
-    			$("#contact").css("opacity",".8");
-    			$("#contact").css("z-index","3");
+    			$("#contact").css("opacity","1");
+    			$("#contact").css("z-index","1000");
     		});
 
     	$("#contactUs").mouseout(
     		function() {
-    			$("#navBarDiv").css("z-index","1");
+    			// $("#navBarDiv").css("z-index","1");
     			$("#contact").css("opacity", "0");
     			$("#contact").css("z-index","0");
     		});
-
-
 });
-
-
-//////////Display Bio
-    // function fullBio(event){
-    // 	if ($(event + 'Para').css("display") == 'none'){
-    // 		//$("#sab").css("height", "670px");
-    // 		//$(event).parent().css("height", "235px");
-    // 		$("#hwangPara").css("display", "none");
-    // 		$("#hwangButton").html("&nbsp; &nbsp;Full Bio &darr;");
-    // 		$("#hwangHeader").css("background", "rgba(255,255,255,.7");
-    // 		$("#weissPara").css("display", "none");
-    // 		$("#weissButton").html("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Full Bio &darr;");
-    // 		$("#weissHeader").css("background", "rgba(255,255,255,.7");
-    // 		$("#bolgerPara").css("display", "none");
-    // 		$("#bolgerButton").html("Full Bio &darr;");
-    // 		$("#bolgerHeader").css("background", "rgba(255,255,255,.7");
-    // 		$("#goodePara").css("display", "none");
-    // 		$("#goodeButton").html("&nbsp;&nbsp;&nbsp;&nbsp;Full Bio &darr;");
-    // 		$("#goodeHeader").css("background", "rgba(255,255,255,.7");
-    // 		$("#nelsonPara").css("display", "none");
-    // 		$("#nelsonButton").html("Full Bio &darr;");
-    // 		$("#nelsonHeader").css("background", "rgba(255,255,255,.7");
-    // 		$("#stromePara").css("display", "none");
-    // 		$("#stromeButton").html("Full Bio &darr;");
-    // 		$("#stromeHeader").css("background", "rgba(255,255,255,.7");
-    // 		$(event + 'Para').css("transition", "display .7s ease");
-    // 		$(event + 'Para').css("display", "inline");
-    // 		$(event + 'Button').html("Full Bio &uarr;");
-    // 		$(event + 'Header').css("transition", "background .7s ease");
-    // 		$(event + 'Header').css("background", "rgba(125,125,125,.7");
-
-    // 	} else{
-    // 		//$(event).parent().css("height", "100px");
-    // 		//$("#sab").css("height", "270px");
-    // 		$(event + 'Header').css("transition", "background .7s ease");
-    // 		$(event + 'Header').css("background", "rgba(255,255,255,.7");
-    // 		$(event + 'Para').css("transition", "display .7s ease");
-    // 		$(event + 'Para').css("display", "none");
-    // 		$(event + 'Button').html("Full Bio &darr;");
-    // 	}
-    // }
 		
 
 /////////////////PASSWORD SCRIPT START///////////////////////
@@ -377,7 +331,6 @@ function verification() {
         for (i = 0; i < passwordArray.length; i++) {
 			if(hashedPasswordInput == passwordArray[i]) {
 	    	    invalidDisplay.style.opacity = "0";
-	    	    // window.open("investors.html", "Investors");
 	    	    window.location = "investors.html";
 	    	    return;
 			}
@@ -778,10 +731,6 @@ var angle = 0;
 		navBar.style.zIndex = num + 2;
 		id.style.opacity = 1;
 	}
-
-
-
-
 
 
 	$(document).ready(function(){
