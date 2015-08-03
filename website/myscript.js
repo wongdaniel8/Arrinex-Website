@@ -56,6 +56,10 @@ $(document).ready(function(){
 
 			    {
 			    	$("#rhinitisInfo").css("opacity","1");
+			    	
+					$('#pptDisplay').animate({left: 100}, 1000);
+			    	
+
 			    }
 			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 150)// scrolling up
 			    {
@@ -103,8 +107,6 @@ $(document).ready(function(){
 				}
 			}
         });
-
-
 
 
 	// FUNCTIONS FOR NAVIGATION BAR SCROLLING
@@ -736,7 +738,6 @@ var angle = 0;
 	$(document).ready(function(){
     $("#foxButton").click(function(){
         $("#fox").animate({left: "700px"}, 6000, "linear");
-
     });
     
 }); 

@@ -1488,17 +1488,19 @@ BEGINNING OF INVESTORS STYLESHEET
   position: absolute;
   width: 80%;
   margin: auto;
-  left: 60px;
+  left: -1000px;
   top: 900px;
   height: 600px;
   border: 3px solid black;
 }
+
 #fox {
   position: absolute;
   top: 1500px;
   width: 30%;
 }
-#copyright { 
+#copyright, #copyright2 { 
+  position: absolute;
   z-index: 100;
   /*padding, margin: 0px;*/
   padding-top: 1px;
@@ -1511,6 +1513,10 @@ BEGINNING OF INVESTORS STYLESHEET
   color: #787878;
   font-weight: 300;
   font-size: 14px;
+}
+#copyright2 {
+  top: 2000px;
+
 }
 
 #copyrightPar1 {
