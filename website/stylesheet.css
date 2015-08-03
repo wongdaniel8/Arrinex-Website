@@ -1488,7 +1488,8 @@ BEGINNING OF INVESTORS STYLESHEET
   position: absolute;
   width: 80%;
   margin: auto;
-  left: -1000px;
+  left: -1500px;
+  /*right: -2000px;*/
   top: 900px;
   height: 600px;
   border: 3px solid black;
@@ -1515,7 +1516,7 @@ BEGINNING OF INVESTORS STYLESHEET
   font-size: 14px;
 }
 #copyright2 {
-  top: 2000px;
+  top: 3000px;
 
 }
 

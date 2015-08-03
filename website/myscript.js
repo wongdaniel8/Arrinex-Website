@@ -52,15 +52,26 @@ $(document).ready(function(){
 
 	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 250) // scrolling down
 
-	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 150) // scrolling down
-
-			    {
+	            
+	           
+	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 150){ // && scroll_point2 < 420) { // scrolling down
+			    
 			    	$("#rhinitisInfo").css("opacity","1");
-			    	
-					$('#pptDisplay').animate({left: 100}, 1000);
-			    	
+					$('#pptDisplay').animate({left: 115}, 1000);
 
-			    }
+			    	
+			    	
+				}
+
+				else if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 460) {
+        				$('#pptDisplay').animate({left: -1500}, 1000);
+
+				}
+			  
+
+
+			    
+
 			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 150)// scrolling up
 			    {
 			    	$("#rhinitisInfo").css("opacity","0");
