@@ -1,3 +1,7 @@
+/** CSS for index.html and investors.html
+ *  @author Daniel Wong, Herberth Bonilla, Devin Morgan
+ */
+
 body, html {
   font-family: "Helvetica" !important;
   margin: 0 auto;
@@ -2145,7 +2149,6 @@ position: fixed;
   border-bottom: 1px solid rgb(128,128,128);
   box-shadow: 0px 0px 20px white;
 
-  -webkit-backface-visibility: hidden;
 }
 
 /*===================================

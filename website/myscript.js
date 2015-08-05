@@ -1,6 +1,8 @@
-function adjustPicture()
-{
-	
+/** Javascript for index.html
+ *  @author Daniel Wong, Herberth Bonilla, Devin Morgan
+ */
+
+function adjustPicture() {
 	if (parseFloat(window.innerWidth) > 1024)
 	{
 		var initial_top_offset_at_1590_width = 325;
@@ -119,7 +121,7 @@ $(document).ready(function(){
         });
 
 
-	// FUNCTIONS FOR NAVIGATION BAR SCROLLING
+	/* ================= FUNCTIONS FOR NAVIGATION BAR SCROLLING ================= */
 				$("#teamLink").click(function() {
 					if (isInvestors == false) {
 						
@@ -262,8 +264,7 @@ $(document).ready(function(){
 	    	});
 
 
-
-    ///////////////////FUNCTION for the cool highlight method for the DropDownMenus
+	/* ============ FUNCTION for the cool highlight method for the DropDownMenus ============ */
        	$(".dropDownLI").mouseover(function(){
        		$(this).find(".highlightLeft").css("opacity","1").css("left","0px");
 
@@ -397,7 +398,7 @@ function rotate(card, container, ident) {
 		 	
 			//for safari compatibility
 		 	if (card_1_flipped_back % 2 == 1) {
-	
+
 		 		$(document).ready(function(){
 					 
 					 setTimeout(function(){
@@ -410,13 +411,9 @@ function rotate(card, container, ident) {
 			       $('#logoWrapper').css('display', 'block');
 						 }, 500);
 					});
-			}
-
-
-		
-
+			}		
 	}
-	
+
 	if (card == "f1_card2" )
 	{	
 		var rotateDeg = card_2_flipped_back * 180;
@@ -590,7 +587,7 @@ function playCarousel()
 					count--;
 				}
 				else
-				{//alert(count);
+				{
 					var left_position = parseFloat($(".carouselList").css("margin-left")) + 695;
 					$(".carouselList").css("margin-left",""+left_position + "px");
 					count--;
