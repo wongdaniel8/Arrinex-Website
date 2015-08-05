@@ -320,6 +320,7 @@ $(document).ready(function(){
 
 /////////////////PASSWORD SCRIPT START///////////////////////
 function verifyKey(e) {
+	var intKey = (window.event) ? e.which : e.keyCode;
     var keycode;
     if (window.event)
         keycode = window.event.keyCode;
@@ -367,18 +368,10 @@ function invalid() {
 	    elem.parentNode.replaceChild(invalidDisplay1, elem);
 
 
-	    // $("invalidDisplay1").css('-webkit-animation-name','shake');
-	    // $("invalidDisplay1").css('-webkit-animation-duration','1s');
-
-
-	    // invalidDisplay1.style.WebkitAnimation = "shake 1s 2";
+	    //Safari compatibility
 	    invalidDisplay1.style.webkitAnimationName = "shake";
 	    invalidDisplay1.style.webkitAnimationDuration = "1s";
-	    // invalidDisplay1.style['-webkit-animation-name']  = "shake";
-	    // invalidDisplay1.style['-webkit-animation-duration']  = "1s";
-	   
-
-	    // original
+	  
 	    invalidDisplay1.style.animation = "shake";
 	    invalidDisplay1.style.animationDuration = "1s";
 	}
