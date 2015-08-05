@@ -378,29 +378,28 @@ var card_2_flipped_back = 1;
 var card_3_flipped_back = 1;
 
 function rotate(card, container, ident) {
-
 	if (card == "f1_card1"  )
 	{
-			var car = document.getElementById(card);
-			car.style.transition = "1s linear";
-			var rotateDeg = card_1_flipped_back * 180;
-			car.style.transform = "rotateY("+rotateDeg+"deg)" ;
+		var rotateDeg = card_1_flipped_back * 180;
+		$('#f1_card1').css('transition', 'all 1s linear');
+		$('#f1_card1').css('-webkit-transform', 'rotateY('+ rotateDeg +'deg)');
+		$('#f1_card1').css('-moz-transform', 'rotateY('+ rotateDeg +'deg)');
 		
 	}
 	if (card == "f1_card2" )
 	{	
-			var car = document.getElementById(card);
-			car.style.transition = "1s linear";
-			var rotateDeg = card_2_flipped_back * 180;
-			car.style.transform = "rotateY("+rotateDeg+"deg)" ;
+		var rotateDeg = card_2_flipped_back * 180;
+		$('#f1_card2').css('transition', 'all 1s linear');
+		$('#f1_card2').css('-webkit-transform', 'rotateY('+ rotateDeg +'deg)');
+		$('#f1_card2').css('-moz-transform', 'rotateY('+ rotateDeg +'deg)');
 		
 	}
 	if (card == "f1_card3" )
 	{
-			var car = document.getElementById(card);
-			car.style.transition = "1s linear";
-			var rotateDeg = card_3_flipped_back * 180;
-			car.style.transform = "rotateY("+rotateDeg+"deg)" ;	
+		var rotateDeg = card_3_flipped_back * 180;
+		$('#f1_card3').css('transition', 'all 1s linear');
+		$('#f1_card3').css('-webkit-transform', 'rotateY('+ rotateDeg +'deg)');
+		$('#f1_card3').css('-moz-transform', 'rotateY('+ rotateDeg +'deg)');
 	}
 	
 }
