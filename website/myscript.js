@@ -47,8 +47,8 @@ $(document).ready(function(){
         $(document).scroll(function() {
             
             //FUNCTION that deals with fade in and out
-	            var scroll_point2 = $("body").scrollTop();
-
+	            var scroll_point2 = $("body").scrollTop() + $("html").scrollTop();;
+	            //						^for chrome				^for firefox
 
 	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 250) // scrolling down
 
@@ -85,6 +85,7 @@ $(document).ready(function(){
 			    	$(".navBarLinks").css("padding","13px 25px");
 			    	$("#logoBlock").css("padding","10px 17px");
 			    	$(".dropDownList").css("top","17px");
+
 			    }
 			    else
 			    {
