@@ -2089,7 +2089,7 @@ position: fixed;
 #f1_container1:hover #f1_card1, #f1_container2:hover #f1_card2, #f1_container3:hover #f1_card3  {
   /*transform: rotateY(180deg);*/
   cursor: pointer;
-  box-shadow: -5px 5px 5px #69696C; /*#8A8B8F;*/
+  box-shadow: -5px 5px 5px #69696C; 
 }
 
 /*frontface*/
@@ -2143,7 +2143,9 @@ position: fixed;
   background-color: white;
   border-top: 2px solid white;
   border-bottom: 1px solid rgb(128,128,128);
-  box-shadow: 0px 0px 20px white; 
+  box-shadow: 0px 0px 20px white;
+
+  -webkit-backface-visibility: hidden;
 }
 
 /*===================================
