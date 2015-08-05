@@ -320,10 +320,12 @@ $(document).ready(function(){
 
 /////////////////PASSWORD SCRIPT START///////////////////////
 function verifyKey(e) {
+	
     var keycode;
-    if (window.event)
-        keycode = window.event.keyCode;
+        keycode = (window.event) ? e.which : e.keyCode;
+
     if (keycode == 13) {
+
         return verification();
     }
 }
