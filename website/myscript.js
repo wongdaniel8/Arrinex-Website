@@ -354,6 +354,7 @@ function verification() {
 }
 
 var shakeCount = 0;
+
 function invalid() {
     var invalidDisplay = document.getElementById('errorPar');
     document.getElementById("passwordInput").value = "";
@@ -364,6 +365,20 @@ function invalid() {
 	    var elem = invalidDisplay;
 	    var invalidDisplay1 = elem.cloneNode(true);
 	    elem.parentNode.replaceChild(invalidDisplay1, elem);
+
+
+	    // $("invalidDisplay1").css('-webkit-animation-name','shake');
+	    // $("invalidDisplay1").css('-webkit-animation-duration','1s');
+
+
+	    // invalidDisplay1.style.WebkitAnimation = "shake 1s 2";
+	    invalidDisplay1.style.webkitAnimationName = "shake";
+	    invalidDisplay1.style.webkitAnimationDuration = "1s";
+	    // invalidDisplay1.style['-webkit-animation-name']  = "shake";
+	    // invalidDisplay1.style['-webkit-animation-duration']  = "1s";
+	   
+
+	    // original
 	    invalidDisplay1.style.animation = "shake";
 	    invalidDisplay1.style.animationDuration = "1s";
 	}

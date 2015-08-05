@@ -208,12 +208,6 @@ position: fixed;
   -ms-animation-duration: 1s;
   animation-duration: 1s;
 
-  
-  -webkit-animation-play-state: paused;
-  -moz-animation-play-state: paused;
-  -o-animation-play-state: paused;
-  -ms-animation-play-state: paused;
-  animation-play-state: paused;
 }
 
 @-webkit-keyframes shake {
