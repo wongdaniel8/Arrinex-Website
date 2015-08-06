@@ -404,9 +404,7 @@ function rotate(card, container, ident) {
 		
 		 	
 			//for safari compatibility
-					// $('#logoWrapper').css('background-color', 'white');
 		 	if (card_1_flipped_back % 2 == 1) {
-
 		 		$(document).ready(function(){
 					 
 					 setTimeout(function(){

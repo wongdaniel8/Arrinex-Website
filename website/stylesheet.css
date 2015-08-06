@@ -2140,7 +2140,8 @@ position: fixed;
 }
 
 #logoWrapper1, #logoWrapper2, #logoWrapper3  {
-  position: relative;
+  /*position: relative;*/
+  margin-top: 85px;
   top: 85px;
   height: 68px;
   background-color: white;
