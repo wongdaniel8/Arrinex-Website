@@ -2049,8 +2049,6 @@ position: fixed;
   height: 530px;
   z-index: 0;
   left: 100px;
-
-  
 }
 
 #f1_container2 {
@@ -2141,7 +2139,7 @@ position: fixed;
   right: 10px;
 }
 
-#logoWrapper {
+#logoWrapper1, #logoWrapper2, #logoWrapper3  {
   position: relative;
   top: 85px;
   height: 68px;
@@ -2151,7 +2149,6 @@ position: fixed;
   box-shadow: 0px 0px 20px white;
 
 }
-
 /*===================================
 */
 #arrinexSolution {

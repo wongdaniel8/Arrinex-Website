@@ -404,18 +404,19 @@ function rotate(card, container, ident) {
 		
 		 	
 			//for safari compatibility
+					// $('#logoWrapper').css('background-color', 'white');
 		 	if (card_1_flipped_back % 2 == 1) {
 
 		 		$(document).ready(function(){
 					 
 					 setTimeout(function(){
-						$('#logoWrapper').css('display', 'none');
+						$('#logoWrapper1').css('display', 'none');
 						 }, 500);
 					});
-			} else{
+			} else{ 
 			 		$(document).ready(function(){
 					 setTimeout(function(){
-			       $('#logoWrapper').css('display', 'block');
+			       $('#logoWrapper1').css('display', 'block');
 						 }, 500);
 					});
 			}		
@@ -427,6 +428,22 @@ function rotate(card, container, ident) {
 		$('#f1_card2').css('transition', 'all 1s linear');
 		$('#f1_card2').css('-webkit-transform', 'rotateY('+ rotateDeg +'deg)');
 		$('#f1_card2').css('-moz-transform', 'rotateY('+ rotateDeg +'deg)');
+
+		if (card_2_flipped_back % 2 == 1) {
+
+		 		$(document).ready(function(){
+					 
+					 setTimeout(function(){
+						$('#logoWrapper2').css('display', 'none');
+						 }, 500);
+					});
+			} else{ 
+			 		$(document).ready(function(){
+					 setTimeout(function(){
+			       $('#logoWrapper2').css('display', 'block');
+						 }, 500);
+					});
+			}		
 	
 	}
 
@@ -436,6 +453,22 @@ function rotate(card, container, ident) {
 		$('#f1_card3').css('transition', 'all 1s linear');
 		$('#f1_card3').css('-webkit-transform', 'rotateY('+ rotateDeg +'deg)');
 		$('#f1_card3').css('-moz-transform', 'rotateY('+ rotateDeg +'deg)');
+
+		if (card_3_flipped_back % 2 == 1) {
+
+		 		$(document).ready(function(){
+					 
+					 setTimeout(function(){
+						$('#logoWrapper3').css('display', 'none');
+						 }, 500);
+					});
+			} else{ 
+			 		$(document).ready(function(){
+					 setTimeout(function(){
+			       $('#logoWrapper3').css('display', 'block');
+						 }, 500);
+					});
+			}		
 
 		
 	}
