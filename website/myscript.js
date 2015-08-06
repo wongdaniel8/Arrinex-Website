@@ -222,12 +222,18 @@ $(document).ready(function(){
         $( "#navBarList li a" ).mouseover(
 		  function() {
 		    $( this ).parent().find(".dropDownList").addClass("dropDownON");
-		    
+		    $('#navBarDiv').css('z-index', '3000');
 		  });
+       
         $( "#navBarList li" ).mouseleave( function() {
 		    $( this ).find("ul").removeClass("dropDownON");
-		    
 		  });
+
+        $( ".dropDownList" ).mouseleave( function() {
+		    $('#navBarDiv').css('z-index', '1000');
+		  });
+
+
 
 	//this PART was added to ensure the cogs didn't interfere with the DD menu
 	        $( "#navBarList li" ).mouseleave(
@@ -281,13 +287,15 @@ $(document).ready(function(){
     //////////////login modal
     	$("#forInvestors").click(
     		function(){
+
+
     			$("#contact").css("opacity","0");
     			$("#contact").css("z-index","0");
     			$("#navBarDiv").css("z-index","1000"); //1000 to fix issue of pdf z index exceeding z index of navbar in investors page FIXME
     			$("#passwordField").css("opacity",".8");
-    			$("#passwordField").css("z-index","3");
+    			$("#passwordField").css("z-index","1010");
     			$("#passwordInput").css("opacity",".8");
-    			$("#passwordInput").css("z-index","3");
+    			$("#passwordInput").css("z-index","1010");
     		});
 
     	$("#passwordField").click(
@@ -312,7 +320,6 @@ $(document).ready(function(){
 
     	$("#contactUs").mouseout(
     		function() {
-    			// $("#navBarDiv").css("z-index","1");
     			$("#contact").css("opacity", "0");
     			$("#contact").css("z-index","0");
     		});
