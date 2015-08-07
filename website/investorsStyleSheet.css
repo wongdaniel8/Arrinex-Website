@@ -251,7 +251,7 @@ body{
 
     .article {
       display: none;
-      height: 650px;
+      height: 660px;
       width: 800px;
       margin: 40px auto 0px auto;
       position: relative;
@@ -261,6 +261,19 @@ body{
     }
         
 #copyright2 {
+ position: absolute;
+  z-index: 100;
+  /*padding, margin: 0px;*/
+  padding-top: 1px;
+  border:0;
+  background: black;
+  display: block;
+  height: 45px;
+  max-width: 100%;
+  min-width: 100%;
+  color: #787878;
+  font-weight: 300;
+  font-size: 14px;
   bottom: 0px;
 
 }
