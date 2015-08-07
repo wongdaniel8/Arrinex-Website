@@ -1,153 +1,266 @@
 /*==============================================================================================================================
 BEGINNING OF INVESTORS STYLESHEET
 ================================================================================================================================*/
+body{
+  background-color: #CCCCCC;
+}
+            .navBarLinks{
+              position: relative;
+            }
+                #documents:hover{
+                  cursor: pointer;
+                }
+
+@media screen and (min-width: 1200px){ /*the pipe won't look good if the screen is too small*/
+
+   
+    #articleRemoverContainer{
+      width: 150px;
+      height: 620px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 1;
+      /*background-color: orange;*/
+    }
+        #vert_extend_rect{
+          background-color: rgb(0,0,0);
+          position: absolute;
+          top: 0px;
+          width: 50px;
+          height: 70px;
+        }
+        #horz_extend_rect{
+          display: none;
+          position: absolute;
+          top: 370px;
+          height: 50px;
+          width: 50px;
+          background-color: rgb(0,0,0);;
+        }
+        #vacuum_nosel{
+          display: none;
+          position: absolute;
+          right: 0px;
+          border-top: 25px solid transparent;
+          border-right: 50px solid rgb(0,0,0);;
+          border-bottom: 25px solid transparent;
+          top: 370px;
+        }
+
+
+    @keyframes topTriangleClose{
+      0%{
+          border-top: 0px solid #CCCCCC;
+          border-right: 800px solid transparent;
+        }
+      20%{
+          border-top: 300px solid #CCCCCC;
+        }
+      100%{
+          border-top: 800px solid #CCCCCC;
+          border-right: 2100px solid transparent;
+        }
+    }
+    @keyframes botTriangleClose{
+      0%{
+          border-bottom: 0px solid #CCCCCC;
+          border-right: 800px solid transparent;
+        }
+      20%{
+          border-bottom: 300px solid #CCCCCC;
+        }
+      100%{
+          border-bottom: 800px solid #CCCCCC;
+          border-right: 2100px solid transparent;
+        }
+    }
+
+    .trapazoidTop{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 0px;
+            width: 00px;
+            border-top: 0px solid #CCCCCC;
+            border-right: 800px solid transparent;
+
+            
+     }
+     .trapazoidTopLive{
+            /*border-top: 800px solid #CCCCCC;*/
+            animation-name:topTriangleClose;
+            animation-duration:.5s;
+            animation-timing-function:linear;
+            animation-delay:0s;
+            animation-iteration-count:1;
+            animation-direction:normal;
+     }
+
+     .trapazoidBot{
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            height: 0px;
+            width: 00px;
+            border-bottom: 0px solid #CCCCCC;
+            border-right: 800px solid transparent;
+        }
+        .trapazoidBotLive{
+          /*border-bottom: 800px solid #CCCCCC;*/
+            animation-name:botTriangleClose;
+            animation-duration:.5s;
+            animation-timing-function:linear;
+            animation-delay:0s;
+            animation-iteration-count:1;
+            animation-direction:normal;
+        }
+
+}
+
+@keyframes disappear{
+  0% {top: 68px; width: 700px;}
+  30% {top: 68px; width:330px;}
+  50% {top: 68px; width:330px;}
+  100% {top: -700px; width:320px;}
+
+}
+
+#documentDDContainer{
+  width: 700px;
+  height: 435px;
+  background-color: rgb(255,255,255);
+  border: 2px solid black;
+  position: absolute;
+  right: 220px;
+  color: black;
+  z-index: 1;
+  /*top:-700px;*/
+  display: none;
+  
+}
+    .ddUp{
+      top: -700px;
+      animation-name:disappear;
+      animation-duration:1.2s;
+      animation-timing-function:ease;
+      animation-delay:0s;
+      animation-iteration-count:1;
+      animation-direction:normal;
+      /*animation-play-state: paused;*/
+    }
+    .ddDown{
+      top:68px;
+      animation-name:disappear;
+      animation-duration:1.2s;
+      animation-timing-function:ease;
+      animation-delay:0s;
+      animation-iteration-count:1;
+      animation-direction:reverse;
+      /*animation-play-state: paused;*/
+    }
+
+    #docListHeader{
+      text-align: center;
+      width: 260px;
+      position: absolute;
+      left: 0px;
+      border-bottom: 1px solid black;
+      margin-left: 25px;
+      padding-bottom: 5px;
+      z-index: 2;
+      background-color: white;
+    }
+    #descListHeader{
+      display: none;
+      text-align: center;
+      width: 43%;
+      position: absolute;
+      right: 0px;
+      border-bottom: 1px solid black;
+      margin-right: 25px;
+      padding-bottom: 5px;
+      z-index: 1;
+    }
+    #documentsList{
+      clear: both;
+      padding: 0px 0px 0px 0px;
+      width: 310px;
+      list-style-type: none;
+      position: absolute;
+      left: 0px;
+      top: 32px;
+      z-index: 2;
+      background-color: white;
+      height: 385px;
+    }
+        .documentListLI{
+          position: relative;
+          font-size: 15px;
+          width: 245px;
+          padding: 0px 16px 5px 0px;
+          text-transform: capitalize;
+          text-align: left;
+          height: 33px;
+          line-height: 55px;
+          margin-left: 25px;
+          border-bottom: 2px solid transparent;
+        }
+            .documentName{
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; 
+            }
+            .documentListLI:hover{
+              cursor: pointer;
+              color: rgb(150,150,150);
+            }
+    #docDescriptionList{
+      display: none;
+      margin: -15px 20px 0px 0px;
+      position: absolute;
+      right: 0px;
+      top: 65px;
+      z-index: 1;
+    }
+        #instructions{
+          position: absolute;
+          top: 140px;
+          right: 75px;
+          line-height: 15px;
+          font-size: 12px;
+          width: 155px;
+        }
+        .previewItem{
+          display: none;
+        }
+            .smallPDF{
+              width: 304px;
+              height: 365px;
+            }
+
+
 
 #pdfDisplay {
-  /*position: absolute;*/
-  margin-top: 70px;
-  height: 700px;
-  width: 70%;
-  float: right;
-
+  position: absolute;
+  margin-top: 30px;
+  width: 100%;
+  background-color: #CCCCCC;
+  z-index: 0;
   }
 
-.article {
-  position: absolute;
-  float: right;
-  height: 600px;
-  width: 70%;
-  margin-right: 0px;
-  padding: 0px;
-  right: 0px;
-}
-
-#article-executive {
-  z-index: 4; /*navbar z-index is 5*/
-
-}
-#article-Impact {
-  z-index: 0;
-  opacity: 0; 
-}
-
-#article-canning {
-  z-index: 0;
-  opacity: 0; 
-
-}
-
-#article-kikawada {
-  z-index: 0;
-  opacity: 0;
-}
-
-#article-epidemiology{
- z-index: 0;
- opacity: 0;
-}
-
-#article-ikeda{
- z-index: 0;
- opacity: 0;
-}
-
-#article-WhitePaper{
- z-index: 0;
- opacity: 0;
-}
-
-#article-prevalence{
- z-index: 0;
- opacity: 0;
-}
-
-#articleButtons {
-  background-image: url("merged copy.png"); 
-  /*background-size: 100% 100%;*/
-  position: absolute;
-  width: 30%;
-  left: 0;
-  /*height: 658px;*/
-  height: 600px;
-}
-
-.articleButton {
-  width: 90%;
-  /*height: 40px;*/
-  height: 30px;
-  background-color: transparent;
-  text-align: center;
-  /*vertical-align: center;*/
-  left-margin: 10px;
-  display: block;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 12.5px;
-  margin-right: 15px;
-  padding-top: 20px;
-  border: 2px solid white;
-  color: #9E8365;
-
-}
-
-.articleButton:hover {
-  background-color: rgba(106, 105, 107, 1);
-  color: white;
-  opacity: .7;
-  -webkit-transition: background-color 1.5s ease;
-  -moz-transition: background-color 1.5s ease;
-  -o-transition: background-color 1.5s ease;
-  -ms-transition: background-color 1.5s ease;
-  transition: background-color 1.5s ease;
-}
-
-#pptDisplay {
-  position: absolute;
-  width: 80%;
-  margin: auto;
-  left: -1500px;
-  /*right: -2000px;*/
-  top: 900px;
-  height: 600px;
-  border: 3px solid black;
-}
-
-#fox {
-  position: absolute;
-  top: 1500px;
-  width: 30%;
-}
-#copyright, #copyright2 { 
-  position: absolute;
-  z-index: 100;
-  /*padding, margin: 0px;*/
-  padding-top: 1px;
-  border:0;
-  background: black;
-  display: block;
-  height: 45px;
-  max-width: 100%;
-  min-width: 100%;
-  color: #787878;
-  font-weight: 300;
-  font-size: 14px;
-}
+    .article {
+      display: none;
+      height: 650px;
+      width: 800px;
+      margin: 40px auto 0px auto;
+      position: relative;
+    }
+    #article-executive{
+      display: block;
+    }
+        
 #copyright2 {
-  top: 3000px;
+  bottom: 0px;
 
-}
-
-#copyrightPar1 {
-  display: block;
-  margin:0;
-  margin-top: 10px;
-  margin-bottom: 2px;
-  font-size: 12px;
-
-
-}
-#copyrightPar2 {
-  margin:0;
-  font-size: 12px;
-  padding-bottom: 0px;
 }
