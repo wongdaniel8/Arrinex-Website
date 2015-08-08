@@ -47,8 +47,58 @@ body{
           border-bottom: 25px solid transparent;
           top: 370px;
         }
-
-
+    @-webkit-keyframes topTriangleClose{
+      0%{
+          border-top: 0px solid #CCCCCC;
+          border-right: 800px solid transparent;
+        }
+      20%{
+          border-top: 300px solid #CCCCCC;
+        }
+      100%{
+          border-top: 800px solid #CCCCCC;
+          border-right: 2100px solid transparent;
+        }
+    }
+    @-moz-keyframes topTriangleClose{
+      0%{
+          border-top: 0px solid #CCCCCC;
+          border-right: 800px solid transparent;
+        }
+      20%{
+          border-top: 300px solid #CCCCCC;
+        }
+      100%{
+          border-top: 800px solid #CCCCCC;
+          border-right: 2100px solid transparent;
+        }
+    }
+    @-o-keyframes topTriangleClose{
+      0%{
+          border-top: 0px solid #CCCCCC;
+          border-right: 800px solid transparent;
+        }
+      20%{
+          border-top: 300px solid #CCCCCC;
+        }
+      100%{
+          border-top: 800px solid #CCCCCC;
+          border-right: 2100px solid transparent;
+        }
+    }
+    @-ms-keyframes topTriangleClose{
+      0%{
+          border-top: 0px solid #CCCCCC;
+          border-right: 800px solid transparent;
+        }
+      20%{
+          border-top: 300px solid #CCCCCC;
+        }
+      100%{
+          border-top: 800px solid #CCCCCC;
+          border-right: 2100px solid transparent;
+        }
+    }
     @keyframes topTriangleClose{
       0%{
           border-top: 0px solid #CCCCCC;
@@ -59,6 +109,62 @@ body{
         }
       100%{
           border-top: 800px solid #CCCCCC;
+          border-right: 2100px solid transparent;
+        }
+    }
+
+
+
+
+    @-webkit-keyframes botTriangleClose{
+      0%{
+          border-bottom: 0px solid #CCCCCC;
+          border-right: 800px solid transparent;
+        }
+      20%{
+          border-bottom: 300px solid #CCCCCC;
+        }
+      100%{
+          border-bottom: 800px solid #CCCCCC;
+          border-right: 2100px solid transparent;
+        }
+    }
+    @-moz-keyframes botTriangleClose{
+      0%{
+          border-bottom: 0px solid #CCCCCC;
+          border-right: 800px solid transparent;
+        }
+      20%{
+          border-bottom: 300px solid #CCCCCC;
+        }
+      100%{
+          border-bottom: 800px solid #CCCCCC;
+          border-right: 2100px solid transparent;
+        }
+    }
+    @-o-keyframes botTriangleClose{
+      0%{
+          border-bottom: 0px solid #CCCCCC;
+          border-right: 800px solid transparent;
+        }
+      20%{
+          border-bottom: 300px solid #CCCCCC;
+        }
+      100%{
+          border-bottom: 800px solid #CCCCCC;
+          border-right: 2100px solid transparent;
+        }
+    }
+    @-ms-keyframes botTriangleClose{
+      0%{
+          border-bottom: 0px solid #CCCCCC;
+          border-right: 800px solid transparent;
+        }
+      20%{
+          border-bottom: 300px solid #CCCCCC;
+        }
+      100%{
+          border-bottom: 800px solid #CCCCCC;
           border-right: 2100px solid transparent;
         }
     }
@@ -89,11 +195,40 @@ body{
      }
      .trapazoidTopLive{
             /*border-top: 800px solid #CCCCCC;*/
+            -webkit-animation-name:topTriangleClose;
+            -moz-animation-name:topTriangleClose;
+            -o-animation-name:topTriangleClose;
+            -ms-animation-name:topTriangleClose;
             animation-name:topTriangleClose;
+
+            -webkit-animation-duration:.5s;
+            -moz-animation-duration:.5s;
+            -o-animation-duration:.5s;
+            -ms-animation-duration:.5s;
             animation-duration:.5s;
+
+            -webkit-animation-timing-function:linear;
+            -moz-animation-timing-function:linear;
+            -o-animation-timing-function:linear;
+            -ms-animation-timing-function:linear;
             animation-timing-function:linear;
+
+            -webkit-animation-delay:0s;
+            -moz-animation-delay:0s;
+            -o-animation-delay:0s;
+            -ms-animation-delay:0s;
             animation-delay:0s;
+
+            -webkit-animation-iteration-count:1;
+            -moz-animation-iteration-count:1;
+            -o-animation-iteration-count:1;
+            -ms-animation-iteration-count:1;
             animation-iteration-count:1;
+
+            -webkit-animation-direction:normal;
+            -moz-animation-direction:normal;
+            -o-animation-direction:normal;
+            -ms-animation-direction:normal;
             animation-direction:normal;
      }
 
@@ -107,19 +242,75 @@ body{
             border-right: 800px solid transparent;
         }
         .trapazoidBotLive{
-          /*border-bottom: 800px solid #CCCCCC;*/
-            animation-name:botTriangleClose;
-            animation-duration:.5s;
-            animation-timing-function:linear;
-            animation-delay:0s;
-            animation-iteration-count:1;
-            animation-direction:normal;
+          -webkit-animation-name:botTriangleClose;
+          -moz-animation-name:botTriangleClose;
+          -o-animation-name:botTriangleClose;
+          -ms-animation-name:botTriangleClose;
+          animation-name:botTriangleClose;
+
+          -webkit-animation-duration:.5s;
+          -moz-animation-duration:.5s;
+          -o-animation-duration:.5s;
+          -ms-animation-duration:.5s;
+          animation-duration:.5s;
+
+          -webkit-animation-timing-function:linear;
+          -moz-animation-timing-function:linear;
+          -o-animation-timing-function:linear;
+          -ms-animation-timing-function:linear;
+          animation-timing-function:linear;
+
+          -webkit-animation-delay:0s;
+          -moz-animation-delay:0s;
+          -o-animation-delay:0s;
+          -ms-animation-delay:0s;
+          animation-delay:0s;
+
+          -webkit-animation-iteration-count:1;
+          -moz-animation-iteration-count:1;
+          -o-animation-iteration-count:1;
+          -ms-animation-iteration-count:1;
+          animation-iteration-count:1;
+
+          -webkit-animation-direction:normal;
+          -moz-animation-direction:normal;
+          -o-animation-direction:normal;
+          -ms-animation-direction:normal;
+          animation-direction:normal;
+
         }
 
 }
 
 
+@-webkit-keyframes disappear{
+  0% {top: 68px; width: 700px;}
+  30% {top: 68px; width:330px;}
+  50% {top: 68px; width:330px;}
+  100% {top: -700px; width:320px;}
 
+}
+@-moz-keyframes disappear{
+  0% {top: 68px; width: 700px;}
+  30% {top: 68px; width:330px;}
+  50% {top: 68px; width:330px;}
+  100% {top: -700px; width:320px;}
+
+}
+@-o-keyframes disappear{
+  0% {top: 68px; width: 700px;}
+  30% {top: 68px; width:330px;}
+  50% {top: 68px; width:330px;}
+  100% {top: -700px; width:320px;}
+
+}
+@-ms-keyframes disappear{
+  0% {top: 68px; width: 700px;}
+  30% {top: 68px; width:330px;}
+  50% {top: 68px; width:330px;}
+  100% {top: -700px; width:320px;}
+
+}
 @keyframes disappear{
   0% {top: 68px; width: 700px;}
   30% {top: 68px; width:330px;}
@@ -143,23 +334,83 @@ body{
 }
     .ddUp{
       top: -700px;
+
+      -webkit-animation-name:disappear;
+      -moz-animation-name:disappear;
+      -o-animation-name:disappear;
+      -ms-animation-name:disappear;
       animation-name:disappear;
+
+      -webkit-animation-duration:1.2s;
+      -moz-animation-duration:1.2s;
+      -o-animation-duration:1.2s;
+      -ms-animation-duration:1.2s;
       animation-duration:1.2s;
-      animation-timing-function:ease;
+
+      -webkit-animation-timing-function:linear;
+      -moz-animation-timing-function:linear;
+      -o-animation-timing-function:linear;
+      -ms-animation-timing-function:linear;
+      animation-timing-function:linear;
+
+      -webkit-animation-delay:0s;
+      -moz-animation-delay:0s;
+      -o-animation-delay:0s;
+      -ms-animation-delay:0s;
       animation-delay:0s;
+
+      -webkit-animation-iteration-count:1;
+      -moz-animation-iteration-count:1;
+      -o-animation-iteration-count:1;
+      -ms-animation-iteration-count:1;
       animation-iteration-count:1;
+
+      -webkit-animation-direction:normal;
+      -moz-animation-direction:normal;
+      -o-animation-direction:normal;
+      -ms-animation-direction:normal;
       animation-direction:normal;
-      /*animation-play-state: paused;*/
+
     }
     .ddDown{
       top:68px;
+
+      -webkit-animation-name:disappear;
+      -moz-animation-name:disappear;
+      -o-animation-name:disappear;
+      -ms-animation-name:disappear;
       animation-name:disappear;
+
+      -webkit-animation-duration:1.2s;
+      -moz-animation-duration:1.2s;
+      -o-animation-duration:1.2s;
+      -ms-animation-duration:1.2s;
       animation-duration:1.2s;
-      animation-timing-function:ease;
+
+      -webkit-animation-timing-function:linear;
+      -moz-animation-timing-function:linear;
+      -o-animation-timing-function:linear;
+      -ms-animation-timing-function:linear;
+      animation-timing-function:linear;
+
+      -webkit-animation-delay:0s;
+      -moz-animation-delay:0s;
+      -o-animation-delay:0s;
+      -ms-animation-delay:0s;
       animation-delay:0s;
+
+      -webkit-animation-iteration-count:1;
+      -moz-animation-iteration-count:1;
+      -o-animation-iteration-count:1;
+      -ms-animation-iteration-count:1;
       animation-iteration-count:1;
+
+      -webkit-animation-direction:reverse;
+      -moz-animation-direction:reverse;
+      -o-animation-direction:reverse;
+      -ms-animation-direction:reverse;
       animation-direction:reverse;
-      /*animation-play-state: paused;*/
+
     }
 
     #docListHeader{
@@ -269,7 +520,7 @@ body{
     }
         
 #copyright2 {
- position: absolute;
+ position: fixed;
   z-index: 100;
   /*padding, margin: 0px;*/
   padding-top: 1px;

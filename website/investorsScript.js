@@ -127,12 +127,12 @@ function deployVacuum(article_title,item)
 
 			          					height: "+=50",
 			          					top: "-=25",
-			          					borderTop: "60px solid transparent", 
+			          					borderTop: "120px solid transparent", 
 									    borderRight: "100px solid blue", 
-									    borderBottom: "60px solid transparent",
+									    borderBottom: "120px solid transparent",
 									    right: "-30px"
 
-				    	}, 500, function() { 
+				    	}, 300, function() { 
 				    		// vacuum_nosel COMPLETE.
 				    		$(".article[data-art-num="+currentArticleTitle+"]").find(".trapazoidTop").addClass("trapazoidTopLive");
 				    		$(".article[data-art-num="+currentArticleTitle+"]").find(".trapazoidBot").addClass("trapazoidBotLive");
