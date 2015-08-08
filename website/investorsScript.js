@@ -2,6 +2,20 @@
 // JAVASCRIPT FOR INVESTORS PAGE
 //============================================================
     
+// firefox and safari lag hard when the PDFs are directly embedded into the cite so we
+
+
+var executive_pdf =  '<object data="executive.pdf" type="application/pdf" width="100%" height="100%"> </object>';
+var AR_and_its_impact_on_productivity = '<object data="AR & its impact on work productivity.pdf" type="application/pdf" width="100%" height="100%"> </object>';
+var canning_neurology_of_AR = '<object data="Canning_ neurology of Allergic inflammation and rhinitis.pdf" type="application/pdf" width="100%" height="100%"> </object>';
+var kikawada = '<object data="kikawada.pdf" type="application/pdf" width="100%" height="100%"> </object>';
+var epidemiology = '<object data="epidemiology.pdf" type="application/pdf" width="100%" height="100%"> </object>';
+var ikeda = '<object data="ikeda.pdf" type="application/pdf" width="100%" height="100%"> </object>';
+var whitePaper = '<object data="WhitePaper.pdf" type="application/pdf" width="100%" height="100%"> </object>';
+var prevelence = '<object data="prevalence.pdf" type="application/pdf" width="100%" height="100%"> </object>';
+var businitch = '<object data="businitch.pdf" type="application/pdf" width="100%" height="100%"> </object>';
+
+
 
 $(document).ready(function(){
 	// FUNCTION to reveal document navigator
@@ -46,13 +60,21 @@ function hideDropDown()
 
 
 //FUNCTION to reveal quick preview
-function selectMiniArticle(article_number,item)
+function selectMiniArticle(article_title,item)
 {
+	// get the HTMl for the PDF object file 
+	var mini_article_HTML = '<div class = "smallPDF">' + window[article_title] +'</div>';
+							// alert(window[article_title]);
 	//hide instructions
 	$("#instructions").css("display","none");
-	// reveal the small pdf
+
+	// reveal the small pdf (no HTML yet)
 	$(".previewItem").css("display","none");
-	$(".previewItem[data-art-num="+article_number+"]").css("display","block");
+	$(".previewItem[data-art-num="+article_title+"]").css("display","block");
+
+	// insert the HTML
+	$(".previewItem").html("");
+	$(".previewItem[data-art-num="+article_title+"]").html(mini_article_HTML);
 
 	// underline title of slected document
 	
@@ -61,7 +83,7 @@ function selectMiniArticle(article_number,item)
 	// this.style.borderBottom = "2px solid black";
 }
 
-function selectMainArticleAndHideDropDown(article_number,item)
+function selectMainArticleAndHideDropDown(article_title,item)
 {
 	//reset the drop down menu
 		// hide all previews
@@ -77,14 +99,14 @@ function selectMainArticleAndHideDropDown(article_number,item)
 		hideDropDown();
 
 		//animate the vacuum removal
-		deployVacuum(article_number,item);
+		deployVacuum(article_title,item);
 
 }
 
-var currentArticleNumber = 1;
+var currentArticleTitle = "executive_pdf";
 var permit_retraction = false;
 
-function deployVacuum(article_number,item)
+function deployVacuum(article_title,item)
 {
 	permit_retraction = true;
 	$( "#vert_extend_rect" ).animate({
@@ -112,37 +134,40 @@ function deployVacuum(article_number,item)
 
 				    	}, 500, function() { 
 				    		// vacuum_nosel COMPLETE.
-				    		$(".article[data-art-num="+currentArticleNumber+"]").find(".trapazoidTop").addClass("trapazoidTopLive");
-				    		$(".article[data-art-num="+currentArticleNumber+"]").find(".trapazoidBot").addClass("trapazoidBotLive");
-				    		$(".article[data-art-num="+currentArticleNumber+"]").animate({
+				    		$(".article[data-art-num="+currentArticleTitle+"]").find(".trapazoidTop").addClass("trapazoidTopLive");
+				    		$(".article[data-art-num="+currentArticleTitle+"]").find(".trapazoidBot").addClass("trapazoidBotLive");
+				    		var time_to_slid = window.innerWidth * -0.5 + 1300;
+				    		$(".article[data-art-num="+currentArticleTitle+"]").animate({
 
 				    			right: "1300px"
 
-				    			}, 500, function(){
+				    			}, time_to_slid, function(){ //1600 --> 500 1400 --> 600  1200 --> 700     600 = -1/2x + 1300
 
 				    				// article COMPLETE
 				    					
 				    					// set the hidden article back to default css 
-				    					$(".article[data-art-num="+currentArticleNumber+"]").css("right","0px");
-				    					$(".article[data-art-num="+currentArticleNumber+"]").find(".trapazoidTop").removeClass("trapazoidTopLive");
-				    					$(".article[data-art-num="+currentArticleNumber+"]").find(".trapazoidBot").removeClass("trapazoidBotLive");
+				    					$(".article[data-art-num="+currentArticleTitle+"]").css("right","0px");
+				    					$(".article[data-art-num="+currentArticleTitle+"]").find(".trapazoidTop").removeClass("trapazoidTopLive");
+				    					$(".article[data-art-num="+currentArticleTitle+"]").find(".trapazoidBot").removeClass("trapazoidBotLive");
 
-				    					//reset the top/ bot trapazoids so they can do animation again
-				    					var parentHTML = $(".article[data-art-num="+currentArticleNumber+"]").parent().html();
-				    					$(".article[data-art-num="+currentArticleNumber+"]").parent().html(parentHTML);
+				    					
+				    					var main_article_HTML = window[article_title] + '<div class="trapazoidTop"></div>' + '<div class="trapazoidBot"></div>';
+
+										//insert the HTML after clearing all others
+										$(".article").html("");
+										$(".article[data-art-num="+article_title+"]").html(main_article_HTML);
 
 
 				    					// get rid of the vacuum device
 				    					retractVacuum();
 
-				    					//hide all main articles
-										$(".article").css("display","none");
+				    					//hide all main articles and display the desired one (no HTML yet)
+										$(".article").css("display","none");										
+										$(".article[data-art-num="+article_title+"]").css("display","block");
 
-										//select the desired one
-										$(".article[data-art-num="+article_number+"]").css("display","block");
 
 										// set the current article number
-										currentArticleNumber = article_number;
+										currentArticleTitle = article_title;
 				    				
 
 				    		});

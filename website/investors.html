@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Arrinex</title>
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <title>Arrinex</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="stylesheet" type="text/css" href="investorsStyleSheet.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script type="text/javascript" src="myscript.js"></script>
+    <script type="text/javascript" src="myscript.js"></script>
     <script type="text/javascript" src="investorsScript.js"></script>
     <script type='text/javascript'> var isInvestors = true; </script>
     
 </head>
 
 <body onresize="adjustPicture()" onload="adjustPicture()">
-	
-	<!-- Main Header Nav Bar -->
+    
+    <!-- Main Header Nav Bar -->
     <div id="navBarDiv">
         <ul id="navBarList">
             <li id="logoBlock">
@@ -42,52 +42,52 @@
 
     <!-- documents navigator -->
     <div>
-        <div id="documentDDContainer" onmouseleave="hideDropDown()" class="">
+        <div id="documentDDContainer" onmouseleave="hideDropDown()" >
             <h3 id="docListHeader">Document</h3>
             <h3 id="descListHeader">Preview</h3>
             <ul id="documentsList">
                 <li class="documentListLI">
-                    <div class="documentName" id="startDocument" onclick="selectMiniArticle(1,this)" ondblclick="selectMainArticleAndHideDropDown(1,this)">Executive Summary</div>
+                    <div class="documentName" id="startDocument" onclick="selectMiniArticle('executive_pdf',this)" ondblclick="selectMainArticleAndHideDropDown('executive_pdf',this)">Executive Summary</div>
                     <!-- <div class="highlightLeft"></div>
                     <div class="highlightRight"></div> -->
                 </li>
                 <li class="documentListLI">
-                    <div class="documentName" onclick="selectMiniArticle(2,this)" ondblclick="selectMainArticleAndHideDropDown(2,this)">Allergic rhinitis and its impact on work productivity in primary care practice and a comparison with other common diseases:</div>
+                    <div class="documentName" onclick="selectMiniArticle('AR_and_its_impact_on_productivity',this)" ondblclick="selectMainArticleAndHideDropDown('AR_and_its_impact_on_productivity',this)">Allergic rhinitis and its impact on work productivity in primary care practice and a comparison with other common diseases:</div>
                     <!-- <div class="highlightLeft"></div>
                     <div class="highlightRight"></div> -->
                 </li>
                 <li class="documentListLI" >
-                    <div class="documentName" onclick="selectMiniArticle(3,this)" ondblclick="selectMainArticleAndHideDropDown(3,this)">Neurology of Allergic Inflamation and Rhinitis</div>
+                    <div class="documentName" onclick="selectMiniArticle('canning_neurology_of_AR',this)" ondblclick="selectMainArticleAndHideDropDown('canning_neurology_of_AR',this)">Neurology of Allergic Inflamation and Rhinitis</div>
                     <!-- <div class="highlightLeft"></div>
                     <div class="highlightRight"></div> -->
                 </li>
                 <li class="documentListLI">
-                    <div class="documentName" onclick="selectMiniArticle(4,this)" ondblclick="selectMainArticleAndHideDropDown(4,this)">Endoscopic Posterior Nasal Neurectomy: an Alternative to Vidian Neurectomy</div>
+                    <div class="documentName" onclick="selectMiniArticle('kikawada',this)" ondblclick="selectMainArticleAndHideDropDown('kikawada',this)">Endoscopic Posterior Nasal Neurectomy: an Alternative to Vidian Neurectomy</div>
                     <!-- <div class="highlightLeft"></div>
                     <div class="highlightRight"></div> -->
                 </li>
                 <li class="documentListLI">
-                    <div class="documentName" onclick="selectMiniArticle(5,this)" ondblclick="selectMainArticleAndHideDropDown(5,this)">Effect of Resection of the Posterior Nasal Nerve on Functional and Morphological Changes in the Inferior Turbinate Mucosa</div>
+                    <div class="documentName" onclick="selectMiniArticle('ikeda',this)" ondblclick="selectMainArticleAndHideDropDown('ikeda',this)">Effect of Resection of the Posterior Nasal Nerve on Functional and Morphological Changes in the Inferior Turbinate Mucosa</div>
                     <!-- <div class="highlightLeft"></div>
                     <div class="highlightRight"></div> -->
                 </li>
                 <li class="documentListLI">
-                    <div class="documentName" onclick="selectMiniArticle(6,this)" ondblclick="selectMainArticleAndHideDropDown(6,this)">Prevalence of Allergic Rhinitis in the United States</div>
+                    <div class="documentName" onclick="selectMiniArticle('prevelence',this)" ondblclick="selectMainArticleAndHideDropDown('prevelence',this)">Prevalence of Allergic Rhinitis in the United States</div>
                     <!-- <div class="highlightLeft"></div>
                     <div class="highlightRight"></div> -->
                 </li>
                 <li class="documentListLI">
-                    <div class="documentName" onclick="selectMiniArticle(7,this)" ondblclick="selectMainArticleAndHideDropDown(7,this)"> Epidemiology off Rhinitis -- Breif Review</div>
+                    <div class="documentName" onclick="selectMiniArticle('epidemiology',this)" ondblclick="selectMainArticleAndHideDropDown('epidemiology',this)"> Epidemiology off Rhinitis -- Breif Review</div>
                     <!-- <div class="highlightLeft"></div>
                     <div class="highlightRight"></div> -->
                 </li>
                 <li class="documentListLI">
-                    <div class="documentName" onclick="selectMiniArticle(8,this)" ondblclick="selectMainArticleAndHideDropDown(8,this)">Arrinex, Inc. Rhinitis White Paper</div>
+                    <div class="documentName" onclick="selectMiniArticle('whitePaper',this)" ondblclick="selectMainArticleAndHideDropDown('whitePaper',this)">Arrinex, Inc. Rhinitis White Paper</div>
                     <!-- <div class="highlightLeft"></div>
                     <div class="highlightRight"></div> -->
                 </li>
                 <li class="documentListLI">
-                    <div class="documentName" onclick="selectMiniArticle(9,this)" ondblclick="selectMainArticleAndHideDropDown(9,this)">Arrinex, Inc. PPT presentation</div>
+                    <div class="documentName" onclick="selectMiniArticle('businitch',this)" ondblclick="selectMainArticleAndHideDropDown('businitch',this)">Arrinex, Inc. PPT presentation</div>
                     <!-- <div class="highlightLeft"></div>
                     <div class="highlightRight"></div> -->
                 </li>
@@ -95,50 +95,50 @@
             <ul id="docDescriptionList">
                  <div id="instructions">Click a document to preview<br>
                 or double-click to open!</div>
-                <li class="previewItem" data-art-num="1">
+                <li class="previewItem" data-art-num="executive_pdf">
                     <div class = "smallPDF">
-                        <object data="executive.pdf" type="application/pdf" width="100%" height="100%"> </object>
+                        <!-- <object data="executive.pdf" type="application/pdf" width="100%" height="100%"> </object> -->
                     </div>
                 </li>
-                <li class="previewItem" data-art-num="2">
+                <li class="previewItem" data-art-num="AR_and_its_impact_on_productivity">
                     <div class = "smallPDF">
-                        <object data="AR & its impact on work productivity.pdf" type="application/pdf" width="100%" height="100%"> </object>
+                       <!--  <object data="AR & its impact on work productivity.pdf" type="application/pdf" width="100%" height="100%"> </object> -->
                     </div>
                 </li>
-                <li class="previewItem" data-art-num="3">
+                <li class="previewItem" data-art-num="canning_neurology_of_AR">
                     <div class = "smallPDF">
-                        <object data="Canning_ neurology of Allergic inflammation and rhinitis.pdf" type="application/pdf" width="100%" height="100%"> </object>
+                        <!-- <object data="Canning_ neurology of Allergic inflammation and rhinitis.pdf" type="application/pdf" width="100%" height="100%"> </object> -->
                     </div>
                 </li>
-                <li class="previewItem" data-art-num="4">
+                <li class="previewItem" data-art-num="kikawada">
                     <div class = "smallPDF">
-                        <object data="kikawada.pdf" type="application/pdf" width="100%" height="100%"> </object>
+                       <!--  <object data="kikawada.pdf" type="application/pdf" width="100%" height="100%"> </object> -->
                     </div>
                 </li>
-                <li class="previewItem" data-art-num="5">
+                <li class="previewItem" data-art-num="epidemiology">
                     <div class = "smallPDF">
-                        <object data="epidemiology.pdf" type="application/pdf" width="100%" height="100%"> </object>
+                       <!--  <object data="epidemiology.pdf" type="application/pdf" width="100%" height="100%"> </object> -->
                     </div>
                 </li>
-                <li class="previewItem" data-art-num="6">
+                <li class="previewItem" data-art-num="ikeda">
                     <div class = "smallPDF">
-                        <object data="ikeda.pdf" type="application/pdf" width="100%" height="100%"> </object>
+                        <!-- <object data="ikeda.pdf" type="application/pdf" width="100%" height="100%"> </object> -->
                     </div>
                 </li>
-                <li class="previewItem" data-art-num="7">
+                <li class="previewItem" data-art-num="whitePaper">
                     <div class = "smallPDF">
-                        <object data="WhitePaper.pdf" type="application/pdf" width="100%" height="100%"> </object>
+                        <!-- <object data="WhitePaper.pdf" type="application/pdf" width="100%" height="100%"> </object> -->
                     </div>
                 </li>
-                <li class="previewItem" data-art-num="8">
+                <li class="previewItem" data-art-num="prevelence">
                     <div class = "smallPDF">
-                        <object data="prevalence.pdf" type="application/pdf" width="100%" height="100%"> </object>
+                        <!-- <object data="prevalence.pdf" type="application/pdf" width="100%" height="100%"> </object> -->
                     </div>
                 </li>
-                <li class="previewItem" data-art-num="9">
+                <li class="previewItem" data-art-num="businitch">
                     <div class = "smallPDF">
-                    <object data="businitch.pdf" type="application/pdf" width="100%" height="100%"> </object>
-                </div>
+                   <!--  <object data="businitch.pdf" type="application/pdf" width="100%" height="100%"> </object> -->
+                    </div>
                 </li>
             </ul>
         </div> <!-- END documents navigator -->
@@ -155,55 +155,55 @@
 
     <div id="pdfDisplay">
 
-       <div class = "article" id = "article-executive" data-art-num="1">
+       <div class = "article" id = "article-executive" data-art-num="executive_pdf">
             <object data="executive.pdf" type="application/pdf" width="100%" height="100%"> </object>
             <div class="trapazoidTop"></div>
             <div class="trapazoidBot"></div>
         </div>
 
-        <div class = "article" id = "article-Impact" data-art-num="2">
-            <object data="AR & its impact on work productivity.pdf" type="application/pdf" width="100%" height="100%"> </object>
+        <div class = "article" id = "article-Impact" data-art-num="AR_and_its_impact_on_productivity">
+           <!--  <object data="AR & its impact on work productivity.pdf" type="application/pdf" width="100%" height="100%"> </object> -->
             <div class="trapazoidTop"></div>
             <div class="trapazoidBot"></div>
         </div>
 
-        <div class = "article" id = "article-canning" data-art-num="3">
-            <object data="Canning_ neurology of Allergic inflammation and rhinitis.pdf" type="application/pdf" width="100%" height="100%"> </object>
+        <div class = "article" id = "article-canning" data-art-num="canning_neurology_of_AR">
+            <!-- <object data="Canning_ neurology of Allergic inflammation and rhinitis.pdf" type="application/pdf" width="100%" height="100%"> </object> -->
             <div class="trapazoidTop"></div>
             <div class="trapazoidBot"></div>
         </div>
         
-        <div class = "article" id = "article-kikawada" data-art-num="4">
-            <object data="kikawada.pdf" type="application/pdf" width="100%" height="100%"> </object>
+        <div class = "article" id = "article-kikawada" data-art-num="kikawada">
+            <!-- <object data="kikawada.pdf" type="application/pdf" width="100%" height="100%"> </object> -->
             <div class="trapazoidTop"></div>
             <div class="trapazoidBot"></div>
         </div>
 
-        <div class = "article" id = "article-epidemiology" data-art-num="5">
-            <object data="epidemiology.pdf" type="application/pdf" width="100%" height="100%"> </object>
+        <div class = "article" id = "article-epidemiology" data-art-num="epidemiology">
+            <!-- <object data="epidemiology.pdf" type="application/pdf" width="100%" height="100%"> </object> -->
             <div class="trapazoidTop"></div>
             <div class="trapazoidBot"></div>
         </div>
 
-        <div class = "article" id = "article-ikeda" data-art-num="6">
-            <object data="ikeda.pdf" type="application/pdf" width="100%" height="100%"> </object>
+        <div class = "article" id = "article-ikeda" data-art-num="ikeda">
+            <!-- <object data="ikeda.pdf" type="application/pdf" width="100%" height="100%"> </object> -->
             <div class="trapazoidTop"></div>
             <div class="trapazoidBot"></div>
         </div>
 
-        <div class = "article" id = "article-WhitePaper" data-art-num="7">
-            <object data="WhitePaper.pdf" type="application/pdf" width="100%" height="100%"> </object>
+        <div class = "article" id = "article-WhitePaper" data-art-num="whitePaper">
+            <!-- <object data="WhitePaper.pdf" type="application/pdf" width="100%" height="100%"> </object> -->
             <div class="trapazoidTop"></div>
             <div class="trapazoidBot"></div>
         </div>
 
-        <div class = "article" id = "article-prevalence" data-art-num="8">
-            <object data="prevalence.pdf" type="application/pdf" width="100%" height="100%"> </object>
+        <div class = "article" id = "article-prevalence" data-art-num="prevelence">
+            <!-- <object data="prevalence.pdf" type="application/pdf" width="100%" height="100%"> </object> -->
             <div class="trapazoidTop"></div>
             <div class="trapazoidBot"></div>
         </div>
-        <div id = "pptDisplay" class = "article" data-art-num="9">
-            <object data="businitch.pdf" type="application/pdf" width="100%" height="100%"> </object>
+        <div id = "pptDisplay" class = "article" data-art-num="businitch">
+            <!-- <object data="businitch.pf" type="application/pdf" width="100%" height="100%"> </object> -->
             <div class="trapazoidTop"></div>
             <div class="trapazoidBot"></div>
         </div>
@@ -221,5 +221,4 @@
 
 </body>
 <html>
-
 

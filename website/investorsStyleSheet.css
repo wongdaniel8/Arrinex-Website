@@ -118,6 +118,8 @@ body{
 
 }
 
+
+
 @keyframes disappear{
   0% {top: 68px; width: 700px;}
   30% {top: 68px; width:330px;}
@@ -255,6 +257,12 @@ body{
       width: 800px;
       margin: 40px auto 0px auto;
       position: relative;
+    }
+    @media screen and (max-width: 1200px){
+      .article
+      {
+        margin: 40px auto 0px auto;
+      }
     }
     #article-executive{
       display: block;
