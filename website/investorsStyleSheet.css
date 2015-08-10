@@ -7,47 +7,15 @@ body{
             .navBarLinks{
               position: relative;
             }
+                #documents{ /*this is the document link in the nav bar...I made the padding wide to the left so it would block the drop down to make it look like it was coming from behind the nav menu*/
+                  padding: 50px 25px 24px 260px;
+                  background-color: black;
+                  z-index: 4;
+                }
                 #documents:hover{
                   cursor: pointer;
                 }
-
-@media screen and (min-width: 1200px){ /*the pipe won't look good if the screen is too small*/
-
-   
-    #articleRemoverContainer{
-      width: 150px;
-      height: 620px;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      z-index: 1;
-      /*background-color: orange;*/
-    }
-        #vert_extend_rect{
-          background-color: rgb(0,0,0);
-          position: absolute;
-          top: 0px;
-          width: 50px;
-          height: 70px;
-        }
-        #horz_extend_rect{
-          display: none;
-          position: absolute;
-          top: 370px;
-          height: 50px;
-          width: 50px;
-          background-color: rgb(0,0,0);;
-        }
-        #vacuum_nosel{
-          display: none;
-          position: absolute;
-          right: 0px;
-          border-top: 25px solid transparent;
-          border-right: 50px solid rgb(0,0,0);;
-          border-bottom: 25px solid transparent;
-          top: 370px;
-        }
-    @-webkit-keyframes topTriangleClose{
+ @-webkit-keyframes topTriangleClose{   /*topTriangleClose is the upper triangle that masks the document to make it look like it is shrinking*/
       0%{
           border-top: 0px solid #CCCCCC;
           border-right: 800px solid transparent;
@@ -116,7 +84,7 @@ body{
 
 
 
-    @-webkit-keyframes botTriangleClose{
+    @-webkit-keyframes botTriangleClose{        /*botTriangleClose is the upper triangle that masks the document to make it look like it is shrinking*/
       0%{
           border-bottom: 0px solid #CCCCCC;
           border-right: 800px solid transparent;
@@ -182,7 +150,46 @@ body{
         }
     }
 
-    .trapazoidTop{
+
+@media screen and (min-width: 1200px){ /*the pipe won't look good if the screen is too small*/
+
+   
+    #articleRemoverContainer{
+      width: 150px;
+      height: 620px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 1;
+    }
+        #vert_extend_rect{
+          display: none;
+          background-color: rgb(0,0,0);
+          position: absolute;
+          top: 0px;
+          width: 50px;
+          height: 70px;
+        }
+        #horz_extend_rect{
+          display: none;
+          position: absolute;
+          top: 370px;
+          height: 50px;
+          width: 50px;
+          background-color: rgb(0,0,0);;
+        }
+        #vacuum_nosel{
+          display: none;
+          position: absolute;
+          right: 0px;
+          border-top: 25px solid transparent;
+          border-right: 50px solid rgb(0,0,0);;
+          border-bottom: 25px solid transparent;
+          top: 370px;
+        }
+   
+
+    .trapazoidTop{                  /* class refering to the top and bottom triangles that participate in the masking animation*/
             position: absolute;
             top: 0px;
             left: 0px;
@@ -193,8 +200,7 @@ body{
 
             
      }
-     .trapazoidTopLive{
-            /*border-top: 800px solid #CCCCCC;*/
+     .trapazoidTopLive{                  /* the class given to top  triangles with then vacuum "begins" sucking up the document*/
             -webkit-animation-name:topTriangleClose;
             -moz-animation-name:topTriangleClose;
             -o-animation-name:topTriangleClose;
@@ -280,10 +286,10 @@ body{
 
         }
 
-}
+} /*end @media min-width */
 
 
-@-webkit-keyframes disappear{
+@-webkit-keyframes disappear{  /* this is the animation for the DD menu| normal direction hides it but reverse direction displays it */
   0% {top: 68px; width: 700px;}
   30% {top: 68px; width:330px;}
   50% {top: 68px; width:330px;}
@@ -319,20 +325,20 @@ body{
 
 }
 
-#documentDDContainer{
+#documentDDContainer{ /* is the container div for the entire drop down*/
   width: 700px;
   height: 435px;
   background-color: rgb(255,255,255);
   border: 2px solid black;
   position: absolute;
-  right: 220px;
+  right: 25px;
   color: black;
-  z-index: 1;
+  z-index: -1;
   /*top:-700px;*/
   display: none;
   
 }
-    .ddUp{
+    .ddUp{  /* this class is applied to dropdownDD to animate it upwards*/
       top: -700px;
 
       -webkit-animation-name:disappear;
@@ -341,11 +347,11 @@ body{
       -ms-animation-name:disappear;
       animation-name:disappear;
 
-      -webkit-animation-duration:1.2s;
-      -moz-animation-duration:1.2s;
-      -o-animation-duration:1.2s;
-      -ms-animation-duration:1.2s;
-      animation-duration:1.2s;
+      -webkit-animation-duration:0.8s;
+      -moz-animation-duration:0.8s;
+      -o-animation-duration:0.8s;
+      -ms-animation-duration:0.8s;
+      animation-duration:0.8s;
 
       -webkit-animation-timing-function:linear;
       -moz-animation-timing-function:linear;
@@ -372,7 +378,7 @@ body{
       animation-direction:normal;
 
     }
-    .ddDown{
+    .ddDown{    /* this class is applied to dropdownDD to animate it downwards*/
       top:68px;
 
       -webkit-animation-name:disappear;
@@ -381,11 +387,11 @@ body{
       -ms-animation-name:disappear;
       animation-name:disappear;
 
-      -webkit-animation-duration:1.2s;
-      -moz-animation-duration:1.2s;
-      -o-animation-duration:1.2s;
-      -ms-animation-duration:1.2s;
-      animation-duration:1.2s;
+      -webkit-animation-duration:0.8s;
+      -moz-animation-duration:0.8s;
+      -o-animation-duration:0.8s;
+      -ms-animation-duration:0.8s;
+      animation-duration:0.8s;
 
       -webkit-animation-timing-function:linear;
       -moz-animation-timing-function:linear;
@@ -413,7 +419,7 @@ body{
 
     }
 
-    #docListHeader{
+    #docListHeader{     /*header class for the titles of the documents in the dropdown menu*/
       text-align: center;
       width: 260px;
       position: absolute;
@@ -424,7 +430,7 @@ body{
       z-index: 2;
       background-color: white;
     }
-    #descListHeader{
+    #descListHeader{  /* description list header class for the dropdown menu...descripotion is the mini pdf*/
       display: none;
       text-align: center;
       width: 43%;
@@ -435,14 +441,14 @@ body{
       padding-bottom: 5px;
       z-index: 1;
     }
-    #documentsList{
+    #documentsList{   /*holds the list of all of the TITLES for the documents in the drop down*/
       clear: both;
       padding: 0px 0px 0px 0px;
       width: 310px;
       list-style-type: none;
       position: absolute;
       left: 0px;
-      top: 32px;
+      top: 50px;
       z-index: 2;
       background-color: white;
       height: 385px;
@@ -468,7 +474,7 @@ body{
               cursor: pointer;
               color: rgb(150,150,150);
             }
-    #docDescriptionList{
+    #docDescriptionList{ /*list of all the mini PDFs display in the dropdown menu*/
       display: none;
       margin: -15px 20px 0px 0px;
       position: absolute;
@@ -476,7 +482,7 @@ body{
       top: 65px;
       z-index: 1;
     }
-        #instructions{
+        #instructions{ /* this is the little paragraph element that tell you what a single click and a double click do in the dropdown menu*/
           position: absolute;
           top: 140px;
           right: 75px;
@@ -494,7 +500,7 @@ body{
 
 
 
-#pdfDisplay {
+#pdfDisplay {   /* refers to the entire container where each of the .article (i.e. PDFs will be displayed within)*/
   position: absolute;
   margin-top: 30px;
   width: 100%;
@@ -502,7 +508,7 @@ body{
   z-index: 0;
   }
 
-    .article {
+    .article { /*each PDF document has the .article class8*/
       display: none;
       height: 660px;
       width: 800px;
@@ -519,10 +525,9 @@ body{
       display: block;
     }
         
-#copyright2 {
+#copyright2 { /* this is the copyright section at the bottom of the page*/
  position: fixed;
   z-index: 100;
-  /*padding, margin: 0px;*/
   padding-top: 1px;
   border:0;
   background: black;
