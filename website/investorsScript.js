@@ -3,7 +3,7 @@
 //============================================================
     
 // firefox and safari lag hard when the PDFs are directly embedded into the cite and loaded all at once
-// therefore each one of these the pdf objects is stored as a string here so it can be inserted at the approriate time not all at once
+// therefore each one of these (the pdf objects) is stored as a string here so it can be inserted at the approriate time not all at once
 var executive_pdf =  '<object data="executive.pdf" type="application/pdf" width="100%" height="100%"> </object>';
 var AR_and_its_impact_on_productivity = '<object data="AR & its impact on work productivity.pdf" type="application/pdf" width="100%" height="100%"> </object>';
 var canning_neurology_of_AR = '<object data="Canning_ neurology of Allergic inflammation and rhinitis.pdf" type="application/pdf" width="100%" height="100%"> </object>';
@@ -15,7 +15,7 @@ var prevelence = '<object data="prevalence.pdf" type="application/pdf" width="10
 var businitch = '<object data="businitch.pdf" type="application/pdf" width="100%" height="100%"> </object>';
 
 
-// the drop down is toggled by a hover and a mouseleave mechanism so it tends to call the showDropDown/ hideDropDown function too many times and it lags
+// the drop down is toggled by a hover and a mouseleave mechanism, so it tends to call the showDropDown/ hideDropDown function too many times and it lags
 
 var dd_animation_in_progress = false; // <---- this variable keeps track of whether an animation is already in progress to avoid it getting called again if it is already running
 
@@ -24,7 +24,7 @@ function showDropDown()
 	if (dd_animation_in_progress == false)
 	{
 		$("#documentDDContainer").css("display","block");
-		$("#documentDDContainer").parent().html($("#documentDDContainer").parent().html()); //this replaces the innerHTML with itself because CSS animations only work once so they HTML must be refreshed for it to keep working
+		$("#documentDDContainer").parent().html($("#documentDDContainer").parent().html()); //this replaces the innerHTML with itself because CSS animations only work once so the HTML must be refreshed for it to keep working
 		$("#documentDDContainer").removeClass("ddUp").addClass("ddDown");
 		
 		$("#docDescriptionList, #descListHeader").css("display","block");
@@ -66,7 +66,7 @@ function selectMiniArticle(article_title,item)
 	$(".previewItem").html("");
 	$(".previewItem[data-art-num="+article_title+"]").html(mini_article_HTML);
 
-	// underline title of slected document
+	// underline title of selected document
 	$(".documentListLI").css("border-bottom","1px solid transparent");
 	$(item).parent().css("border-bottom","1px solid black");
 
@@ -209,3 +209,55 @@ function retractVacuum()
 	}
 	
 }
+
+function closeIntro() {
+	$("#info").css("display","none");
+}
+
+ 
+ $(document).ready(function() {
+    $("#info").animate({left: 40}, 1000);
+
+    navigator.sayswho= (function(){
+    var ua= navigator.userAgent, tem,
+    M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+    if(/trident/i.test(M[1])){
+        tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+        alert('IE '+(tem[1] || '') );
+    }
+    if(M[1]=== 'Chrome'){
+        tem= ua.match(/\b(OPR|Edge)\/(\d+)/);
+        if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+    }
+    M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+    if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+    return M.join(' ');
+	})();
+
+ 	if (navigator.sayswho == "Safari 8") {
+ 		$("#pdfDisplay").css("background-color", "rgba(0, 0, 0, 0.28)");
+ 		
+ 	}
+ });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

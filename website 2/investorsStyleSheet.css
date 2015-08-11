@@ -1,0 +1,153 @@
+/*==============================================================================================================================
+BEGINNING OF INVESTORS STYLESHEET
+================================================================================================================================*/
+
+#pdfDisplay {
+  /*position: absolute;*/
+  margin-top: 70px;
+  height: 700px;
+  width: 70%;
+  float: right;
+
+  }
+
+.article {
+  position: absolute;
+  float: right;
+  height: 600px;
+  width: 70%;
+  margin-right: 0px;
+  padding: 0px;
+  right: 0px;
+}
+
+#article-executive {
+  z-index: 4; /*navbar z-index is 5*/
+
+}
+#article-Impact {
+  z-index: 0;
+  opacity: 0; 
+}
+
+#article-canning {
+  z-index: 0;
+  opacity: 0; 
+
+}
+
+#article-kikawada {
+  z-index: 0;
+  opacity: 0;
+}
+
+#article-epidemiology{
+ z-index: 0;
+ opacity: 0;
+}
+
+#article-ikeda{
+ z-index: 0;
+ opacity: 0;
+}
+
+#article-WhitePaper{
+ z-index: 0;
+ opacity: 0;
+}
+
+#article-prevalence{
+ z-index: 0;
+ opacity: 0;
+}
+
+#articleButtons {
+  background-image: url("merged copy.png"); 
+  /*background-size: 100% 100%;*/
+  position: absolute;
+  width: 30%;
+  left: 0;
+  /*height: 658px;*/
+  height: 600px;
+}
+
+.articleButton {
+  width: 90%;
+  /*height: 40px;*/
+  height: 30px;
+  background-color: transparent;
+  text-align: center;
+  /*vertical-align: center;*/
+  left-margin: 10px;
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 12.5px;
+  margin-right: 15px;
+  padding-top: 20px;
+  border: 2px solid white;
+  color: #9E8365;
+
+}
+
+.articleButton:hover {
+  background-color: rgba(106, 105, 107, 1);
+  color: white;
+  opacity: .7;
+  -webkit-transition: background-color 1.5s ease;
+  -moz-transition: background-color 1.5s ease;
+  -o-transition: background-color 1.5s ease;
+  -ms-transition: background-color 1.5s ease;
+  transition: background-color 1.5s ease;
+}
+
+#pptDisplay {
+  position: absolute;
+  width: 80%;
+  margin: auto;
+  left: -1500px;
+  /*right: -2000px;*/
+  top: 900px;
+  height: 600px;
+  border: 3px solid black;
+}
+
+#fox {
+  position: absolute;
+  top: 1500px;
+  width: 30%;
+}
+#copyright, #copyright2 { 
+  position: absolute;
+  z-index: 100;
+  /*padding, margin: 0px;*/
+  padding-top: 1px;
+  border:0;
+  background: black;
+  display: block;
+  height: 45px;
+  max-width: 100%;
+  min-width: 100%;
+  color: #787878;
+  font-weight: 300;
+  font-size: 14px;
+}
+#copyright2 {
+  top: 3000px;
+
+}
+
+#copyrightPar1 {
+  display: block;
+  margin:0;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  font-size: 12px;
+
+
+}
+#copyrightPar2 {
+  margin:0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
