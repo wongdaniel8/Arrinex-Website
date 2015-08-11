@@ -1,6 +1,32 @@
-/** Javascript for index.html
+/** 
+ *  Javascript for index.html
  *  @author Daniel Wong, Herberth Bonilla, Devin Morgan
  */
+
+
+ //function to check browser type 
+ $(document).ready(function() {  
+    navigator.sayswho= (function(){
+    var ua= navigator.userAgent, tem,
+    M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+    if(/trident/i.test(M[1])){
+        tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+        alert('IE '+(tem[1] || '') );
+    }
+    if(M[1]=== 'Chrome'){
+        tem= ua.match(/\b(OPR|Edge)\/(\d+)/);
+        if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+    }
+    M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+    if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+    return M.join(' ');
+	})();
+ 	
+ 	if (M = "safari") {
+ 		$("#homeImageDiv").css("height", "700");
+ 	}
+ });
+
 
 function adjustPicture() {
 	if (parseFloat(window.innerWidth) > 1024)
@@ -72,7 +98,7 @@ $(document).ready(function(){
 				}
 			  
 
-			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 150)// scrolling up
+			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 220)// scrolling up
 			    {
 			    	$("#rhinitisInfo").css("opacity","0");
 			    }
@@ -144,16 +170,28 @@ $(document).ready(function(){
 					if (isInvestors == false) {
 
 						if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
-					    		$("html, body").animate({ scrollTop: 458 + 'px'}, 1000);
+					    		$("html, body").animate({ scrollTop:  500 + 'px'}, 1000); 
 					    	}
 					    	else {
-					    		$("html, body").animate({ scrollTop: 678 + 'px'}, 1000);
+					    		$("html, body").animate({ scrollTop: 678 + 'px'}, 1000); //678
 					    	}
 					    	return true;
 
 					    }
 					else window.location = "index.html#rhinitisInfo";
 				});
+
+
+				$("#chronicRhinitisButt").click(function() {
+				    	if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+				    		$("html, body").animate({ scrollTop: 510 + 'px'}, 1000);
+				    	}
+				    	else {
+				    		$("html, body").animate({ scrollTop: 678 + 'px'}, 1000);
+				    	}
+				    	return true;
+				});
+
 
 				$("#currentSolutionsLink").click(function() {
 					if (isInvestors == false) {
@@ -187,16 +225,6 @@ $(document).ready(function(){
 				    	}
 				    	else {
 				    		$("html, body").animate({ scrollTop: 2901 + 'px'}, 1000);
-				    	}
-				    	return true;
-				});
-
-				$("#chronicRhinitisButt").click(function() {
-				    	if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
-				    		$("html, body").animate({ scrollTop: 458 + 'px'}, 1000);
-				    	}
-				    	else {
-				    		$("html, body").animate({ scrollTop: 678 + 'px'}, 1000);
 				    	}
 				    	return true;
 				});

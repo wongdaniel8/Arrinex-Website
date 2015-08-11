@@ -214,7 +214,8 @@ function closeIntro() {
 	$("#info").css("display","none");
 }
 
- 
+
+//function to check browser type 
  $(document).ready(function() {
     $("#info").animate({left: 40}, 1000);
 
