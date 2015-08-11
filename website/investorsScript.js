@@ -235,8 +235,9 @@ function closeIntro() {
 	})();
 
  	if (navigator.sayswho == "Safari 8") {
- 		$("#pdfDisplay").css("background-color", "rgba(0, 0, 0, 0.28)");
- 		
+ 		$("#pdfDisplay").css("background-color", "rgba(0, 0, 0, 0.19)");
+ 		$("#pdfDisplay").css("margin-top", "16px");
+ 		$("#html").css("background-color", "rgba(0, 0, 0, 0.28)");
  	}
  });
 

@@ -2,8 +2,11 @@
 BEGINNING OF INVESTORS STYLESHEET
 ================================================================================================================================*/
 body{
-  background-color: #CCCCCC;
+  /*background-color: #CCCCCC;*/
+  background-color: rgba(0, 0, 0, 0.28);
+
 }
+
   
             /*#navBarDiv {
               height: 500px;
