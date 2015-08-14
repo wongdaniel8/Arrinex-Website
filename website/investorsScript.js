@@ -11,7 +11,7 @@ var kikawada = '<object data="kikawada.pdf" type="application/pdf" width="100%" 
 var epidemiology = '<object data="epidemiology.pdf" type="application/pdf" width="100%" height="100%"> </object>';
 var ikeda = '<object data="ikeda.pdf" type="application/pdf" width="100%" height="100%"> </object>';
 var whitePaper = '<object data="WhitePaper.pdf" type="application/pdf" width="100%" height="100%"> </object>';
-var prevelence = '<object data="prevalence.pdf" type="application/pdf" width="100%" height="100%"> </object>';
+var prevelence = '<object data="prevelence.pdf" type="application/pdf" width="100%" height="100%"> </object>';
 var businitch = '<object data="businitch.pdf" type="application/pdf" width="100%" height="100%"> </object>';
 
 
