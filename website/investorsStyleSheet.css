@@ -1,28 +1,24 @@
 /*==============================================================================================================================
 BEGINNING OF INVESTORS STYLESHEET
 ================================================================================================================================*/
-body{
-  background-color: rgba(0, 0, 0, 0.28);
+  body{
+    background-color: rgba(0, 0, 0, 0.28);
+  }
 
-}
+  .navBarLinks{
+    position: relative;
+  }
+  #documents{ /*this is the document link in the nav bar...I made the padding wide to the left so it would block the drop down to make it look like it was coming from behind the nav menu*/
+    padding: 50px 25px 24px 260px;
+    background-color: black;
+    z-index: 4;
+  }
+  #documents:hover{
+    cursor: pointer;
+  }
 
-  
-            /*#navBarDiv {
-              height: 30px;
-            }*/
-            
-            .navBarLinks{
-              position: relative;
-            }
-                #documents{ /*this is the document link in the nav bar...I made the padding wide to the left so it would block the drop down to make it look like it was coming from behind the nav menu*/
-                  padding: 50px 25px 24px 260px;
-                  background-color: black;
-                  z-index: 4;
-                }
-                #documents:hover{
-                  cursor: pointer;
-                }
- @-webkit-keyframes topTriangleClose{   /*topTriangleClose is the upper triangle that masks the document to make it look like it is shrinking*/
+
+  @-webkit-keyframes topTriangleClose{   /*topTriangleClose is the upper triangle that masks the document to make it look like it is shrinking*/
       0%{
           border-top: 0px solid #CCCCCC;
           border-right: 800px solid transparent;
@@ -214,17 +210,7 @@ body{
       cursor: pointer;
     }
 
-    #rightMargin {
-      z-index: 1000;
-      width: 220px;
-      height: 612px;
-      right: 0px;
-      position: fixed;
-      background-image: url("investorButtonBackground.jpg");
-      background-size: 100% 100%;
-      margin-top: 70px;
-
-    }
+  
    
     #articleRemoverContainer{
       width: 150px;
@@ -248,14 +234,14 @@ body{
           top: 370px;
           height: 50px;
           width: 50px;
-          background-color: rgb(0,0,0);;
+          background-color: rgb(0,0,0);
         }
         #vacuum_nosel{
           display: none;
           position: absolute;
           right: 0px;
           border-top: 25px solid transparent;
-          border-right: 50px solid rgb(0,0,0);;
+          border-right: 50px solid rgb(0,0,0);
           border-bottom: 25px solid transparent;
           top: 370px;
         }
@@ -318,6 +304,7 @@ body{
             width: 00px;
             border-bottom: 0px solid #CCCCCC;
             border-right: 800px solid transparent;
+
         }
         .trapazoidBotLive{
           -webkit-animation-name:botTriangleClose;
@@ -355,6 +342,8 @@ body{
           -o-animation-direction:normal;
           -ms-animation-direction:normal;
           animation-direction:normal;
+
+
 
         }
 
@@ -598,7 +587,7 @@ body{
     }
         
 #copyright2 { /* this is the copyright section at the bottom of the page*/
- position: fixed;
+  position: fixed;
   z-index: 100;
   padding-top: 1px;
   border:0;

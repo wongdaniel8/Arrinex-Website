@@ -78,30 +78,32 @@ $(document).ready(function(){
 	            var scroll_point2 = $("body").scrollTop() + $("html").scrollTop();;
 	            //						^for chrome				^for firefox
 
-	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 250) // scrolling down
+	            // if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 250) // scrolling down
 
-	            
-	           
-	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 150) {//&& scroll_point2 < 460) { // scrolling down
-			    
+	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 150) { // scrolling down
 			    	$("#rhinitisInfo").css("opacity","1");
-					$('#pptDisplay').animate({left: 115}, 1000);
-
-			    	
-			    	
 				}
 
-				else if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 460) { //doesn't work
-						alert("slide away");
-        				$('#pptDisplay').animate({left: -1500}, 1000);
+				// else if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 460) { //doesn't work
+				// 		alert("slide away");
+    //     				$('#pptDisplay').animate({left: -1500}, 1000);
 
-				}
+				// }
 			  
 
 			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 220)// scrolling up
 			    {
 			    	$("#rhinitisInfo").css("opacity","0");
 			    }
+
+			    if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 1650) { //scrolling down
+			    	$("#team").css("opacity","1");
+			    }
+			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 1840) { //scrolling up
+			    	$("#team").css("opacity","0");
+			    }
+
+
 			    
 			    scroll_point1 = scroll_point2;// update the data points to ensure accuracy
 
@@ -369,6 +371,21 @@ var isInvestors = false;
 function verification() {
 	// var passwordArray = ["a", "b", "password"];
 	var passwordArray = ["0cc175b9c0f1b6a831c399e269772661", "92eb5ffee6ae2fec3ad71c777531578f", "5f4dcc3b5aa765d61d8327deb882cf99"];
+    
+ //    var accessed = []
+ //    var clients = { 
+ //    	"daniel" : "password1", 
+ //    	"herb" : "password2",
+ //    	"dev" : "password3"
+ //    }
+ //    for client in clients {
+ //    	for (i = 0; i < clients[client].length; i++) {
+ //    		if (hashedPasswordInput == clients[client][i]) {
+ //    			accessed.push(client);
+ //    		}
+
+ //    	}
+ //    }
 
     var x;
     var invalidDisplay = document.getElementById('errorPar');
