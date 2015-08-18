@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrinex</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="investorsStyleSheet.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="myscript.js"></script>
+    <script type="text/javascript" src="investorsScript.js"></script>
+    <script type='text/javascript'> var isInvestors = true; </script>
+    
+</head>
+
+<body onresize="adjustPicture()" onload="adjustPicture()">
+    
+    <!-- Main Header Nav Bar -->
+    <div id="navBarDiv">
+        <ul id="navBarList">
+            <li id="logoBlock">
+                <a href="index.html">
+                    <img id = "logo" src = "transparant_logo.png" align="center"> </img>
+                    <span>Arrinex, Inc.</span>
+                </a>
+            </li>
+            <li class="navBarLinks">
+                <a id = "contactUs" style = "cursor:pointer">Contact Us </a>
+            </li>
+            <li class="navBarLinks" style="width:350px;">
+                <a id = "documents" onmouseover="showDropDown()" >Documents</a>
+                <!-- DROP DOWN MENU -->
+                <div>
+                    <div id="documentDDContainer" onmouseleave="hideDropDown()" >
+                        <h3 id="docListHeader">Document</h3>
+                        <h3 id="descListHeader">Preview</h3>
+                        <ul id="documentsList">
+                            <li class="documentListLI">
+                                <div class="documentName" id="startDocument" onclick="selectMiniArticle('executive_pdf',this)" ondblclick="selectMainArticleAndHideDropDown('executive_pdf',this)">Executive Summary</div>
+                                
+                            </li>
+                            <li class="documentListLI">
+                                <div class="documentName" onclick="selectMiniArticle('AR_and_its_impact_on_productivity',this)" ondblclick="selectMainArticleAndHideDropDown('AR_and_its_impact_on_productivity',this)">Allergic rhinitis and its impact on work productivity in primary care practice and a comparison with other common diseases:</div>
+                            </li>
+                            <li class="documentListLI" >
+                                <div class="documentName" onclick="selectMiniArticle('canning_neurology_of_AR',this)" ondblclick="selectMainArticleAndHideDropDown('canning_neurology_of_AR',this)">Neurology of Allergic Inflamation and Rhinitis</div>
+                            </li>
+                            <li class="documentListLI">
+                                <div class="documentName" onclick="selectMiniArticle('kikawada',this)" ondblclick="selectMainArticleAndHideDropDown('kikawada',this)">Endoscopic Posterior Nasal Neurectomy: an Alternative to Vidian Neurectomy</div>
+                            </li>
+                            <li class="documentListLI">
+                                <div class="documentName" onclick="selectMiniArticle('ikeda',this)" ondblclick="selectMainArticleAndHideDropDown('ikeda',this)">Effect of Resection of the Posterior Nasal Nerve on Functional and Morphological Changes in the Inferior Turbinate Mucosa</div>
+                            </li>
+                            <li class="documentListLI">
+                                <div class="documentName" onclick="selectMiniArticle('prevelence',this)" ondblclick="selectMainArticleAndHideDropDown('prevelence',this)">Prevalence of Allergic Rhinitis in the United States</div>
+                            </li>
+                            <li class="documentListLI">
+                                <div class="documentName" onclick="selectMiniArticle('epidemiology',this)" ondblclick="selectMainArticleAndHideDropDown('epidemiology',this)"> Epidemiology of Rhinitis -- Brief Review</div>
+                            </li>
+                            <li class="documentListLI">
+                                <div class="documentName" onclick="selectMiniArticle('whitePaper',this)" ondblclick="selectMainArticleAndHideDropDown('whitePaper',this)">Arrinex, Inc. Rhinitis White Paper</div>
+                            </li>
+                            <li class="documentListLI">
+                                <div class="documentName" onclick="selectMiniArticle('businitch',this)" ondblclick="selectMainArticleAndHideDropDown('businitch',this)">Arrinex, Inc. PPT presentation</div>
+                            </li>
+                        </ul>
+                        <ul id="docDescriptionList">
+                             <div id="instructions">Click a document to preview<br>
+                            or double click to open!</div>
+                            <li class="previewItem" data-art-num="executive_pdf">
+                                <div class = "smallPDF">
+                                </div>
+                            </li>
+                            <li class="previewItem" data-art-num="AR_and_its_impact_on_productivity">
+                                <div class = "smallPDF">
+                                </div>
+                            </li>
+                            <li class="previewItem" data-art-num="canning_neurology_of_AR">
+                                <div class = "smallPDF">
+                                </div>
+                            </li>
+                            <li class="previewItem" data-art-num="kikawada">
+                                <div class = "smallPDF">
+                                </div>
+                            </li>
+                            <li class="previewItem" data-art-num="epidemiology">
+                                <div class = "smallPDF">
+                                </div>
+                            </li>
+                            <li class="previewItem" data-art-num="ikeda">
+                                <div class = "smallPDF">
+                                </div>
+                            </li>
+                            <li class="previewItem" data-art-num="whitePaper">
+                                <div class = "smallPDF">
+                                </div>
+                            </li>
+                            <li class="previewItem" data-art-num="prevelence">
+                                <div class = "smallPDF">
+                                </div>
+                            </li>
+                            <li class="previewItem" data-art-num="businitch">
+                                <div class = "smallPDF">
+                                </div>
+                            </li>
+                        </ul>
+                    </div> 
+                </div>
+                <!-- END DROP DOWN MENU -->
+            </li>
+       </ul>
+    </div> <!-- NAV BAR DIV -->
+
+    <div id = "info"> Welcome to the Investor's page!
+        <br></br>
+
+        <p id = "infoPar">The science and research that inspire and support our work is accesible through the Documents tab in the top right corner.</p> 
+
+        <p id = "close" onclick = "closeIntro()"> Close </p>
+    </div>
+     <!-- Here at Arrinex, we assure confidence in our product through sound science.   -->
+
+    
+
+
+    <!-- this is the arm that vacuums up the old document -->
+    <div id="articleRemoverContainer">
+        <div id="vert_extend_rect"></div>
+        <div id="horz_extend_rect"></div>
+        <div id="vacuum_nosel"></div>
+    </div>
+
+
+
+    
+
+    <!-- CONTACT FORM -->
+    <div id = "contact"> 
+        <h1>CONTACT US</h1>
+        <p> Address: 1755 East Bayshore Road, Suite 26A</p>
+        <p> Redwood City, CA 94063</p>
+        <p> Email: vahid@arrinex.com </p>
+        <p> Phone: (408) 802-2052 </p>
+    </div>
+
+    <!-- CONTAINER FOR ALL MAIN PDF DOCUMENTS -->
+    <div id="pdfDisplay">
+       <div class = "article" id = "article-executive" data-art-num="executive_pdf">
+            <object data="executive.pdf" type="application/pdf" width="100%" height="100%"> </object>
+            <div class="trapazoidTop"></div>
+            <div class="trapazoidBot"></div>
+        </div>
+
+        <div class = "article" id = "article-Impact" data-art-num="AR_and_its_impact_on_productivity">
+            <div class="trapazoidTop"></div>
+            <div class="trapazoidBot"></div>
+        </div>
+
+        <div class = "article" id = "article-canning" data-art-num="canning_neurology_of_AR">
+            <div class="trapazoidTop"></div>
+            <div class="trapazoidBot"></div>
+        </div>
+        
+        <div class = "article" id = "article-kikawada" data-art-num="kikawada">
+            <div class="trapazoidTop"></div>
+            <div class="trapazoidBot"></div>
+        </div>
+
+        <div class = "article" id = "article-epidemiology" data-art-num="epidemiology">
+            <div class="trapazoidTop"></div>
+            <div class="trapazoidBot"></div>
+        </div>
+
+        <div class = "article" id = "article-ikeda" data-art-num="ikeda">
+            <div class="trapazoidTop"></div>
+            <div class="trapazoidBot"></div>
+        </div>
+
+        <div class = "article" id = "article-WhitePaper" data-art-num="whitePaper">
+            <div class="trapazoidTop"></div>
+            <div class="trapazoidBot"></div>
+        </div>
+
+        <div class = "article" id = "article-prevalence" data-art-num="prevelence">
+            <div class="trapazoidTop"></div>
+            <div class="trapazoidBot"></div>
+        </div>
+        <div id = "pptDisplay" class = "article" data-art-num="businitch">
+            <div class="trapazoidTop"></div>
+            <div class="trapazoidBot"></div>
+        </div>
+
+    </div> <!--END pdfDisplay DIV -->
+
+
+    <div id="sab">
+            <p class="sabPars" id="hwangPara">Peter Hwang is a professor of Otololaryngology at the Stanford School of Medicine, focusing on head and neck surgery. He is the chief of Stanford Medical's division of Rhinology and Endoscopic Skull Base Surgery.</p>
+            <p class="sabPars" id="weissPara"> Ray Weiss is a graduate of the University of Texas Medical School at San Antonio. He is Board certified by the American Board of Otolaryngology, and is a Fellow of the American Academy of Otolaryngology - Head and Neck Surgery, and a member of the American Rhinology Society.</p>
+            <p class="sabPars" id="bolgerPara"> Dr. William Bolger is an ENT-otolaryngologist in Jacksonville, Florida and is affiliated with Mayo Clinic. William Bolger recieved his medical degree from the F. Edward Hebert School of Medicine, Uniformed Services University of the Health Sciences. </p> 
+            <p class="sabPars" id="goodePara"> Dr. Goode is a professor emiritus of Otolarnygology at Stanford. He recieved his medical degree at the USC Keck School of Medicine. Dr. Goode held the title of president of the American Academy of Otolaryngology, Head and Neck Surgery. 
+            </p>
+            <p class="sabPars" id="nelsonPara">Lionel Nelson is a graduate from the Yale School of Medicine. He did his residency at Stanford and currently works in San Jose, in affiliation with Good Samaritan Hospital. </p>
+            <p class="sabPars" id="stromePara"> Dr. Strome recieved his degree in medicine from the University of Michigan Medical School and has been in practice for 51 years. He is affiliated with Mount Sinai St. Luke's-Roosevelt, and is the Director for the Center for Head and Neck Oncology at the  New York Head and Neck Institute. 
+            </p>
+            <img src="enlargedDandelion.png" id="dandelion">
+            <img src="enlargedDandelion.png" id="dandelion2">
+            <p id="sabHeader">Meet the Scientific Advisory Board</p>
+            <img src="headerDandelion.png" id="bud" class="budRow1">
+            <p class="sabNameRow1" id="hwangHeader" onClick="sabClick('#hwang')">Hwang, M.D.</p>
+            <img src="headerDandelion.png" id="bud1" class="budRow1">
+            <p class="sabNameRow1" id="weissHeader" onClick="sabClick('#weiss')">Weiss, M.D.</p>
+            <img src="headerDandelion.png" id="bud2" class="budRow1">
+            <p class="sabNameRow1" id="stromeHeader" onClick="sabClick('#strome')">Strome, M.D.</p>
+            <img src="headerDandelion.png" id="bud3" class="budRow2">
+            <p class="sabNameRow2" id="bolgerHeader" onClick="sabClick('#bolger')">Bolger, M.D.</p>
+            <img src="headerDandelion.png" id="bud4" class="budRow2">
+            <p class="sabNameRow2" id="goodeHeader" onClick="sabClick('#goode')">Goode, M.D.</p>
+            <img src="headerDandelion.png" id="bud5" class="budRow2">
+            <p class="sabNameRow2" id="nelsonHeader" onClick="sabClick('#nelson')">Nelson, M.D.</p>
+        </div>
+
+    
+
+    
+<div id = "copyright2"> 
+    <p id = "copyrightPar1">&#169; Copyright 2015</p>
+    <p id = "copyrightPar2"> Website designed and created by Daniel Wong, in collaboration with Herberth Bonilla and Devin Morgan. All rights reserved.</p>
+</div>
+
+
+</body>
+<html>
+

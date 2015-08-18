@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrinex</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="myscript.js"></script>
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+    
+
+    
+</head>
+
+<body onresize="adjustPicture()" onload="adjustPicture(),pauseBoyGearMotion(),pauseGirlGearMotion()">
+    
+    <!-- Main Header Nav Bar -->
+    <div id="navBarDiv">
+        <ul id="navBarList">
+            <li id="logoBlock">
+                <a href="#">
+                    <img id = "logo" src = "transparant_logo.png" align="center"> </img>
+                    <span>Arrinex, Inc.</span>
+                </a>
+            </li>
+            <li class="navBarLinks">
+                <a id = "contactUs" style = "cursor:pointer">Contact Us </a>
+            </li>
+            <li class="navBarLinks">
+                <a id = "forInvestors" style = "cursor: pointer;" >For Investors</a>
+                
+            </li>
+            
+            <li class="navBarLinks" >
+                <a id = "forPatients">For Patients</a>
+                <ul class="dropDownList">
+                    <li class="dropDownLI">
+                        <div class="ddText" id = "whatIsLink">What is Rhinitis?</div>
+                        <div class="highlightLeft"></div>
+                        <div class="highlightRight"></div>
+                    </li>
+                    <li class="dropDownLI">
+                        <div class="ddText" id = "currentSolutionsLink">Current Solutions</div>
+                        <div class="highlightLeft"></div>
+                        <div class="highlightRight"></div>
+                    </li>
+                    <li class="dropDownLI">
+                        <div class="ddText" id = "arrinexSolutionLink">The Arrinex Solution</div>
+                        <div class="highlightLeft"></div>
+                        <div class="highlightRight"></div>
+                    </li>
+                </ul>
+            </li>
+            <li class="navBarLinks">
+                <a id = "company">Company</a>
+            </li>
+       </ul>
+    </div>
+
+
+<div id = "passwordField"> 
+
+    <h1> FOR INVESTORS </h1>
+    <p id = "investorsPar"> The following page is restricted to potential investors only. 
+        Please input your confidential key, or contact us to recieve one at vahid@arrinex.com. Click anywhere in the black box to exit. </p>
+    <p id = "errorPar"><br> </br> <br></br>The entered password was incorrect </p>
+</div>
+    <input id = "passwordInput" type = "password" placeholder = "PASSWORD" onkeypress = "verifyKey(event)"> </input>
+
+
+<div id = "contact"> 
+    <h1>CONTACT US</h1>
+    <p> Address: 1755 East Bayshore Road, Suite 26A</p>
+    <p> Redwood City, CA 94063</p>
+    <p> Email: vahid@arrinex.com </p>
+</div>
+
+ <div id="homeImageDiv">
+        <div id="firstHomeText">
+            <span id="textSpanEnjoy" size="20">
+                Enjoy <b>peace</b> of mind
+            </span>
+            <br>
+            <br>
+            <span id="textSpanRelief" size="5">Get relief from chronic rhinitis with
+            <br>
+            breakthrough cryogenic therapy.</span>
+            <br>
+            <br>
+            <div id="chronicRhinitisButt">
+                What is Chronic Rhinitis?
+            </div>
+            <div id="solutionButt">
+                The Arrinex Solution
+            </div>
+        </div>
+ </div>
+
+
+<!-- Beginning of section divs -->
+    <div id="parallaxHelpDiv">
+    
+    <div class = "sectionDivs" id = "rhinitisInfo">
+        <div id="cards_container">
+            <div id="cards_center_wrapper">
+                <h1 id="rhinitisHeader" style = "font-weight: 300;">Understanding Rhinitis...</h1>
+
+
+                <div id = "f1_container1" data-count="0" onmouseover = "rotate('f1_card1')" onmouseleave = "leftCard('f1_card1')"> 
+                        <div id="f1_card1" class="shadow">
+                             <div class="front face1">
+                                <br></br>
+
+                                How common is it?
+                                <div id = "logoWrapper1">
+                                <img src = "transparant_logo.png" class = "cardLogo">
+                                </div>
+                            </div>
+                            <div class="back1 face1 center" >
+                                <div class="homeParPicOne" >
+                                    <img class = "circlePics" src = "groupOfPeopleCircle2.png" align="center"> </img>
+                                </div>
+                                <div class="homeParInfoOne" align="center">
+                                    <div class="paraCell" align="center">
+                                        <h3 style="height: 35px;text-align:center"> It's common!</h3>
+                                        <p align="justify" style="padding: 0px 23px">About 60-80 million Americans have either allergic or non-allergic rhinitis. The difference? One is triggered by allergies, the other is triggered by unknown causes.</p>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+
+                <div id = "f1_container2" data-count="0" onmouseover = "rotate('f1_card2')" onmouseleave = "leftCard('f1_card2')">
+                    <div id="f1_card2" class="shadow">
+                         <div class="front face1">
+                            <br></br>
+                            How annoying is it?
+                            <div id = "logoWrapper2">
+                            <img src = "transparant_logo.png" class = "cardLogo">
+                            </div>
+                        </div>
+                        <div class="back1 face1 center">
+                            <div class="homeParPicOne" align="center">
+                                <img class = "circlePics" src = "blowNoseCircle.png" align="center"> </img>
+                            </div>
+                            <div class="homeParInfoOne" align="center">
+                                <div class="paraCell">
+                                    <h3 style="height: 35px;text-align:center">It's annoying!</h3>
+                                    <p align="justify" style="padding: 0px 34px">Both allergic and non-allergic rhinitis result in allergy symptoms such as a runny nose, itchy eyes and skin, sneezing, stuffy nose, and fatigue.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id = "f1_container3" data-count="0" onmouseover = "rotate('f1_card3')" onmouseleave = "leftCard('f1_card3')">
+                    <div id="f1_card3" class="shadow">
+                         <div class="front face1">
+                            <br></br>
+                            How easily is it triggered?
+                            <div id = "logoWrapper3">
+                            <img src = "transparant_logo.png" class = "cardLogo">
+                            </div>
+                        </div>
+                        <div class="back1 face1 center">
+                           <div class="homeParPicOne" align="center">
+                            <img class = "circlePics" src = "triggersCircle.png" align="center"> </img>
+                        </div>
+                            <div class="homeParInfoOne" align="center">
+                                <div class="paraCell">
+                                    <h3 style="height: 35px;text-align:center">Easily!</h3>
+                                    <p align="justify" style="padding: 0px 35px">Common triggers include pollen, grass, pet hair, and dust mites. Non-allergenic triggers include cleaning solutions, cigarette smoke, hair spray, and car exhaust.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class = "sectionDivs" id = "existingSolutions" style="font-weight:300;">
+
+        <div id="carouselContainer">
+            <!-- <h1 id = "currentSolutionsHeader">Current Solutions</h1> -->
+            <div id="carouselControls">
+                <div id="carouselPlayborder" >
+                    <div class="left_next" onclick="tickLeft()" ></div>
+                    <div class="left_next" style="left:-8px;" onclick="tickLeft()"></div>
+                    <div id="carouselPlay" onclick="playCarousel()"></div>
+                    <div id="carouselPause" onclick="pauseCarousel()"></div>
+                    <div class="right_next" onclick="tickRight()"></div>
+                    <div class="right_next" style="right:20px;" onclick="tickRight()"></div>
+                </div>
+            </div>
+            <div id="wrong_pic_holder">
+            </div>
+            <div id="carouselImageContainer">
+                <ul class="carouselList">
+                    <li class="carouselLI" id="sinus_rinse">
+                    </li>
+                    <li class="carouselLI" id="sinus_medication">
+                    </li>
+                    <li class="carouselLI" id="nose_spary">
+                    </li>
+                    <li class="carouselLI" id="sinus_surgery">
+                    </li>
+                    <li class="carouselLI" id="dealing_with">
+                    </li>
+                </ul>
+            </div>
+            <div id="textContainer">
+                <ul id="descriptionList">
+                    <li class="pictureDescription" data-position="1" >
+                        <h3 class = "carouselHeader">Nasal Rinsing</h3>
+                        <p class = "carouselPar"> is a process that involves squirting a saline solution up the nostrils to purge the nasal cavities. Nasal rinses can be repulsive and unfomfortable. At best, nasal rinses only bring about temporary relief from certain allergy symptoms.
+                        </p>
+                    </li>
+                    <li class="pictureDescription" data-position="2" >
+                        <h3 class = "carouselHeader">Medication</h3>
+                        <p class = "carouselPar"> 
+                            is often used to mask the symptoms of rhinitis by temporarily suppressing the release of histamines within the body. Even if medication is successful in reducing the irritating affects of rhinitis, they must be constantly replenished, which can take a financial toll.
+                       </p>
+                    </li>
+                    <li class="pictureDescription" data-position="3" >
+                        <h3 class = "carouselHeader">Steriod Nasal Sprays</h3>
+                        <p class = "carouselPar"> work by inhaling a liquid-aerosol medication up your nose for the purpose of reducing inflammation of the nasal lining. Depending on the type, some nasal sprays require several days to a week of continued use before any improvement in symptoms can be noticed.
+                        </p>
+                    </li>
+                    <li class="pictureDescription" data-position="4" >
+                        <h3 class = "carouselHeader">Sinus Surgery</h3>
+                        <p class = "carouselPar"> 
+                            is used in certain cases of chronic rhinits, but is often seen as a last resort. Surgery can help drain fluid built up in the sinuses or remove nasal polyps, either of which could be the result of allergic or nonallergic rhinitis.
+                        </p>
+                    </li>
+                    <li class="pictureDescription" data-position="5" >
+                        <h3 class = "carouselHeader">Dealing With It</h3>
+                        <p class = "carouselPar"> When the prospect of continually seeking medication or constantly trying different therapies seems to have no avail, many people are left with the unfortunate choice of seeking temporary relief, or just living with chronic rhinitis.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>    
+
+
+    
+
+    
+
+     <!-- <div class = "sectionDivs" id = "team"> 
+        <div id="gears_container">
+            <div id="faces_conainer">
+                <div id="gearColoredBackground"></div>
+                <div id="giantGear"></div>
+                <div id="extraGear1"></div>
+                <div id="extraGear2"></div>
+                <div id="extraGear3"></div>
+                <div id="extraGear4"></div>
+                <div id="extraGear5"></div>
+                <div id="boy_face">
+                    <div id="boy_modal" class="gear_modal">
+                        <span class="close_gear_modal" style="font-weight:300;">Close</span>
+                        <h1 id="gear_modal_header">Meet Vahid Saadat</h1>
+                        <p id="mastermind_description">Vahid Saadat is a serial medical device entrepreneur with 25 years of experience.
+                    Prior to Arrinex, Vahid served as the CEO of Voyage Medical, funded by Kleiner perkins, Three Arch , RWI and Abbott Ventures. Mr. Saadat holds a Bachelor's and Master's degrees in engineering from the University of Texas at Austin. He is named an inventor on 200 patents in a variety of medical specialties.</p>
+                    </div>                
+                    <div id="boy_gear">
+                        <div class="boy_pin_wheel">
+                          <div class="spoke1 spoke">
+                            <div class="spoke_tip1" title="Vahid Saadat was an undergraduate at the University of Autstin Texas between 1980 and 1984 and recieved a Bachelor of Science in Electrical Engineering. After undergraduate studies, Saadat stayed on two more years (1984-1986) to get a his masters in Biomedical Engineering ">
+                                <span class="spoke_tip_description">
+                                    
+                                </span>
+                            </div>
+                            <div class="spoke_tip2" title="Vahind serveds as the CEO and president of Voyage Medical between February 2006 and September 2015. Voyage Medical was founded on a technological breakthough in intra-cardiac procedures and raised over $50 million in funding to bringg this technology to market">
+                                <span class="spoke_tip_description"></span>
+                            </div>
+                          </div>
+                          <div class="spoke2 spoke">
+                            <div class="spoke_tip1" title="Vahid co-founded USGI Medical with Eugene Chen and focusses on using endoluminal surgery and incisionless surgery in the field of gastroenterology. In addition to raisingg $50 million in investment, USGI Medical has successfully been generating positive cashflow for some time now">
+                                <span class="spoke_tip_description"></span>
+                            </div>
+                            <div class="spoke_tip2" title="Vahid worked at Trimedyne from 1988 - 1995. While at Trimedyne, Vahid served in several different positions including Senior Vice President of Research and Development as well as Director of Laser systems">
+                                <span class="spoke_tip_description"></span>
+                            </div>
+                          </div>
+                          <div class="spoke3 spoke">
+                            <div class="spoke_tip1" title="Vahid and Mojgan founded Arrinex in 2013 with aim of providing long term relief to the many people that suffer from allergic and non-allergic chronic rhinitis. Given the success of their treatment, the future for this company looks very bright.">
+                                <span class="spoke_tip_description"></span>
+                            </div>
+                            <div class="spoke_tip2" title="Vahid co-founded Baxano Surgical with Dr. Jeffrey Bleich in 2005 and helped raise a total of $47 million to get Baxon to market. Baxon specializes in minimally invasive treatment of spinal stenosis where borrows principles from the field of cardiology by sing guide wires and sheaths to minimize healthy tissue disruption.">
+                                <span class="spoke_tip_description"> </span>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <image id="boy_picture" src="vahidPicture.png"></image>
+                </div>
+                <div id="girl_face">
+                    <div id="girl_modal" class="gear_modal">
+                        <span class="close_gear_modal">Close</span>
+                        <h1 id="gear_modal_header" style="font-weight:300;">Meet Mojgan Saadat</h1>
+                        <p id="mastermind_description">Mojgan Saadat is an entrepreneur with more than 10 years of hands on experience. Mojgan has had an ongoing key role in scientific and clinical due diligence, establishing Intellectual Property, strategic planning, financing, and operations for the company. Mojgan holds a BS in biology and a BS in computer science.</p>
+                    </div>
+                    <div id="girl_gear">
+                        <div class="girl_pin_wheel">
+                          <div class="spoke1 spoke">
+                            <div class="spoke_tip1" title="Mojgan graduated from Isfahan University of Technology with a Bachelor of Science in Medical Technology">
+                                <span class="spoke_tip_description" ></span>
+                            </div>
+                            <div class="spoke_tip2" title="Mojgan went back to school to get her Bachelor of Science in Computer Science from San Jose State University">
+                                <span class="spoke_tip_description" > </span>
+                            </div>
+                          </div>
+                          <div class="spoke2 spoke" >
+                            <div class="spoke_tip1" title="Mojgan and Vahid founded Arrinex in 2013 with aim of providing long term relief to the many people that suffer from allergic and non-allergic chronic rhinitis. Given the success of their treatment, the future for this company looks very bright.">
+                                <span class="spoke_tip_description" ></span>
+                            </div>
+                            <div class="spoke_tip2" title="Mojgan co-founded, the eHealth company Cognitx which specializes in helping people with certain cognitive disorders. Mojgan worked at CognitTX from January 2011 - December 2012">Cognitx
+                                <span class="spoke_tip_description" ></span>
+                            </div>
+                          </div>
+                          <div class="spoke3 spoke">
+                            <div class="spoke_tip1" title="Mojgan was a partner at Nidus Medical LLC prior to co-founding Arrinex. In fact, Nidus Medcal a medical device incubator, actually served as an incubator for the technology behind Arrinex.">Nidus Medical, LLC.
+                                <span class="spoke_tip_description" ></span>
+                            </div>
+                            <div class="spoke_tip2" title="From 2007 to 2011, Mojgan served as an IP Consultant for Voyage Medical. Mojgan also worked as a consult for Voyage Medical during this same period.">
+                                <span class="spoke_tip_description" ></span>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <image id="girl_picture" src="mojganSaadat.png"></image>
+                </div>
+            </div>
+       </div>
+    </div> -->
+
+    <div class = "sectionDivs" id = "arrinexSolution">
+        <h1 id = "solutionHeader"> The Arrinex Solution</h1>
+        <p id = "solutionStarter"> Simple. Elegant. Effective.</p>
+        <p class = "solutionIntroPar"> 
+            We are a medical device company focused on developing
+            the first in-office medical procedure for treating refractory 
+            chronic rhinitis. Our ClariFixTM device will be used by 
+            otolaryngologists, or ENT physicians, in a short non-invasive 
+            procedure under topical anesthesia to provide long lasting 
+            relief from chronic rhinitis symptoms.
+
+            <br></br>
+
+            Here at Arrinex, we have developed a non-surgical means of eliminating rhinitis symptoms using cryotherapy that is as safe as it is effective. With the Arrinex solution, symptoms will be alleviated with a brief and painless procedure, and peace of mind will be restored for years to come. </p>
+        <br></br>
+        <p class = "solutionIntroPar" > The science and methodology behind our solution, which has undergone the most rigorous academic scrutiny and scientific testing, are based upon an anatomical survey of the nervous system. By selectively targeting overactive nerves, we are able to provide long-term alleviation of rhinitis. </p>
+    </div> <!--arrinexSolution end div-->
+
+    </div> <!-- parallax div? -->
+    
+
+    <!-- <div id="sab">
+            <p class="sabPars" id="hwangPara">Peter Hwang is a professor of Otololaryngology at the Stanford School of Medicine, focusing on head and neck surgery. He is the chief of Stanford Medical's division of Rhinology and Endoscopic Skull Base Surgery.</p>
+            <p class="sabPars" id="weissPara"> Ray Weiss is a graduate of the University of Texas Medical School at San Antonio. He is Board certified by the American Board of Otolaryngology, and is a Fellow of the American Academy of Otolaryngology - Head and Neck Surgery, and a member of the American Rhinology Society.</p>
+            <p class="sabPars" id="bolgerPara"> Dr. William Bolger is an ENT-otolaryngologist in Jacksonville, Florida and is affiliated with Mayo Clinic. William Bolger recieved his medical degree from the F. Edward Hebert School of Medicine, Uniformed Services University of the Health Sciences. </p> 
+            <p class="sabPars" id="goodePara"> Dr. Goode is a professor emiritus of Otolarnygology at Stanford. He recieved his medical degree at the USC Keck School of Medicine. Dr. Goode held the title of president of the American Academy of Otolaryngology, Head and Neck Surgery. 
+            </p>
+            <p class="sabPars" id="nelsonPara">Lionel Nelson is a graduate from the Yale School of Medicine. He did his residency at Stanford and currently works in San Jose, in affiliation with Good Samaritan Hospital. </p>
+            <p class="sabPars" id="stromePara"> Dr. Strome recieved his degree in medicine from the University of Michigan Medical School and has been in practice for 51 years. He is affiliated with Mount Sinai St. Luke's-Roosevelt, and is the Director for the Center for Head and Neck Oncology at the  New York Head and Neck Institute. 
+            </p>
+            <img src="enlargedDandelion.png" id="dandelion">
+            <img src="enlargedDandelion.png" id="dandelion2">
+            <p id="sabHeader">Meet the Scientific Advisory Board</p>
+            <img src="headerDandelion.png" id="bud" class="budRow1">
+            <p class="sabNameRow1" id="hwangHeader" onClick="sabClick('#hwang')">Hwang, M.D.</p>
+            <img src="headerDandelion.png" id="bud1" class="budRow1">
+            <p class="sabNameRow1" id="weissHeader" onClick="sabClick('#weiss')">Weiss, M.D.</p>
+            <img src="headerDandelion.png" id="bud2" class="budRow1">
+            <p class="sabNameRow1" id="stromeHeader" onClick="sabClick('#strome')">Strome, M.D.</p>
+            <img src="headerDandelion.png" id="bud3" class="budRow2">
+            <p class="sabNameRow2" id="bolgerHeader" onClick="sabClick('#bolger')">Bolger, M.D.</p>
+            <img src="headerDandelion.png" id="bud4" class="budRow2">
+            <p class="sabNameRow2" id="goodeHeader" onClick="sabClick('#goode')">Goode, M.D.</p>
+            <img src="headerDandelion.png" id="bud5" class="budRow2">
+            <p class="sabNameRow2" id="nelsonHeader" onClick="sabClick('#nelson')">Nelson, M.D.</p>
+        </div> -->
+
+    </div> <!-- parallax div? -->
+<div id = "copyright"> 
+    <p id = "copyrightPar1">&#169; Copyright 2015</p>
+    <p id = "copyrightPar2"> Website designed and created by Daniel Wong, in collaboration with Herberth Bonilla and Devin Morgan. All rights reserved.</p>
+</div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
