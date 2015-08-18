@@ -193,6 +193,16 @@ body, html {
   transition: opacity 2.8s linear;
 }
 
+#investorsPar {
+  /*font-size: 16px;*/
+  margin-bottom: 0;
+
+}
+
+#exitPar {
+  margin-top: 0;
+}
+
 #errorPar {
   line-height: 24px;
   opacity: 0;
