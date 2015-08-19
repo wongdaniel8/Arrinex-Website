@@ -114,7 +114,7 @@ $(document).ready(function(){
 			    	$("#logoBlock").css("padding","10px 17px");
 			    	$(".dropDownList").css("top","17px");
 
-			    	$("#documents").css("padding","0px");
+			    	$("#documents").css("padding-bottom","0px");
 
 			    }
 			    else
@@ -722,7 +722,7 @@ function playBoyGearMotion()
 
 $(document).on('scroll', function(e) {
 	
-        var S = $(this).scrollTop() - 3235,                // scrolled distance
+        var S = $(this).scrollTop() - 300,                // scrolled distance
             T = 315 + (S/45),                        // value for Top
             L = 200 + (S/45)							//value for Left
             H = 100*(S/75)							//value for height
