@@ -74,6 +74,8 @@ function selectMiniArticle(article_title,item)
 
 function selectMainArticleAndHideDropDown(article_title,item)
 {
+	//scroll to top of investor page
+		$("html, body").animate({ scrollTop: 0 + 'px'}, 300);
 	//reset the drop down menu
 		// hide all previewItems (aka all the miniPDFs)
 		$(".previewItem").css("display","none");
@@ -236,18 +238,102 @@ function closeIntro() {
 	})();
 
  	if (navigator.sayswho == "Safari 8") {
- 		// $("#pdfDisplay").css("background-color", "rgba(0, 0, 0, 0.19)");
  		$("#pdfDisplay").css("margin-top", "16px");
- 		// $("#html").css("background-color", "rgba(0, 0, 0, 0.19)");
- 		
- 		// $(".trapazoidTopLive").css("background-color", "rgba(0, 0, 0, .19)");
- 		// $(".trapazoidBotLive").css("background-color", "rgba(0, 0, 0, .19)");
- 		// $(".trapazoidTop").css("background-color", "rgba(0, 0, 0, .19)");
- 		// $(".trapazoidBot").css("background-color", "rgba(0, 0, 0, .19)");
-
-
  	}
  });
+
+
+ $(document).on('scroll', function(e) {
+	
+        var S = $(this).scrollTop() - 300,                // scrolled distance
+            T = 315 + (S/45),                        // value for Top
+            L = 200 + (S/45)							//value for Left
+            H = 100*(S/75)							//value for height
+            W = 100*(S/70)							//value for width
+            D = 360 *(S/100)						//value for degrees
+            //L = 10 + Math.abs(Math.sin(S/40)*50);  // value for Left
+            //set CSS
+           
+        if(H > 10 && H <= 401){
+        	$("#dandelion").css({"margin-top": T + 'px'});
+        	$("#dandelion").css({"margin-left": L + 'px'});
+        	$("#dandelion").css({"height": H + 'px'});
+        	$("#dandelion").css({"width": W + 'px'});
+        	$("#dandelion").css({"transform": 'rotate(' + D + 'deg)'});
+        }
+        if(H>90){
+        		$("#hwangHeader").fadeIn();
+		        $("#bud").fadeIn();
+		    } else{
+		    	$("#hwangPara").fadeOut();
+		    	$("#hwangHeader").fadeOut();
+		        $("#bud").fadeOut();
+		    }
+		    if(H>150){
+        		$("#weissHeader").fadeIn();
+		        $("#bud1").fadeIn();
+		    } else{
+		    	$("#weissPara").fadeOut();
+		    	$("#weissHeader").fadeOut();
+		        $("#bud1").fadeOut();
+		    }
+		    if(H>200){
+        		$("#stromeHeader").fadeIn();
+		        $("#bud2").fadeIn();
+		    } else{
+		    	$("#stromePara").fadeOut();
+		    	$("#stromeHeader").fadeOut();
+		        $("#bud2").fadeOut();
+		        
+		    }
+		    if(H>300){
+        		$("#bolgerHeader").fadeIn();
+		        $("#bud3").fadeIn();
+		    } else{
+		    	$("#bolgerPara").fadeOut();
+		    	$("#bolgerHeader").fadeOut();
+		        $("#bud3").fadeOut();
+		    }
+		     if(H>360){
+		     	$("#dandelion").fadeOut();
+		     	$("#dandelion2").fadeIn();
+        		$("#goodeHeader").fadeIn();
+		        $("#bud4").fadeIn();
+		        $("#dandelion").css({"margin-top": T + 'px'});
+        		$("#dandelion").css({"margin-left": L + 'px'});
+        		$("#dandelion").css({"height": '400px'});
+        		$("#dandelion").css({"width": '428'});
+		    } else{
+		    	$("#dandelion").fadeIn();
+		     	$("#dandelion2").fadeOut();
+		    	$("#goodePara").fadeOut();
+		    	$("#goodeHeader").fadeOut();
+		        $("#bud4").fadeOut();
+		    }
+		    if(H>390){
+        		$("#nelsonHeader").fadeIn();
+		        $("#bud5").fadeIn();
+		        $("#sabHeader").fadeIn();
+		    } else{
+		    	$("#nelsonPara").fadeOut();
+		    	$("#nelsonHeader").fadeOut();
+		        $("#bud5").fadeOut();
+		        $("#sabHeader").fadeOut();
+		    }
+    });
+
+function sabClick(event){
+	$("#hwangPara").css("display", "none");
+    $("#weissPara").css("display", "none");
+   	$("#stromePara").css("display", "none");
+    $("#bolgerPara").css("display", "none");
+    $("#goodePara").css("display", "none");
+    $("#nelsonPara").css("display", "none");
+	$(event + 'Para').css("text-align", "center");
+    $(event + 'Para').css("width", "300px");
+    $(event + 'Para').css("height", "200px");
+    $(event + 'Para').css("display", "inline-block");
+}
 
 
 

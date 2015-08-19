@@ -152,6 +152,10 @@ $(document).ready(function(){
 
 
 	/* ================= FUNCTIONS FOR NAVIGATION BAR SCROLLING ================= */
+				$("#company").click(function() {
+					$("html, body").animate({ scrollTop: 3000+ 'px'}, 1000);
+				});
+
 				$("#teamLink").click(function() {
 					if (isInvestors == false) {
 						
@@ -200,10 +204,10 @@ $(document).ready(function(){
 				$("#currentSolutionsLink").click(function() {
 					if (isInvestors == false) {
 						if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
-				    		$("html, body").animate({ scrollTop: 1215 + 'px'}, 1000);
+				    		$("html, body").animate({ scrollTop: 1515 + 'px'}, 1000);
 				    	}
 				    	else {
-				    		$("html, body").animate({ scrollTop: 1435 + 'px'}, 1000);
+				    		$("html, body").animate({ scrollTop: 1410 + 'px'}, 1000);
 				    	}
 				    	return true;
 				    } 
@@ -251,7 +255,7 @@ $(document).ready(function(){
 
 
 	////////////	drop down menus
-        $( "#navBarList li a" ).mouseover(
+        $( "#navBarList li a").mouseover(
 		  function() {
 		    $( this ).parent().find(".dropDownList").addClass("dropDownON");
 		    $('#navBarDiv').css('z-index', '3000');
@@ -616,7 +620,7 @@ function playCarousel()
 					if (carousel_in_motion == false)
 					{
 						carousel_in_motion = true;
-						if (count == -1 || ((count+1) % 5 == 0 && count > 0))
+						if (count == -1 || ((count+1) % 4 == 0 && count > 0))
 						{
 							$(".carouselList").css("margin-left","0px");
 							count++;
@@ -632,7 +636,7 @@ function playCarousel()
 						// the first one starts off display: none so this fixes that
 
 						// only show the one we care about
-						 var the_chossen_one = $(".pictureDescription[data-position='"+((count%5)+1)+"']");
+						 var the_chossen_one = $(".pictureDescription[data-position='"+((count%4)+1)+"']");
 						the_chossen_one.css("display","block");
 						the_chossen_one.css("opacity","1");
 						setTimeout(function(){
@@ -666,7 +670,7 @@ function playCarousel()
 			if (carousel_in_motion == false)
 			{
 				carousel_in_motion = true;
-				if ((count) % 5 == 0 )
+				if ((count) % 4 == 0 )
 				{
 					$(".carouselList").css("margin-left","-2778.6767578125px");
 					count--;
@@ -682,7 +686,7 @@ function playCarousel()
 				// the first one starts off display: none so this fixes that
 
 				// only show the one we care about
-				 var the_chossen_one = $(".pictureDescription[data-position='"+((count%5)+1)+"']");
+				 var the_chossen_one = $(".pictureDescription[data-position='"+((count%4)+1)+"']");
 				the_chossen_one.css("display","block");
 				the_chossen_one.css("opacity","1");
 
@@ -720,95 +724,5 @@ function playBoyGearMotion()
 
 
 
-$(document).on('scroll', function(e) {
-	
-        var S = $(this).scrollTop() - 300,                // scrolled distance
-            T = 315 + (S/45),                        // value for Top
-            L = 200 + (S/45)							//value for Left
-            H = 100*(S/75)							//value for height
-            W = 100*(S/70)							//value for width
-            D = 360 *(S/100)						//value for degrees
-            //L = 10 + Math.abs(Math.sin(S/40)*50);  // value for Left
-            //set CSS
-           
-        if(H > 10 && H <= 401){
-        	$("#dandelion").css({"margin-top": T + 'px'});
-        	$("#dandelion").css({"margin-left": L + 'px'});
-        	$("#dandelion").css({"height": H + 'px'});
-        	$("#dandelion").css({"width": W + 'px'});
-        	$("#dandelion").css({"transform": 'rotate(' + D + 'deg)'});
-        }
-        if(H>90){
-        		$("#hwangHeader").fadeIn();
-		        $("#bud").fadeIn();
-		    } else{
-		    	$("#hwangPara").fadeOut();
-		    	$("#hwangHeader").fadeOut();
-		        $("#bud").fadeOut();
-		    }
-		    if(H>150){
-        		$("#weissHeader").fadeIn();
-		        $("#bud1").fadeIn();
-		    } else{
-		    	$("#weissPara").fadeOut();
-		    	$("#weissHeader").fadeOut();
-		        $("#bud1").fadeOut();
-		    }
-		    if(H>200){
-        		$("#stromeHeader").fadeIn();
-		        $("#bud2").fadeIn();
-		    } else{
-		    	$("#stromePara").fadeOut();
-		    	$("#stromeHeader").fadeOut();
-		        $("#bud2").fadeOut();
-		        
-		    }
-		    if(H>300){
-        		$("#bolgerHeader").fadeIn();
-		        $("#bud3").fadeIn();
-		    } else{
-		    	$("#bolgerPara").fadeOut();
-		    	$("#bolgerHeader").fadeOut();
-		        $("#bud3").fadeOut();
-		    }
-		     if(H>360){
-		     	$("#dandelion").fadeOut();
-		     	$("#dandelion2").fadeIn();
-        		$("#goodeHeader").fadeIn();
-		        $("#bud4").fadeIn();
-		        $("#dandelion").css({"margin-top": T + 'px'});
-        		$("#dandelion").css({"margin-left": L + 'px'});
-        		$("#dandelion").css({"height": '400px'});
-        		$("#dandelion").css({"width": '428'});
-		    } else{
-		    	$("#dandelion").fadeIn();
-		     	$("#dandelion2").fadeOut();
-		    	$("#goodePara").fadeOut();
-		    	$("#goodeHeader").fadeOut();
-		        $("#bud4").fadeOut();
-		    }
-		    if(H>390){
-        		$("#nelsonHeader").fadeIn();
-		        $("#bud5").fadeIn();
-		        $("#sabHeader").fadeIn();
-		    } else{
-		    	$("#nelsonPara").fadeOut();
-		    	$("#nelsonHeader").fadeOut();
-		        $("#bud5").fadeOut();
-		        $("#sabHeader").fadeOut();
-		    }
-    });
 
-function sabClick(event){
-	$("#hwangPara").css("display", "none");
-    $("#weissPara").css("display", "none");
-   	$("#stromePara").css("display", "none");
-    $("#bolgerPara").css("display", "none");
-    $("#goodePara").css("display", "none");
-    $("#nelsonPara").css("display", "none");
-	$(event + 'Para').css("text-align", "center");
-    $(event + 'Para').css("width", "300px");
-    $(event + 'Para').css("height", "200px");
-    $(event + 'Para').css("display", "inline-block");
-}
 

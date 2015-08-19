@@ -662,14 +662,7 @@ body, html {
                       background-position: 90px 0px; /*for firefox*/
                       background-position-x: 90px; /*for chrome*/
                     }
-                    #sinus_surgery{
-                      background-image: url("sinus_surgery.jpg");
-                      background-repeat: no-repeat;
-                      background-size: auto 100%;
-                      background-position: 130px 12px; /*for firefox*/
-                      background-position-x: 130px; /*for chrome*/
-                      background-position-y: 12px;
-                    }
+                   
                     #sinus_medication{
                       background-image: url("sinus_medication.jpg");
                       background-size: auto auto;
@@ -2125,14 +2118,7 @@ body, html {
   background-color: rgb(245,245,245);
 }
 
-.cardLogo { 
-  top: 5px;
-  position: relative;
-  float: right;
-  height: 60px;
-  width: 60px;
-  right: 10px;
-}
+
 
 #logoWrapper1, #logoWrapper2, #logoWrapper3  {
   margin-top: 85px;
@@ -2147,7 +2133,7 @@ body, html {
 /*===================================
 */
 #arrinexSolution {
-  height: 625px;
+  height: 600px;
 }
 
 #solutionHeader {
@@ -2166,7 +2152,7 @@ body, html {
 .solutionIntroPar {
   margin: auto;
   max-width: 55%;
-  line-height: 23px;
+  line-height: 25px;
   font-size: 18px;
   font-weight: 300;
 }

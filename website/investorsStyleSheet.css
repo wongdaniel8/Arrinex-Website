@@ -153,10 +153,7 @@ BEGINNING OF INVESTORS STYLESHEET
         }
     }
 
-
-@media screen and (min-width: 1200px){ /*the pipe won't look good if the screen is too small*/
-
-    #info {
+#info {
       font-weight: 300;
       z-index: 500;
       opacity: .95;
@@ -210,8 +207,9 @@ BEGINNING OF INVESTORS STYLESHEET
       cursor: pointer;
     }
 
-  
-   
+
+@media screen and (min-width: 1200px){ /*the pipe won't look good if the screen is too small*/
+
     #articleRemoverContainer{
       width: 150px;
       height: 620px;
