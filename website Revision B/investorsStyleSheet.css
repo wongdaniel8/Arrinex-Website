@@ -594,19 +594,20 @@ BEGINNING OF INVESTORS STYLESHEET
     }
 
   
- #sab{
-  overflow: hidden;
-  background-image: url("meadowWithDandelions.jpg");
-  width:100%;
-  min-width:1200px;
-  height:720px;
-  padding:0px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  margin-left: 0px;
-
-}
+  #sab{
+    overflow: hidden;
+    background-image: url("meadowWithDandelions.jpg");
+    width:100%;
+    min-width:1200px;
+    height:720px;
+    padding:0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin-left: 0px;
+    
+  }
+  
 .sabPars {
   font-size: 20px;
   text-decoration: none;

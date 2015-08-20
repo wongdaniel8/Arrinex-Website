@@ -68,7 +68,7 @@ $(document).ready(function(){
 	            var scroll_point2 = $("body").scrollTop() + $("html").scrollTop();;
 	            //						^for chrome				^for firefox
 
-	           
+	            
 
 	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 150) { // scrolling down
 			    	$("#rhinitisInfo").css("opacity","1");
@@ -81,17 +81,18 @@ $(document).ready(function(){
 
 			    if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 800) { //scrolling down
 			    	$("#existingSolutions").css("opacity","1");
-			    }
-			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 1075) { //scrolling up
+ 			    }
+			     if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 1075) { //scrolling up
 			    	$("#existingSolutions").css("opacity","0");
-			    }
-
-			    if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 1400) { //scrolling down
+ 			    }
+ 
+			     if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 1400) { //scrolling down
 			    	$("#arrinexSolution").css("opacity","1");
 			    }
 			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 1920) { //scrolling up
 			    	$("#arrinexSolution").css("opacity","0");
 			    }
+
 
 			    
 			    scroll_point1 = scroll_point2;// update the data points to ensure accuracy
@@ -122,7 +123,6 @@ $(document).ready(function(){
 					var parallax_opacity = 1-scroll_point2*0.004;
 					$("#parallaxHelpDiv").css("bottom",""+parallax_displacement+"px");
 					$("#arrinexSolution").css("height",""+ 630 - parallax_displacement+"px");
-
 					$("#firstHomeText").css("opacity",""+parallax_opacity);
 				}
 
@@ -147,7 +147,24 @@ $(document).ready(function(){
 					$("html, body").animate({ scrollTop: 3000+ 'px'}, 1000);
 				});
 
-		
+				$("#teamLink").click(function() {
+					if (isInvestors == false) {
+						
+						if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+							
+							$("html, body").animate({ scrollTop: 1960 + 'px'}, 1000);
+						}
+						else {
+							$("html, body").animate({ scrollTop: 2140 + 'px'}, 1000);
+		    			}
+		    			return true;
+
+		    		}
+		    		else window.location = "index.html#team";					
+				});
+
+				
+
 				$("#whatIsLink").click(function() {
 					if (isInvestors == false) {
 
@@ -211,7 +228,17 @@ $(document).ready(function(){
 				    	return true;
 				});
 
-				
+				$("#sabLink").click(function() {
+					if (isInvestors == false) {
+						if (parallax_shifted == true || (parallax_shifted == false && $("body").scrollTop() == 0)) {
+					    		$("html, body").animate({ scrollTop: 3600 + 'px'}, 1000);
+					    	}
+					    	else {
+					    		$("html, body").animate({ scrollTop: 3590 + 'px'}, 1000);
+					    	}
+					    	return true;
+				    } else window.location = "index.html#sab";
+				});
 
 
 	//FUNCTION to assist carousel
@@ -339,6 +366,7 @@ function verifyKey(e) {
 
 var isInvestors = false;
 function verification() {
+	
 	var passwordArray = ["0cc175b9c0f1b6a831c399e269772661", "92eb5ffee6ae2fec3ad71c777531578f",
 	 "5f4dcc3b5aa765d61d8327deb882cf99", "827c749c685b3db7770955ec3b439f92"];
     
