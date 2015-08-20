@@ -22,8 +22,14 @@
     return M.join(' ');
 	})();
  	
- 	if (M = "safari") {
+ 	
+ 	var prefix = navigator.sayswho.substring(0,6);
+ 	if (prefix == "Safari") {
  		$("#homeImageDiv").css("height", "700");
+ 	}
+ 	else {
+ 		$(".budRow1").css( "animation-name", "none");
+ 		$(".budRow2").css( "animation-name", "none");
  	}
  });
 
@@ -64,11 +70,16 @@ $(document).ready(function(){
 	var parallax_shifted = false;
         $(document).scroll(function() {
             
-            //FUNCTION that deals with fade in and out
+            //FUNCTIONS that deals with fade in and out
 	            var scroll_point2 = $("body").scrollTop() + $("html").scrollTop();;
 	            //						^for chrome				^for firefox
-
 	            
+	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 150) { // scrolling down 410
+					$("#copyright").css("opacity", "1");
+				}
+			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 30) {// scrolling up 
+					$("#copyright").css("opacity", "0");
+			    }
 
 	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 150) { // scrolling down
 			    	$("#rhinitisInfo").css("opacity","1");
@@ -79,10 +90,10 @@ $(document).ready(function(){
 			    	$("#rhinitisInfo").css("opacity","0");
 			    }
 
-			    if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 800) { //scrolling down
+			    if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 845) { //scrolling down
 			    	$("#existingSolutions").css("opacity","1");
  			    }
-			     if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 1075) { //scrolling up
+			     if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 1125) { //scrolling up
 			    	$("#existingSolutions").css("opacity","0");
  			    }
  
@@ -143,6 +154,7 @@ $(document).ready(function(){
 
 
 	/* ================= FUNCTIONS FOR NAVIGATION BAR SCROLLING ================= */
+				
 				$("#company").click(function() {
 					$("html, body").animate({ scrollTop: 3000+ 'px'}, 1000);
 				});

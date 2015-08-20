@@ -422,7 +422,7 @@ body, html {
               width: 230px;
               height: 50px;
               position: absolute;
-              bottom: 150px;
+              bottom: 140px;
               right: 25px;
               border: 3px solid black;
               box-shadow: 3px 3px 5px rgb(182, 182, 182);
@@ -618,7 +618,7 @@ body, html {
                 overflow-x: hidden;
             }
                 .carouselList{
-                  width: 3475px;
+                  width: 3475px; /*2780px for 4 carousel elements*/
                   height: 100%;
                   padding-left: 0px;
                   margin: 0px;
@@ -2179,7 +2179,10 @@ BEGINNING OF INVESTORS STYLESHEET
 
 
 #copyright{ 
-  position: absolute;
+
+  bottom: 0px;
+  position: fixed;
+  opacity: 0;
   z-index: 100;
   padding-top: 1px;
   border:0;
@@ -2191,6 +2194,12 @@ BEGINNING OF INVESTORS STYLESHEET
   color: #787878;
   font-weight: 300;
   font-size: 14px;
+
+   -webkit-transition: opacity 2.5s ease;
+  -moz-transition: opacity 2.5s ease;
+  -o-transition: opacity 2.5s ease;
+  -ms-transition: opacity 2.5s ease;
+  transition: opacity 2.5s ease;
 }
 
 #copyrightPar1 {
