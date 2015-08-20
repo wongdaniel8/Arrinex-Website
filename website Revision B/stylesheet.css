@@ -355,11 +355,11 @@ body, html {
               display:inline-block;
               vertical-align: middle;
               padding:0px;
-              -webkit-transition: opacity 3s ease;
-              -moz-transition: opacity 3s ease;
-              -o-transition: opacity 3s ease;
-              -ms-transition: opacity 3s ease;
-              transition: opacity 3s ease;
+              -webkit-transition: opacity 2.5s ease;
+              -moz-transition: opacity 2.5s ease;
+              -o-transition: opacity 2.5s ease;
+              -ms-transition: opacity 2.5s ease;
+              transition: opacity 2.5s ease;
             }
                 .rhitinisInfoWrapper{
                    width:300px;
@@ -399,10 +399,16 @@ body, html {
                                     #symptomsItem{
                                     }
    #existingSolutions {
+      opacity: 0;
       color: white;
       padding: 0px;
       margin:10px 0px 50px 0px;
       overflow-y:hidden; 
+      -webkit-transition: opacity 2.5s ease;
+     -moz-transition: opacity 2.5s ease;
+     -o-transition: opacity 2.5s ease;
+     -ms-transition: opacity 2.5s ease;
+     transition: opacity 2.5s ease;
     }
         #carouselContainer{
           width: 1024px;
@@ -915,7 +921,14 @@ body, html {
 /*===================================
 */
 #arrinexSolution {
+  opacity: 0;
   height: 630px;
+  padding-left:0px;
+   -webkit-transition: opacity 2.5s ease;
+   -moz-transition: opacity 2.5s ease;
+   -o-transition: opacity 2.5s ease;
+   -ms-transition: opacity 2.5s ease;
+   transition: opacity 2.5s ease;
 }
 
 #solutionHeader {
@@ -934,7 +947,7 @@ body, html {
 .solutionIntroPar {
   margin: auto;
   max-width: 55%;
-  line-height: 25px;
+  line-height: 35px;
   font-size: 18px;
   font-weight: 300;
 }

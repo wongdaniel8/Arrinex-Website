@@ -56,16 +56,6 @@ function adjustPicture() {
 
 
 
-function homeParReveal(ident) {
-	var id = document.getElementById(ident);
-	id.style.opacity = .8;
-	id.style.color = "rgb(105,105,105)";
-}
-
-function homeParHide(ident) {
-	var id = document.getElementById(ident);
-	id.style.opacity = 0;
-}
 
 $(document).ready(function(){
 
@@ -78,31 +68,30 @@ $(document).ready(function(){
 	            var scroll_point2 = $("body").scrollTop() + $("html").scrollTop();;
 	            //						^for chrome				^for firefox
 
-	            // if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 250) // scrolling down
+	           
 
 	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 150) { // scrolling down
 			    	$("#rhinitisInfo").css("opacity","1");
 				}
-
-				// else if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 460) { //doesn't work
-				// 		alert("slide away");
-    //     				$('#pptDisplay').animate({left: -1500}, 1000);
-
-				// }
-			  
 
 			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 220)// scrolling up
 			    {
 			    	$("#rhinitisInfo").css("opacity","0");
 			    }
 
-			    if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 1650) { //scrolling down
-			    	$("#team").css("opacity","1");
+			    if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 800) { //scrolling down
+			    	$("#existingSolutions").css("opacity","1");
 			    }
-			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 1840) { //scrolling up
-			    	$("#team").css("opacity","0");
+			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 1075) { //scrolling up
+			    	$("#existingSolutions").css("opacity","0");
 			    }
 
+			    if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 1400) { //scrolling down
+			    	$("#arrinexSolution").css("opacity","1");
+			    }
+			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 1920) { //scrolling up
+			    	$("#arrinexSolution").css("opacity","0");
+			    }
 
 			    
 			    scroll_point1 = scroll_point2;// update the data points to ensure accuracy
