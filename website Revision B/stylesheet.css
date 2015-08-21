@@ -651,19 +651,21 @@ body, html {
                     }
                     #sinus_rinse{
 
-                     /* background-image: url("sinus_rinse_carousel.png");
+                      background-image: url("sinus_rinse_carousel.png");
                       background-repeat: no-repeat;
                       background-size: auto 100%;
-                      background-position: 12px 0px; 
-                      background-position-x: 12px;
-*/
+                      background-position: 12px 0px; /*for firefox*/
+                      background-position-x: 12px; /*for chrome*/
 
+                    }
+                    #anticholinergic {
                       background-image: url("anticholinergic.png");
                       background-repeat: no-repeat;
                       background-size: auto 90%;
                       background-position: 12px 0px; /*for firefox*/
                       background-position-x: 120px; /*for chrome*/
                       background-position-y: 20px;
+
                     }
                     #dealing_with{
                       background-image: url("dealing_with_allergies1.jpg");

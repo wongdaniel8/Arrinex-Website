@@ -624,7 +624,7 @@ function playCarousel()
 					if (carousel_in_motion == false)
 					{
 						carousel_in_motion = true;
-						if (count == -1 || ((count+1) % 4 == 0 && count > 0))
+						if (count == -1 || ((count+1) % 5 == 0 && count > 0))
 						{
 							$(".carouselList").css("margin-left","0px");
 							count++;
@@ -640,7 +640,7 @@ function playCarousel()
 						// the first one starts off display: none so this fixes that
 
 						// only show the one we care about
-						 var the_chossen_one = $(".pictureDescription[data-position='"+((count%4)+1)+"']");
+						 var the_chossen_one = $(".pictureDescription[data-position='"+((count%5)+1)+"']");
 						the_chossen_one.css("display","block");
 						the_chossen_one.css("opacity","1");
 						setTimeout(function(){
@@ -674,7 +674,7 @@ function playCarousel()
 			if (carousel_in_motion == false)
 			{
 				carousel_in_motion = true;
-				if ((count) % 4 == 0 )
+				if ((count) % 5 == 0 )
 				{
 					$(".carouselList").css("margin-left","-2778.6767578125px");
 					count--;
@@ -690,7 +690,7 @@ function playCarousel()
 				// the first one starts off display: none so this fixes that
 
 				// only show the one we care about
-				 var the_chossen_one = $(".pictureDescription[data-position='"+((count%4)+1)+"']");
+				 var the_chossen_one = $(".pictureDescription[data-position='"+((count%5)+1)+"']");
 				the_chossen_one.css("display","block");
 				the_chossen_one.css("opacity","1");
 
