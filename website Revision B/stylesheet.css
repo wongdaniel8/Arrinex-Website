@@ -422,7 +422,7 @@ body, html {
               width: 230px;
               height: 50px;
               position: absolute;
-              bottom: 140px;
+              bottom: 150px;
               right: 25px;
               border: 3px solid black;
               box-shadow: 3px 3px 5px rgb(182, 182, 182);
@@ -650,11 +650,20 @@ body, html {
                       height: 100%;
                     }
                     #sinus_rinse{
-                      background-image: url("sinus_rinse_carousel.png");
+
+                     /* background-image: url("sinus_rinse_carousel.png");
                       background-repeat: no-repeat;
                       background-size: auto 100%;
+                      background-position: 12px 0px; 
+                      background-position-x: 12px;
+*/
+
+                      background-image: url("anticholinergic.png");
+                      background-repeat: no-repeat;
+                      background-size: auto 90%;
                       background-position: 12px 0px; /*for firefox*/
-                      background-position-x: 12px; /*for chrome*/
+                      background-position-x: 120px; /*for chrome*/
+                      background-position-y: 20px;
                     }
                     #dealing_with{
                       background-image: url("dealing_with_allergies1.jpg");

@@ -74,7 +74,7 @@ $(document).ready(function(){
 	            var scroll_point2 = $("body").scrollTop() + $("html").scrollTop();;
 	            //						^for chrome				^for firefox
 	            
-	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 150) { // scrolling down 410
+	            if ((scroll_point2 - scroll_point1 > 0) && scroll_point2 > 450) { // scrolling down 410
 					$("#copyright").css("opacity", "1");
 				}
 			    if ((scroll_point2 - scroll_point1 < 0) && scroll_point2 < 30) {// scrolling up 
